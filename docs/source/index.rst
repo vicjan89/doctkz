@@ -1,20 +1,46 @@
-.. doctkz documentation master file, created by
-   sphinx-quickstart on Mon Apr  5 21:08:34 2021.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+######################################
+Программа расчёта электрических сетей
+######################################
 
-Welcome to doctkz's documentation!
-==================================
+
+.. image:: /_static/electrodevices_electr_4064.ico
+		:width: 10em
+		:align: left 
+
+.. |br| raw:: html
+
+    <br />
+
+|br|    
+|br|    
+|br| 
+
+       
+
+    
+|br|    
+|br|    
+|br|    
+|br|    
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+    :maxdepth: 3
 
+    about
+    elements
+    editor
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+..  std_types
+    powerflow
+    opf
+    shortcircuit
+    estimation
+    control
+    timeseries
+    topology
+    networks
+    plotting
+    file_io
+    converter
+    toolbox
+	
