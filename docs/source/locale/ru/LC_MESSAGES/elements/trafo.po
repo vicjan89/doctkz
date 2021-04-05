@@ -1,0 +1,984 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/elements/trafo.rst:5
+msgid "Transformer"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:13
+msgid ""
+":ref:`Unit Systems and Conventions <conventions>` |br| :ref:`Standard "
+"Type Libraries <std_types>`"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:17
+msgid "Create Function"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:19
+msgid ""
+"Transformers can be either created from the standard type library "
+"(create_transformer) or with custom values "
+"(create_transformer_from_parameters)."
+msgstr ""
+
+#: of pandapower.create.create_transformer:2
+#: pandapower.create.create_transformer_from_parameters:2
+msgid ""
+"Creates a two-winding transformer in table net[\"trafo\"]. The trafo "
+"parameters are defined through the standard type library."
+msgstr ""
+
+#: of pandapower.create.create_transformer:12
+#: pandapower.create.create_transformer_from_parameters:39
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.create.create_transformer:6
+#: pandapower.create.create_transformer_from_parameters:6
+msgid "**net** - The net within this transformer should be created"
+msgstr ""
+
+#: of pandapower.create.create_transformer:8
+#: pandapower.create.create_transformer_from_parameters:8
+msgid ""
+"**hv_bus** (int) - The bus on the high-voltage side on which the "
+"transformer will be             connected to"
+msgstr ""
+
+#: of pandapower.create.create_transformer:10
+#: pandapower.create.create_transformer_from_parameters:10
+msgid ""
+"**lv_bus** (int) - The bus on the low-voltage side on which the "
+"transformer will be             connected to"
+msgstr ""
+
+#: of pandapower.create.create_transformer:12
+msgid "**std_type** -  The used standard type from the standard type library"
+msgstr ""
+
+#: of pandapower.create.create_transformer:14
+msgid ""
+"**Zero sequence parameters** (Added through std_type For Three phase load"
+" flow) :"
+msgstr ""
+
+#: of pandapower.create.create_transformer:16
+msgid "**vk0_percent** - zero sequence relative short-circuit voltage"
+msgstr ""
+
+#: of pandapower.create.create_transformer:18
+#: pandapower.create.create_transformer_from_parameters:33
+msgid ""
+"**vkr0_percent** - real part of zero sequence relative short-circuit "
+"voltage"
+msgstr ""
+
+#: of pandapower.create.create_transformer:20
+msgid ""
+"**mag0_percent** - ratio between magnetizing and short circuit impedance "
+"(zero sequence)"
+msgstr ""
+
+#: of pandapower.create.create_transformer:22
+msgid "z_mag0 / z0"
+msgstr ""
+
+#: of pandapower.create.create_transformer:24
+msgid "**mag0_rx**  - zero sequence magnetizing r/x  ratio"
+msgstr ""
+
+#: of pandapower.create.create_transformer:26
+msgid ""
+"**si0_hv_partial** - zero sequence short circuit impedance  distribution "
+"in hv side"
+msgstr ""
+
+#: of pandapower.create.create_transformer:41
+#: pandapower.create.create_transformer_from_parameters:41
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.create.create_transformer:29
+msgid "**name** (string, None) - A custom name for this transformer"
+msgstr ""
+
+#: of pandapower.create.create_transformer:31
+#: pandapower.create.create_transformer_from_parameters:53
+msgid ""
+"**tap_pos** (int, nan) - current tap position of the transformer. "
+"Defaults to the medium             position (tap_neutral)"
+msgstr ""
+
+#: of pandapower.create.create_transformer:33
+msgid ""
+"**in_service** (boolean, True) - True for in_service or False for out of "
+"service"
+msgstr ""
+
+#: of pandapower.create.create_transformer:35
+#: pandapower.create.create_transformer_from_parameters:67
+msgid ""
+"**index** (int, None) - Force a specified ID if it is available. If None,"
+" the index one             higher than the highest already existing index"
+" is selected."
+msgstr ""
+
+#: of pandapower.create.create_transformer:37
+#: pandapower.create.create_transformer_from_parameters:69
+msgid ""
+"**max_loading_percent (float)** - maximum current loading (only needed "
+"for OPF)"
+msgstr ""
+
+#: of pandapower.create.create_transformer:39
+#: pandapower.create.create_transformer_from_parameters:45
+msgid "**parallel** (integer) - number of parallel transformers"
+msgstr ""
+
+#: of pandapower.create.create_transformer:41
+#: pandapower.create.create_transformer_from_parameters:71
+msgid ""
+"**df** (float) - derating factor: maximal current of transformer in "
+"relation to nominal             current of transformer (from 0 to 1)"
+msgstr ""
+
+#: of pandapower.create.create_transformer:44
+#: pandapower.create.create_transformer_from_parameters:76
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.create.create_transformer:44
+#: pandapower.create.create_transformer_from_parameters:76
+msgid "**index** (int) - The unique ID of the created transformer"
+msgstr ""
+
+#: of pandapower.create.create_transformer:61
+#: pandapower.create.create_transformer_from_parameters:93
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.create.create_transformer:47
+msgid ""
+"create_transformer(net, hv_bus = 0, lv_bus = 1, name = \"trafo1\", "
+"std_type =             \"0.4 MVA 10/0.4 kV\")"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:12
+msgid "**sn_mva** (float) - rated apparent power"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:14
+msgid "**vn_hv_kv** (float) - rated voltage on high voltage side"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:16
+msgid "**vn_lv_kv** (float) - rated voltage on low voltage side"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:18
+msgid "**vkr_percent** (float) - real part of relative short-circuit voltage"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:20
+msgid "**vk_percent** (float) - relative short-circuit voltage"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:22
+msgid "**pfe_kw** (float)  - iron losses in kW"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:24
+msgid "**i0_percent** (float) - open loop losses in percent of rated current"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:26
+msgid "**vector_group** (String) - Vector group of the transformer"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:28
+msgid "HV side is Uppercase letters and LV side is lower case"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:31
+msgid "**vk0_percent** (float) - zero sequence relative short-circuit voltage"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:35
+msgid "**mag0_percent** - zero sequence magnetizing impedance/ vk0"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:37
+msgid "**mag0_rx**  - zero sequence magnitizing R/X ratio"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:39
+msgid ""
+"**si0_hv_partial** - Distribution of zero sequence leakage impedances for"
+" HV side"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:43
+msgid "**in_service** (boolean) - True for in_service or False for out of service"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:47
+msgid "**name** (string) - A custom name for this transformer"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:49
+msgid "**shift_degree** (float) - Angle shift over the transformer*"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:51
+msgid "**tap_side** (string) - position of tap changer (\"hv\", \"lv\")"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:55
+msgid ""
+"**tap_neutral** (int, nan) - tap position where the transformer ratio is "
+"equal to the ration of             the rated voltages"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:57
+msgid "**tap_max** (int, nan) - maximal allowed tap position"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:59
+msgid "**tap_min** (int, nan):  minimal allowed tap position"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:61
+msgid ""
+"**tap_step_percent** (float) - tap step size for voltage magnitude in "
+"percent"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:63
+msgid "**tap_step_degree** (float) - tap step size for voltage angle in degree*"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:65
+msgid ""
+"**tap_phase_shifter** (bool) - whether the transformer is an ideal phase "
+"shifter*"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:73
+msgid "** only considered in loadflow if calculate_voltage_angles = True"
+msgstr ""
+
+#: of pandapower.create.create_transformer_from_parameters:79
+msgid ""
+"create_transformer_from_parameters(net, hv_bus=0, lv_bus=1, "
+"name=\"trafo1\", sn_mva=40,             vn_hv_kv=110, vn_lv_kv=10, "
+"vk_percent=10, vkr_percent=0.3, pfe_kw=30,             i0_percent=0.1, "
+"shift_degree=30)"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:27
+msgid "Input Parameters"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:29
+msgid "*net.trafo*"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1 ../../source/elements/trafo_res.csv:1
+msgid "**Parameter**"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1 ../../source/elements/trafo_res.csv:1
+msgid "**Datatype**"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "**Value Range**"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1 ../../source/elements/trafo_res.csv:1
+msgid "**Explanation**"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "name"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "string"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "name of the transformer"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "std_type"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "transformer standard type name"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "hv_bus*"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "integer"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "high voltage bus index of the transformer"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "lv_bus*"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "low voltage bus index of the transformer"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "sn_mva*"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1 ../../source/elements/trafo_res.csv:1
+msgid "float"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid ":math:`>` 0"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "rated apparent power of the transformer [MVA]"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "vn_hv_kv*"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "rated voltage at high voltage bus [kV]"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "vn_lv_kv*"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "rated voltage at low voltage bus [kV]"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "vk_percent*"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "short circuit voltage [%]"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "vkr_percent*"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid ":math:`\\geq`  0"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "real component of short circuit voltage [%]"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "pfe_kw*"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid ":math:`\\geq` 0"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "iron losses [kW]"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "i0_percent*"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "open loop losses in [%]"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "shift_degree*"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "transformer phase shift angle"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "tap_side"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "\"hv\", \"lv\""
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "defines if tap changer is at the high- or low voltage side"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "tap_neutral"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "rated tap position"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "tap_min"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "minimum tap position"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "tap_max"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "maximum tap position"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "tap_step_percent"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "tap step size for voltage magnitude [%]"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "tap_step_degree"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "tap step size for voltage angle"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "tap_pos"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "current position of tap changer"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "tap_phase_shifter"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "bool"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "defines whether the transformer is an ideal phase shifter"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "parallel"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "int"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "number of parallel transformers"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "max_loading_percent**"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid ""
+"Maximum loading of the transformer with respect to sn_mva and its "
+"corresponding current at 1.0 p.u."
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "df"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "1 :math:`\\geq` df :math:`>`0"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid ""
+"derating factor: maximal current of transformer in relation to nominal "
+"current of transformer (from 0 to 1)"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "in_service*"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "boolean"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "True / False"
+msgstr ""
+
+#: ../../source/elements/trafo_par.csv:1
+msgid "specifies if the transformer is in service."
+msgstr ""
+
+#: ../../source/elements/trafo.rst:37
+msgid ""
+"\\*necessary for executing a power flow calculation |br| \\*\\*optimal "
+"power flow parameter"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:39
+msgid ""
+"The transformer loading constraint for the optimal power flow corresponds"
+" to the option trafo_loading=\"current\":"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:43
+msgid "Electric Model"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:45
+msgid ""
+"The equivalent circuit used for the transformer can be set in the power "
+"flow with the parameter \"trafo_model\"."
+msgstr ""
+
+#: ../../source/elements/trafo.rst:47
+msgid "*trafo_model='t':*"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:53
+msgid "*trafo_model='pi':*"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:61
+msgid "Transformer Ratio"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:63
+msgid "The magnitude of the transformer ratio is given as:"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:65
+msgid ""
+"\\begin{align*}\n"
+"n &= \\frac{V_{ref, HV, transformer}}{V_{ref, LV, transformer}} \\cdot "
+"\\frac{V_{ref, LV bus}}{V_{ref, HV bus}}\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:72
+msgid ""
+"The reference voltages of the high- and low voltage buses are taken from "
+"the net.bus table. The reference voltage of the transformer  is taken "
+"directly from the transformer table:"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:74
+msgid ""
+"\\begin{align*}\n"
+" V_{ref, HV, transformer} &= vn\\_hv\\_kv \\\\\n"
+" V_{ref, LV, transformer} &= vn\\_lv\\_kv\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:83
+msgid ""
+"If the power flow is run with voltage_angles=True, the complex ratio is "
+"given as:"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:85
+msgid ""
+"\\begin{align*}\n"
+"\\underline{n} &= n \\cdot e^{j \\cdot \\theta \\cdot \\frac{\\pi}{180}} "
+"\\\\\n"
+"\\theta &= shift\\_degree\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:93
+msgid "Otherwise, the ratio does not include a phase shift:"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:95
+msgid ""
+"\\begin{align*}\n"
+"\\underline{n} &= n\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:103
+msgid "Impedance Values"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:105
+msgid "The short-circuit impedance is calculated as:"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:107
+msgid ""
+"\\begin{align*}\n"
+"z_k &= \\frac{vk\\_percent}{100} \\cdot \\frac{1000}{sn\\_mva} \\\\\n"
+"r_k &= \\frac{vkr\\_percent}{100} \\cdot \\frac{1000}{sn\\_mva} \\\\\n"
+"x_k &= \\sqrt{z^2 - r^2} \\\\\n"
+"\\underline{z}_k &= r_k + j \\cdot x_k\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:117
+msgid "The magnetising admittance is calculated as:"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:119
+msgid ""
+"\\begin{align*}\n"
+"y_m &= \\frac{i0\\_percent}{100} \\\\\n"
+"g_m &= \\frac{pfe\\_mw}{sn\\_mva \\cdot 1000} \\cdot "
+"\\frac{1000}{sn\\_mva} \\\\\n"
+"b_m &= \\sqrt{y_m^2 - g_m^2} \\\\\n"
+"\\underline{y_m} &= g_m - j \\cdot b_m\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:129
+msgid ""
+"The values calculated in that way are relative to the rated values of the"
+" transformer. To transform them into the per unit system, they have to be"
+" converted to the rated values of the network:"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:131
+msgid ""
+"\\begin{align*}\n"
+" Z_{N} &= \\frac{V_{N}^2}{S_{N}} \\\\\n"
+" Z_{ref, trafo} &= \\frac{vn\\_lv\\_kv^2 \\cdot 1000}{sn\\_mva} \\\\\n"
+" \\underline{z} &= \\underline{z}_k \\cdot \\frac{Z_{ref, trafo}}{Z_{N}} "
+"\\\\\n"
+" \\underline{y} &= \\underline{y}_m \\cdot \\frac{Z_{N}}{Z_{ref, trafo}} "
+"\\\\\n"
+" \\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:141
+msgid ""
+"Where the reference voltage :math:`V_{N}` is the nominal voltage at the "
+"low voltage side of the transformer and the rated apparent power "
+":math:`S_{N}` is defined system wide in the net object (see :ref:`Unit "
+"Systems and Conventions<conventions>`)."
+msgstr ""
+
+#: ../../source/elements/trafo.rst:144
+msgid "Tap Changer"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:146
+msgid "**Longitudinal regulator**"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:148
+msgid ""
+"A longitudinal regulator can be modeled by setting tap_phase_shifter to "
+"False and defining the tap changer voltage step with tap_step_percent."
+msgstr ""
+
+#: ../../source/elements/trafo.rst:150
+msgid "The reference voltage is then multiplied with the tap factor:"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:152
+msgid ""
+"\\begin{align*}\n"
+" n_{tap} = 1 + (tap\\_pos - tap\\_neutral) \\cdot "
+"\\frac{tap\\_st\\_percent}{100}\n"
+" \\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:159
+msgid ""
+"On which side the reference voltage is adapted depends on the "
+":math:`tap\\_side` variable:"
+msgstr ""
+
+#: ../../source/elements/trafo_tap.csv:1
+msgid "**tap_side=\"hv\"**"
+msgstr ""
+
+#: ../../source/elements/trafo_tap.csv:1
+msgid "**tap_side=\"lv\"**"
+msgstr ""
+
+#: ../../source/elements/trafo_tap.csv:1
+msgid ":math:`V_{n, HV, transformer}`"
+msgstr ""
+
+#: ../../source/elements/trafo_tap.csv:1
+msgid ":math:`vnh\\_kv  \\cdot n_{tap}`"
+msgstr ""
+
+#: ../../source/elements/trafo_tap.csv:1
+msgid ":math:`vnh\\_kv`"
+msgstr ""
+
+#: ../../source/elements/trafo_tap.csv:1
+msgid ":math:`V_{n, LV, transformer}`"
+msgstr ""
+
+#: ../../source/elements/trafo_tap.csv:1
+msgid ":math:`vnl\\_kv`"
+msgstr ""
+
+#: ../../source/elements/trafo_tap.csv:1
+msgid ":math:`vnl\\_kv  \\cdot n_{tap}`"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:168
+msgid ""
+"The variables tap_min and tap_max are not considered in the power flow. "
+"The user is responsible to ensure that tap_min < tap_pos < tap_max!"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:170
+msgid "**Cross regulator**"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:172
+msgid ""
+"In addition to tap_step_percent a value for tap_step_degree can be "
+"defined to model an angle shift for each tap, resulting in a cross "
+"regulator that affects the magnitude as well as the angle of the "
+"transformer ratio."
+msgstr ""
+
+#: ../../source/elements/trafo.rst:176
+msgid "**Ideal phase shifter**"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:178
+msgid ""
+"If tap_phase_shifter is set to True, the tap changer is modeled as an "
+"ideal phase shifter, meaning that a constant angle shift is added with "
+"each tap step:"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:181
+msgid ""
+"\\begin{align*}\n"
+"\\underline{n} &= n \\cdot e^{j \\cdot (\\theta + \\theta_{tp}) \\cdot "
+"\\frac{\\pi}{180}} \\\\\n"
+"\\theta &= shift\\_degree\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:189
+msgid "The angle shift can be directly defined in tap_step_degree, in which case:"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:191
+msgid ""
+"\\begin{align*}\n"
+"\\theta_{tp} = tap\\_st\\_degree \\cdot (tap\\_pos - tap\\_neutral)\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:198
+msgid ""
+"or it can be given as a constant voltage step in tap_step_percent, in "
+"which case the angle is calculated as:"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:200
+msgid ""
+"\\begin{align*}\n"
+"\\theta_{tp} = 2 \\cdot arcsin(\\frac{1}{2} \\cdot "
+"\\frac{tap\\_st\\_percent}{100})  \\cdot (tap\\_pos - tap\\_neutral)\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:207
+msgid ""
+"If both values are given for an ideal phase shift transformer, the power "
+"flow will raise an error."
+msgstr ""
+
+#: ../../source/elements/trafo.rst:211
+msgid ""
+"`ENTSO-E - Phase Shift Transformers Modelling, Version 1.0.0, May 2015 "
+"<https://docstore.entsoe.eu/Documents/CIM_documents/Grid_Model_CIM/ENTSOE_CGMES_v2.4_28May2014_PSTmodelling.pdf>`_"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:213
+msgid ""
+"`J. Verboomen, D. Van Hertem, P. H. Schavemaker, W. L. Kling and R. "
+"Belmans, \"Phase shifting transformers: principles and applications,\" "
+"2005 International Conference on Future Power Systems, Amsterdam, 2005 "
+"<https://ieeexplore.ieee.org/document/1600575/>`_"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:219
+msgid "Result Parameters"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:220
+msgid "*net.res_trafo*"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "p_hv_mw"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "active power flow at the high voltage transformer bus [MW]"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "q_hv_mvar"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "reactive power flow at the high voltage transformer bus [MVar]"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "p_lv_mw"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "active power flow at the low voltage transformer bus [MW]"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "q_lv_mvar"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "reactive power flow at the low voltage transformer bus [MVar]"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "pl_mw"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "active power losses of the transformer [MW]"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "ql_mvar"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "reactive power consumption of the transformer [Mvar]"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "i_hv_ka"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "current at the high voltage side of the transformer [kA]"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "i_lv_ka"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "current at the low voltage side of the transformer [kA]"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "loading_percent"
+msgstr ""
+
+#: ../../source/elements/trafo_res.csv:1
+msgid "load utilization relative to rated power [%]"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:229
+msgid ""
+"\\begin{align*}\n"
+" p\\_hv\\_mw &= Re(\\underline{v}_{hv} \\cdot \\underline{i}^*_{hv}) \\\\"
+"\n"
+" q\\_hv\\_mvar &= Im(\\underline{v}_{hv} \\cdot \\underline{i}^*_{hv}) "
+"\\\\\n"
+" p\\_lv\\_mw &= Re(\\underline{v}_{lv} \\cdot \\underline{i}^*_{lv}) \\\\"
+"\n"
+" q\\_lv\\_mvar &= Im(\\underline{v}_{lv} \\cdot \\underline{i}^*_{lv}) "
+"\\\\\n"
+"     pl\\_mw &= p\\_hv\\_mw + p\\_lv\\_mw \\\\\n"
+"     ql\\_mvar &= q\\_hv\\_mvar + q\\_lv\\_mvar \\\\\n"
+" i\\_hv\\_ka &= i_{hv} \\\\\n"
+" i\\_lv\\_ka &= i_{lv}\n"
+" \\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:243
+msgid ""
+"The definition of the transformer loading depends on the trafo_loading "
+"parameter of the power flow."
+msgstr ""
+
+#: ../../source/elements/trafo.rst:245
+msgid "For trafo_loading=\"current\", the loading is calculated as:"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:247
+msgid ""
+"\\begin{align*}\n"
+" loading\\_percent &= max(\\frac{i_{hv} \\cdot vn\\_hv\\_kv}{sn\\_mva}, "
+"\\frac{i_{lv} \\cdot vn\\_lv\\_kv}{sn\\_mva})  \\cdot 100\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:255
+msgid "For trafo_loading=\"power\", the loading is defined as:"
+msgstr ""
+
+#: ../../source/elements/trafo.rst:257
+msgid ""
+"\\begin{align*}\n"
+" loading\\_percent &= max( \\frac{i_{hv} \\cdot v_{hv}}{sn\\_mva}, "
+"\\frac{i_{lv} \\cdot v_{lv}}{sn\\_mva}) \\cdot 100\n"
+" \\end{align*}"
+msgstr ""
+

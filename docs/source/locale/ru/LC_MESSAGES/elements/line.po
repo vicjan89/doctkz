@@ -1,0 +1,642 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/elements/line.rst:3
+msgid "Line"
+msgstr ""
+
+#: ../../source/elements/line.rst:12
+msgid ""
+":ref:`Unit Systems and Conventions <conventions>` |br| :ref:`Standard "
+"Type Libraries <std_types>`"
+msgstr ""
+
+#: ../../source/elements/line.rst:16
+msgid "Create Function"
+msgstr ""
+
+#: ../../source/elements/line.rst:20
+msgid ""
+"Lines can be either created from the standard type library (create_line) "
+"or with custom values (create_line_from_parameters)."
+msgstr ""
+
+#: of pandapower.create.create_line:2
+msgid ""
+"Creates a line element in net[\"line\"] The line parameters are defined "
+"through the standard type library."
+msgstr ""
+
+#: of pandapower.create.create_line:20
+#: pandapower.create.create_line_from_parameters:25
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.create.create_line:6
+#: pandapower.create.create_line_from_parameters:5
+msgid "**net** - The net within this line should be created"
+msgstr ""
+
+#: of pandapower.create.create_line:8
+#: pandapower.create.create_line_from_parameters:7
+msgid ""
+"**from_bus** (int) - ID of the bus on one side which the line will be "
+"connected with"
+msgstr ""
+
+#: of pandapower.create.create_line:10
+#: pandapower.create.create_line_from_parameters:9
+msgid ""
+"**to_bus** (int) - ID of the bus on the other side which the line will be"
+" connected with"
+msgstr ""
+
+#: of pandapower.create.create_line:12
+#: pandapower.create.create_line_from_parameters:11
+msgid "**length_km** (float) - The line length in km"
+msgstr ""
+
+#: of pandapower.create.create_line:14
+msgid "**std_type** (string) - Name of a standard linetype :"
+msgstr ""
+
+#: of pandapower.create.create_line:16
+msgid "Pre-defined in standard_linetypes"
+msgstr ""
+
+#: of pandapower.create.create_line:18
+msgid "**or**"
+msgstr ""
+
+#: of pandapower.create.create_line:20
+msgid "Customized std_type made using **create_std_type()**"
+msgstr ""
+
+#: of pandapower.create.create_line:39
+#: pandapower.create.create_line_from_parameters:50
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.create.create_line:23
+#: pandapower.create.create_line_from_parameters:28
+msgid "**name** (string, None) - A custom name for this line"
+msgstr ""
+
+#: of pandapower.create.create_line:25
+#: pandapower.create.create_line_from_parameters:30
+msgid ""
+"**index** (int, None) - Force a specified ID if it is available. If None,"
+" the index one             higher than the highest already existing index"
+" is selected."
+msgstr ""
+
+#: of pandapower.create.create_line:27
+#: pandapower.create.create_line_from_parameters:44
+msgid ""
+"**geodata** (array, default None, shape= (,2L)) - The linegeodata of the "
+"line. The first row should be the coordinates of bus a and the last "
+"should be the coordinates of bus b. The points in the middle represent "
+"the bending points of the line"
+msgstr ""
+
+#: of pandapower.create.create_line:33
+#: pandapower.create.create_line_from_parameters:32
+msgid ""
+"**in_service** (boolean, True) - True for in_service or False for out of "
+"service"
+msgstr ""
+
+#: of pandapower.create.create_line:35
+#: pandapower.create.create_line_from_parameters:36
+msgid ""
+"**df** (float, 1) - derating factor: maximal current of line in relation "
+"to nominal current             of line (from 0 to 1)"
+msgstr ""
+
+#: of pandapower.create.create_line:37
+#: pandapower.create.create_line_from_parameters:42
+msgid "**parallel** (integer, 1) - number of parallel line systems"
+msgstr ""
+
+#: of pandapower.create.create_line:39
+#: pandapower.create.create_line_from_parameters:50
+msgid ""
+"**max_loading_percent (float)** - maximum current loading (only needed "
+"for OPF)"
+msgstr ""
+
+#: of pandapower.create.create_line:42
+#: pandapower.create.create_line_from_parameters:53
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.create.create_line:42
+#: pandapower.create.create_line_from_parameters:53
+msgid "**index** (int) - The unique ID of the created line"
+msgstr ""
+
+#: of pandapower.create.create_line:59
+#: pandapower.create.create_line_from_parameters:72
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.create.create_line:45
+msgid ""
+"create_line(net, \"line1\", from_bus = 0, to_bus = 1, length_km=0.1,  "
+"std_type=\"NAYY 4x50 SE\")"
+msgstr ""
+
+#: of pandapower.create.create_line_from_parameters:2
+msgid "Creates a line element in net[\"line\"] from line parameters."
+msgstr ""
+
+#: of pandapower.create.create_line_from_parameters:13
+msgid "**r_ohm_per_km** (float) - line resistance in ohm per km"
+msgstr ""
+
+#: of pandapower.create.create_line_from_parameters:15
+msgid "**x_ohm_per_km** (float) - line reactance in ohm per km"
+msgstr ""
+
+#: of pandapower.create.create_line_from_parameters:17
+msgid "**c_nf_per_km** (float) - line capacitance in nano Farad per km"
+msgstr ""
+
+#: of pandapower.create.create_line_from_parameters:19
+msgid "**r0_ohm_per_km** (float) - zero sequence line resistance in ohm per km"
+msgstr ""
+
+#: of pandapower.create.create_line_from_parameters:21
+msgid "**x0_ohm_per_km** (float) - zero sequence line reactance in ohm per km"
+msgstr ""
+
+#: of pandapower.create.create_line_from_parameters:23
+msgid ""
+"**c0_nf_per_km** (float) - zero sequence line capacitance in nano Farad "
+"per km"
+msgstr ""
+
+#: of pandapower.create.create_line_from_parameters:25
+msgid "**max_i_ka** (float) - maximum thermal current in kilo Ampere"
+msgstr ""
+
+#: of pandapower.create.create_line_from_parameters:34
+msgid ""
+"**type** (str, None) - type of line (\"ol\" for overhead line or \"cs\" "
+"for cable system)"
+msgstr ""
+
+#: of pandapower.create.create_line_from_parameters:38
+msgid ""
+"**g_us_per_km** (float, 0) - dielectric conductance in micro Siemens per "
+"km"
+msgstr ""
+
+#: of pandapower.create.create_line_from_parameters:40
+msgid ""
+"**g0_us_per_km** (float, 0) - zero sequence dielectric conductance in "
+"micro Siemens per km"
+msgstr ""
+
+#: of pandapower.create.create_line_from_parameters:56
+msgid ""
+"create_line_from_parameters(net, \"line1\", from_bus = 0, to_bus = 1, "
+"lenght_km=0.1, r_ohm_per_km = .01, x_ohm_per_km = 0.05, c_nf_per_km = 10,"
+" max_i_ka = 0.4)"
+msgstr ""
+
+#: ../../source/elements/line.rst:27
+msgid "Input Parameters"
+msgstr ""
+
+#: ../../source/elements/line.rst:29
+msgid "*net.line*"
+msgstr ""
+
+#: ../../source/elements/line_geo.csv:1 ../../source/elements/line_par.csv:1
+#: ../../source/elements/line_res.csv:1
+msgid "**Parameter**"
+msgstr ""
+
+#: ../../source/elements/line_geo.csv:1 ../../source/elements/line_par.csv:1
+#: ../../source/elements/line_res.csv:1
+msgid "**Datatype**"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "**Value Range**"
+msgstr ""
+
+#: ../../source/elements/line_geo.csv:1 ../../source/elements/line_par.csv:1
+#: ../../source/elements/line_res.csv:1
+msgid "**Explanation**"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "name"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "string"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "name of the line"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "std_type"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid ""
+"standard type which can be used to easily define line parameters with the"
+" pandapower standard type library"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "from_bus*"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "integer"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "Index of bus where the line starts"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "to_bus*"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "Index of bus where the line ends"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "length_km*"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1 ../../source/elements/line_res.csv:1
+msgid "float"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid ":math:`>` 0"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "length of the line [km]"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "r_ohm_per_km*"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid ":math:`\\geq` 0"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "resistance of the line [Ohm per km]"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "x_ohm_per_km*"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "inductance of the line [Ohm per km]"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "c_nf_per_km*"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "capacitance of the line [nano Farad per km]"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "g_us_per_km*"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "dielectric conductance of the line [micro Siemens per km]"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "max_i_ka*"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "maximal thermal current [kilo Ampere]"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "parallel*"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid ":math:`\\geq` 1"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "number of parallel line systems"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "df*"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "0...1"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "derating factor (scaling) for max_i_ka"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "type"
+msgstr ""
+
+#: ../../source/elements/line_par.csv
+msgid "Naming conventions:"
+msgstr ""
+
+#: ../../source/elements/line_par.csv
+msgid "*\"ol\"* - overhead line"
+msgstr ""
+
+#: ../../source/elements/line_par.csv
+msgid "*\"cs\"* - underground cable system"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "type of line"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "max_loading_percent**"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "Maximum loading of the line"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "endtemp_degree***"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "Short-Circuit end temperature of the line"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "in_service*"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "boolean"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "True / False"
+msgstr ""
+
+#: ../../source/elements/line_par.csv:1
+msgid "specifies if the line is in service."
+msgstr ""
+
+#: ../../source/elements/line.rst:37
+msgid ""
+"\\*necessary for executing a power flow calculation |br| \\*\\*optimal "
+"power flow parameter |br| \\*\\*\\*short-circuit calculation parameter"
+msgstr ""
+
+#: ../../source/elements/line.rst:41
+msgid ""
+"Defining a line with length zero leads to a division by zero in the power"
+" flow and is therefore not allowed. Lines with a very low impedance might"
+" lead to convergence problems in the power flow for the same reason. If "
+"you want to directly connect two buses, please use the switch element "
+"instead of a line with a small impedance!"
+msgstr ""
+
+#: ../../source/elements/line.rst:44
+msgid "*net.line_geodata*"
+msgstr ""
+
+#: ../../source/elements/line_geo.csv:1
+msgid "coords"
+msgstr ""
+
+#: ../../source/elements/line_geo.csv:1
+msgid "list"
+msgstr ""
+
+#: ../../source/elements/line_geo.csv:1
+msgid "List of (x,y) tuples that mark the inflexion points of the line"
+msgstr ""
+
+#: ../../source/elements/line.rst:54
+msgid "Electric Model"
+msgstr ""
+
+#: ../../source/elements/line.rst:56
+msgid "Lines are modelled with the :math:`\\pi`-equivalent circuit:"
+msgstr ""
+
+#: ../../source/elements/line.rst:65
+msgid ""
+"The elements in the equivalent circuit are calculated from the parameters"
+" in the net.line dataframe as:"
+msgstr ""
+
+#: ../../source/elements/line.rst:67
+msgid ""
+"\\begin{align*}\n"
+" \\underline{Z} &= (r\\_ohm\\_per\\_km + j \\cdot x\\_ohm\\_per\\_km) "
+"\\cdot \\frac{length\\_km}{parallel}  \\\\\n"
+" \\underline{Y}&= (g\\_us\\_per\\_km \\cdot 1 \\cdot 10^-6 + j \\cdot 2 "
+"\\pi f \\cdot c\\_nf\\_per\\_km \\cdot 1 \\cdot 10^-9) \\cdot length\\_km"
+" \\cdot parallel\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/line.rst:75
+msgid ""
+"The power system frequency :math:`f` is defined when creating an empty "
+"network, the default value is :math:`f = 50 Hz`."
+msgstr ""
+
+#: ../../source/elements/line.rst:77
+msgid "The parameters are then transformed in the per unit system:"
+msgstr ""
+
+#: ../../source/elements/line.rst:79
+msgid ""
+"\\begin{align*}\n"
+" Z_{N} &= \\frac{V_{N}^2}{S_{N}} \\\\\n"
+" \\underline{z} &= \\frac{\\underline{Z}}{Z_{N}} \\\\\n"
+" \\underline{y} &= \\underline{Y} \\cdot Z_{N} \\\\\n"
+" \\end{align*}"
+msgstr ""
+
+#: ../../source/elements/line.rst:88
+msgid ""
+"Where the reference voltage :math:`V_{N}` is the nominal voltage at the "
+"from bus and the rated apparent power :math:`S_{N}` is defined system "
+"wide in the net object (see :ref:`Unit Systems and "
+"Conventions<conventions>`)."
+msgstr ""
+
+#: ../../source/elements/line.rst:91
+msgid ""
+"pandapower assumes that nominal voltage of from bus and to bus are equal,"
+" which means pandapower does not support lines that connect different "
+"voltage levels. If you want to connect different voltage levels, either "
+"use a transformer or an impedance element."
+msgstr ""
+
+#: ../../source/elements/line.rst:95
+msgid "Result Parameters"
+msgstr ""
+
+#: ../../source/elements/line.rst:97
+msgid "*net.res_line*"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "p_from_mw"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "active power flow into the line at \"from\" bus [MW]"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "q_from_mvar"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "reactive power flow into the line at \"from\" bus [MVar]"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "p_to_mw"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "active power flow into the line at \"to\" bus [MW]"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "q_to_mvar"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "reactive power flow into the line at \"to\" bus [MVar]"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "pl_mw"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "active power losses of the line [MW]"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "ql_mvar"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "reactive power consumption of the line [MVar]"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "i_from_ka"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "Current at to bus [kA]"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "i_to_ka"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "Current at from bus [kA]"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "i_ka"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "Maximum of i_from_ka and i_to_ka [kA]"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "loading_percent"
+msgstr ""
+
+#: ../../source/elements/line_res.csv:1
+msgid "line loading [%]"
+msgstr ""
+
+#: ../../source/elements/line.rst:105
+msgid "The power flow results in the net.res_line table are defined as:"
+msgstr ""
+
+#: ../../source/elements/line.rst:107
+msgid ""
+"\\begin{align*}\n"
+" p\\_from\\_mw &= Re(\\underline{v}_{from} \\cdot "
+"\\underline{i}^*_{from}) \\\\\n"
+" q\\_from\\_mvar &= Im(\\underline{v}_{from} \\cdot "
+"\\underline{i}^*_{from}) \\\\\n"
+" p\\_to\\_mw &= Re(\\underline{v}_{to} \\cdot \\underline{i}^*_{to}) \\\\"
+"\n"
+" q\\_to\\_mvar &= Im(\\underline{v}_{to} \\cdot \\underline{i}^*_{to}) "
+"\\\\\n"
+"     pl\\_mw &= p\\_from\\_mw + p\\_to\\_mw \\\\\n"
+"     ql\\_mvar &= q\\_from\\_mvar + q\\_to\\_mvar \\\\\n"
+" i\\_from\\_ka &= i_{from} \\\\\n"
+" i\\_to\\_ka &= i_{to} \\\\\n"
+" i\\_ka &= max(i_{from}, i_{to}) \\\\\n"
+" loading\\_percent &= \\frac{i\\_ka}{imax\\_ka \\cdot df \\cdot parallel}"
+" \\cdot 100\n"
+" \\end{align*}"
+msgstr ""
+
+#: ../../source/elements/line.rst:124
+msgid "*net.res_line_est*"
+msgstr ""
+
+#: ../../source/elements/line.rst:126
+msgid ""
+"The state estimation results are put into *net.res_line_est* with the "
+"same definition as in *net.res_line*."
+msgstr ""
+

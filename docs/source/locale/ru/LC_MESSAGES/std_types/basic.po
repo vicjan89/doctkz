@@ -1,0 +1,1369 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/std_types/basic.rst:3
+msgid "Basic Standard Types"
+msgstr ""
+
+#: ../../source/std_types/basic.rst:5
+msgid "Every pandapower network comes with a default set of standard types."
+msgstr ""
+
+#: ../../source/std_types/basic.rst:8
+msgid ""
+"The pandapower standard types are compatible with 50 Hz systems, please "
+"be aware that the standard type values might not be realistic for 60 Hz "
+"(or other) power systems."
+msgstr ""
+
+#: ../../source/std_types/basic.rst:11
+msgid "Lines"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "r_ohm_per_km"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "x_ohm_per_km"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "c_nf_per_km"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "max_i_ka"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "type"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "q_mm2"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "alpha"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NAYY 4x50 SE"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.642"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.083"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "210.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.142"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "cs"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "50"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.00403"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NAYY 4x120 SE"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.225"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.08"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "264.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.242"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "120"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NAYY 4x150 SE"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.208"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "261.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.27"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "150"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NA2XS2Y 1x95 RM/25 12/20 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.313"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.132"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "216.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.252"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "95"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NA2XS2Y 1x185 RM/25 12/20 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.161"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.117"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "273.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.362"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "185"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NA2XS2Y 1x240 RM/25 12/20 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.122"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.112"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "304.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.421"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "240"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NA2XS2Y 1x95 RM/25 6/10 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.123"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "315.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.249"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NA2XS2Y 1x185 RM/25 6/10 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.11"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "406.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.358"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NA2XS2Y 1x240 RM/25 6/10 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.105"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "456.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.416"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NA2XS2Y 1x150 RM/25 12/20 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.206"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.116"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "250.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.319"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NA2XS2Y 1x120 RM/25 12/20 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.253"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.119"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "230.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.283"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NA2XS2Y 1x70 RM/25 12/20 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.443"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "190.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.22"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "70"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NA2XS2Y 1x150 RM/25 6/10 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "360.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.315"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NA2XS2Y 1x120 RM/25 6/10 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.113"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "340.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "0.28"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "NA2XS2Y 1x70 RM/25 6/10 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "280.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.217"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "N2XS(FL)2Y 1x120 RM/35 64/110 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.153"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.166"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "112.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.366"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.00393"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "N2XS(FL)2Y 1x185 RM/35 64/110 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.099"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.156"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "125.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.457"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "N2XS(FL)2Y 1x240 RM/35 64/110 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.075"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.149"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "135.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.526"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "N2XS(FL)2Y 1x300 RM/35 64/110 kV"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.06"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.144"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "144.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.588"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "300"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "15-AL1/3-ST1A 0.4"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "1.8769"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "0.35"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "11.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "ol"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "16"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "24-AL1/4-ST1A 0.4"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "1.2012"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.335"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "11.25"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.14"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "24"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "48-AL1/8-ST1A 0.4"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.5939"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.3"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "12.2"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.21"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "48"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "94-AL1/15-ST1A 0.4"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.306"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.29"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "13.2"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "94"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "34-AL1/6-ST1A 10.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.8342"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.36"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "9.7"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.17"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "34"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "48-AL1/8-ST1A 10.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "10.1"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "70-AL1/11-ST1A 10.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.4132"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.339"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "10.4"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "94-AL1/15-ST1A 10.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.33"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "10.75"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "122-AL1/20-ST1A 10.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.2376"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.323"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "11.1"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.41"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "122"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "149-AL1/24-ST1A 10.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.194"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.47"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "149"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "34-AL1/6-ST1A 20.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.382"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "9.15"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "48-AL1/8-ST1A 20.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.372"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "9.5"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "70-AL1/11-ST1A 20.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "94-AL1/15-ST1A 20.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "10.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "122-AL1/20-ST1A 20.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.344"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "10.3"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "149-AL1/24-ST1A 20.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.337"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "10.5"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "184-AL1/30-ST1A 20.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.1571"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.535"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "184"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "243-AL1/39-ST1A 20.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.1188"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+#: ../../source/std_types/trafo3wtypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.32"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.645"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "243"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "48-AL1/8-ST1A 110.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.46"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "8.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "70-AL1/11-ST1A 110.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.45"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "8.4"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "94-AL1/15-ST1A 110.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.44"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "8.65"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "122-AL1/20-ST1A 110.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.43"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "8.5"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "149-AL1/24-ST1A 110.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "8.75"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "184-AL1/30-ST1A 110.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.4"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "8.8"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "243-AL1/39-ST1A 110.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.39"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "9.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "305-AL1/39-ST1A 110.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.0949"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.38"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "9.2"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.74"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "305"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "490-AL1/64-ST1A 110.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.059"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.37"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "9.75"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.96"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "490"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "679-AL1/86-ST1A 110.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.042"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "9.95"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "1.15"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "679"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "490-AL1/64-ST1A 220.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.285"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "679-AL1/86-ST1A 220.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "0.275"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "11.7"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "490-AL1/64-ST1A 380.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "679-AL1/86-ST1A 380.0"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.25"
+msgstr ""
+
+#: ../../source/std_types/linetypes.csv:1
+msgid "14.6"
+msgstr ""
+
+#: ../../source/std_types/basic.rst:20
+msgid ""
+"To add the optional column \"alpha\" to net.line that is used if power "
+"flow is calculated for a different line temperature than 20 °C, use the "
+"function pp.add_temperature_coefficient()"
+msgstr ""
+
+#: ../../source/std_types/basic.rst:23
+msgid "Transformers"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "sn_mva"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "vn_hv_kv"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "vn_lv_kv"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "vk_percent"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "vkr_percent"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "pfe_kw"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "i0_percent"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "shift_degree"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "tap_side"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "tap_neutral"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "tap_min"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "tap_max"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "tap_step_percent"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "tap_step_degree"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "tap_phase_shifter"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "160 MVA 380/110 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "160.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "380.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "110.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "60.0"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "hv"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "-9"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "9"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "1.5"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "False"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "100 MVA 220/110 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "100.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "220.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "12.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.26"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "55.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "63 MVA 110/20 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "63.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "20.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "18.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "22.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.04"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "40 MVA 110/20 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "40.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "16.2"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.34"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.05"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "25 MVA 110/20 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "25.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "14.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.07"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "63 MVA 110/10 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "40 MVA 110/10 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "25 MVA 110/10 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.25 MVA 20/0.4 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "6.0"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "1.44"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.8"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "-2"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "2"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "2.5"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.4 MVA 20/0.4 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "1.425"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "1.35"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.3375"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.63 MVA 20/0.4 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.63"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "1.206"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "1.65"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.2619"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.25 MVA 10/0.4 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "4.0"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+#: ../../source/std_types/trafotypes.csv:1
+msgid "1.2"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.6"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.24"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.4 MVA 10/0.4 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "1.325"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.95"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.2375"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.63 MVA 10/0.4 kV"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "1.0794"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "1.18"
+msgstr ""
+
+#: ../../source/std_types/trafotypes.csv:1
+msgid "0.1873"
+msgstr ""
+
+#: ../../source/std_types/basic.rst:32
+msgid "Three Winding Transformers"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "sn_hv_mva"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "sn_mv_mva"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "sn_lv_mva"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "vn_mv_kv"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "vk_hv_percent"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "vk_mv_percent"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "vk_lv_percent"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "vkr_hv_percent"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "vkr_mv_percent"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "vkr_lv_percent"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "shift_mv_degree"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "shift_lv_degree"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "63/25/38 MVA 110/20/10 kV"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "63"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "25"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "38"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "110"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "20"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "10"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "35"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "0.89"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "-10"
+msgstr ""
+
+#: ../../source/std_types/trafo3wtypes.csv:1
+msgid "63/25/38 MVA 110/10/10 kV"
+msgstr ""
+

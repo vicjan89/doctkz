@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/plotting/matplotlib/draw.rst:3
+msgid "Draw Collections"
+msgstr ""
+
+#: of pandapower.plotting.collections.draw_collections:2
+msgid ""
+"Draws matplotlib collections which can be created with the create "
+"collection functions."
+msgstr ""
+
+#: of pandapower.plotting.collections.draw_collections:5
+msgid "Input:"
+msgstr ""
+
+#: of pandapower.plotting.collections.draw_collections:5
+msgid ""
+"**collections** (list) - iterable of collection objects, may include "
+"tuples of collections"
+msgstr ""
+
+#: of pandapower.plotting.collections.draw_collections:17
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.plotting.collections.draw_collections:8
+msgid "**figsize** (tuple, (10,8)) - figsize of the matplotlib figure"
+msgstr ""
+
+#: of pandapower.plotting.collections.draw_collections:10
+msgid ""
+"**ax** (axis, None) - matplotlib axis object to plot into, new axis is "
+"created if None"
+msgstr ""
+
+#: of pandapower.plotting.collections.draw_collections:12
+msgid ""
+"**plot_colorbars** (bool, True) - defines whether colorbars should be "
+"plotted"
+msgstr ""
+
+#: of pandapower.plotting.collections.draw_collections:14
+msgid ""
+"**set_aspect** (bool, True) - defines whether 'equal' and 'datalim' "
+"aspects of axis scaling should be set."
+msgstr ""
+
+#: of pandapower.plotting.collections.draw_collections:17
+msgid ""
+"**axes_visible** (tuple, (False, False)) - defines visibility of (xaxis, "
+"yaxis)"
+msgstr ""
+
+#: of pandapower.plotting.collections.draw_collections:34
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.plotting.collections.draw_collections:20
+msgid "**ax** - matplotlib axes"
+msgstr ""
+
+#: ../../source/plotting/matplotlib/draw.rst:8
+msgid ""
+"Example plot with mv_oberrhein network from the pandapower.networks "
+"package:"
+msgstr ""
+

@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/networks/mv_oberrhein.rst:3
+msgid "MV Oberrhein"
+msgstr ""
+
+#: ../../source/networks/mv_oberrhein.rst:7
+msgid ""
+"The MV Oberrhein network is a generic network assembled from openly "
+"available data supplemented with parameters based on experience."
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:2
+msgid ""
+"Loads the Oberrhein network, a generic 20 kV network serviced by two 25 "
+"MVA HV/MV transformer stations. The network supplies 141 MV/LV "
+"substations and 6 MV loads through four MV feeders. The network layout is"
+" meshed, but the network is operated as a radial network with 6 open "
+"sectioning points."
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:7
+msgid ""
+"The network can be loaded with two different worst case scenarios for "
+"load and generation, which are defined by scaling factors for loads / "
+"generators as well as tap positions of the HV/MV transformers. These "
+"worst case scenarios are a good starting point for working with this "
+"network, but you are of course free to parametrize the network for your "
+"use case."
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:12
+msgid ""
+"The network also includes geographical information of lines and buses for"
+" plotting."
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:29
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:15
+msgid ""
+"**scenario** - (str, \"load\"): defines the scaling for load and "
+"generation"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:17
+msgid "\"load\": high load scenario, load = 0.6 / sgen = 0, trafo taps [-2, -3]"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:18
+msgid ""
+"\"generation\": high feed-in scenario: load = 0.1, generation = 0.8, "
+"trafo taps [0, 0]"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:20
+msgid "**cosphi_load** - (str, 0.98): cosine(phi) of the loads"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:22
+msgid "**cosphi_sgen** - (str, 1.0): cosine(phi) of the static generators"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:24
+msgid ""
+"**include_substations** - (bool, False): if True, the transformers of the"
+" MV/LV level are modelled, otherwise the loads representing the LV "
+"networks are connected directly to the MV node"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:28
+msgid ""
+"**separation_by_sub** - (bool, False): if True, the network gets "
+"separated into two  sections, referring to both substations"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:34
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:32
+msgid "**net** - pandapower network"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:34
+msgid "**net0, net1** - both sections of the pandapower network"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:36
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:38
+msgid "``import pandapower.networks``"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:40
+msgid "``net = pandapower.networks.mv_oberrhein(\"generation\")``"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:42
+msgid "or with separation"
+msgstr ""
+
+#: of pandapower.networks.mv_oberrhein.mv_oberrhein:44
+msgid "``net0, net1 = pandapower.networks.mv_oberrhein(separation_by_sub=True)``"
+msgstr ""
+
+#: ../../source/networks/mv_oberrhein.rst:11
+msgid "The geographical representation of the network looks like this:"
+msgstr ""
+
+#: ../../source/networks/mv_oberrhein.rst:17
+msgid ""
+"The different colors of the MV/LV stations indicate the feeders which are"
+" galvanically seperated by open switches. If you are interested in how to"
+" make plots such as these, check out the pandapower tutorial on plotting."
+msgstr ""
+
+#: ../../source/networks/mv_oberrhein.rst:20
+msgid ""
+"The power flow results of the network in the different worst case "
+"scenarios look like this:"
+msgstr ""
+
+#: ../../source/networks/mv_oberrhein.rst:26
+#, python-format
+msgid ""
+"As you can see, the network is designed to comply with a voltage band of "
+"0.975 < u < 1.03 and line loading of <60 % in the high load case (for n-1"
+" security) and <100% in the low load case."
+msgstr ""
+

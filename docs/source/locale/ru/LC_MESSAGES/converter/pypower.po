@@ -1,0 +1,293 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/converter/pypower.rst:3
+msgid "PYPOWER"
+msgstr ""
+
+#: ../../source/converter/pypower.rst:7
+msgid ""
+"The following functions are provided to enable a network data exchange "
+"with PYPOWER."
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:2
+msgid "This function converts pypower case files to pandapower net structure."
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:4
+#: pandapower.converter.pypower.from_ppc.validate_from_ppc:4
+#: pandapower.converter.pypower.to_ppc.to_ppc:4
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:6
+msgid "**ppc** : The pypower case file."
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:8
+#: pandapower.converter.pypower.from_ppc.validate_from_ppc:11
+#: pandapower.converter.pypower.to_ppc.to_ppc:8
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:10
+msgid "**f_hz** (float, 50) - The frequency of the network."
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:14
+msgid ""
+"**validate_conversion** (bool, False) - If True, validate_from_ppc is run"
+" after conversion."
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:13
+msgid ""
+"For running the validation, the ppc must already contain the pypower "
+"powerflow results or pypower must be importable."
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:16
+msgid ""
+"****kwargs** keyword arguments for validate_from_ppc if "
+"validate_conversion is True"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:18
+#: pandapower.converter.pypower.from_ppc.validate_from_ppc:24
+#: pandapower.converter.pypower.to_ppc.to_ppc:40
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:20
+msgid "**net** : pandapower net."
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:22
+#: pandapower.converter.pypower.from_ppc.validate_from_ppc:30
+#: pandapower.converter.pypower.to_ppc.to_ppc:44
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:24
+#: pandapower.converter.pypower.from_ppc.validate_from_ppc:32
+#: pandapower.converter.pypower.to_ppc.to_ppc:46
+msgid "import pandapower.converter as pc"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:26
+msgid "from pypower import case4gs"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:28
+msgid "ppc_net = case4gs.case4gs()"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.from_ppc:30
+msgid "net = pc.from_ppc(ppc_net, f_hz=60)"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:2
+msgid ""
+"This function validates the pypower case files to pandapower net "
+"structure conversion via a     comparison of loadflow calculation "
+"results. (Hence the opf cost conversion is not validated.)"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:7
+msgid ""
+"**ppc_net** - The pypower case file, which must already contain the "
+"pypower powerflow"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:7
+msgid "results or pypower must be importable."
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:9
+msgid "**net** - The pandapower network."
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:14
+msgid ""
+"**pf_type** (\"runpp\", string) - Type of validated power flow. Possible "
+"are (\"runpp\","
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:14
+msgid "\"rundcpp\", \"runopp\", \"rundcopp\")"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:16
+msgid ""
+"**max_diff_values** - Dict of maximal allowed difference values. The keys"
+" must be 'vm_pu', 'va_degree', 'p_branch_mw', 'q_branch_mvar', 'p_gen_mw'"
+" and 'q_gen_mvar' and the values floats."
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:22
+msgid ""
+"**run** (True, bool or list of two bools) - changing the value to False "
+"avoids trying to run"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:21
+msgid ""
+"(optimal) loadflows. Giving a list of two bools addresses first pypower "
+"and second pandapower."
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:26
+msgid ""
+"**conversion_success** - conversion_success is returned as False if "
+"pypower or pandapower cannot calculate a powerflow or if the maximum "
+"difference values (max_diff_values ) cannot be hold."
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:34
+msgid "net = cv.from_ppc(ppc_net, f_hz=50)"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:36
+msgid "conversion_success = cv.validate_from_ppc(ppc_net, net)"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:38
+msgid "NOTE:"
+msgstr ""
+
+#: of pandapower.converter.pypower.from_ppc.validate_from_ppc:40
+msgid ""
+"The user has to take care that the loadflow results already are included "
+"in the provided         ppc_net or pypower is importable."
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:2
+msgid "This function converts a pandapower net to a pypower case file."
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:6
+msgid "**net** - The pandapower net."
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:10
+msgid ""
+"**calculate_voltage_angles** (bool, False) - consider voltage angles in "
+"loadflow calculation"
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:12
+msgid ""
+"If True, voltage angles of ext_grids and transformer shifts are "
+"considered in the loadflow calculation. Considering the voltage angles is"
+" only necessary in meshed networks that are usually found in higher "
+"networks."
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:16
+msgid ""
+"**trafo_model** (str, \"t\") - transformer equivalent circuit model "
+"pandapower provides two equivalent circuit models for the transformer:"
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:19
+msgid "\"t\" - transformer is modeled as equivalent with the T-model."
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:20
+msgid ""
+"\"pi\" - transformer is modeled as equivalent PI-model. This is not "
+"recommended, since             it is less exact than the T-model. It is "
+"only recommended for validation with other             software that uses"
+" the pi-model."
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:22
+msgid ""
+"**switch_rx_ratio** (float, 2) - rx_ratio of bus-bus-switches. If "
+"impedance is zero,         buses connected by a closed bus-bus switch are"
+" fused to model an ideal bus.         Otherwise, they are modelled as "
+"branches with resistance defined as z_ohm column in         switch table "
+"and this parameter"
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:24
+msgid ""
+"**check_connectivity** (bool, True) - Perform an extra connectivity test "
+"after the conversion from pandapower to PYPOWER"
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:27
+msgid ""
+"If True, an extra connectivity test based on SciPy Compressed Sparse "
+"Graph Routines is perfomed. If check finds unsupplied buses, they are set"
+" out of service in the ppc"
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:30
+msgid ""
+"**voltage_depend_loads** (bool, True) - consideration of voltage-"
+"dependent loads.         If False, net.load.const_z_percent and "
+"net.load.const_i_percent are not considered, i.e.         net.load.p_mw "
+"and net.load.q_mvar are considered as constant-power loads."
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:32
+msgid ""
+"**init** (str, \"results\") - initialization method of the converter "
+"pandapower ppc converter supports two methods for initializing the "
+"converter:"
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:35
+msgid ""
+"\"flat\"- flat start with voltage of 1.0pu and angle of 0° at all PQ-"
+"buses and 0° for             PV buses as initial solution"
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:36
+msgid "\"results\" - voltage vector from net.res_bus is used as initial solution."
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:38
+msgid ""
+"**mode** (str, None) - mode of power flow calculation type (\"pf\" - "
+"power flow, \"opf\" -         optimal power flow or \"sc\" - short "
+"circuit). \"mode\" influences for instance whether opf         cost data "
+"will be converted or which slack bus voltage limits are respected. If "
+"\"mode\"         is None, cost data will be respected via mode=\"opf\" if"
+" cost data are existing."
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:42
+msgid "**ppc** - The Pypower casefile for usage with pypower"
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:48
+msgid "import pandapower.networks as pn"
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:50
+msgid "net = pn.case9()"
+msgstr ""
+
+#: of pandapower.converter.pypower.to_ppc.to_ppc:52
+msgid "ppc = pc.to_ppc(net)"
+msgstr ""
+

@@ -1,0 +1,287 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/topology/searches.rst:3
+msgid "Topological Searches"
+msgstr ""
+
+#: ../../source/topology/searches.rst:5
+msgid ""
+"Once you converted your network into a MultiGraph there are several "
+"functions to perform topological searches and analyses at your disposal. "
+"You can either use the general-purpose functions that come with NetworkX "
+"(see "
+"http:/networkx.github.io/documentation/networkx-1.10/reference/algorithms.html)"
+" or topology's own ones which are specialized on electrical networks."
+msgstr ""
+
+#: ../../source/topology/searches.rst:11
+msgid "calc_distance_to_bus"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:2
+msgid ""
+"Calculates the shortest distance between a source bus and all buses "
+"connected to it."
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:7
+#: pandapower.topology.graph_searches.connected_component:7
+#: pandapower.topology.graph_searches.connected_components:5
+#: pandapower.topology.graph_searches.determine_stubs:6
+#: pandapower.topology.graph_searches.unsupplied_buses:5
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:5
+#: pandapower.topology.graph_searches.determine_stubs:6
+msgid "**net** (pandapowerNet) - Variable that contains a pandapower network."
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:7
+msgid "**bus** (integer) - Index of the source bus."
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:18
+#: pandapower.topology.graph_searches.connected_component:11
+#: pandapower.topology.graph_searches.determine_stubs:10
+#: pandapower.topology.graph_searches.unsupplied_buses:17
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:12
+msgid ""
+"**respect_switches** (boolean, True) - True: open line switches are being"
+" considered"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:11
+msgid "(no edge between nodes)"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:12
+msgid "False: open line switches are being ignored"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:14
+msgid "**nogobuses** (integer/list, None) - nogobuses are not being considered"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:16
+msgid ""
+"**notravbuses** (integer/list, None) - lines connected to these buses are"
+" not being"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:17
+msgid "considered"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:18
+msgid "**weight** (string, None) – Edge data key corresponding to the edge weight"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:22
+#: pandapower.topology.graph_searches.connected_component:14
+#: pandapower.topology.graph_searches.connected_components:13
+#: pandapower.topology.graph_searches.unsupplied_buses:20
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:22
+msgid ""
+"**dist** - Returns a pandas series with containing all distances to the "
+"source bus"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:22
+msgid "in km. If weight=None dist is the topological distance (int)."
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:41
+#: pandapower.topology.graph_searches.connected_component:35
+#: pandapower.topology.graph_searches.connected_components:34
+#: pandapower.topology.graph_searches.determine_stubs:29
+#: pandapower.topology.graph_searches.unsupplied_buses:39
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:25
+#: pandapower.topology.graph_searches.connected_component:17
+#: pandapower.topology.graph_searches.connected_components:16
+#: pandapower.topology.graph_searches.determine_stubs:13
+#: pandapower.topology.graph_searches.unsupplied_buses:23
+msgid "import pandapower.topology as top"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.calc_distance_to_bus:27
+msgid "dist = top.calc_distance_to_bus(net, 5)"
+msgstr ""
+
+#: ../../source/topology/searches.rst:16
+msgid "connected_component"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.connected_component:2
+msgid "Finds all buses in a NetworkX graph that are connected to a certain bus."
+msgstr ""
+
+#: of pandapower.topology.graph_searches.connected_component:5
+#: pandapower.topology.graph_searches.connected_components:5
+#: pandapower.topology.graph_searches.unsupplied_buses:8
+msgid ""
+"**mg** (NetworkX graph) - NetworkX Graph or MultiGraph that represents a "
+"pandapower network."
+msgstr ""
+
+#: of pandapower.topology.graph_searches.connected_component:7
+msgid ""
+"**bus** (integer) - Index of the bus at which the search for connected "
+"components originates"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.connected_component:11
+msgid ""
+"**notravbuses** (list/set) - indices of notravbuses: lines connected to "
+"these buses are"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.connected_component:11
+#: pandapower.topology.graph_searches.connected_components:9
+msgid "not being considered in the graph"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.connected_component:14
+msgid ""
+"**cc** (generator) - Returns a generator that yields all buses connected "
+"to the input bus"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.connected_component:19
+#: pandapower.topology.graph_searches.connected_components:18
+msgid "mg = top.create_nx_graph(net)"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.connected_component:21
+msgid "cc = top.connected_component(mg, 5)"
+msgstr ""
+
+#: ../../source/topology/searches.rst:21
+msgid "connected_components"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.connected_components:2
+msgid "Clusters all buses in a NetworkX graph that are connected to each other."
+msgstr ""
+
+#: of pandapower.topology.graph_searches.connected_components:7
+msgid ""
+"OPTIONAL: **notravbuses** (set) - Indices of notravbuses: lines connected"
+" to these buses are"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.connected_components:13
+msgid ""
+"**cc** (generator) - Returns a generator that yields all clusters of "
+"buses connected"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.connected_components:13
+msgid "to each other."
+msgstr ""
+
+#: of pandapower.topology.graph_searches.connected_components:20
+msgid "cc = top.connected_components(net, 5)"
+msgstr ""
+
+#: ../../source/topology/searches.rst:27
+msgid "unsupplied_buses"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.unsupplied_buses:2
+msgid "Finds buses, that are not connected to an external grid."
+msgstr ""
+
+#: of pandapower.topology.graph_searches.unsupplied_buses:5
+msgid "**net** (pandapowerNet) - variable that contains a pandapower network"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.unsupplied_buses:11
+msgid ""
+"**in_service_only** (boolean, False) - Defines whether only in service "
+"buses should be"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.unsupplied_buses:11
+msgid "included in unsupplied_buses."
+msgstr ""
+
+#: of pandapower.topology.graph_searches.unsupplied_buses:14
+msgid ""
+"**slacks** (set, None) - buses which are considered as root / slack "
+"buses. If None, all"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.unsupplied_buses:14
+msgid "existing slack buses are considered."
+msgstr ""
+
+#: of pandapower.topology.graph_searches.unsupplied_buses:17
+msgid ""
+"**respect_switches** (boolean, True) - Fixes how to consider switches - "
+"only in case of no"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.unsupplied_buses:17
+msgid "given mg."
+msgstr ""
+
+#: of pandapower.topology.graph_searches.unsupplied_buses:20
+msgid "**ub** (set) - unsupplied buses"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.unsupplied_buses:25
+msgid "top.unsupplied_buses(net)"
+msgstr ""
+
+#: ../../source/topology/searches.rst:32
+msgid "determine_stubs"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.determine_stubs:2
+msgid ""
+"Finds stubs in a network. Open switches are being ignored. Results are "
+"being written in a new column in the bus table (\"on_stub\") and line "
+"table (\"is_stub\") as True/False value."
+msgstr ""
+
+#: of pandapower.topology.graph_searches.determine_stubs:10
+msgid ""
+"**roots** (integer/list, None) - indices of buses that should be excluded"
+" (by default, the"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.determine_stubs:10
+msgid "ext_grid buses will be set as roots)"
+msgstr ""
+
+#: of pandapower.topology.graph_searches.determine_stubs:15
+msgid "top.determine_stubs(net, roots = [0, 1])"
+msgstr ""
+

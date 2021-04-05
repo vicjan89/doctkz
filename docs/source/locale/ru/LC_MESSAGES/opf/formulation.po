@@ -1,0 +1,549 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/opf/formulation.rst:4
+msgid "Optimisation problem"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:6
+msgid ""
+"The equation describes the basic formulation of the optimal power flow "
+"(OPF) problem. The pandapower optimal power flow can be constrained by "
+"either AC or DC loadflow equations. The branch constraints represent the "
+"maximum apparent power loading of transformers and the maximum line "
+"current loadings. The bus constraints can contain maximum and minimum "
+"voltage magnitude and angle. For the external grid, generators, loads, DC"
+" lines and static generators, the maximum and minimum active resp. "
+"reactive power can be considered as operational constraints for the "
+"optimal power flow. The constraints are defined element wise in the "
+"respective element tables."
+msgstr ""
+
+#: ../../source/opf/formulation.rst:13
+msgid ""
+"& min & \\sum_{i  \\ \\epsilon \\ gen, sgen, load, "
+"ext\\_grid}{f_{i}(P_i)} \\\\\n"
+"& subject \\ to \\\\\n"
+"& & loadflow \\ equations \\\\\n"
+"& & branch \\ constraints  \\\\\n"
+"& & bus \\ constraints \\\\\n"
+"& & operational \\ power \\ constraints \\\\\n"
+"\n"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:22
+msgid "**Generator flexibilities / Operational power constraints**"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:24
+msgid ""
+"The active and reactive power generation of generators, loads, dc lines "
+"and static generators can be defined as a flexibility for the OPF."
+msgstr ""
+
+#: ../../source/opf/opf_constraints.csv:1
+#: ../../source/opf/opf_flexibility.csv:1
+msgid "**Constraint**"
+msgstr ""
+
+#: ../../source/opf/opf_constraints.csv:1
+#: ../../source/opf/opf_flexibility.csv:1
+msgid "**Defined in**"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid ":math:`P_{min,i} \\leq P_{g} \\leq P_{max,g},\\ g  \\ \\epsilon \\ gen`"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid "net.gen.min_p_mw / net.gen.max_p_mw"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid ":math:`Q_{min,g} \\leq Q_{g} \\leq Q_{max,g},\\ g  \\ \\epsilon \\ gen`"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid "net.gen.min_q_mvar / net.gen.max_q_mvar"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid ""
+":math:`P_{min,sg} \\leq P_{sg} \\leq P_{max,sg},\\ sg  \\ \\epsilon \\ "
+"sgen`"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid "net.sgen.min_p_mw  / net.sgen.max_p_mw"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid ""
+":math:`Q_{min,sg} \\leq Q_{sg} \\leq Q_{max,sg},\\ sg  \\ \\epsilon \\ "
+"sgen`"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid "net.sgen.min_q_mvar / net.sgen.max_q_mvar"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid ":math:`P_{max,g},\\ g  \\ \\epsilon \\ dcline`"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid "net.dcline.max_p_mw"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid ":math:`Q_{min,g} \\leq Q_{g} \\leq Q_{max,g},\\ g  \\ \\epsilon \\ dcline`"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid ""
+"net.dcline.min_q_from_mvar / net.dcline.max_q_from_mvar / "
+"net.dcline.min_q_to_mvar / net.dcline.max_q_to_mvar"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid ""
+":math:`P_{min,eg} \\leq P_{eg} \\leq P_{max,eg},\\ eg  \\ \\epsilon \\ "
+"ext\\_grid`"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid "net.ext_grid.min_p_mw  / net.ext_grid.max_p_mw"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid ""
+":math:`Q_{min,eg} \\leq Q_{eg} \\leq Q_{max,eg},\\ eg  \\ \\epsilon \\ "
+"ext\\_grid`"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid "net.ext_grid.min_q_mvar / net.ext_grid.max_q_mvar"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid ""
+":math:`P_{min,ld} \\leq P_{ld} \\leq P_{max,ld},\\ ld \\ \\epsilon \\ "
+"load`"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid "net.load.min_p_mw  / net.load.max_p_mw"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid ""
+":math:`Q_{min,ld} \\leq Q_{ld} \\leq Q_{max,ld},\\ ld  \\ \\epsilon \\ "
+"load`"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid "net.load.min_q_mvar / net.load.max_q_mvar"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid ""
+":math:`P_{min,st} \\leq P_{st} \\leq P_{max,st},\\ st \\ \\epsilon \\ "
+"storage`"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid "net.storage.min_p_mw  / net.storage.max_p_mw"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid ""
+":math:`Q_{min,st} \\leq Q_{st} \\leq Q_{max,st},\\ st  \\ \\epsilon \\ "
+"storage`"
+msgstr ""
+
+#: ../../source/opf/opf_flexibility.csv:1
+msgid "net.storage.min_q_mvar / net.storage.max_q_mvar"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:32
+msgid ""
+"Defining operational constraints is indispensable for the OPF, it will "
+"not start if constraints are not defined."
+msgstr ""
+
+#: ../../source/opf/formulation.rst:34
+msgid "**Network constraints**"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:36
+msgid ""
+"The network constraints contain constraints for bus voltages and branch "
+"flows:"
+msgstr ""
+
+#: ../../source/opf/opf_constraints.csv:1
+msgid ":math:`V_{min,j} \\leq V_{g,i}  \\leq V_{min,i},\\ j  \\ \\epsilon \\ bus`"
+msgstr ""
+
+#: ../../source/opf/opf_constraints.csv:1
+msgid "net.bus.min_vm_pu / net.bus.max_vm_pu"
+msgstr ""
+
+#: ../../source/opf/opf_constraints.csv:1
+msgid ":math:`L_{k} \\leq L_{max,k},\\ k \\ \\epsilon \\ trafo`"
+msgstr ""
+
+#: ../../source/opf/opf_constraints.csv:1
+msgid "net.trafo.max_loading_percent"
+msgstr ""
+
+#: ../../source/opf/opf_constraints.csv:1
+msgid ":math:`L_{l} \\leq L_{max,l},\\ l \\ \\epsilon \\ line`"
+msgstr ""
+
+#: ../../source/opf/opf_constraints.csv:1
+msgid "net.line.max_loading_percent"
+msgstr ""
+
+#: ../../source/opf/opf_constraints.csv:1
+msgid ":math:`L_{l} \\leq L_{max,l},\\ l \\ \\epsilon \\ trafo_{3w}`"
+msgstr ""
+
+#: ../../source/opf/opf_constraints.csv:1
+msgid "net.trafo3w.max_loading_percent"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:43
+msgid ""
+"The defaults are unconstraint branch loadings and :math:`\\pm 1.0 pu` for"
+" bus voltages."
+msgstr ""
+
+#: ../../source/opf/formulation.rst:46
+msgid "Cost functions"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:48
+msgid ""
+"The cost function is specified element wise and is organized in tables as"
+" well, which makes the parametrization user friendly. There are two "
+"options formulating a cost function for each element: A piecewise linear "
+"function with :math:`n` data points."
+msgstr ""
+
+#: ../../source/opf/formulation.rst:51
+msgid ""
+"f_{pwl}(p) = f_{\\alpha} +(p-p_{\\alpha}) \\frac{f_{\\alpha + "
+"1}-f_{\\alpha}}{p_{\\alpha + 1}-p_{\\alpha}}  \\ , \\ "
+"(p_{\\alpha},f_{\\alpha}) \\ =\\begin{cases}\n"
+"                                                  (p_{0},f_{0}) \\ , \\ &"
+" p_{0} < p <p_{1}) \\\\\n"
+"                                                  ...\\\\\n"
+"                                                  (p_{n-1},f_{n-1}) \\ , "
+"& \\ p_{n-1} < p <p_{n})\n"
+"                                                  \\end{cases} \\\\  \\\\"
+"\n"
+"f_{pwl}(q) = f_{1} +(q-q_{1}) \\frac{f_{2}-f_{1}}{q_{2}-q_{1}}\n"
+"\n"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:59
+msgid "Piecewise linear cost functions can be specified using create_pwl_costs():"
+msgstr ""
+
+#: of pandapower.create.create_pwl_cost:8
+msgid ""
+"Creates an entry for piecewise linear costs for an element. The currently"
+" supported elements are"
+msgstr ""
+
+#: of pandapower.create.create_pwl_cost:3
+msgid "Generator"
+msgstr ""
+
+#: of pandapower.create.create_pwl_cost:4
+msgid "External Grid"
+msgstr ""
+
+#: of pandapower.create.create_pwl_cost:5
+msgid "Static Generator"
+msgstr ""
+
+#: of pandapower.create.create_pwl_cost:6
+msgid "Load"
+msgstr ""
+
+#: of pandapower.create.create_pwl_cost:7
+msgid "Dcline"
+msgstr ""
+
+#: of pandapower.create.create_pwl_cost:8
+msgid "Storage"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:25
+#: pandapower.create.create_pwl_cost:15
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:11
+#: pandapower.create.create_pwl_cost:11
+msgid "**element** (int) - ID of the element in the respective element table"
+msgstr ""
+
+#: of pandapower.create.create_pwl_cost:13
+msgid ""
+"**et** (string) - element type, one of \"gen\", \"sgen\", \"ext_grid\", "
+"\"load\", \"dcline\", \"storage\"]"
+msgstr ""
+
+#: of pandapower.create.create_pwl_cost:15
+msgid ""
+"**points** - (list) list of lists with [[p1, p2, c1], [p2, p3, c2], ...] "
+"where c(n) defines the costs between p(n) and p(n+1)"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:27
+#: pandapower.create.create_pwl_cost:20
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.create.create_pwl_cost:18
+msgid ""
+"**type** - (string) - Type of cost [\"p\", \"q\"] are allowed for active "
+"or reactive power"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:29
+#: pandapower.create.create_pwl_cost:20
+msgid ""
+"**index** (int, index) - Force a specified ID if it is available. If "
+"None, the index one             higher than the highest already existing "
+"index is selected."
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:32
+#: pandapower.create.create_pwl_cost:23
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:32
+#: pandapower.create.create_pwl_cost:23
+msgid "**index** (int) - The unique ID of created cost entry"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:51
+#: pandapower.create.create_pwl_cost:46
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.create.create_pwl_cost:26
+msgid ""
+"The cost function is given by the x-values p1 and p2 with the slope m "
+"between those points. The constant part b of a linear function y = m*x + "
+"b can be neglected for OPF purposes. The intervals have to be continuous "
+"(the starting point of an interval has to be equal to the end point of "
+"the previous interval)."
+msgstr ""
+
+#: of pandapower.create.create_pwl_cost:30
+msgid ""
+"To create a gen with costs of 1€/MW between 0 and 20 MW and 2€/MW between"
+" 20 and 30:"
+msgstr ""
+
+#: of pandapower.create.create_pwl_cost:32
+msgid "create_pwl_cost(net, 0, \"gen\", [[0, 20, 1], [20, 30, 2]])"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:65
+msgid "The other option is to formulate a n-polynomial cost function:"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:67
+msgid ""
+"f_{pol}(p) = c_n p^n + ... + c_1 p + c_0 \\\\\n"
+"f_{pol}(q) = c_2 q^2 + c_1 q + c_0\n"
+"\n"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:71
+msgid "Polynomial cost functions can be specified using create_poly_cost():"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:8
+msgid ""
+"Creates an entry for polynimoal costs for an element. The currently "
+"supported elements are:"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:3
+msgid "Generator (\"gen\")"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:4
+msgid "External Grid (\"ext_grid\")"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:5
+msgid "Static Generator (\"sgen\")"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:6
+msgid "Load (\"load\")"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:7
+msgid "Dcline (\"dcline\")"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:8
+msgid "Storage (\"storage\")"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:13
+msgid ""
+"**et** (string) - Type of element [\"gen\", \"sgen\", \"ext_grid\", "
+"\"load\", \"dcline\", \"storage\"]             are possible"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:15
+msgid "**cp1_eur_per_mw** (float) - Linear costs per MW"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:17
+msgid "**cp0_eur=0** (float) - Offset active power costs in euro"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:19
+msgid "**cq1_eur_per_mvar=0** (float) - Linear costs per Mvar"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:21
+msgid "**cq0_eur=0** (float) - Offset reactive power costs in euro"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:23
+msgid "**cp2_eur_per_mw2=0** (float) - Quadratic costs per MW"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:25
+msgid "**cq2_eur_per_mvar2=0** (float) - Quadratic costs per Mvar"
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:35
+msgid ""
+"The polynomial cost function is given by the linear and quadratic cost "
+"coefficients."
+msgstr ""
+
+#: of pandapower.create.create_poly_cost:37
+msgid "create_poly_cost(net, 0, \"load\", cp1_eur_per_mw = 0.1)"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:76
+msgid ""
+"Please note, that polynomial costs for reactive power can only be "
+"quadratic, linear or constant. Piecewise linear cost funcions for "
+"reactive power are not working at the moment with 2 segments or more. "
+"Loads can only have 2 data points in their piecewise linear cost function"
+" for active power."
+msgstr ""
+
+#: ../../source/opf/formulation.rst:80
+msgid ""
+"Active and reactive power costs are calculted separately. The costs of "
+"all types are summed up to determine the overall costs for a grid state."
+msgstr ""
+
+#: ../../source/opf/formulation.rst:83
+msgid "Visualization of cost functions"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:85
+msgid "**Minimizing generation**"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:87
+msgid ""
+"The most common optimization goal is the minimization of the overall "
+"generator feed in. The according cost function would be formulated like "
+"this:"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:98
+msgid ""
+"It is a straight with a negative slope, so that it has the highest cost "
+"value at p_min_mw and is zero when the feed in is zero:"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:106
+msgid "**Maximizing generation**"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:108
+msgid ""
+"This cost function may be used, when the curtailment of renewables should"
+" be minimized, which at the same time means that the feed in of those "
+"renewables should be maximized. This can be realized by the following "
+"cost function definitions:"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:118
+msgid ""
+"It is a straight with a positive slope, so that the cost is zero at "
+"p_min_mw and is at its maximum when the generation equals zero."
+msgstr ""
+
+#: ../../source/opf/formulation.rst:127
+msgid "**Maximize load**"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:129
+msgid ""
+"In case that the load should be maximized, the cost function could be "
+"defined like this:"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:146
+msgid "**Minimizing load**"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:148
+msgid ""
+"In case that the load should be minimized, the cost function could be "
+"defined like this:"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:163
+msgid "**DC line behaviour**"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:165
+msgid ""
+"Please note, that the costs of the DC line transmission are always "
+"related to the power at the from_bus!"
+msgstr ""
+
+#: ../../source/opf/formulation.rst:168
+msgid ""
+"You can always check your optimization result by comparing your result "
+"(From res_sgen, res_load etc.)."
+msgstr ""
+

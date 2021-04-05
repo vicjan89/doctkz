@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/topology.rst:3
+msgid "Topological Searches"
+msgstr ""
+
+#: ../../source/topology.rst:5
+msgid ""
+"pandapower provides the possibility of graph searches using the networkx "
+"package, which is \"a Python language software package for the creation, "
+"manipulation, and study of the structure, dynamics, and function of "
+"complex networks.\" (see NetworkX documentation "
+"http:/networkx.github.io/documentation/networkx-1.10/index.html )"
+msgstr ""
+
+#: ../../source/topology.rst:8
+msgid ""
+"pandapower provides a function to translate pandapower networks into "
+"networkx graphs. Once the electric network is translated into an abstract"
+" networkx graph, all network operations that are available in networkx "
+"can be used to analyse the network. For example you can find the shortest"
+" path between two nodes, find out if two areas in a network are connected"
+" to each other or if there are cycles in a network.  For a complete list "
+"of all NetworkX algorithms see "
+"http:/networkx.github.io/documentation/networkx-1.10/reference/algorithms.html"
+msgstr ""
+
+#: ../../source/topology.rst:12
+msgid ""
+"pandapower also provides some search algorithms specialiced for electric "
+"networks, such as finding all buses that are connected to a slack node."
+msgstr ""
+

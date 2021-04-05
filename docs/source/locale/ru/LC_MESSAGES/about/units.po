@@ -1,0 +1,247 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/about/units.rst:5
+msgid "Unit System and Conventions"
+msgstr ""
+
+#: ../../source/about/units.rst:7
+msgid "**Naming Conventions**"
+msgstr ""
+
+#: ../../source/about/units.rst:9
+msgid "Parameters are always named in the form of <parameter>_<unit>, such as:"
+msgstr ""
+
+#: ../../source/about/nameing1.csv:1 ../../source/about/nameing2.csv:1
+msgid "**Parameter**"
+msgstr ""
+
+#: ../../source/about/nameing1.csv:1 ../../source/about/nameing2.csv:1
+msgid "**read as**"
+msgstr ""
+
+#: ../../source/about/nameing1.csv:1
+msgid "vm_pu"
+msgstr ""
+
+#: ../../source/about/nameing1.csv:1
+msgid ":math:`v_m  [pu]`"
+msgstr ""
+
+#: ../../source/about/nameing1.csv:1
+msgid "loading_percent"
+msgstr ""
+
+#: ../../source/about/nameing1.csv:1
+msgid ":math:`loading [\\%]`"
+msgstr ""
+
+#: ../../source/about/nameing1.csv:1
+msgid "pl_mw"
+msgstr ""
+
+#: ../../source/about/nameing1.csv:1
+msgid ":math:`p_l  [mw]`"
+msgstr ""
+
+#: ../../source/about/nameing1.csv:1
+msgid "r_ohm_per_km"
+msgstr ""
+
+#: ../../source/about/nameing1.csv:1
+msgid ":math:`r  [\\Omega / km]`"
+msgstr ""
+
+#: ../../source/about/units.rst:17
+msgid ""
+"Constraint parameters are always named with max or min as the prefix to "
+"the variable which is constrained, for example:"
+msgstr ""
+
+#: ../../source/about/nameing2.csv:1
+msgid "min_vm_pu"
+msgstr ""
+
+#: ../../source/about/nameing2.csv:1
+msgid ":math:`v_m^{min}  [pu]`"
+msgstr ""
+
+#: ../../source/about/nameing2.csv:1
+msgid "max_loading_percent"
+msgstr ""
+
+#: ../../source/about/nameing2.csv:1
+msgid ":math:`loading^{max} [\\%]`"
+msgstr ""
+
+#: ../../source/about/nameing2.csv:1
+msgid "max_p_mw"
+msgstr ""
+
+#: ../../source/about/nameing2.csv:1
+msgid ":math:`p^{max}  [mw]`"
+msgstr ""
+
+#: ../../source/about/nameing2.csv:1
+msgid "min_q_mvar"
+msgstr ""
+
+#: ../../source/about/nameing2.csv:1
+msgid ":math:`q^{min}  [mvar]`"
+msgstr ""
+
+#: ../../source/about/units.rst:25
+msgid ""
+"It is advised to keep consistent with these naming conventions when "
+"extending the framework and introducing new parameters."
+msgstr ""
+
+#: ../../source/about/units.rst:27
+msgid "**Three Phase System**"
+msgstr ""
+
+#: ../../source/about/units.rst:29
+msgid "For the three phase system, the following conventions apply:"
+msgstr ""
+
+#: ../../source/about/units.rst:31
+msgid "voltage values are given as phase-to-phase voltages"
+msgstr ""
+
+#: ../../source/about/units.rst:32
+msgid "current values are given as phase currents"
+msgstr ""
+
+#: ../../source/about/units.rst:33
+msgid "power values are given as three-phase power flows"
+msgstr ""
+
+#: ../../source/about/units.rst:35
+msgid ""
+"The power equation in the three phase system is therefore given as "
+":math:`S = \\sqrt3 \\cdot V \\cdot I`."
+msgstr ""
+
+#: ../../source/about/units.rst:37
+msgid ""
+"All power values are given in MW / MVA / MVar except the iron losses of "
+"transformers which are given in MW (pfe_mw)."
+msgstr ""
+
+#: ../../source/about/units.rst:39
+msgid "**Per Unit System**"
+msgstr ""
+
+#: ../../source/about/units.rst:41
+msgid ""
+"Bus voltages are given in the per unit system. The per unit values are "
+"relative to the phase-to-phase voltages defined in net.bus.vn_kv for each"
+" bus."
+msgstr ""
+
+#: ../../source/about/units.rst:43
+msgid ""
+"The rated apparent power for the per unit system can be defined with the "
+"net.sn_mva parameter when creating an empty network. The default value is"
+" :math:`S_{N} = 1 MVA`. The value should not be relevant in most "
+"applications since all power values are given in physical units."
+msgstr ""
+
+#: ../../source/about/units.rst:46
+msgid "**Signing System**"
+msgstr ""
+
+#: ../../source/about/units.rst:51
+msgid ""
+"There are three elements that have power values based on the generator "
+"viewpoint (positive active power means power generation), which are:"
+msgstr ""
+
+#: ../../source/about/units.rst:49
+msgid "gen"
+msgstr ""
+
+#: ../../source/about/units.rst:50
+msgid "sgen"
+msgstr ""
+
+#: ../../source/about/units.rst:51
+msgid "ext_grid"
+msgstr ""
+
+#: ../../source/about/units.rst:59
+msgid ""
+"For all other bus elements the signing is based on the consumer viewpoint"
+" (positive active power means power consumption):"
+msgstr ""
+
+#: ../../source/about/units.rst:54
+msgid "bus"
+msgstr ""
+
+#: ../../source/about/units.rst:55
+msgid "load"
+msgstr ""
+
+#: ../../source/about/units.rst:56
+msgid "shunt"
+msgstr ""
+
+#: ../../source/about/units.rst:57
+msgid "ward"
+msgstr ""
+
+#: ../../source/about/units.rst:58
+msgid "xward"
+msgstr ""
+
+#: ../../source/about/units.rst:59
+msgid "storage"
+msgstr ""
+
+#: ../../source/about/units.rst:61
+msgid ""
+"The power flow values for branch elements (e.g. lines & transformers) are"
+" always defined as the power flow into the branch element (positive "
+"values means power flows into the element, negative power means power "
+"flows out of the element)."
+msgstr ""
+
+#: ../../source/about/units.rst:63
+msgid "**Frequency**"
+msgstr ""
+
+#: ../../source/about/units.rst:65
+msgid ""
+"The frequency can be defined when creating an empty network. The "
+"frequency is only used to calculate the shunt admittance of lines, since "
+"the line reactance is given directly in ohm per kilometer. The frequency "
+"is also relevant when calculating the peak factor :math:`\\kappa` in the "
+"short circuit calculation."
+msgstr ""
+
+#: ../../source/about/units.rst:68
+msgid ""
+"The standard frequency in pandapower is 50 Hz, and the pandapower "
+"standard types are also chosen for 50 Hz systems. If you use a different "
+"frequency, please be aware that the line reactance values might not be "
+"realistic."
+msgstr ""
+

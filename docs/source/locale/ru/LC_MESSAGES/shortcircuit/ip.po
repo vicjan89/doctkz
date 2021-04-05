@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/shortcircuit/ip.rst:2
+msgid "Peak Short-Circuit Current"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:5
+msgid "Current Calculation"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:7
+msgid "The peak short-circuit current is calculated as:"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:9
+msgid ""
+"\\begin{bmatrix}\n"
+"i_{p, 1}  \\\\\n"
+"\\vdots  \\\\\n"
+"i_{p, n}  \\\\\n"
+"\\end{bmatrix}\n"
+"= \\sqrt{2} \\left(\n"
+"\\begin{bmatrix}\n"
+"\\kappa_{1}  \\\\\n"
+"\\vdots  \\\\\n"
+"\\kappa_{1}   \\\\\n"
+"\\end{bmatrix}\n"
+"\\begin{bmatrix}\n"
+"\\underline{I}''_{kI, 1} \\\\\n"
+"\\vdots  \\\\\n"
+"\\underline{I}''_{kI, n} \\\\\n"
+"\\end{bmatrix} +\n"
+"\\begin{bmatrix}\n"
+"\\underline{I}''_{kII, 1} \\\\\n"
+"\\vdots  \\\\\n"
+"\\underline{I}''_{kII, n} \\\\\n"
+"\\end{bmatrix} \\right)"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:33
+msgid "where :math:`\\kappa` is the peak factor."
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:38
+msgid "Peak Factor :math:`\\kappa`"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:40
+msgid "In radial networks, :math:`\\kappa` is given as:"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:42
+msgid "\\kappa = 1.02 + 0.98 e^{-{3}{R/X}}"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:46
+msgid ""
+"where :math:`R/X` is the R/X ratio of the equivalent short-circuit "
+"impedance :math:`Z_k` at the fault location."
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:48
+msgid ""
+"In meshed networks, the standard defines three possibilities for the "
+"calculation of :math:`\\kappa`:"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:50
+msgid "Method A: Uniform Ratio R/X"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:51
+msgid "Method B: R/X ratio at short-circuit location"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:52
+msgid "Method C: Equivalent frequency"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:54
+msgid ""
+"The user can chose between Methods B and C when running a short circuit "
+"calculation. Method C yields the most accurate results according to the "
+"standard and is therefore the default option. Method A is only suited for"
+" estimated manual calculations with low accuracy and therefore not "
+"implemented in pandapower."
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:57
+msgid "**Method C: Equivalent frequency**"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:59
+msgid ""
+"For method C, the same formula for :math:`\\kappa` is used as for radial "
+"grids. The R/X value that is inserter is however not the"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:62
+msgid "**Method B: R/X Ratio at short-circuit location**"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:64
+msgid "For method B, :math:`\\kappa` is given as:"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:66
+msgid "\\kappa = [1.02 + 0.98 e^{-{3}{R/X}}] \\cdot 1.15"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:71
+msgid ""
+"while being limited with :math:`\\kappa_{min} < \\kappa < \\kappa_{max}` "
+"depending on the voltage level:"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:77
+msgid "Voltage Level"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:77
+msgid "|kmin|"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:77
+msgid "|kmax|"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:79
+msgid "< 1 kV"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:80
+msgid "1.0"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:79
+msgid "1.8"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:81
+msgid "> 1 kV"
+msgstr ""
+
+#: ../../source/shortcircuit/ip.rst:81
+msgid "2.0"
+msgstr ""
+

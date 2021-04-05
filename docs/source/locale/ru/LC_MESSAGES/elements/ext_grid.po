@@ -1,0 +1,393 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/elements/ext_grid.rst:3
+msgid "External Grid"
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:7
+msgid ""
+"Power values of external grids are given in the generator system, "
+"therefore p_mw is negative if the external grid is absorbing power and "
+"positive if it is supplying/generating power."
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:10
+msgid ":ref:`Unit Systems and Conventions <conventions>`"
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:13
+msgid "Create Function"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:2
+msgid "Creates an external grid connection."
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:4
+msgid ""
+"External grids represent the higher level power grid connection and are "
+"modelled as the slack bus in the power flow calculation."
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:10
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:8
+msgid "**net** - pandapower network"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:10
+msgid "**bus** (int) - bus where the slack is connected"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:43
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:13
+msgid "**vm_pu** (float, default 1.0) - voltage at the slack node in per unit"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:15
+msgid ""
+"**va_degree** (float, default 0.) - voltage angle at the slack node in "
+"degrees*"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:17
+msgid "**name** (string, default None) - name of of the external grid"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:19
+msgid "**in_service** (boolean) - True for in_service or False for out of service"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:21
+msgid ""
+"**s_sc_max_mva** (float, NaN) - maximal short circuit apparent power to "
+"calculate internal             impedance of ext_grid for short circuit "
+"calculations"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:23
+msgid ""
+"**s_sc_min_mva** (float, NaN) - minimal short circuit apparent power to "
+"calculate internal             impedance of ext_grid for short circuit "
+"calculations"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:25
+msgid ""
+"**rx_max** (float, NaN) - maximal R/X-ratio to calculate internal "
+"impedance of ext_grid             for short circuit calculations"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:27
+msgid ""
+"**rx_min** (float, NaN) - minimal R/X-ratio to calculate internal "
+"impedance of ext_grid             for short circuit calculations"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:29
+msgid ""
+"**max_p_mw** (float, NaN) - Maximum active power injection. Only "
+"respected for OPF"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:31
+msgid ""
+"**min_p_mw** (float, NaN) - Minimum active power injection. Only "
+"respected for OPF"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:33
+msgid ""
+"**max_q_mvar** (float, NaN) - Maximum reactive power injection. Only "
+"respected for OPF"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:35
+msgid ""
+"**min_q_mvar** (float, NaN) - Minimum reactive power injection. Only "
+"respected for OPF"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:37
+msgid ""
+"**r0x0_max** (float, NaN) - maximal R/X-ratio to calculate Zero sequence "
+"internal impedance of ext_grid"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:40
+msgid ""
+"**x0x_max** (float, NaN) - maximal X0/X-ratio to calculate Zero sequence "
+"internal impedance of ext_grid"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:43
+msgid "** only considered in loadflow if calculate_voltage_angles = True"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:64
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:46
+msgid "create_ext_grid(net, 1, voltage = 1.03)"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:48
+msgid "For three phase load flow"
+msgstr ""
+
+#: of pandapower.create.create_ext_grid:50
+msgid ""
+"create_ext_grid(net, 1, voltage = 1.03,s_sc_max_mva= 1000, "
+"rx_max=0.1,r0x0_max=0.1,x0x_max= 1.0 )"
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:19
+msgid "Input Parameters"
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:21
+msgid "*net.ext_grid*"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+#: ../../source/elements/ext_grid_res.csv:1
+msgid "**Parameter**"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+#: ../../source/elements/ext_grid_res.csv:1
+msgid "**Datatype**"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "**Value Range**"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+#: ../../source/elements/ext_grid_res.csv:1
+msgid "**Explanation**"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "name"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "string"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "name of the external grid"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "bus*"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "integer"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "index of connected bus"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "vm_pu*"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+#: ../../source/elements/ext_grid_res.csv:1
+msgid "float"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid ":math:`>` 0"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "voltage set point [p.u]"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "va_degree*"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "angle set point [degree]"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "max_p_mw**"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "Maximum active power"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "min_p_mw**"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "Minimum active power"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "max_q_mvar**"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "Maximum reactive power"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "min_q_mvar**"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "Minimum reactive power"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "s_sc_max_mva***"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "maximum short circuit power provision [MVA]"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "s_sc_min_mva***"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "minimum short circuit power provision [MVA]"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "rx_max***"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "0...1"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "maxium R/X ratio of short-circuit impedance"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "rx_min***"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "minimum R/X ratio of short-circuit impedance"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "in_service*"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "boolean"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "True / False"
+msgstr ""
+
+#: ../../source/elements/ext_grid_par.csv:1
+msgid "specifies if the external grid is in service."
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:33
+msgid ""
+"\\*necessary for executing a power flow calculation |br| \\*\\*optimal "
+"power flow parameter |br| \\*\\*\\*short-circuit calculation parameter"
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:36
+msgid "Electric Model"
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:38
+msgid ""
+"The external grid is modelled as a voltage source in the power flow "
+"calculation, which means the node the grid is connected to is treated as "
+"a slack node:"
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:45
+msgid "with:"
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:47
+msgid ""
+"\\begin{align*}\n"
+" \\underline{v}_{bus} &= vm\\_pu \\cdot e^{j \\cdot \\theta} \\\\\n"
+"\\theta &= shift\\_degree \\cdot \\frac{\\pi}{180}\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:56
+msgid "Result Parameters"
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:57
+msgid "*net.res_ext_grid*"
+msgstr ""
+
+#: ../../source/elements/ext_grid_res.csv:1
+msgid "p_mw"
+msgstr ""
+
+#: ../../source/elements/ext_grid_res.csv:1
+msgid "active power supply at the external grid [MW]"
+msgstr ""
+
+#: ../../source/elements/ext_grid_res.csv:1
+msgid "q_mvar"
+msgstr ""
+
+#: ../../source/elements/ext_grid_res.csv:1
+msgid "reactive power supply at the external grid [MVar]"
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:65
+msgid ""
+"Active and reactive power feed-in / consumption at the slack node is a "
+"result of the power flow:"
+msgstr ""
+
+#: ../../source/elements/ext_grid.rst:67
+msgid ""
+"\\begin{align*}\n"
+" p\\_mw &= P_{eg} \\\\\n"
+" q\\_mvar &= Q_{eg}\n"
+" \\end{align*}"
+msgstr ""
+

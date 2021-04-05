@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/elements/empty_network.rst:3
+msgid "Empty Network"
+msgstr ""
+
+#: ../../source/elements/empty_network.rst:6
+msgid "Create Function"
+msgstr ""
+
+#: of pandapower.create.create_empty_network:2
+msgid "This function initializes the pandapower datastructure."
+msgstr ""
+
+#: of pandapower.create.create_empty_network:11
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.create.create_empty_network:5
+msgid "**f_hz** (float, 50.) - power system frequency in hertz"
+msgstr ""
+
+#: of pandapower.create.create_empty_network:7
+msgid "**name** (string, None) - name for the network"
+msgstr ""
+
+#: of pandapower.create.create_empty_network:9
+msgid "**sn_mva** (float, 1e3) - reference apparent power for per unit system"
+msgstr ""
+
+#: of pandapower.create.create_empty_network:11
+msgid "**add_stdtypes** (boolean, True) - Includes standard types to net"
+msgstr ""
+
+#: of pandapower.create.create_empty_network:14
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.create.create_empty_network:14
+msgid "**net** (attrdict) - PANDAPOWER attrdict with empty tables:"
+msgstr ""
+
+#: of pandapower.create.create_empty_network:31
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.create.create_empty_network:17
+msgid "net = create_empty_network()"
+msgstr ""
+

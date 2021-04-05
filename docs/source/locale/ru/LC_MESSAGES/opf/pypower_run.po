@@ -1,0 +1,311 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/opf/pypower_run.rst:3
+msgid "Optimization with PYPOWER"
+msgstr ""
+
+#: ../../source/opf/pypower_run.rst:5
+msgid "You can run an Optimal Power Flow using the PYPOWER OPF"
+msgstr ""
+
+#: ../../source/opf/pypower_run.rst:8
+msgid "AC OPF"
+msgstr ""
+
+#: of pandapower.run.rundcopp:2 pandapower.run.runopp:2
+msgid ""
+"Runs the  pandapower Optimal Power Flow. Flexibilities, constraints and "
+"cost parameters are defined in the pandapower element tables."
+msgstr ""
+
+#: of pandapower.run.runopp:5
+msgid ""
+"Flexibilities can be defined in net.sgen / net.gen /net.load / "
+"net.storage net.sgen.controllable if a static generator is controllable. "
+"If False, the active and reactive power are assigned as in a normal power"
+" flow. If True, the following flexibilities apply:"
+msgstr ""
+
+#: of pandapower.run.rundcopp:10 pandapower.run.runopp:9
+msgid "net.gen.min_p_mw / net.gen.max_p_mw"
+msgstr ""
+
+#: of pandapower.run.runopp:10
+msgid "net.gen.min_q_mvar / net.gen.max_q_mvar"
+msgstr ""
+
+#: of pandapower.run.rundcopp:9 pandapower.run.runopp:11
+msgid "net.sgen.min_p_mw / net.sgen.max_p_mw"
+msgstr ""
+
+#: of pandapower.run.runopp:12
+msgid "net.sgen.min_q_mvar / net.sgen.max_q_mvar"
+msgstr ""
+
+#: of pandapower.run.runopp:13
+msgid "net.dcline.max_p_mw"
+msgstr ""
+
+#: of pandapower.run.runopp:14
+msgid ""
+"net.dcline.min_q_to_mvar / net.dcline.max_q_to_mvar / "
+"net.dcline.min_q_from_mvar / net.dcline.max_q_from_mvar"
+msgstr ""
+
+#: of pandapower.run.runopp:15
+msgid "net.ext_grid.min_p_mw / net.ext_grid.max_p_mw"
+msgstr ""
+
+#: of pandapower.run.runopp:16
+msgid "net.ext_grid.min_q_mvar / net.ext_grid.max_q_mvar"
+msgstr ""
+
+#: of pandapower.run.rundcopp:11 pandapower.run.runopp:17
+msgid "net.load.min_p_mw / net.load.max_p_mw"
+msgstr ""
+
+#: of pandapower.run.runopp:18
+msgid "net.load.min_q_mvar / net.load.max_q_mvar"
+msgstr ""
+
+#: of pandapower.run.runopp:19
+msgid "net.storage.min_p_mw / net.storage.max_p_mw"
+msgstr ""
+
+#: of pandapower.run.runopp:20
+msgid "net.storage.min_q_mvar / net.storage.max_q_mvar"
+msgstr ""
+
+#: of pandapower.run.runopp:22
+msgid ""
+"Controllable loads behave just like controllable static generators. It "
+"must be stated if they are controllable. Otherwise, they are not "
+"respected as flexibilities. Dc lines are controllable per default"
+msgstr ""
+
+#: of pandapower.run.runopp:30
+msgid ""
+"Network constraints can be defined for buses, lines and transformers the "
+"elements in the following columns:"
+msgstr ""
+
+#: of pandapower.run.runopp:27
+msgid "net.bus.min_vm_pu / net.bus.max_vm_pu"
+msgstr ""
+
+#: of pandapower.run.runopp:28
+msgid "net.line.max_loading_percent"
+msgstr ""
+
+#: of pandapower.run.runopp:29
+msgid "net.trafo.max_loading_percent"
+msgstr ""
+
+#: of pandapower.run.runopp:30
+msgid "net.trafo3w.max_loading_percent"
+msgstr ""
+
+#: of pandapower.run.runopp:32
+msgid ""
+"How these costs are combined into a cost function depends on the "
+"cost_function parameter."
+msgstr ""
+
+#: of pandapower.run.rundcopp:19 pandapower.run.runopp:35
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.run.rundcopp:19 pandapower.run.runopp:35
+msgid "**net** - The pandapower format network"
+msgstr ""
+
+#: of pandapower.run.rundcopp:47 pandapower.run.runopp:82
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.run.rundcopp:22 pandapower.run.runopp:38
+msgid "**verbose** (bool, False) - If True, some basic information is printed"
+msgstr ""
+
+#: of pandapower.run.rundcopp:24 pandapower.run.runopp:40
+msgid "**suppress_warnings** (bool, True) - suppress warnings in pypower"
+msgstr ""
+
+#: of pandapower.run.rundcopp:26 pandapower.run.runopp:42
+msgid ""
+"If set to True, warnings are disabled during the loadflow. Because of the"
+" way data is processed in pypower, ComplexWarnings are raised during the "
+"loadflow. These warnings are suppressed by this option, however keep in "
+"mind all other pypower warnings are suppressed, too."
+msgstr ""
+
+#: of pandapower.run.runopp:47
+msgid ""
+"**init** (str, \"flat\") - init of starting opf vector. Options are "
+"\"flat\" or \"pf\""
+msgstr ""
+
+#: of pandapower.run.runopp:49
+msgid ""
+"Starting solution vector (x0) for opf calculations is determined by this "
+"flag. Options are: \"flat\" (default): starting vector is (upper bound - "
+"lower bound) / 2 \"pf\": a power flow is executed prior to the opf and "
+"the pf solution is the starting vector. This may improve convergence, but"
+" takes a longer runtime (which are probably neglectible for opf "
+"calculations)"
+msgstr ""
+
+#: of pandapower.run.rundcopp:31 pandapower.run.runopp:54
+msgid "**delta** (float, 1e-10) - power tolerance"
+msgstr ""
+
+#: of pandapower.run.rundcopp:33 pandapower.run.runopp:56
+msgid ""
+"**trafo3w_losses** (str, \"hv\") - defines where open loop losses of "
+"three-winding transformers are considered. Valid options are \"hv\", "
+"\"mv\", \"lv\" for HV/MV/LV side or \"star\" for the star point."
+msgstr ""
+
+#: of pandapower.run.runopp:58
+msgid ""
+"**consider_line_temperature** (bool, False) - adjustment of line "
+"impedance based on provided            line temperature. If True, "
+"net.line must contain a column \"temperature_degree_celsius\"."
+"            The temperature dependency coefficient alpha must be provided"
+" in the net.line.alpha            column, otherwise the default value of "
+"0.004 is used"
+msgstr ""
+
+#: of pandapower.run.runopp:60
+msgid "**kwargs** - Pypower / Matpower keyword arguments:"
+msgstr ""
+
+#: of pandapower.run.runopp:62
+msgid "OPF_VIOLATION (5e-6) constraint violation tolerance"
+msgstr ""
+
+#: of pandapower.run.runopp:63
+msgid "PDIPM_COSTTOL (1e-6) optimality tolerance"
+msgstr ""
+
+#: of pandapower.run.runopp:64
+msgid "PDIPM_GRADTOL (1e-6) gradient tolerance"
+msgstr ""
+
+#: of pandapower.run.runopp:65
+msgid "PDIPM_COMPTOL (1e-6) complementarity condition (inequality) tolerance"
+msgstr ""
+
+#: of pandapower.run.runopp:66
+msgid ""
+"PDIPM_FEASTOL (set to OPF_VIOLATION if not specified) feasibiliy "
+"(equality) tolerance"
+msgstr ""
+
+#: of pandapower.run.runopp:67
+msgid "PDIPM_MAX_IT  (150) maximum number of iterations"
+msgstr ""
+
+#: of pandapower.run.runopp:68
+msgid "SCPDIPM_RED_IT(20) maximum number of step size reductions per iteration"
+msgstr ""
+
+#: ../../source/opf/pypower_run.rst:12
+msgid ""
+"The internal solver uses the interior point method. By default, the "
+"initial state is the center of the operational constraints. Another "
+"option would be to initialize the optimisation with a valid loadflow "
+"solution. For optimiation of a timeseries, this warm start possibilty "
+"could imply a significant speedup. This is not yet provided in the actual"
+" version, but could be an useful extension in the future. Another "
+"parametrisation for the AC OPF is, if voltage angles should be "
+"considered, which is the same option than for the loadflow calculation "
+"with pandapower.runpp:"
+msgstr ""
+
+#: ../../source/opf/pypower_run.rst:28
+msgid "References:"
+msgstr ""
+
+#: ../../source/opf/pypower_run.rst:18
+msgid ""
+"\"On the Computation and Application of Multi-period Security-Constrained"
+" Optimal Power Flow for Real-time Electricity Market Operations\", "
+"Cornell University, May 2007."
+msgstr ""
+
+#: ../../source/opf/pypower_run.rst:21
+msgid ""
+"H. Wang, C. E. Murillo-Sanchez, R. D. Zimmerman, R. J. Thomas, \"On "
+"Computational Issues of Market-Based Optimal Power Flow\", IEEE "
+"Transactions on Power Systems, Vol. 22, No. 3, Aug. 2007, pp. 1185-1193."
+msgstr ""
+
+#: ../../source/opf/pypower_run.rst:25
+msgid ""
+"R. D. Zimmerman, C. E. Murillo-Sánchez, and R. J. Thomas, \"MATPOWER: "
+"Steady-State Operations, Planning and Analysis Tools for Power Systems "
+"Research and Education,\" Power Systems, IEEE Transactions on, vol. 26, "
+"no. 1, pp. 12-19, Feb. 2011."
+msgstr ""
+
+#: ../../source/opf/pypower_run.rst:31
+msgid "DC OPF"
+msgstr ""
+
+#: ../../source/opf/pypower_run.rst:33
+msgid ""
+"The dc optimal power flow is a linearized optimization of the grid state."
+" It offers two cost function options, that are fitting special use cases."
+" To understand the usage, the OPF tutorial is recommended (see "
+"`opf_dcline_ipynb`_)."
+msgstr ""
+
+#: of pandapower.run.rundcopp:5
+msgid ""
+"Flexibilities for generators can be defined in net.sgen / net.gen. "
+"net.sgen.controllable / net.gen.controllable signals if a generator is "
+"controllable. If False, the active and reactive power are assigned as in "
+"a normal power flow. If yes, the following flexibilities apply:"
+msgstr ""
+
+#: of pandapower.run.rundcopp:13
+msgid ""
+"Network constraints can be defined for buses, lines and transformers the "
+"elements in the following columns: - net.line.max_loading_percent - "
+"net.trafo.max_loading_percent - net.trafo3w.max_loading_percent"
+msgstr ""
+
+#: ../../source/opf/pypower_run.rst:38
+msgid ""
+"Flexibilities, costs and constraints (except voltage constraints) are "
+"handled as in the :ref:`opf`. Voltage constraints are not considered in "
+"the DC OPF, since voltage magnitutes are not part of the linearized power"
+" flow equations."
+msgstr ""
+
+#: ../../source/opf/pypower_run.rst:44
+msgid ""
+"If you are interested in the pypower casefile that pandapower is using "
+"for power flow, you can find it in net[\"_ppc_opf\"]. However all "
+"necessary informations are written into the pandpower format net, so the "
+"pandapower user should not usually have to deal with pypower."
+msgstr ""
+

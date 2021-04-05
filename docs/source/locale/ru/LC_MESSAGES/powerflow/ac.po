@@ -1,0 +1,431 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/powerflow/ac.rst:2
+msgid "Power Flow"
+msgstr ""
+
+#: ../../source/powerflow/ac.rst:4
+msgid "pandapower uses PYPOWER to solve the power flow problem:"
+msgstr ""
+
+#: of pandapower.run.runpp:2
+msgid "Runs a power flow"
+msgstr ""
+
+#: of pandapower.run.runpp:5
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.run.runpp:5
+msgid "**net** - The pandapower format network"
+msgstr ""
+
+#: of pandapower.run.runpp:144
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.run.runpp:8
+msgid ""
+"**algorithm** (str, \"nr\") - algorithm that is used to solve the power "
+"flow problem."
+msgstr ""
+
+#: of pandapower.run.runpp:10
+msgid "The following algorithms are available:"
+msgstr ""
+
+#: of pandapower.run.runpp:12
+msgid "\"nr\" Newton-Raphson (pypower implementation with numba accelerations)"
+msgstr ""
+
+#: of pandapower.run.runpp:13
+msgid ""
+"\"iwamoto_nr\" Newton-Raphson with Iwamoto multiplier (maybe slower than "
+"NR but more robust)"
+msgstr ""
+
+#: of pandapower.run.runpp:14
+msgid ""
+"\"bfsw\" backward/forward sweep (specially suited for radial and weakly-"
+"meshed networks)"
+msgstr ""
+
+#: of pandapower.run.runpp:15
+msgid "\"gs\" gauss-seidel (pypower implementation)"
+msgstr ""
+
+#: of pandapower.run.runpp:16
+msgid "\"fdbx\" fast-decoupled (pypower implementation)"
+msgstr ""
+
+#: of pandapower.run.runpp:17
+msgid "\"fdxb\" fast-decoupled (pypower implementation)"
+msgstr ""
+
+#: of pandapower.run.runpp:19
+msgid ""
+"**calculate_voltage_angles** (str or bool, \"auto\") - consider voltage "
+"angles in loadflow calculation"
+msgstr ""
+
+#: of pandapower.run.runpp:21
+msgid ""
+"If True, voltage angles of ext_grids and transformer shifts are "
+"considered in the loadflow calculation. Considering the voltage angles is"
+" only necessary in meshed networks that are usually found in higher "
+"voltage levels. calculate_voltage_angles in \"auto\" mode defaults to:"
+msgstr ""
+
+#: of pandapower.run.runpp:26
+msgid "True, if the network voltage level is above 70 kV"
+msgstr ""
+
+#: of pandapower.run.runpp:27
+msgid "False otherwise"
+msgstr ""
+
+#: of pandapower.run.runpp:29
+msgid ""
+"The network voltage level is defined as the maximum rated voltage of any "
+"bus in the network that is connected to a line."
+msgstr ""
+
+#: of pandapower.run.runpp:32
+msgid ""
+"**init** (str, \"auto\") - initialization method of the loadflow "
+"pandapower supports four methods for initializing the loadflow:"
+msgstr ""
+
+#: of pandapower.run.runpp:35
+msgid ""
+"\"auto\" - init defaults to \"dc\" if calculate_voltage_angles is True or"
+" \"flat\" otherwise"
+msgstr ""
+
+#: of pandapower.run.runpp:36
+msgid ""
+"\"flat\"- flat start with voltage of 1.0pu and angle of 0° at all PQ-"
+"buses and 0° for PV buses as initial solution, the slack bus is "
+"initialized with the values provided in net[\"ext_grid\"]"
+msgstr ""
+
+#: of pandapower.run.runpp:37
+msgid ""
+"\"dc\" - initial DC loadflow before the AC loadflow. The results of the "
+"DC loadflow are used as initial solution for the AC loadflow. Note that "
+"the DC loadflow only calculates voltage angles at PQ and PV buses, "
+"voltage magnitudes are still flat started."
+msgstr ""
+
+#: of pandapower.run.runpp:38
+msgid ""
+"\"results\" - voltage vector of last loadflow from net.res_bus is used as"
+" initial solution. This can be useful to accelerate convergence in "
+"iterative loadflows like time series calculations."
+msgstr ""
+
+#: of pandapower.run.runpp:40
+msgid ""
+"Considering the voltage angles might lead to non-convergence of the power"
+" flow in flat start. That is why in \"auto\" mode, init defaults to "
+"\"dc\" if calculate_voltage_angles is True or \"flat\" otherwise"
+msgstr ""
+
+#: of pandapower.run.runpp:43
+msgid ""
+"**max_iteration** (int, \"auto\") - maximum number of iterations carried "
+"out in the power flow algorithm."
+msgstr ""
+
+#: of pandapower.run.runpp:45
+msgid "In \"auto\" mode, the default value depends on the power flow solver:"
+msgstr ""
+
+#: of pandapower.run.runpp:47
+msgid "10 for \"nr\""
+msgstr ""
+
+#: of pandapower.run.runpp:48
+msgid "100 for \"bfsw\""
+msgstr ""
+
+#: of pandapower.run.runpp:49
+msgid "1000 for \"gs\""
+msgstr ""
+
+#: of pandapower.run.runpp:50
+msgid "30 for \"fdbx\""
+msgstr ""
+
+#: of pandapower.run.runpp:51
+msgid "30 for \"fdxb\""
+msgstr ""
+
+#: of pandapower.run.runpp:53
+msgid ""
+"**tolerance_mva** (float, 1e-8) - loadflow termination condition "
+"referring to P / Q mismatch of node power in MVA"
+msgstr ""
+
+#: of pandapower.run.runpp:55
+msgid ""
+"**trafo_model** (str, \"t\")  - transformer equivalent circuit model "
+"pandapower provides two equivalent circuit models for the transformer:"
+msgstr ""
+
+#: of pandapower.run.runpp:58
+msgid "\"t\" - transformer is modeled as equivalent with the T-model."
+msgstr ""
+
+#: of pandapower.run.runpp:59
+msgid ""
+"\"pi\" - transformer is modeled as equivalent PI-model. This is not "
+"recommended, since it is less exact than the T-model. It is only "
+"recommended for valdiation with other software that uses the pi-model."
+msgstr ""
+
+#: of pandapower.run.runpp:61
+msgid ""
+"**trafo_loading** (str, \"current\") - mode of calculation for "
+"transformer loading"
+msgstr ""
+
+#: of pandapower.run.runpp:63
+msgid ""
+"Transformer loading can be calculated relative to the rated current or "
+"the rated power. In both cases the overall transformer loading is defined"
+" as the maximum loading on the two sides of the transformer."
+msgstr ""
+
+#: of pandapower.run.runpp:65
+msgid ""
+"\"current\"- transformer loading is given as ratio of current flow and "
+"rated current of the transformer. This is the recommended setting, since "
+"thermal as well as magnetic effects in the transformer depend on the "
+"current."
+msgstr ""
+
+#: of pandapower.run.runpp:66
+msgid ""
+"\"power\" - transformer loading is given as ratio of apparent power flow "
+"to the rated apparent power of the transformer."
+msgstr ""
+
+#: of pandapower.run.runpp:68
+msgid "**enforce_q_lims** (bool, False) - respect generator reactive power limits"
+msgstr ""
+
+#: of pandapower.run.runpp:70
+msgid ""
+"If True, the reactive power limits in net.gen.max_q_mvar/min_q_mvar are "
+"respected in the loadflow. This is done by running a second loadflow if "
+"reactive power limits are violated at any generator, so that the runtime "
+"for the loadflow will increase if reactive power has to be curtailed."
+msgstr ""
+
+#: of pandapower.run.runpp:75
+msgid "Note: enforce_q_lims only works if algorithm=\"nr\"!"
+msgstr ""
+
+#: of pandapower.run.runpp:77
+msgid ""
+"**check_connectivity** (bool, True) - Perform an extra connectivity test "
+"after the conversion from pandapower to PYPOWER"
+msgstr ""
+
+#: of pandapower.run.runpp:79
+msgid ""
+"If True, an extra connectivity test based on SciPy Compressed Sparse "
+"Graph Routines is perfomed. If check finds unsupplied buses, they are set"
+" out of service in the ppc"
+msgstr ""
+
+#: of pandapower.run.runpp:82
+msgid ""
+"**voltage_depend_loads** (bool, True) - consideration of voltage-"
+"dependent loads. If False, net.load.const_z_percent and "
+"net.load.const_i_percent are not considered, i.e. net.load.p_mw and "
+"net.load.q_mvar are considered as constant-power loads."
+msgstr ""
+
+#: of pandapower.run.runpp:87
+msgid ""
+"**consider_line_temperature** (bool, False) - adjustment of line "
+"impedance based on provided"
+msgstr ""
+
+#: of pandapower.run.runpp:85
+msgid ""
+"line temperature. If True, net.line must contain a column "
+"\"temperature_degree_celsius\". The temperature dependency coefficient "
+"alpha must be provided in the net.line.alpha column, otherwise the "
+"default value of 0.004 is used"
+msgstr ""
+
+#: of pandapower.run.runpp:89
+msgid "**KWARGS:"
+msgstr ""
+
+#: of pandapower.run.runpp:91
+msgid ""
+"**numba** (bool, True) - Activation of numba JIT compiler in the newton "
+"solver"
+msgstr ""
+
+#: of pandapower.run.runpp:93
+msgid ""
+"If set to True, the numba JIT compiler is used to generate matrices for "
+"the powerflow, which leads to significant speed improvements."
+msgstr ""
+
+#: of pandapower.run.runpp:96
+msgid ""
+"**switch_rx_ratio** (float, 2) - rx_ratio of bus-bus-switches. If "
+"impedance is zero, buses connected by a closed bus-bus switch are fused "
+"to model an ideal bus. Otherwise, they are modelled as branches with "
+"resistance defined as z_ohm column in switch table and this parameter"
+msgstr ""
+
+#: of pandapower.run.runpp:98
+msgid ""
+"**delta_q** - Reactive power tolerance for option \"enforce_q_lims\" in "
+"kvar - helps convergence in some cases."
+msgstr ""
+
+#: of pandapower.run.runpp:100
+msgid ""
+"**trafo3w_losses** - defines where open loop losses of three-winding "
+"transformers are considered. Valid options are \"hv\", \"mv\", \"lv\" for"
+" HV/MV/LV side or \"star\" for the star point."
+msgstr ""
+
+#: of pandapower.run.runpp:102
+msgid ""
+"**v_debug** (bool, False) - if True, voltage values in each newton-"
+"raphson iteration are logged in the ppc"
+msgstr ""
+
+#: of pandapower.run.runpp:104
+msgid ""
+"**init_vm_pu** (string/float/array/Series, None) - Allows to define "
+"initialization specifically for voltage magnitudes. Only works with init "
+"== \"auto\"!"
+msgstr ""
+
+#: of pandapower.run.runpp:106
+msgid ""
+"\"auto\": all buses are initialized with the mean value of all voltage "
+"controlled elements in the grid"
+msgstr ""
+
+#: of pandapower.run.runpp:107
+msgid "\"flat\" for flat start from 1.0"
+msgstr ""
+
+#: of pandapower.run.runpp:108
+msgid "\"results\": voltage magnitude vector is taken from result table"
+msgstr ""
+
+#: of pandapower.run.runpp:109
+msgid "a float with which all voltage magnitudes are initialized"
+msgstr ""
+
+#: of pandapower.run.runpp:110
+msgid ""
+"an iterable with a voltage magnitude value for each bus (length and order"
+" has to match with the buses in net.bus)"
+msgstr ""
+
+#: of pandapower.run.runpp:111
+msgid ""
+"a pandas Series with a voltage magnitude value for each bus (indexes have"
+" to match the indexes in net.bus)"
+msgstr ""
+
+#: of pandapower.run.runpp:113
+msgid ""
+"**init_va_degree** (string/float/array/Series, None) - Allows to define "
+"initialization specifically for voltage angles. Only works with init == "
+"\"auto\"!"
+msgstr ""
+
+#: of pandapower.run.runpp:115
+msgid ""
+"\"auto\": voltage angles are initialized from DC power flow if angles are"
+" calculated or as 0 otherwise"
+msgstr ""
+
+#: of pandapower.run.runpp:116
+msgid "\"dc\": voltage angles are initialized from DC power flow"
+msgstr ""
+
+#: of pandapower.run.runpp:117
+msgid "\"flat\" for flat start from 0"
+msgstr ""
+
+#: of pandapower.run.runpp:118
+msgid "\"results\": voltage angle vector is taken from result table"
+msgstr ""
+
+#: of pandapower.run.runpp:119
+msgid "a float with which all voltage angles are initialized"
+msgstr ""
+
+#: of pandapower.run.runpp:120
+msgid ""
+"an iterable with a voltage angle value for each bus (length and order has"
+" to match with the buses in net.bus)"
+msgstr ""
+
+#: of pandapower.run.runpp:121
+msgid ""
+"a pandas Series with a voltage angle value for each bus (indexes have to "
+"match the indexes in net.bus)"
+msgstr ""
+
+#: of pandapower.run.runpp:123
+msgid ""
+"**recycle** (dict, none) - Reuse of internal powerflow variables for time"
+" series calculation"
+msgstr ""
+
+#: of pandapower.run.runpp:125
+msgid ""
+"Contains a dict with the following parameters: bus_pq: If True PQ values "
+"of buses are updated trafo: If True trafo relevant variables, e.g., the "
+"Ybus matrix, is recalculated gen: If True Sbus and the gen table in the "
+"ppc are recalculated"
+msgstr ""
+
+#: of pandapower.run.runpp:130
+msgid ""
+"**neglect_open_switch_branches** (bool, False) - If True no auxiliary "
+"buses are created for branches when switches are opened at the branch. "
+"Instead branches are set out of service"
+msgstr ""
+
+#: ../../source/powerflow/ac.rst:15
+msgid ""
+"If you are interested in the pypower casefile that pandapower is using "
+"for power flow, you can find it in net[\"_ppc\"]. However all necessary "
+"informations are written into the pandpower format net, so the pandapower"
+" user should not usually have to deal with pypower."
+msgstr ""
+

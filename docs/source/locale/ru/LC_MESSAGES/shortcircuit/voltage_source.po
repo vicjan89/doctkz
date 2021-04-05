@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/shortcircuit/voltage_source.rst:2
+msgid "Voltage Source Elements"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:4
+msgid ""
+"Voltage source elements are represented by their internal voltage source "
+"with an internal resistance :math:`Z_k`:"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:10
+msgid ""
+"since the voltage source is moved to the fault location for with "
+"methodology of the equivalent voltage source, the bus elements can be "
+"reduced to a single shunt impedance:"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:17
+msgid ""
+"The contribution of loads and shunts are negligible according to the "
+"standard and therefore neglected in the short-circuit calculation."
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:20
+msgid "External Grid"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:22
+msgid ""
+"When calculating maximum short-circuit currents, the impedance of an "
+"external grid connection is given as:"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:24
+msgid ""
+"z_{k, eg} =& \\frac{c_{max}}{s\\_sc\\_max\\_mva} \\\\[1em]\n"
+"x_{k, eg} =& \\frac{z_{sg}}{\\sqrt{1 + rx\\_max^2}} \\\\[1em]\n"
+"r_{k, eg} =& rx\\_max \\cdot x_{sg}"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:30
+msgid ""
+"where :math:`rx\\_max` and :math:`s\\_sc\\_max\\_mva` are parameters in "
+"the ext_grid table and :math:`c_{max}` is the :ref:`voltage correction "
+"factor <c>` of the external grid bus."
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:33
+msgid ""
+"In case of minimal short-circuit currents, the impedance is calculated "
+"accordingly:"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:35
+msgid ""
+"z_{k, eg} =& \\frac{c_{min}}{s\\_sc\\_min\\_mva} \\\\[1em]\n"
+"x_{k, eg} =& \\frac{z_{sg}}{\\sqrt{1 + rx\\_min^2}} \\\\[1em]\n"
+"r_{k, eg} =& rx\\_min \\cdot x_{sg}"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:42
+msgid "Asynchronous Motor"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:43
+msgid ""
+"Asynchronous motors can be considered by setting the type variable of an "
+"sgen element to \"motor\". The internal impedance is then calculated as:"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:45
+msgid ""
+"Z_{k, m} = \\frac{1}{k} \\cdot \\frac{vn\\_kv^2 \\cdot 1000}{sn\\_kva} "
+"\\\\\n"
+"X_{k, m} = \\frac{Z_{sg}}{\\sqrt{1 + rx^2}} \\\\\n"
+"R_{k, m} = rx \\cdot X_{sg}"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:51
+msgid ""
+"where :math:`sn\\_kva` is the rated power of the motor, :math:`k` is the "
+"ratio of nominal to short circuit current and :math:`rx` is the R/X ratio"
+" of the motor. :math:`vn\\_kv` is the rated voltage of the bus the motor "
+"is connected to."
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:56
+msgid "Synchronous Generator"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:57
+msgid "Synchronous generators are considered with the short-circuit impedance of:"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:59
+msgid ""
+"\\underline{Z}_{k, gen} = K_G \\cdot (R''_d + jX''_d)\n"
+"\n"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:62
+msgid "The short-circuit impedance is calculated as:"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:64
+msgid "z_k = xdss"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:68
+msgid "The generator correction factor :math:`K_G` is given as:"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:70
+msgid ""
+"K_G = \\frac{V_{N, gen}}{V_{N, bus}} \\cdot \\frac{c_{max}}{1 + x_{dss} "
+"\\cdot sin(\\varphi)}"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:74
+msgid ""
+"where :math:`V_{N, bus}` is the rated voltage of the bus the generator is"
+" connected to and :math:`V_{N, gen}` is the rated voltage of the "
+"generator which is defined by the parameter :math:`\\text{sn\\_kva}` in "
+"the gen table. The rated phasor angle :math:`\\varphi` is given as:"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:77
+msgid "\\varphi = arcos(cos\\_phi)"
+msgstr ""
+
+#: ../../source/shortcircuit/voltage_source.rst:81
+msgid "where :math:`cos\\_phi` is defined in the gen table."
+msgstr ""
+

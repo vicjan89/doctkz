@@ -1,0 +1,650 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/estimation.rst:3
+msgid "State Estimation"
+msgstr ""
+
+#: ../../source/estimation.rst:5
+msgid "The module provides a state estimation for pandapower networks."
+msgstr ""
+
+#: ../../source/estimation.rst:8
+msgid "Theoretical Background"
+msgstr ""
+
+#: ../../source/estimation.rst:9
+msgid ""
+"State Estimation is a process to estimate the electrical state of a "
+"network by eliminating inaccuracies and errors from measurement data. "
+"Various measurements are placed around the network and transferred to the"
+" operational control center via SCADA. Unfortunately measurements are not"
+" perfect: There are tolerances for each measurement device, which lead to"
+" an inherent inaccuracy in the measurement value. Analog transmission of "
+"data can change the measurement values through noise. Faulty devices can "
+"return completely wrong measurement values. To account for the "
+"measurement errors, the state estimation processes all available "
+"measurements and uses a regression method to identify the likely real "
+"state of the electrical network. The **output** of the state estimator is"
+" therefore a **set of voltage absolutes and voltage angles** for all "
+"buses in the grid. The **input** is the **network** in pandapower format "
+"and a number of **measurements**."
+msgstr ""
+
+#: ../../source/estimation.rst:13
+msgid "Amount of Measurements"
+msgstr ""
+
+#: ../../source/estimation.rst:15
+msgid ""
+"There is a minimum amount of required measurements necessary for the "
+"regression to be mathematically possible. Assuming the network contains "
+":math:`n` buses, the network is then described by :math:`2n` variables, "
+"namely :math:`n` voltage absolute values and :math:`n` voltage angles. A "
+"slack bus serves as the reference, its voltage angle is set to zero or "
+"the value provided in the corresponding *net.ext_grid.va_degree* entry "
+"(see *init* parameter) and is not altered in the estimation process. The "
+"voltage angles of the other network buses are relative to the voltage "
+"angles of the connected slack bus. The state estimation therefore has to "
+"find :math:`2n-k` variables, where :math:`k` is the number of defined "
+"slack buses. The minimum amount of measurements :math:`m_{min}` needed "
+"for the method to work is therefore:"
+msgstr ""
+
+#: ../../source/estimation.rst:21
+msgid ":math:`m_{min} = 2n-k`"
+msgstr ""
+
+#: ../../source/estimation.rst:23
+msgid ""
+"To perform well however, the number of redundant measurements should be "
+"higher. A value of :math:`m \\approx 4n` is often considered reasonable "
+"for practical purposes."
+msgstr ""
+
+#: ../../source/estimation.rst:26
+msgid "Standard Deviation"
+msgstr ""
+
+#: ../../source/estimation.rst:27
+#, python-format
+msgid ""
+"Since each measurement device may have a different tolerance and a "
+"different path length it has to travel to the control center, the "
+"accuracy of each measurement can be different. Therefore each measurement"
+" is assigned an accuracy value in the form of a standard deviation. "
+"Typical measurement errors are 1 % for voltage measurements and 1-3 % for"
+" power measurements."
+msgstr ""
+
+#: ../../source/estimation.rst:30
+msgid ""
+"For a more in-depth explanation of the internals of the state estimation "
+"method, please see the following sources:"
+msgstr ""
+
+#: ../../source/estimation.rst:33 ../../source/estimation.rst:104
+msgid ""
+"*Power System State Estimation: Theory and Implementation* by Ali Abur, "
+"Antonio Gómez Expósito, CRC Press, 2004."
+msgstr ""
+
+#: ../../source/estimation.rst:34
+msgid ""
+"*State Estimation in Electric Power Systems - A Generalized Approach* by "
+"A. Monticelli, Springer, 1999."
+msgstr ""
+
+#: ../../source/estimation.rst:38
+msgid "Defining Measurements"
+msgstr ""
+
+#: ../../source/estimation.rst:40
+msgid ""
+"Measurements are defined via the pandapower *\"create_measurement\"* "
+"function. There are different physical properties, which can be measured "
+"at different elements. The following lists and table clarify the possible"
+" combinations. Contrary to the pandapower load flow results, bus power "
+"injection measurements are given in the producer system. Generated power "
+"is positive, consumed power is negative."
+msgstr ""
+
+#: ../../source/estimation.rst:42
+msgid "**Types of Measurements**"
+msgstr ""
+
+#: ../../source/estimation.rst:44
+msgid "*\"v\"* for voltage measurements (in per-unit)"
+msgstr ""
+
+#: ../../source/estimation.rst:45
+msgid "*\"p\"* for active power measurements (in MW)"
+msgstr ""
+
+#: ../../source/estimation.rst:46
+msgid "*\"q\"* for reactive power measurements (in MVar)"
+msgstr ""
+
+#: ../../source/estimation.rst:47
+msgid "*\"i\"* for electrical current measurements at a line (in kA)"
+msgstr ""
+
+#: ../../source/estimation.rst:50
+msgid "**Element Types**"
+msgstr ""
+
+#: ../../source/estimation.rst:52
+msgid "*\"bus\"* for bus measurements"
+msgstr ""
+
+#: ../../source/estimation.rst:53
+msgid "*\"line\"* for line measurements"
+msgstr ""
+
+#: ../../source/estimation.rst:54
+msgid "*\"trafo\"* for transformer measurements"
+msgstr ""
+
+#: ../../source/estimation.rst:55
+msgid "*\"trafo3w\"* for three-winding-transformer measurements"
+msgstr ""
+
+#: ../../source/estimation.rst:58
+msgid "**Available Measurements per Element**"
+msgstr ""
+
+#: ../../source/estimation.rst:61
+msgid "Element Type"
+msgstr ""
+
+#: ../../source/estimation.rst:61
+msgid "Available Measurement Types"
+msgstr ""
+
+#: ../../source/estimation.rst:63
+msgid "bus"
+msgstr ""
+
+#: ../../source/estimation.rst:63
+msgid "v, p, q"
+msgstr ""
+
+#: ../../source/estimation.rst:65
+msgid "line"
+msgstr ""
+
+#: ../../source/estimation.rst:65 ../../source/estimation.rst:67
+#: ../../source/estimation.rst:69
+msgid "i, p, q"
+msgstr ""
+
+#: ../../source/estimation.rst:67
+msgid "trafo"
+msgstr ""
+
+#: ../../source/estimation.rst:69
+msgid "trafo3w"
+msgstr ""
+
+#: ../../source/estimation.rst:72
+msgid "The *\"create_measurement\"* function is defined as follows:"
+msgstr ""
+
+#: of pandapower.create.create_measurement:2
+msgid ""
+"Creates a measurement, which is used by the estimation module. Possible "
+"types of measurements are: v, p, q, i, va, ia"
+msgstr ""
+
+#: of pandapower.create.create_measurement:21
+#: pandapower.estimation.state_estimation.chi2_analysis:9
+#: pandapower.estimation.state_estimation.remove_bad_data:9
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.create.create_measurement:6
+msgid ""
+"**meas_type** (string) - Type of measurement. \"v\", \"p\", \"q\", \"i\","
+" \"va\", \"ia\" are possible"
+msgstr ""
+
+#: of pandapower.create.create_measurement:8
+msgid ""
+"**element_type** (string) - Clarifies which element is measured. \"bus\","
+" \"line\", \"trafo\", and \"trafo3w\" are possible"
+msgstr ""
+
+#: of pandapower.create.create_measurement:11
+msgid ""
+"**value** (float) - Measurement value. Units are \"MW\" for P, \"MVar\" "
+"for Q, \"p.u.\" for V, \"kA\" for I. Generation is a positive bus power "
+"consumption, injection negative"
+msgstr ""
+
+#: of pandapower.create.create_measurement:14
+msgid ""
+"**std_dev** (float) - Standard deviation in the same unit as the "
+"measurement"
+msgstr ""
+
+#: of pandapower.create.create_measurement:16
+msgid ""
+"**element** (int) - Index of the measured element (either bus index, line"
+" index, trafo index, trafo3w index)"
+msgstr ""
+
+#: of pandapower.create.create_measurement:18
+msgid ""
+"**side** (int, string, default: None) - Only used for measured lines or "
+"transformers. Side defines at which end of the branch the measurement is "
+"gathered. For lines this may be \"from\", \"to\" to denote the side with "
+"the from_bus or to_bus. It can also the be index of the from_bus or "
+"to_bus. For transformers, it can be \"hv\", \"mv\" or \"lv\" or the "
+"corresponding bus index, respectively"
+msgstr ""
+
+#: of pandapower.create.create_measurement:30
+#: pandapower.estimation.state_estimation.chi2_analysis:21
+#: pandapower.estimation.state_estimation.estimate:36
+#: pandapower.estimation.state_estimation.remove_bad_data:22
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.create.create_measurement:24
+msgid ""
+"**check_existing** (bool, default: None) - Check for and replace existing"
+" measurements for this bus, type and element_type. Set it to false for "
+"performance improvements which can cause unsafe behaviour"
+msgstr ""
+
+#: of pandapower.create.create_measurement:28
+msgid ""
+"**index** (int, default: None) - Index of the measurement in the "
+"measurement table. Should not exist already."
+msgstr ""
+
+#: of pandapower.create.create_measurement:30
+msgid "**name** (str, default: None) - Name of measurement"
+msgstr ""
+
+#: of pandapower.create.create_measurement:33
+#: pandapower.estimation.state_estimation.chi2_analysis:38
+#: pandapower.estimation.state_estimation.estimate:53
+#: pandapower.estimation.state_estimation.remove_bad_data:39
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.create.create_measurement:33
+msgid "(int) Index of measurement"
+msgstr ""
+
+#: of pandapower.create.create_measurement:54
+msgid "EXAMPLES:"
+msgstr ""
+
+#: of pandapower.create.create_measurement:36
+msgid ""
+"2 MW load measurement with 0.05 MW standard deviation on bus 0: "
+"create_measurement(net, \"p\", \"bus\", 0, 2., 0.05.)"
+msgstr ""
+
+#: of pandapower.create.create_measurement:39
+msgid ""
+"4.5 MVar line measurement with 0.1 MVar standard deviation on the "
+"\"to_bus\" side of line 2 create_measurement(net, \"q\", \"line\", 2, "
+"4.5, 0.1, \"to\")"
+msgstr ""
+
+#: ../../source/estimation.rst:77
+msgid "Running the State Estimation"
+msgstr ""
+
+#: ../../source/estimation.rst:79
+msgid ""
+"The state estimation can be used with the wrapper function "
+"*\"estimate\"*, which prevents the need to deal with the state_estimation"
+" class object and functions. It can be imported from "
+"*\"estimation.state_estimation\"*."
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.estimate:2
+msgid "Wrapper function for WLS state estimation. INPUT:"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.estimate:4
+#: pandapower.estimation.state_estimation.remove_bad_data:5
+msgid "**net** - The net within this line should be created"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.chi2_analysis:7
+#: pandapower.estimation.state_estimation.estimate:6
+#: pandapower.estimation.state_estimation.remove_bad_data:7
+msgid ""
+"**init** - (string) Initial voltage for the estimation. 'flat' sets 1.0 "
+"p.u. / 0° for all buses, 'results' uses the values from *res_bus_est* if "
+"available and 'slack' considers the slack bus voltage (and optionally, "
+"angle) as the initial values. Default is 'flat'"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.chi2_analysis:12
+#: pandapower.estimation.state_estimation.estimate:10
+#: pandapower.estimation.state_estimation.remove_bad_data:12
+msgid ""
+"**tolerance** - (float) - When the maximum state change between "
+"iterations is less than tolerance, the process stops. Default is 1e-6"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.chi2_analysis:15
+#: pandapower.estimation.state_estimation.estimate:13
+#: pandapower.estimation.state_estimation.remove_bad_data:15
+msgid ""
+"**maximum_iterations** - (integer) - Maximum number of iterations. "
+"Default is 10"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.chi2_analysis:17
+#: pandapower.estimation.state_estimation.estimate:15
+#: pandapower.estimation.state_estimation.remove_bad_data:17
+msgid ""
+"**calculate_voltage_angles** - (boolean) - Take into account absolute "
+"voltage angles and phase shifts in transformers, if init is 'slack'. "
+"Default is True"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.estimate:18
+msgid ""
+"**zero_injection** - (str, iterable, None) - Defines which buses are zero"
+" injection bus or the method to identify zero injection bus, with "
+"'wls_estimator' virtual measurements will be added, with  'wls_estimator "
+"with zero constraints' the buses will be handled as constraints"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.estimate:21
+msgid ""
+"\"auto\": all bus without p,q measurement, without p, q value (load, "
+"sgen...) and aux buses will be"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.estimate:22
+msgid "identified as zero injection bus"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.estimate:23
+msgid ""
+"\"aux_bus\": only aux bus will be identified as zero injection bus None: "
+"no bus will be identified as zero injection bus iterable: the iterable "
+"should contain index of the zero injection bus and also aux bus will be "
+"identified"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.estimate:26
+msgid "as zero-injection bus"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.estimate:28
+msgid ""
+"**fuse_buses_with_bb_switch** - (str, iterable, None) - Defines how buses"
+" with closed bb switches should  be handled, if fuse buses will only "
+"fused to one for calculation, if not fuse, an auxiliary bus and  "
+"auxiliary line will be automatically added to the network to make the "
+"buses with different p,q injection measurements identifieble"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.estimate:32
+msgid ""
+"\"all\": all buses with bb-switches will be fused, the same as the "
+"default behaviour in load flow None: buses with bb-switches and "
+"individual p,q measurements will be reconfigurated"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.estimate:34
+msgid "by auxiliary elements"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.estimate:36
+msgid ""
+"iterable: the iterable should contain the index of buses to be fused, the"
+" behaviour is contigous e.g."
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.estimate:36
+msgid ""
+"if one of the bus among the buses connected through bb switch is given, "
+"then all of them will still be fused"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.estimate:39
+#: pandapower.estimation.state_estimation.remove_bad_data:25
+msgid "**successful** (boolean) - Was the state estimation successful?"
+msgstr ""
+
+#: ../../source/estimation.rst:84
+msgid "Handling of bad data"
+msgstr ""
+
+#: ../../source/estimation.rst:86
+msgid ""
+"The bad data removal is not very robust at this time. Please treat the "
+"results with caution!"
+msgstr ""
+
+#: ../../source/estimation.rst:88
+msgid ""
+"The state estimation class allows additionally the removal of bad data, "
+"especially single or non-interacting false measurements. For detecting "
+"bad data the Chi-squared distribution is used to identify the presence of"
+" them. Afterwards follows the largest normalized residual test that "
+"identifys the actual measurements which will be removed at the end. Both "
+"methods are combined in the *perform_rn_max_test* function that is part "
+"of the state estimation class. To access it, the following wrapper "
+"function *remove_bad_data* has been created."
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.remove_bad_data:2
+msgid "Wrapper function for bad data removal."
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.remove_bad_data:20
+msgid ""
+"**rn_max_threshold** (float) - Identification threshold to determine if "
+"the largest normalized residual reflects a bad measurement (default value"
+" of 3.0)"
+msgstr ""
+
+#: ../../source/estimation.rst:96
+msgid ""
+"Nevertheless the Chi-squared test is available as well to allow a "
+"identification of topology errors or, as explained, false measurements. "
+"It is named as *chi2_analysis*. The detection's result of present bad "
+"data of the Chi-squared test is stored internally as *bad_data_present* "
+"(boolean, class member variable) and returned by the function call."
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.chi2_analysis:2
+msgid "Wrapper function for the chi-squared test."
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.chi2_analysis:5
+msgid "**net** - The net within this line should be created."
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.chi2_analysis:20
+msgid ""
+"**chi2_prob_false** (float) - probability of error / false alarms "
+"(default value: 0.05)"
+msgstr ""
+
+#: of pandapower.estimation.state_estimation.chi2_analysis:24
+msgid ""
+"**bad_data_detected** (boolean) - Returns true if bad data has been "
+"detected"
+msgstr ""
+
+#: ../../source/estimation.rst:101
+msgid ""
+"Background information about this topic can be sourced from the following"
+" literature:"
+msgstr ""
+
+#: ../../source/estimation.rst:105
+msgid ""
+"*Power Generation, Operation, and Control* by Allen J. Wood, Bruce "
+"Wollenberg, Wiley Interscience Publication, 1996."
+msgstr ""
+
+#: ../../source/estimation.rst:108
+msgid "Example"
+msgstr ""
+
+#: ../../source/estimation.rst:110
+msgid ""
+"As an example, we will define measurements for a simple pandapower "
+"network *net* with 4 buses. Bus 4 is out-of-service. The external grid is"
+" connected at bus 1."
+msgstr ""
+
+#: ../../source/estimation.rst:112
+msgid ""
+"There are multiple measurements available, which have to be defined for "
+"the state estimator. There are two voltage measurements at buses 1 and 2."
+" There are two power measurements (active and reactive power) at bus 2. "
+"There are also line power measurements at bus 1. The measurements are "
+"both for active and reactive power and are located on the line from bus 1"
+" to bus 2 and from bus 1 to bus 3. This yields the following code:"
+msgstr ""
+
+#: ../../source/estimation.rst:129
+msgid ""
+"Now that the data is ready, the state_estimation can be initialized and "
+"run. We want to use the flat start condition, in which all voltages are "
+"set to 1.0 p.u.."
+msgstr ""
+
+#: ../../source/estimation.rst:137
+msgid ""
+"The resulting variables now contain the voltage absolute values in *V*, "
+"the voltage angles in *delta*, an indication of success in *success*. The"
+" bus power injections can be accessed similarly with "
+"*net.res_bus_est.p_mw* and *net.res_bus_est.q_mvar*. Line data is also "
+"available in the same format as defined in *res_line*."
+msgstr ""
+
+#: ../../source/estimation.rst:141
+msgid ""
+"If we like to check our data for fault measurements, and exclude them in "
+"in our state estimation, we use the following code:"
+msgstr ""
+
+#: ../../source/estimation.rst:148
+msgid ""
+"In the case that we only like to know if there is a likelihood of fault "
+"measurements (probabilty of fault can be adjusted), the Chi-squared test "
+"should be performed separatly. If the test detects the possibility of "
+"fault data, the value of the added class member variable "
+"*bad_data_present* would be *true* as well as the boolean variable "
+"*success_chi2* that is used here:"
+msgstr ""
+
+#: ../../source/estimation.rst:156
+msgid "Further Algorithms and Estimators"
+msgstr ""
+
+#: ../../source/estimation.rst:157
+msgid ""
+"Since Pandapower 2.0.1 further algorithms and estimators (robust "
+"estimators) are available for the state estimation module, these include:"
+msgstr ""
+
+#: ../../source/estimation.rst:160
+msgid "Algorithm"
+msgstr ""
+
+#: ../../source/estimation.rst:160
+msgid "Available Estimators"
+msgstr ""
+
+#: ../../source/estimation.rst:162
+msgid "wls (Newton-Gauss)"
+msgstr ""
+
+#: ../../source/estimation.rst:164
+msgid "wls with zero injection constraints"
+msgstr ""
+
+#: ../../source/estimation.rst:166
+msgid "lp"
+msgstr ""
+
+#: ../../source/estimation.rst:166
+msgid "lav"
+msgstr ""
+
+#: ../../source/estimation.rst:168
+msgid "irwls"
+msgstr ""
+
+#: ../../source/estimation.rst:168
+msgid "wls, shgm"
+msgstr ""
+
+#: ../../source/estimation.rst:170
+msgid "Scipy Optimization Tool"
+msgstr ""
+
+#: ../../source/estimation.rst:170
+msgid "wls, lav, ql, qc"
+msgstr ""
+
+#: ../../source/estimation.rst:173
+msgid ""
+"Most of the algorithms and estimators are implemented as explained in the"
+" *Power System State Estimation: Theory and Implementation* by Ali Abur, "
+"Antonio Gómez Expósito, CRC Press, 2004. While the QC and QL estimators "
+"are adjusted mathematically for a better convergence of scipy "
+"optimization tool."
+msgstr ""
+
+#: ../../source/estimation.rst:175
+msgid ""
+"For SHGM: Please see *\"Robust state estimation based on projection "
+"statistics,\" IEEE Trans. Power Syst, vol. 11, no. 2, pp. 1118--1127, "
+"1996.* by L. Mili, M. Cheniae, N. Vichare, and P. Rousseeuw. The "
+"projection statistics was rewritten in Python based on the code published"
+" by original authors of the paper."
+msgstr ""
+
+#: ../../source/estimation.rst:177
+msgid "Example of using extra estimators: ::"
+msgstr ""
+
+#: ../../source/estimation.rst:189
+msgid ""
+"Note that: The state estimation with Scipy Optimization Tool could "
+"collapse in some cases with flat start, it's suggested to give the "
+"algorithm a warm start or try some other optimization's methods offered "
+"by scipy, which preserves the effects of the estimator while helps the "
+"convergence."
+msgstr ""
+
+#: ../../source/estimation.rst:192
+msgid ""
+"Example for chained estimation (warm start for SciPy Optimization Tool): "
+"::"
+msgstr ""
+

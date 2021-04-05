@@ -1,0 +1,339 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/elements/shunt.rst:5
+msgid "Shunt"
+msgstr ""
+
+#: ../../source/elements/shunt.rst:8
+msgid ":ref:`Unit Systems and Conventions <conventions>`"
+msgstr ""
+
+#: ../../source/elements/shunt.rst:11
+msgid "Create Function"
+msgstr ""
+
+#: of pandapower.create.create_shunt:2
+msgid "Creates a shunt element"
+msgstr ""
+
+#: of pandapower.create.create_shunt:11
+#: pandapower.create.create_shunt_as_capacitor:4
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.create.create_shunt:5
+#: pandapower.create.create_shunt_as_capacitor:6
+msgid ""
+"**net** (pandapowerNet) - The pandapower network in which the element is "
+"created"
+msgstr ""
+
+#: of pandapower.create.create_shunt:7
+#: pandapower.create.create_shunt_as_capacitor:8
+msgid "**bus** - bus number of bus to whom the shunt is connected to"
+msgstr ""
+
+#: of pandapower.create.create_shunt:9
+msgid "**p_mw** - shunt active power in kW at v= 1.0 p.u."
+msgstr ""
+
+#: of pandapower.create.create_shunt:11
+msgid "**q_mvar** - shunt susceptance in kVAr at v= 1.0 p.u."
+msgstr ""
+
+#: of pandapower.create.create_shunt:24
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.create.create_shunt:14
+msgid ""
+"**vn_kv** (float, None) - rated voltage of the shunt. Defaults to rated "
+"voltage of             connected bus"
+msgstr ""
+
+#: of pandapower.create.create_shunt:16
+msgid "**step** (int, 1) - step of shunt with which power values are multiplied"
+msgstr ""
+
+#: of pandapower.create.create_shunt:18
+msgid ""
+"**max_step** (boolean, True) - True for in_service or False for out of "
+"service"
+msgstr ""
+
+#: of pandapower.create.create_shunt:20
+msgid "**name** (str, None) - element name"
+msgstr ""
+
+#: of pandapower.create.create_shunt:22
+msgid ""
+"**in_service** (boolean, True) - True for in_service or False for out of "
+"service"
+msgstr ""
+
+#: of pandapower.create.create_shunt:24
+msgid ""
+"**index** (int, None) - Force a specified ID if it is available. If None,"
+" the index one             higher than the highest already existing index"
+" is selected."
+msgstr ""
+
+#: of pandapower.create.create_shunt:27
+#: pandapower.create.create_shunt_as_capacitor:31
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.create.create_shunt:27
+#: pandapower.create.create_shunt_as_capacitor:17
+msgid "**index** (int) - The unique ID of the created shunt"
+msgstr ""
+
+#: of pandapower.create.create_shunt:44
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.create.create_shunt:30
+msgid "create_shunt(net, 0, 20)"
+msgstr ""
+
+#: of pandapower.create.create_shunt_as_capacitor:2
+msgid "Creates a shunt element representing a capacitor bank."
+msgstr ""
+
+#: of pandapower.create.create_shunt_as_capacitor:10
+msgid "**q_mvar** (float) - reactive power of the capacitor bank at rated voltage"
+msgstr ""
+
+#: of pandapower.create.create_shunt_as_capacitor:12
+msgid "**loss_factor** (float) - loss factor tan(delta) of the capacitor bank"
+msgstr ""
+
+#: of pandapower.create.create_shunt_as_capacitor:14
+msgid "**kwargs are passed to the create_shunt function"
+msgstr ""
+
+#: ../../source/elements/shunt.rst:19
+msgid "Input Parameters"
+msgstr ""
+
+#: ../../source/elements/shunt.rst:21
+msgid "*net.shunt*"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1 ../../source/elements/shunt_res.csv:1
+msgid "**Parameter**"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1 ../../source/elements/shunt_res.csv:1
+msgid "**Datatype**"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "**Value Range**"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1 ../../source/elements/shunt_res.csv:1
+msgid "**Explanation**"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "name"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "string"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "name of the shunt"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "bus*"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "integer"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "index of bus where the impedance starts"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "p_mw*"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1 ../../source/elements/shunt_res.csv:1
+msgid "float"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid ":math:`\\geq` 0"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "shunt active power in MW at v= 1.0 p.u."
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "q_mvar*"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "shunt reactive power in kvar at v= 1.0 p.u."
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "vn_kv*"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid ":math:`>` 0"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "rated voltage of the shunt element"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "step*"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid ":math:`\\geq` 1"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "step position of the shunt"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "in_service*"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "boolean"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "True / False"
+msgstr ""
+
+#: ../../source/elements/shunt_par.csv:1
+msgid "specifies if the shunt is in service."
+msgstr ""
+
+#: ../../source/elements/shunt.rst:29
+msgid "\\*necessary for executing a power flow calculation."
+msgstr ""
+
+#: ../../source/elements/shunt.rst:33
+msgid "Electric Model"
+msgstr ""
+
+#: ../../source/elements/shunt.rst:41
+msgid ""
+"The power values are given at :math:`v = 1` pu and are scaled linearly "
+"with the number of steps:"
+msgstr ""
+
+#: ../../source/elements/shunt.rst:43
+msgid ""
+"\\begin{align*}\n"
+"\\underline{S}_{shunt, ref} &= (p\\_mw + j \\cdot q\\_mvar) \\cdot step\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/shunt.rst:50
+msgid ""
+"Since :math:`\\underline{S}_{shunt, ref}` is the apparent power at the "
+"nominal voltage, we know that:"
+msgstr ""
+
+#: ../../source/elements/shunt.rst:52
+msgid ""
+"\\begin{align*}\n"
+"\\underline{Y}_{shunt} = \\frac{\\underline{S}_{shunt, ref}}{vn\\_kv^2}\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/shunt.rst:59
+msgid "Converting to the per unit system results in:"
+msgstr ""
+
+#: ../../source/elements/shunt.rst:61
+msgid ""
+"\\begin{align*}\n"
+"\\underline{y}_{shunt} &= \\frac{\\underline{S}_{shunt, ref}}{V_{N}^2} "
+"\\cdot Z_{N}\\\\\n"
+"                      &= \\frac{\\underline{S}_{shunt, ref}}{V_{N}^2} "
+"\\cdot \\frac{V_{N}^2}{S_{N}} \\\\\n"
+"                      &= \\frac{S_{shunt, ref}}{S_{N}}\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/shunt.rst:70
+msgid ""
+"with the reference values for the per unit system as defined in "
+":ref:`Unit Systems and Conventions<conventions>`."
+msgstr ""
+
+#: ../../source/elements/shunt.rst:73
+msgid "Result Parameters"
+msgstr ""
+
+#: ../../source/elements/shunt.rst:74
+msgid "*net.res_shunt*"
+msgstr ""
+
+#: ../../source/elements/shunt_res.csv:1
+msgid "p_mw"
+msgstr ""
+
+#: ../../source/elements/shunt_res.csv:1
+msgid "shunt active power consumption [MW]"
+msgstr ""
+
+#: ../../source/elements/shunt_res.csv:1
+msgid "q_mvar"
+msgstr ""
+
+#: ../../source/elements/shunt_res.csv:1
+msgid "shunt reactive power consumption [MVAr]"
+msgstr ""
+
+#: ../../source/elements/shunt_res.csv:1
+msgid "vm_pu"
+msgstr ""
+
+#: ../../source/elements/shunt_res.csv:1
+msgid "voltage magnitude at shunt bus [pu]"
+msgstr ""
+
+#: ../../source/elements/shunt.rst:82
+msgid ""
+"\\begin{align*}\n"
+" p\\_mw &= Re(\\underline{v}_{bus} \\cdot \\underline{i}_{shunt}) \\\\\n"
+" q\\_mvar &= Im(\\underline{v}_{bus} \\cdot \\underline{i}_{shunt}) \\\\\n"
+" vm\\_pu &= v_{bus}\n"
+" \\end{align*}"
+msgstr ""
+

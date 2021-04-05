@@ -1,0 +1,477 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/elements/sgen.rst:3
+msgid "Static Generator"
+msgstr ""
+
+#: ../../source/elements/sgen.rst:7
+msgid ""
+"Static generators should always have a positive p_mw value, since all "
+"power values are given in the generator convention. If you want to model "
+"constant power consumption, it is recommended to use a load element "
+"instead of a static generator with negative active power value. If you "
+"want to model a voltage controlled generator, use the generator element."
+msgstr ""
+
+#: ../../source/elements/sgen.rst:12
+msgid ":ref:`Unit Systems and Conventions <conventions>`"
+msgstr ""
+
+#: ../../source/elements/sgen.rst:15
+msgid "Create Function"
+msgstr ""
+
+#: of pandapower.create.create_sgen:2
+msgid "Adds one static generator in table net[\"sgen\"]."
+msgstr ""
+
+#: of pandapower.create.create_sgen:4
+msgid ""
+"Static generators are modelled as positive and constant PQ power. This "
+"element is used to model generators with a constant active and reactive "
+"power feed-in. If you want to model a voltage controlled generator, use "
+"the generator element instead."
+msgstr ""
+
+#: of pandapower.create.create_sgen:8
+msgid ""
+"gen, sgen and ext_grid in the grid are modelled in the generator system! "
+"If you want to model the generation of power, you have to assign a "
+"positive active power to the generator. Please pay attention to the "
+"correct signing of the reactive power as well (positive for injection and"
+" negative for consumption)."
+msgstr ""
+
+#: of pandapower.create.create_sgen:18
+#: pandapower.create.create_sgen_from_cosphi:13
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.create.create_sgen:14
+#: pandapower.create.create_sgen_from_cosphi:5
+msgid "**net** - The net within this static generator should be created"
+msgstr ""
+
+#: of pandapower.create.create_sgen:16
+#: pandapower.create.create_sgen_from_cosphi:7
+msgid "**bus** (int) - The bus id to which the static generator is connected"
+msgstr ""
+
+#: of pandapower.create.create_sgen:18
+msgid ""
+"**p_mw** (float) - The active power of the static generator  (positive "
+"for generation!)"
+msgstr ""
+
+#: of pandapower.create.create_sgen:20
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.create.create_sgen:22
+msgid "**q_mvar** (float, 0) - The reactive power of the sgen"
+msgstr ""
+
+#: of pandapower.create.create_sgen:24
+msgid "**sn_mva** (float, None) - Nominal power of the sgen"
+msgstr ""
+
+#: of pandapower.create.create_sgen:26
+msgid "**name** (string, None) - The name for this sgen"
+msgstr ""
+
+#: of pandapower.create.create_sgen:28
+msgid ""
+"**index** (int, None) - Force a specified ID if it is available. If None,"
+" the index one             higher than the highest already existing index"
+" is selected."
+msgstr ""
+
+#: of pandapower.create.create_sgen:30
+msgid "**scaling** (float, 1.) - An OPTIONAL scaling factor to be set customly"
+msgstr ""
+
+#: of pandapower.create.create_sgen:32
+msgid ""
+"**type** (string, None) -  Three phase Connection type of the static "
+"generator: wye/delta"
+msgstr ""
+
+#: of pandapower.create.create_sgen:34
+msgid "**in_service** (boolean) - True for in_service or False for out of service"
+msgstr ""
+
+#: of pandapower.create.create_sgen:36
+msgid ""
+"**max_p_mw** (float, NaN) - Maximum active power injection - necessary "
+"for             controllable sgens in OPF"
+msgstr ""
+
+#: of pandapower.create.create_sgen:38
+msgid ""
+"**min_p_mw** (float, NaN) - Minimum active power injection - necessary "
+"for             controllable sgens in OPF"
+msgstr ""
+
+#: of pandapower.create.create_sgen:40
+msgid ""
+"**max_q_mvar** (float, NaN) - Maximum reactive power injection - "
+"necessary for             controllable sgens in OPF"
+msgstr ""
+
+#: of pandapower.create.create_sgen:42
+msgid ""
+"**min_q_mvar** (float, NaN) - Minimum reactive power injection - "
+"necessary for             controllable sgens in OPF"
+msgstr ""
+
+#: of pandapower.create.create_sgen:44
+msgid ""
+"**controllable** (bool, NaN) - Whether this generator is controllable by "
+"the optimal powerflow"
+msgstr ""
+
+#: of pandapower.create.create_sgen:46
+msgid "Defaults to False if \"controllable\" column exists in DataFrame"
+msgstr ""
+
+#: of pandapower.create.create_sgen:48
+msgid "**k** (float, NaN) - Ratio of nominal current to short circuit current"
+msgstr ""
+
+#: of pandapower.create.create_sgen:50
+msgid ""
+"**rx** (float, NaN) - R/X ratio for short circuit impedance. Only "
+"relevant if type is             specified as motor so that sgen is "
+"treated as asynchronous motor"
+msgstr ""
+
+#: of pandapower.create.create_sgen:52
+msgid ""
+"**current_source** (bool, True) - Model this sgen as a current source "
+"during short-            circuit calculations; useful in some cases, for "
+"example the simulation of full-            size converters per IEC "
+"60909-0:2016."
+msgstr ""
+
+#: of pandapower.create.create_sgen:55
+#: pandapower.create.create_sgen_from_cosphi:16
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.create.create_sgen:55
+#: pandapower.create.create_sgen_from_cosphi:16
+msgid "**index** (int) - The unique ID of the created sgen"
+msgstr ""
+
+#: of pandapower.create.create_sgen:72
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.create.create_sgen:58
+msgid "create_sgen(net, 1, p_mw = -120)"
+msgstr ""
+
+#: of pandapower.create.create_sgen_from_cosphi:2
+msgid "Creates an sgen element from rated power and power factor cos(phi)."
+msgstr ""
+
+#: of pandapower.create.create_sgen_from_cosphi:9
+msgid "**sn_mva** (float) - rated power of the generator"
+msgstr ""
+
+#: of pandapower.create.create_sgen_from_cosphi:11
+msgid "**cos_phi** (float) - power factor cos_phi"
+msgstr ""
+
+#: of pandapower.create.create_sgen_from_cosphi:13
+msgid "**mode** (str) - \"ind\" for inductive or \"cap\" for capacitive behaviour"
+msgstr ""
+
+#: of pandapower.create.create_sgen_from_cosphi:18
+msgid ""
+"gen, sgen, and ext_grid are modelled in the generator point of view. "
+"Active power will therefore be postive por generation, and reactive power"
+" will be negative for consumption behaviour and positive for generation "
+"behaviour."
+msgstr ""
+
+#: ../../source/elements/sgen.rst:22
+msgid "Input Parameters"
+msgstr ""
+
+#: ../../source/elements/sgen.rst:24
+msgid "*net.sgen*"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1 ../../source/elements/sgen_res.csv:1
+msgid "**Parameter**"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1 ../../source/elements/sgen_res.csv:1
+msgid "**Datatype**"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "**Value Range**"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1 ../../source/elements/sgen_res.csv:1
+msgid "**Explanation**"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "name"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "string"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "name of the static generator"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "type"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv
+msgid "naming conventions:"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv
+msgid "*\"PV\"* - photovoltaic system"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv
+msgid "*\"WP\"* - wind power system"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv
+msgid "*\"CHP\"* - combined heating and power system"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "type of generator"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "bus*"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "integer"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "index of connected bus"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "p_mw*"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1 ../../source/elements/sgen_res.csv:1
+msgid "float"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid ":math:`\\leq` 0"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "active power of the static generator [MW]"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "q_mvar*"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "reactive power of the static generator [MVar]"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "sn_mva"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid ":math:`>` 0"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "rated power ot the static generator [MVA]"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "scaling*"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid ":math:`\\geq` 0"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "scaling factor for the active and reactive power"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "max_p_mw**"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "Maximum active power [MW]"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "min_p_mw**"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "Minimum active power [MW]"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "max_q_mvar**"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "Maximum reactive power [MVar]"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "min_q_mvar**"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "Minimum reactive power [MVar]"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "controllable**"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "bool"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid ""
+"States if sgen is controllable or not, sgen will not be used as a "
+"flexibilty if it is not controllable"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "k***"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "Ratio of nominal current to short circuit current"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "rx***"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid ""
+"R/X ratio for short circuit impedance. Only relevant if type is specified"
+" as motor so that sgen is treated as asynchronous motor"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "in_service*"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "boolean"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "True / False"
+msgstr ""
+
+#: ../../source/elements/sgen_par.csv:1
+msgid "specifies if the generator is in service."
+msgstr ""
+
+#: ../../source/elements/sgen.rst:36
+msgid ""
+"\\*necessary for executing a power flow calculation |br| \\*\\*optimal "
+"power flow parameter"
+msgstr ""
+
+#: ../../source/elements/sgen.rst:40
+msgid "Electric Model"
+msgstr ""
+
+#: ../../source/elements/sgen.rst:42
+msgid "Static Generators are modelled as PQ-buses in the power flow calculation:"
+msgstr ""
+
+#: ../../source/elements/sgen.rst:49
+msgid "The PQ-Values are calculated from the parameter table values as:"
+msgstr ""
+
+#: ../../source/elements/sgen.rst:51
+msgid ""
+"\\begin{align*}\n"
+" P_{sgen} &= p\\_mw \\cdot scaling \\\\\n"
+" Q_{sgen} &= q\\_mvar \\cdot scaling \\\\\n"
+" \\end{align*}"
+msgstr ""
+
+#: ../../source/elements/sgen.rst:62
+msgid ""
+"The apparent power value sn_mva is provided as additional information for"
+" usage in controller or other applications based on panadapower. It is "
+"not considered in the power flow!"
+msgstr ""
+
+#: ../../source/elements/sgen.rst:65
+msgid "Result Parameters"
+msgstr ""
+
+#: ../../source/elements/sgen.rst:66
+msgid "*net.res_sgen*"
+msgstr ""
+
+#: ../../source/elements/sgen_res.csv:1
+msgid "p_mw"
+msgstr ""
+
+#: ../../source/elements/sgen_res.csv:1
+msgid "resulting active power demand after scaling [MW]"
+msgstr ""
+
+#: ../../source/elements/sgen_res.csv:1
+msgid "q_mvar"
+msgstr ""
+
+#: ../../source/elements/sgen_res.csv:1
+msgid "resulting reactive power demand after scaling [MVar]"
+msgstr ""
+
+#: ../../source/elements/sgen.rst:74
+msgid ""
+"The power values in the net.res_sgen table are equivalent to "
+":math:`P_{sgen}` and :math:`Q_{sgen}`."
+msgstr ""
+

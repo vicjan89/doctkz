@@ -1,0 +1,437 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/elements/storage.rst:3
+msgid "Storage"
+msgstr ""
+
+#: ../../source/elements/storage.rst:7
+msgid ""
+"Since storage power values are given in the consumer system, positive "
+"power models charging and negative power models discharging."
+msgstr ""
+
+#: ../../source/elements/storage.rst:10
+msgid ":ref:`Unit Systems and Conventions <conventions>`"
+msgstr ""
+
+#: ../../source/elements/storage.rst:13
+msgid "Create Function"
+msgstr ""
+
+#: of pandapower.create.create_storage:2
+msgid "Adds a storage to the network."
+msgstr ""
+
+#: of pandapower.create.create_storage:4
+msgid ""
+"In order to simulate a storage system it is possible to use sgens or "
+"loads to model the discharging or charging state. The power of a storage "
+"can be positive or negative, so the use of either a sgen or a load is "
+"(per definition of the elements) not correct. To overcome this issue, a "
+"storage element can be created."
+msgstr ""
+
+#: of pandapower.create.create_storage:9
+msgid ""
+"As pandapower is not a time dependend simulation tool and there is no "
+"time domain parameter in default power flow calculations, the state of "
+"charge (SOC) is not updated during any power flow calculation. The "
+"implementation of energy content related parameters in the storage "
+"element allows to create customized, time dependend simulations by "
+"running several power flow calculations and updating variables manually."
+msgstr ""
+
+#: of pandapower.create.create_storage:23
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.create.create_storage:17
+msgid "**net** - The net within this storage should be created"
+msgstr ""
+
+#: of pandapower.create.create_storage:19
+msgid "**bus** (int) - The bus id to which the storage is connected"
+msgstr ""
+
+#: of pandapower.create.create_storage:21
+msgid ""
+"**p_mw** (float) - The momentary active power of the storage             "
+"(positive for charging, negative for discharging)"
+msgstr ""
+
+#: of pandapower.create.create_storage:23
+msgid ""
+"**max_e_mwh** (float) - The maximum energy content of the storage"
+"             (maximum charge level)"
+msgstr ""
+
+#: of pandapower.create.create_storage:54
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.create.create_storage:26
+msgid "**q_mvar** (float, default 0) - The reactive power of the storage"
+msgstr ""
+
+#: of pandapower.create.create_storage:28
+msgid "**sn_mva** (float, default None) - Nominal power of the storage"
+msgstr ""
+
+#: of pandapower.create.create_storage:30
+msgid "**soc_percent** (float, NaN) - The state of charge of the storage"
+msgstr ""
+
+#: of pandapower.create.create_storage:32
+msgid ""
+"**min_e_mwh** (float, 0) - The minimum energy content of the storage"
+"             (minimum charge level)"
+msgstr ""
+
+#: of pandapower.create.create_storage:34
+msgid "**name** (string, default None) - The name for this storage"
+msgstr ""
+
+#: of pandapower.create.create_storage:36
+msgid ""
+"**index** (int, None) - Force a specified ID if it is available. If None,"
+" the index one             higher than the highest already existing index"
+" is selected."
+msgstr ""
+
+#: of pandapower.create.create_storage:38
+msgid "**scaling** (float, 1.) - An OPTIONAL scaling factor to be set customly"
+msgstr ""
+
+#: of pandapower.create.create_storage:40
+msgid "**type** (string, None) -  type variable to classify the storage"
+msgstr ""
+
+#: of pandapower.create.create_storage:42
+msgid "**in_service** (boolean) - True for in_service or False for out of service"
+msgstr ""
+
+#: of pandapower.create.create_storage:44
+msgid ""
+"**max_p_mw** (float, NaN) - Maximum active power injection - necessary "
+"for a             controllable storage in OPF"
+msgstr ""
+
+#: of pandapower.create.create_storage:46
+msgid ""
+"**min_p_mw** (float, NaN) - Minimum active power injection - necessary "
+"for a             controllable storage in OPF"
+msgstr ""
+
+#: of pandapower.create.create_storage:48
+msgid ""
+"**max_q_mvar** (float, NaN) - Maximum reactive power injection - "
+"necessary for a             controllable storage in OPF"
+msgstr ""
+
+#: of pandapower.create.create_storage:50
+msgid ""
+"**min_q_mvar** (float, NaN) - Minimum reactive power injection - "
+"necessary for a             controllable storage in OPF"
+msgstr ""
+
+#: of pandapower.create.create_storage:52
+msgid ""
+"**controllable** (bool, NaN) - Whether this storage is controllable by "
+"the optimal powerflow"
+msgstr ""
+
+#: of pandapower.create.create_storage:54
+msgid "Defaults to False if \"controllable\" column exists in DataFrame"
+msgstr ""
+
+#: of pandapower.create.create_storage:57
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.create.create_storage:57
+msgid "**index** (int) - The unique ID of the created storage"
+msgstr ""
+
+#: of pandapower.create.create_storage:74
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.create.create_storage:60
+msgid ""
+"create_storage(net, 1, p_mw = -30, max_e_mwh = 60, soc_percent = 1.0, "
+"min_e_mwh = 5)"
+msgstr ""
+
+#: ../../source/elements/storage.rst:18
+msgid "Input Parameters"
+msgstr ""
+
+#: ../../source/elements/storage.rst:20
+msgid "*net.storage*"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+#: ../../source/elements/storage_res.csv:1
+msgid "**Parameter**"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+#: ../../source/elements/storage_res.csv:1
+msgid "**Datatype**"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "**Value Range**"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+#: ../../source/elements/storage_res.csv:1
+msgid "**Explanation**"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "name"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "string"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "Name of the storage unit"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "bus*"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "integer"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "Index of connected bus"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "p_mw*"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+#: ../../source/elements/storage_res.csv:1
+msgid "float"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid ":math:`\\leq` 0"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid ""
+"Momentary real power of the storage (positive for charging, negative for "
+"discharging)"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "q_mvar*"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "Reactive power of the storage [MVar]"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "sn_mva"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid ":math:`>` 0"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "Nominal power ot the storage [MVA]"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "scaling*"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid ":math:`\\geq` 0"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "Scaling factor for the active and reactive power"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "max_e_mwh"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "The maximum energy content of the storage (maximum charge level)"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "min_e_mwh"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "The minimum energy content of the storage (minimum charge level)"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "max_p_mw**"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "Maximum active power"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "min_p_mw**"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "Minimum active power"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "soc_percent"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "0 :math:`\\leq` soc_percent :math:`\\leq` 100"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "The state of charge of the storage"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "max_q_mvar**"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "Maximum reactive power [MVar]"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "min_q_mvar**"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "Minimum reactive power [MVar]"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "controllable**"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "bool"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid ""
+"States if sgen is controllable or not, sgen will not be used as a "
+"flexibilty if it is not controllable"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "in_service*"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "boolean"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "True / False"
+msgstr ""
+
+#: ../../source/elements/storage_par.csv:1
+msgid "Specifies if the generator is in service"
+msgstr ""
+
+#: ../../source/elements/storage.rst:32
+msgid ""
+"\\*necessary for executing a power flow calculation |br| \\*\\*optimal "
+"power flow parameter"
+msgstr ""
+
+#: ../../source/elements/storage.rst:36
+msgid "Electric Model"
+msgstr ""
+
+#: ../../source/elements/storage.rst:38
+msgid "Storages are modelled as PQ-buses in the power flow calculation:"
+msgstr ""
+
+#: ../../source/elements/storage.rst:45
+msgid "The PQ-Values are calculated from the parameter table values as:"
+msgstr ""
+
+#: ../../source/elements/storage.rst:47
+msgid ""
+"\\begin{align*}\n"
+" P_{storage} &= p\\_mw \\cdot scaling \\\\\n"
+" Q_{storage} &= q\\_mvar \\cdot scaling \\\\\n"
+" \\end{align*}"
+msgstr ""
+
+#: ../../source/elements/storage.rst:57
+msgid ""
+"The apparent power value sn_mva, state of charge soc and storage capacity"
+" max_e_mwh are provided as additional information for usage in controller"
+" or other applications based on panadapower. It is not considered in the "
+"power flow!"
+msgstr ""
+
+#: ../../source/elements/storage.rst:60
+msgid "Result Parameters"
+msgstr ""
+
+#: ../../source/elements/storage.rst:61
+msgid "*net.res_storage*"
+msgstr ""
+
+#: ../../source/elements/storage_res.csv:1
+msgid "p_mw"
+msgstr ""
+
+#: ../../source/elements/storage_res.csv:1
+msgid "resulting active power after scaling [MW]"
+msgstr ""
+
+#: ../../source/elements/storage_res.csv:1
+msgid "q_mvar"
+msgstr ""
+
+#: ../../source/elements/storage_res.csv:1
+msgid "resulting reactive power after scaling [MVar]"
+msgstr ""
+
+#: ../../source/elements/storage.rst:69
+msgid ""
+"The power values in the net.res_storage table are equivalent to "
+":math:`P_{storage}` and :math:`Q_{storage}`."
+msgstr ""
+

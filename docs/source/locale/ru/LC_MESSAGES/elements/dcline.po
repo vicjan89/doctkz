@@ -1,0 +1,441 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/elements/dcline.rst:5
+msgid "DC Line"
+msgstr ""
+
+#: ../../source/elements/dcline.rst:8
+msgid ":ref:`Unit Systems and Conventions <conventions>`"
+msgstr ""
+
+#: ../../source/elements/dcline.rst:11
+msgid "Create Function"
+msgstr ""
+
+#: of pandapower.create.create_dcline:2
+msgid "Creates a dc line."
+msgstr ""
+
+#: of pandapower.create.create_dcline:18
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.create.create_dcline:5
+msgid ""
+"**from_bus** (int) - ID of the bus on one side which the line will be "
+"connected with"
+msgstr ""
+
+#: of pandapower.create.create_dcline:7
+msgid ""
+"**to_bus** (int) - ID of the bus on the other side which the line will be"
+" connected with"
+msgstr ""
+
+#: of pandapower.create.create_dcline:9
+msgid "**p_mw** - (float) Active power transmitted from 'from_bus' to 'to_bus'"
+msgstr ""
+
+#: of pandapower.create.create_dcline:12
+msgid ""
+"**loss_percent** - (float) Relative transmission loss in percent of "
+"active power"
+msgstr ""
+
+#: of pandapower.create.create_dcline:12
+msgid "transmission"
+msgstr ""
+
+#: of pandapower.create.create_dcline:14
+msgid "**loss_mw** - (float) Total transmission loss in kW"
+msgstr ""
+
+#: of pandapower.create.create_dcline:16
+msgid "**vm_from_pu** - (float) Voltage setpoint at from bus"
+msgstr ""
+
+#: of pandapower.create.create_dcline:18
+msgid "**vm_to_pu** - (float) Voltage setpoint at to bus"
+msgstr ""
+
+#: of pandapower.create.create_dcline:35
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.create.create_dcline:21
+msgid ""
+"**index** (int, None) - Force a specified ID if it is available. If None,"
+" the index one             higher than the highest already existing index"
+" is selected."
+msgstr ""
+
+#: of pandapower.create.create_dcline:23
+msgid "**name** (str, None) - A custom name for this dc line"
+msgstr ""
+
+#: of pandapower.create.create_dcline:25
+msgid "**in_service** (boolean) - True for in_service or False for out of service"
+msgstr ""
+
+#: of pandapower.create.create_dcline:27
+msgid "**max_p_mw** - Maximum active power flow. Only respected for OPF"
+msgstr ""
+
+#: of pandapower.create.create_dcline:29
+msgid ""
+"**min_q_from_mvar** - Minimum reactive power at from bus. Necessary for "
+"OPF"
+msgstr ""
+
+#: of pandapower.create.create_dcline:31
+msgid "**min_q_to_mvar** - Minimum reactive power at to bus. Necessary for OPF"
+msgstr ""
+
+#: of pandapower.create.create_dcline:33
+msgid ""
+"**max_q_from_mvar** - Maximum reactive power at from bus. Necessary for "
+"OPF"
+msgstr ""
+
+#: of pandapower.create.create_dcline:35
+msgid "**max_q_to_mvar ** - Maximum reactive power at to bus. Necessary for OPF"
+msgstr ""
+
+#: of pandapower.create.create_dcline:38
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.create.create_dcline:38
+msgid "**index** (int) - The unique ID of the created element"
+msgstr ""
+
+#: of pandapower.create.create_dcline:55
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.create.create_dcline:41
+msgid ""
+"create_dcline(net, from_bus=0, to_bus=1, p_mw=1e4, loss_percent=1.2, "
+"loss_mw=25,             vm_from_pu=1.01, vm_to_pu=1.02)"
+msgstr ""
+
+#: ../../source/elements/dcline.rst:16
+msgid "Input Parameters"
+msgstr ""
+
+#: ../../source/elements/dcline.rst:18
+msgid "*net.dcline*"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+#: ../../source/elements/dcline_res.csv:1
+msgid "**Parameter**"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+#: ../../source/elements/dcline_res.csv:1
+msgid "**Datatype**"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "**Value Range**"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+#: ../../source/elements/dcline_res.csv:1
+msgid "**Explanation**"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "name"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "string"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "name of the generator"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "from_bus*"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "integer"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "Index of bus where the dc line starts"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "to_bus*"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "Index of bus where the dc line ends"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "p_mw*"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+#: ../../source/elements/dcline_res.csv:1
+msgid "float"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid ":math:`>` 0"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "Active power transmitted from 'from_bus' to 'to_bus'"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "loss_percent*"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "Relative transmission loss in percent of active power transmission"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "loss_mw*"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "Total transmission loss in MW"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "vm_from_pu*"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "Voltage setpoint at from bus"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "vm_to_pu*"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "Voltage setpoint at to bus"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "max_p_mw**"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "Maximum active power transmission"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "min_q_from_mvar**"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "Minimum reactive power at from bus"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "max_q_from_mvar**"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "Maximum reactive power at from bus"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "min_q_to_mvar**"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "Minimum reactive power at to bus"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "max_q_to_mvar**"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "Maximum reactive power at to bus"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "in_service*"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "bool"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "True/False"
+msgstr ""
+
+#: ../../source/elements/dcline_par.csv:1
+msgid "specifies if DC line is in service"
+msgstr ""
+
+#: ../../source/elements/dcline.rst:30
+msgid ""
+"\\*necessary for executing a power flow calculation |br| \\*\\*optimal "
+"power flow parameter"
+msgstr ""
+
+#: ../../source/elements/dcline.rst:33
+msgid ""
+"DC line is only able to model one-directional loadflow for now, which is "
+"why p_mw / max_p_mw have to be > 0."
+msgstr ""
+
+#: ../../source/elements/dcline.rst:36
+msgid "Electric Model"
+msgstr ""
+
+#: ../../source/elements/dcline.rst:38
+msgid "A DC line is modelled as two generators in the loadflow:"
+msgstr ""
+
+#: ../../source/elements/dcline.rst:50
+msgid ""
+"The active power at the from side is defined by the parameters in the "
+"dcline table. The active power at the to side is equal to the active "
+"power on the from side minus the losses of the DC line."
+msgstr ""
+
+#: ../../source/elements/dcline.rst:52
+msgid ""
+"\\begin{align*}\n"
+" P_{from} &= p\\_mw \\\\\n"
+" P_{to} &= - (p\\_mw - loss\\_mw) \\cdot (1 - "
+"\\frac{loss\\_percent}{100})\n"
+"\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/dcline.rst:61
+msgid ""
+"The voltage control with reactive power works just as described for the "
+"generator model. Maximum and Minimum reactive power limits are considered"
+" in the OPF, and in the PF if it is run with enforce_q_lims=True."
+msgstr ""
+
+#: ../../source/elements/dcline.rst:64
+msgid "Result Parameters"
+msgstr ""
+
+#: ../../source/elements/dcline.rst:65
+msgid "*net.res_dcline*"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "p_from_mw"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "active power flow into the line at 'from_bus' [MW]"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "q_from_mvar"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "reactive power flow into the line at 'from_bus' [kVar]"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "p_to_mw"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "active power flow into the line at 'to_bus' [MW]"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "q_to_mvar"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "reactive power flow into the line at 'to_bus' [kVar]"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "pl_mw"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "active power losses of the line [MW]"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "vm_from_pu"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "voltage magnitude at 'from_bus' [p.u]"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "va_from_degree"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "voltage angle at 'from_bus' [degree]"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "vm_to_pu"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "voltage magnitude at 'to_bus' [p.u]"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "va_to_degree"
+msgstr ""
+
+#: ../../source/elements/dcline_res.csv:1
+msgid "voltage angle at 'to_bus' [degree]"
+msgstr ""
+
+#: ../../source/elements/dcline.rst:73
+msgid ""
+"\\begin{align*}\n"
+" p\\_from\\_mw &= P_{from} \\\\\n"
+" p\\_to\\_mw &= P_{to} \\\\\n"
+" pl\\_mw &= p\\_from\\_mw + p\\_to\\_mw \\\\\n"
+" q\\_from\\_mvar &= Q_{from} \\\\\n"
+" q\\_to\\_mvar &= Q_{to} \\\\\n"
+" va\\_from\\_degree &= \\angle \\underline{v}_{from} \\\\\n"
+" va\\_to\\_degree &= \\angle \\underline{v}_{to} \\\\\n"
+" vm\\_from\\_degree &= |\\underline{v}_{from}| \\\\\n"
+" vm\\_to\\_degree &= |\\underline{v}_{to}| \\\\\n"
+"\\end{align*}"
+msgstr ""
+

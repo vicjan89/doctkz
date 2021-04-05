@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/timeseries/data_source.rst:3
+msgid "Data Sources"
+msgstr ""
+
+#: ../../source/timeseries/data_source.rst:6
+msgid "DataSource Base Class"
+msgstr ""
+
+#: ../../source/timeseries/data_source.rst:7
+msgid ""
+"A ``DataSource`` object must be given to :ref:`const controllers "
+"<ConstControl>` in order to run time series simulations. The data source "
+"contains the values to be set in each time step by the controller. It has"
+" the function :code:`get_time_step_value(time_step)` which reads these "
+"values."
+msgstr ""
+
+#: of pandapower.timeseries.data_source.DataSource:2
+msgid ""
+"The DataSource class is a skeleton for data sources such as pandas "
+"DataFrames Controllers call get_time_step_values(time) in each time step "
+"to get values from the data source"
+msgstr ""
+
+#: of pandapower.timeseries.data_source.DataSource.get_time_step_value:2
+#: pandapower.timeseries.data_sources.frame_data.DFData.get_time_step_value:2
+msgid ""
+"This method retrieves values of the data source according to the given "
+"parameters. For actual parameters look into the DataSource you are "
+"actually using."
+msgstr ""
+
+#: ../../source/timeseries/data_source.rst:15
+msgid "DataFrame Data Source"
+msgstr ""
+
+#: ../../source/timeseries/data_source.rst:16
+msgid ""
+"A ``DFData`` object is inherited from ``DataSource`` and contains a "
+"DataFrame which stores the time series values."
+msgstr ""
+
+#: of pandapower.timeseries.data_sources.frame_data.DFData:2
+msgid ""
+"Hold a pandas.DataFrame as the data source, that uses index column as "
+"time step. Take care that the data is numeric and all the time steps are "
+"present."
+msgstr ""
+
+#: of pandapower.timeseries.data_sources.frame_data.DFData:5
+msgid "Please note: The columns should be integers for scalar accessing!"
+msgstr ""
+
+#: of pandapower.timeseries.data_sources.frame_data.DFData:8
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.timeseries.data_sources.frame_data.DFData:8
+msgid "**df** - A pandas DataFrame which holds the time series data"
+msgstr ""
+
+#: of pandapower.timeseries.data_sources.frame_data.DFData:10
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.timeseries.data_sources.frame_data.DFData:12
+msgid ""
+"**multi** (bool, False) - If True casts columns and indexes to integers. "
+"This might be necessary if you read your data from csv."
+msgstr ""
+

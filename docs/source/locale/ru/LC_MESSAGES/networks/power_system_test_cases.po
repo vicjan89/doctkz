@@ -1,0 +1,759 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/networks/power_system_test_cases.rst:3
+msgid "Power System Test Cases"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:7
+msgid ""
+"All Power System Test Cases were converted from `PYPOWER "
+"<https:/pypi.python.org/pypi/PYPOWER>`_ or `MATPOWER "
+"<http://www.pserc.cornell.edu/matpower/>`_ case files."
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:11
+msgid "Case 4gs"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case4gs:2
+msgid ""
+"This is the 4 bus example from J. J. Grainger and W. D. Stevenson, Power "
+"system analysis.     McGraw-Hill, 1994. pp. 337-338. Its data origin is"
+"     `PYPOWER <https:/pypi.python.org/pypi/PYPOWER>`_."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.GBnetwork:6
+#: pandapower.networks.power_system_test_cases.GBreducednetwork:6
+#: pandapower.networks.power_system_test_cases.case118:7
+#: pandapower.networks.power_system_test_cases.case1354pegase:6
+#: pandapower.networks.power_system_test_cases.case14:9
+#: pandapower.networks.power_system_test_cases.case145:6
+#: pandapower.networks.power_system_test_cases.case1888rte:10
+#: pandapower.networks.power_system_test_cases.case24_ieee_rts:7
+#: pandapower.networks.power_system_test_cases.case2848rte:10
+#: pandapower.networks.power_system_test_cases.case2869pegase:6
+#: pandapower.networks.power_system_test_cases.case30:6
+#: pandapower.networks.power_system_test_cases.case300:6
+#: pandapower.networks.power_system_test_cases.case3120sp:5
+#: pandapower.networks.power_system_test_cases.case33bw:6
+#: pandapower.networks.power_system_test_cases.case39:7
+#: pandapower.networks.power_system_test_cases.case4gs:5
+#: pandapower.networks.power_system_test_cases.case5:5
+#: pandapower.networks.power_system_test_cases.case57:14
+#: pandapower.networks.power_system_test_cases.case6470rte:10
+#: pandapower.networks.power_system_test_cases.case6495rte:10
+#: pandapower.networks.power_system_test_cases.case6515rte:10
+#: pandapower.networks.power_system_test_cases.case6ww:5
+#: pandapower.networks.power_system_test_cases.case89pegase:6
+#: pandapower.networks.power_system_test_cases.case9:6
+#: pandapower.networks.power_system_test_cases.case9241pegase:6
+#: pandapower.networks.power_system_test_cases.case_ieee30:7
+#: pandapower.networks.power_system_test_cases.case_illinois200:6
+#: pandapower.networks.power_system_test_cases.iceland:6
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case4gs:5
+#: pandapower.networks.power_system_test_cases.case5:5
+msgid "**net** - Returns the required ieee network case4gs"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.GBnetwork:25
+#: pandapower.networks.power_system_test_cases.GBreducednetwork:25
+#: pandapower.networks.power_system_test_cases.case118:26
+#: pandapower.networks.power_system_test_cases.case1354pegase:25
+#: pandapower.networks.power_system_test_cases.case14:28
+#: pandapower.networks.power_system_test_cases.case145:25
+#: pandapower.networks.power_system_test_cases.case1888rte:29
+#: pandapower.networks.power_system_test_cases.case24_ieee_rts:26
+#: pandapower.networks.power_system_test_cases.case2848rte:29
+#: pandapower.networks.power_system_test_cases.case2869pegase:25
+#: pandapower.networks.power_system_test_cases.case30:25
+#: pandapower.networks.power_system_test_cases.case300:25
+#: pandapower.networks.power_system_test_cases.case3120sp:24
+#: pandapower.networks.power_system_test_cases.case33bw:25
+#: pandapower.networks.power_system_test_cases.case39:26
+#: pandapower.networks.power_system_test_cases.case4gs:24
+#: pandapower.networks.power_system_test_cases.case5:24
+#: pandapower.networks.power_system_test_cases.case57:33
+#: pandapower.networks.power_system_test_cases.case6470rte:29
+#: pandapower.networks.power_system_test_cases.case6495rte:29
+#: pandapower.networks.power_system_test_cases.case6515rte:29
+#: pandapower.networks.power_system_test_cases.case6ww:24
+#: pandapower.networks.power_system_test_cases.case89pegase:25
+#: pandapower.networks.power_system_test_cases.case9:25
+#: pandapower.networks.power_system_test_cases.case9241pegase:25
+#: pandapower.networks.power_system_test_cases.case_ieee30:26
+#: pandapower.networks.power_system_test_cases.case_illinois200:25
+#: pandapower.networks.power_system_test_cases.iceland:25
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.GBnetwork:9
+#: pandapower.networks.power_system_test_cases.GBreducednetwork:9
+#: pandapower.networks.power_system_test_cases.case118:10
+#: pandapower.networks.power_system_test_cases.case1354pegase:9
+#: pandapower.networks.power_system_test_cases.case14:12
+#: pandapower.networks.power_system_test_cases.case145:9
+#: pandapower.networks.power_system_test_cases.case1888rte:13
+#: pandapower.networks.power_system_test_cases.case24_ieee_rts:10
+#: pandapower.networks.power_system_test_cases.case2848rte:13
+#: pandapower.networks.power_system_test_cases.case2869pegase:9
+#: pandapower.networks.power_system_test_cases.case30:9
+#: pandapower.networks.power_system_test_cases.case300:9
+#: pandapower.networks.power_system_test_cases.case3120sp:8
+#: pandapower.networks.power_system_test_cases.case33bw:9
+#: pandapower.networks.power_system_test_cases.case39:10
+#: pandapower.networks.power_system_test_cases.case4gs:8
+#: pandapower.networks.power_system_test_cases.case5:8
+#: pandapower.networks.power_system_test_cases.case57:17
+#: pandapower.networks.power_system_test_cases.case6470rte:13
+#: pandapower.networks.power_system_test_cases.case6495rte:13
+#: pandapower.networks.power_system_test_cases.case6515rte:13
+#: pandapower.networks.power_system_test_cases.case6ww:8
+#: pandapower.networks.power_system_test_cases.case89pegase:9
+#: pandapower.networks.power_system_test_cases.case9:9
+#: pandapower.networks.power_system_test_cases.case9241pegase:9
+#: pandapower.networks.power_system_test_cases.case_ieee30:10
+#: pandapower.networks.power_system_test_cases.case_illinois200:9
+#: pandapower.networks.power_system_test_cases.iceland:9
+msgid "import pandapower.networks as pn"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case4gs:10
+msgid "net = pn.case4gs()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:18
+msgid "Case 5"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case5:2
+msgid ""
+"This is the 5 bus example from F.Li and R.Bo, \"Small Test Systems for "
+"Power System Economic     Studies\" Its data origin is `MATPOWER "
+"<http://www.pserc.cornell.edu/matpower/>`_."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case5:10
+msgid "net = pn.case5()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:25
+msgid "Case 6ww"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case6ww:2
+msgid ""
+"Calls the json file case6ww.json which data origin is     `PYPOWER "
+"<https:/pypi.python.org/pypi/PYPOWER>`_. It represents the 6 bus example "
+"from pp.     104, 112, 119, 123-124, 549 from A. J. Wood and B. F. "
+"Wollenberg, Power generation, operation,     and control. John Wiley & "
+"Sons, 2012.."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case6ww:5
+msgid "**net** - Returns the required ieee network case6ww"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case6ww:10
+msgid "net = pn.case6ww()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:32
+msgid "Case 9"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case9:2
+msgid ""
+"Calls the json file case9.json which data origin is     `PYPOWER "
+"<https:/pypi.python.org/pypi/PYPOWER>`_. This network was published in "
+"Anderson and Fouad's book 'Power System Control and Stability'     for "
+"the first time in 1980."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case9:6
+msgid "**net** - Returns the required ieee network case9"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case9:11
+msgid "net = pn.case9()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:39
+msgid "Case 14"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case14:2
+msgid ""
+"Calls the json file case14.json which data origin is     `PYPOWER "
+"<https:/pypi.python.org/pypi/PYPOWER>`_. This network was converted from "
+"IEEE Common Data Format (ieee14cdf.txt) on 20-Sep-2004 by cdf2matp, rev. "
+"1.11, to matpower format and finally converted to pandapower format by "
+"pandapower.converter.from_ppc. The vn_kv was adapted considering the "
+"proposed voltage levels in `Washington case 14 "
+"<http://www2.ee.washington.edu/research/pstca/pf14/ieee14cdf.txt>`_"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case14:9
+msgid "**net** - Returns the required ieee network case14"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case14:14
+msgid "net = pn.case14()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:45
+msgid "Case 24_ieee_rts"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case24_ieee_rts:2
+msgid ""
+"The IEEE 24-bus reliability test system was developed by the IEEE "
+"reliability subcommittee     and published in 1979. Some more information"
+" about this network are given by `Illinois University case 24     "
+"<http://icseg.iti.illinois.edu/ieee-24-bus-system/>`_. The data origin "
+"for this network data is `PYPOWER "
+"<https:/pypi.python.org/pypi/PYPOWER>`_."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case24_ieee_rts:7
+msgid "**net** - Returns the required ieee network case24"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case24_ieee_rts:12
+msgid "net = pn.case24_ieee_rts()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:54
+msgid "Case 30"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case30:2
+msgid ""
+"This function calls the json file case30.json which data origin is     "
+"`PYPOWER <https:/pypi.python.org/pypi/PYPOWER>`_. The PYPOWER data are "
+"derived from `Washington 30 Bus Dynamic Test Case "
+"<https://www2.ee.washington.edu/research/pstca/dyn30/pg_tcadyn30.htm>`_."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case30:6
+#: pandapower.networks.power_system_test_cases.case_ieee30:7
+#: pandapower.networks.power_system_test_cases.case_illinois200:6
+msgid "**net** - Returns the required ieee network case30"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case30:11
+msgid "net = pn.case30()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:61
+msgid "Case IEEE30"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case_ieee30:2
+msgid ""
+"This function calls the json file case_ieee30.json which data origin is"
+"     `MATPOWER <http://www.pserc.cornell.edu/matpower/>`_. The MATPOWER "
+"data are derived from `Washington IEEE 30 bus Case "
+"<http://www2.ee.washington.edu/research/pstca/pf30/pg_tca30bus.htm>`_. "
+"Additional information about this network are available at `Illinois "
+"University case 30 <http://icseg.iti.illinois.edu/ieee-30-bus-system/>`_."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case_ieee30:12
+msgid "net = pn.case_ieee30()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:68
+msgid "Case 33bw"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case33bw:2
+msgid ""
+"Calls the json file case33bw.json which data is provided by     `MATPOWER"
+" <http://www.pserc.cornell.edu/matpower/>`_. The data origin is the paper"
+" `M. Baran, F. Wu, Network reconfiguration in distribution systems     "
+"for loss reduction and load balancing     "
+"<http://ieeexplore.ieee.org/document/25627/>`_ IEEE Transactions on Power"
+" Delivery, 1989."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case33bw:6
+msgid "**net** - Returns the required ieee network case33bw"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case33bw:11
+msgid "net = pn.case33bw()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:73
+msgid "Case 39"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case39:2
+msgid ""
+"Calls the json file case39.json which data origin is     `PYPOWER "
+"<https:/pypi.python.org/pypi/PYPOWER>`_. This network was published the "
+"first time in G. Bills et al., On-line stability analysis     study, RP "
+"90-1, E. P. R. I. North American Rockwell Corporation, Edison Electric "
+"Institute,     Ed. IEEE Press, Oct. 1970,. Some more information about "
+"this network are given by     `Illinois University case 39 "
+"<http://icseg.iti.illinois.edu/ieee-39-bus-system/>`_. Because the "
+"Pypower data origin proposes vn_kv=345 for all nodes the transformers "
+"connect     node of the same voltage level."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case39:7
+msgid "**net** - Returns the required ieee network case39"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case39:12
+msgid "net = pn.case39()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:80
+msgid "Case 57"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case57:2
+msgid ""
+"This function provides the ieee case57 network with the data origin "
+"`PYPOWER case 57     <https:/pypi.python.org/pypi/PYPOWER>`_. Some more "
+"information about this network are given by `Illinois University case 57"
+"     <http://icseg.iti.illinois.edu/ieee-57-bus-system/>`_. Because the "
+"Pypower data origin proposes no vn_kv some assumption must be made. There"
+" are six     areas with coinciding voltage level. These are:"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case57:6
+msgid "area 1 with coinciding voltage level comprises node 1-17"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case57:7
+msgid "area 2 with coinciding voltage level comprises node 18-20"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case57:8
+msgid "area 3 with coinciding voltage level comprises node 21-24 + 34-40 + 44-51"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case57:9
+msgid "area 4 with coinciding voltage level comprises node 25 + 30-33"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case57:10
+msgid "area 5 with coinciding voltage level comprises node 41-43 + 56-57"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case57:11
+msgid "area 6 with coinciding voltage level comprises node 52-55 + 26-29"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case57:14
+msgid "**net** - Returns the required ieee network case57"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case57:19
+msgid "net = pn.case57()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:87
+msgid "Case 89pegase"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case89pegase:2
+msgid ""
+"Calls the json file case89pegase.json which data is provided by     "
+"`MATPOWER <http://www.pserc.cornell.edu/matpower/>`_. The data origin are"
+" the paper `C. Josz, S. Fliscounakis, J. Maenght, P. Panciatici, AC power"
+"     flow data in MATPOWER and QCQP format: iTesla, RTE snapshots, and"
+"     PEGASE <https://arxiv.org/abs/1603.01533>`_, 2016 and S. "
+"Fliscounakis, P. Panciatici,     F. Capitanescu, and L. Wehenkel, "
+"Contingency ranking with respect to overloads in very large     power "
+"systems taking into account uncertainty, preventive, and corrective "
+"actions,     IEEE Transactions on Power Systems, vol. 28, no. 4, pp. "
+"4909-4917, Nov 2013.."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case89pegase:6
+msgid "**net** - Returns the required ieee network case89pegase"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case89pegase:11
+msgid "net = pn.case89pegase()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:94
+msgid "Case 118"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case118:2
+msgid ""
+"Calls the json file case118.json which data origin is     `PYPOWER "
+"<https:/pypi.python.org/pypi/PYPOWER>`_. Some more information about this"
+" network are given by `Washington case 118     "
+"<http://www2.ee.washington.edu/research/pstca/pf118/pg_tca118bus.htm>`_ "
+"and     `Illinois University case 118 "
+"<http://icseg.iti.illinois.edu/ieee-118-bus-system/>`_. The PYPOWER case "
+"data are corrected at Vm of buses 68 and 116."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case118:7
+msgid "**net** - Returns the required ieee network case118"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case118:12
+msgid "net = pn.case118()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:101
+msgid "Case 145"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case145:2
+msgid ""
+"Calls the json file case145.json which data origin is     `MATPOWER "
+"<http://www.pserc.cornell.edu/matpower/>`_. This data is converted by "
+"MATPOWER 5.1 using CDF2MPC on 18-May-2016 from 'dd50cdf.txt'."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case145:6
+msgid "**net** - Returns the required ieee network case145"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case145:11
+msgid "net = pn.case145()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:108
+msgid "Case case_illinois200"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case_illinois200:2
+msgid ""
+"This function calls the json file case_illinois200.json which data origin"
+" is     `MATPOWER <http://www.pserc.cornell.edu/matpower/>`_. This "
+"network was published in     A.B. Birchfield, T. Xu, K.M. Gegner, K.S. "
+"Shetye, T.J. Overbye, \"Grid Structural Characteristics as Validation "
+"Criteria for Synthetic Networks,\" IEEE Transactions on Power Systems, "
+"2017. Some additional information about this network are available at "
+"`Illinois University Illinois 200 "
+"<http://icseg.iti.illinois.edu/illinois200/>`_."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case_illinois200:11
+msgid "net = pn.case_illinois200()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:115
+msgid "Case 300"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case300:2
+msgid ""
+"Calls the json file case300.json which data origin is     `PYPOWER "
+"<https:/pypi.python.org/pypi/PYPOWER>`_. Some more information about this"
+" network are given by     `Washington case 300 "
+"<http://www2.ee.washington.edu/research/pstca/pf300/pg_tca300bus.htm>`_"
+"     and `Illinois University case 300 "
+"<http://icseg.iti.illinois.edu/ieee-300-bus-system/>`_."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case300:6
+msgid "**net** - Returns the required ieee network case300"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case300:11
+msgid "net = pn.case300()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:122
+msgid "Case 1354pegase"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case1354pegase:2
+#: pandapower.networks.power_system_test_cases.case9241pegase:2
+msgid ""
+"This grid represents a part of the European high voltage transmission "
+"network. The data is     provided by `MATPOWER "
+"<http://www.pserc.cornell.edu/matpower/>`_. The data origin are the paper"
+" `C. Josz, S. Fliscounakis, J. Maenght, P. Panciatici, AC power     flow "
+"data in MATPOWER and QCQP format: iTesla, RTE snapshots, and PEGASE     "
+"<https://arxiv.org/abs/1603.01533>`_, 2016 and S. Fliscounakis, P. "
+"Panciatici, F. Capitanescu,     and L. Wehenkel, Contingency ranking with"
+" respect to overloads in very large power systems     taking into account"
+" uncertainty, preventive, and corrective actions, IEEE Transactions on"
+"     Power Systems, vol. 28, no. 4, pp. 4909-4917, Nov 2013.."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case1354pegase:6
+msgid "**net** - Returns the required ieee network case1354pegase"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case1354pegase:11
+msgid "net = pn.case1354pegase()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:129
+msgid "Case 1888rte"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case1888rte:2
+#: pandapower.networks.power_system_test_cases.case6515rte:2
+msgid ""
+"This case accurately represents the size and complexity of French very "
+"high voltage and high     voltage transmission network. The data is "
+"provided by `MATPOWER     <http://www.pserc.cornell.edu/matpower/>`_. The"
+" data origin is the paper `C. Josz, S. Fliscounakis, J. Maenght, P. "
+"Panciatici, AC power     flow data in MATPOWER and QCQP format: iTesla, "
+"RTE snapshots, and PEGASE     <https://arxiv.org/abs/1603.01533>`_, 2016."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case1888rte:5
+#: pandapower.networks.power_system_test_cases.case2848rte:5
+#: pandapower.networks.power_system_test_cases.case6470rte:5
+#: pandapower.networks.power_system_test_cases.case6495rte:5
+#: pandapower.networks.power_system_test_cases.case6515rte:5
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case1888rte:7
+#: pandapower.networks.power_system_test_cases.case2848rte:7
+#: pandapower.networks.power_system_test_cases.case6470rte:7
+#: pandapower.networks.power_system_test_cases.case6515rte:7
+msgid ""
+"**ref_bus_idx** - Since the MATPOWER case provides a reference bus "
+"without connected             generator, because a distributed slack is "
+"assumed, to convert the data to pandapower,             another bus has "
+"been assumed as reference bus. Via 'ref_bus_idx' the User can choose a"
+"             reference bus, which should have a generator connected to. "
+"Please be aware that by             changing the reference bus to another"
+" bus than the proposed default value, maybe a             powerflow does "
+"not converge anymore!"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case1888rte:10
+msgid "**net** - Returns the required ieee network case1888rte"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case1888rte:15
+msgid "net = pn.case1888rte()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:136
+msgid "Case 2848rte"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case2848rte:2
+#: pandapower.networks.power_system_test_cases.case6470rte:2
+#: pandapower.networks.power_system_test_cases.case6495rte:2
+msgid ""
+"This case accurately represents the size and complexity of French very "
+"high voltage and high     voltage transmission network. The data is "
+"provided by     `MATPOWER <http://www.pserc.cornell.edu/matpower/>`_. The"
+" data origin is the paper `C. Josz, S. Fliscounakis, J. Maenght, P. "
+"Panciatici, AC power     flow data in MATPOWER and QCQP format: iTesla, "
+"RTE snapshots, and PEGASE     <https://arxiv.org/abs/1603.01533>`_, 2016."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case2848rte:10
+msgid "**net** - Returns the required ieee network case2848rte"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case2848rte:15
+msgid "net = pn.case2848rte()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:143
+msgid "Case 2869pegase"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case2869pegase:2
+msgid ""
+"This grid represents a part of the European high voltage transmission "
+"network. The data is     provided by `MATPOWER "
+"<http://www.pserc.cornell.edu/matpower/>`_. The data origin i the paper "
+"`C. Josz, S. Fliscounakis, J. Maenght, P. Panciatici, AC power     flow "
+"data in MATPOWER and QCQP format: iTesla, RTE snapshots, and PEGASE     "
+"<https://arxiv.org/abs/1603.01533>`_, 2016 and S. Fliscounakis, P. "
+"Panciatici, F. Capitanescu,     and L. Wehenkel, Contingency ranking with"
+" respect to overloads in very large power systems     taking into account"
+" uncertainty, preventive, and corrective actions, IEEE Transactions on"
+"     Power Systems, vol. 28, no. 4, pp. 4909-4917, Nov 2013.."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case2869pegase:6
+msgid "**net** - Returns the required ieee network case2869pegase"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case2869pegase:11
+msgid "net = pn.case2869pegase()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:150
+msgid "Case 3120sp"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case3120sp:2
+msgid ""
+"This case represents the Polish 400, 220 and 110 kV networks during "
+"summer 2008 morning peak     conditions. The data was provided by Roman "
+"Korab <roman.korab@polsl.pl> and to pandapower     converted from "
+"`MATPOWER <http://www.pserc.cornell.edu/matpower/>`_."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case3120sp:5
+msgid "**net** - Returns the required ieee network case3120sp"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case3120sp:10
+msgid "net = pn.case3120sp()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:157
+msgid "Case 6470rte"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case6470rte:10
+msgid "**net** - Returns the required ieee network case6470rte"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case6470rte:15
+msgid "net = pn.case6470rte()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:164
+msgid "Case 6495rte"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case6495rte:7
+msgid ""
+"**ref_bus_idx** - Since the MATPOWER case provides a reference bus "
+"without connected             generator, because a distributed slack is "
+"assumed, to convert the data to pandapower,             another buses "
+"(6077, 6161, 6305, 6306, 6307, 6308) has been assumed as reference bus."
+"             Via 'ref_bus_idx' the User can choose a             "
+"reference bus, which should have a generator connected to. Please be "
+"aware that by             changing the reference bus to another bus than "
+"the proposed default value, maybe a             powerflow does not "
+"converge anymore!"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case6495rte:10
+msgid "**net** - Returns the required ieee network case6495rte"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case6495rte:15
+msgid "net = pn.case6495rte()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:171
+msgid "Case 6515rte"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case6515rte:10
+msgid "**net** - Returns the required ieee network case6515rte"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case6515rte:15
+msgid "net = pn.case6515rte()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:178
+msgid "Case 9241pegase"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case9241pegase:6
+msgid "**net** - Returns the required ieee network case9241pegase"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.case9241pegase:11
+msgid "net = pn.case9241pegase()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:185
+msgid "Case GB network"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.GBnetwork:2
+msgid ""
+"Calls the json file GBnetwork.json which data is provided by `W. A. "
+"Bukhsh, Ken McKinnon,     Network data of real transmission networks, "
+"April 2013      "
+"<http://www.maths.ed.ac.uk/optenergy/NetworkData/fullGB/>`_. This data "
+"represents detailed model of electricity transmission network of Great "
+"Britian (GB).     It consists of 2224 nodes, 3207 branches and 394 "
+"generators. This data is obtained from     publically available data on "
+"National grid website. The data was originally pointing out by     "
+"Manolis Belivanis, University of Strathclyde."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.GBnetwork:6
+#: pandapower.networks.power_system_test_cases.GBreducednetwork:6
+msgid "**net** - Returns the required ieee network GBreducednetwork"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.GBnetwork:11
+msgid "net = pn.GBnetwork()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:192
+msgid "Case GB reduced network"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.GBreducednetwork:2
+msgid ""
+"Calls the json file GBreducednetwork.json which data is provided by `W. "
+"A. Bukhsh, Ken     McKinnon, Network data of real transmission networks, "
+"April 2013      "
+"<http://www.maths.ed.ac.uk/optenergy/NetworkData/reducedGB/>`_. This data"
+" is a representative model of electricity transmission network in Great "
+"Britain (GB).     It was originally developed at the University of "
+"Strathclyde in 2010."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.GBreducednetwork:11
+msgid "net = pn.GBreducednetwork()"
+msgstr ""
+
+#: ../../source/networks/power_system_test_cases.rst:199
+msgid "Case iceland"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.iceland:2
+msgid ""
+"Calls the json file iceland.json which data is provided by `W. A. Bukhsh,"
+" Ken McKinnon, Network     data of real transmission networks, April 2013"
+"      <http://www.maths.ed.ac.uk/optenergy/NetworkData/iceland/>`_. This "
+"data represents electricity transmission network of Iceland. It consists "
+"of 118 nodes,     206 branches and 35 generators. It was originally "
+"developed in PSAT format by Patrick McNabb,     Durham University in "
+"January 2011."
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.iceland:6
+msgid "**net** - Returns the required ieee network iceland"
+msgstr ""
+
+#: of pandapower.networks.power_system_test_cases.iceland:11
+msgid "net = pn.iceland()"
+msgstr ""
+

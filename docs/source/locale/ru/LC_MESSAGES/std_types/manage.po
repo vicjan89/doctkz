@@ -1,0 +1,289 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/std_types/manage.rst:3
+msgid "Manage Standard Types"
+msgstr ""
+
+#: ../../source/std_types/manage.rst:6
+msgid "Show all Available Standard Types"
+msgstr ""
+
+#: of pandapower.std_types.available_std_types:2
+msgid "Returns all standard types available for this network as a table."
+msgstr ""
+
+#: of pandapower.std_types.available_std_types:7
+#: pandapower.std_types.change_std_type:26
+#: pandapower.std_types.copy_std_types:4
+#: pandapower.std_types.create_std_type:21
+#: pandapower.std_types.create_std_types:9
+#: pandapower.std_types.delete_std_type:23
+#: pandapower.std_types.find_std_type_by_parameter:12
+#: pandapower.std_types.load_std_type:10
+#: pandapower.std_types.parameter_from_std_type:15
+#: pandapower.std_types.std_type_exists:9
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.std_types.available_std_types:5
+#: pandapower.std_types.delete_std_type:5
+#: pandapower.std_types.std_type_exists:5
+msgid "**net** - pandapower Network"
+msgstr ""
+
+#: of pandapower.std_types.available_std_types:7
+#: pandapower.std_types.change_std_type:10
+#: pandapower.std_types.delete_std_type:9
+#: pandapower.std_types.find_std_type_by_parameter:10
+#: pandapower.std_types.parameter_from_std_type:11
+#: pandapower.std_types.std_type_exists:9
+msgid "**element** - type of element (\"line\" or \"trafo\")"
+msgstr ""
+
+#: of pandapower.std_types.available_std_types:24
+#: pandapower.std_types.find_std_type_by_parameter:29
+#: pandapower.std_types.load_std_type:27
+#: pandapower.std_types.std_type_exists:26
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.std_types.available_std_types:10
+msgid "**typedata** - table of standard type parameters"
+msgstr ""
+
+#: ../../source/std_types/manage.rst:12
+msgid "Create Standard Type"
+msgstr ""
+
+#: of pandapower.std_types.create_std_type:2
+msgid ""
+"Creates type data in the type database. The parameters that are used for "
+"the loadflow have to be at least contained in data. These parameters are:"
+msgstr ""
+
+#: of pandapower.std_types.create_std_type:4
+msgid "c_nf_per_km, r_ohm_per_km, x_ohm_per_km and max_i_ka (for lines)"
+msgstr ""
+
+#: of pandapower.std_types.create_std_type:5
+msgid ""
+"sn_mva, vn_hv_kv, vn_lv_kv, vk_percent, vkr_percent, pfe_kw, i0_percent, "
+"shift_degree* (for transformers)"
+msgstr ""
+
+#: of pandapower.std_types.create_std_type:6
+msgid ""
+"sn_hv_mva, sn_mv_mva, sn_lv_mva, vn_hv_kv, vn_mv_kv, vn_lv_kv, "
+"vk_hv_percent, vk_mv_percent, vk_lv_percent, vkr_hv_percent, "
+"vkr_mv_percent, vkr_lv_percent, pfe_kw, i0_percent, shift_mv_degree*, "
+"shift_lv_degree* (for 3-winding-transformers)"
+msgstr ""
+
+#: of pandapower.std_types.create_std_type:7
+msgid ""
+"additional parameters can be added and later loaded into pandapower with "
+"the function \"parameter_from_std_type\"."
+msgstr ""
+
+#: of pandapower.std_types.create_std_type:10
+msgid "** only considered in loadflow if calculate_voltage_angles = True"
+msgstr ""
+
+#: of pandapower.std_types.create_std_type:12
+msgid ""
+"The standard type is saved into the pandapower library of the given "
+"network by default."
+msgstr ""
+
+#: of pandapower.std_types.create_std_type:15
+#: pandapower.std_types.create_std_types:5 pandapower.std_types.load_std_type:6
+msgid "**net** - The pandapower network"
+msgstr ""
+
+#: of pandapower.std_types.create_std_type:17
+#: pandapower.std_types.find_std_type_by_parameter:8
+msgid "**data** - dictionary of standard type parameters"
+msgstr ""
+
+#: of pandapower.std_types.create_std_type:19
+#: pandapower.std_types.delete_std_type:7 pandapower.std_types.load_std_type:8
+#: pandapower.std_types.std_type_exists:7
+msgid "**name** - name of the standard type as string"
+msgstr ""
+
+#: of pandapower.std_types.create_std_type:21
+#: pandapower.std_types.create_std_types:9
+#: pandapower.std_types.load_std_type:10
+msgid "**element** - \"line\", \"trafo\" or \"trafo3w\""
+msgstr ""
+
+#: of pandapower.std_types.create_std_type:23
+#: pandapower.std_types.create_std_types:11
+#: pandapower.std_types.parameter_from_std_type:36
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.std_types.create_std_types:2
+msgid "Creates multiple standard types in the type database."
+msgstr ""
+
+#: of pandapower.std_types.create_std_types:7
+msgid "**data** - dictionary of standard type parameter sets"
+msgstr ""
+
+#: ../../source/std_types/manage.rst:20
+msgid "Copy Standard Types"
+msgstr ""
+
+#: of pandapower.std_types.copy_std_types:2
+msgid "Transfers all standard types of one network to another."
+msgstr ""
+
+#: of pandapower.std_types.copy_std_types:6
+msgid "**to_net** - The pandapower network to which the standard types are copied"
+msgstr ""
+
+#: of pandapower.std_types.copy_std_types:8
+msgid ""
+"**from_net** - The pandapower network from which the standard types are "
+"taken"
+msgstr ""
+
+#: of pandapower.std_types.copy_std_types:10
+msgid "**element** - \"line\" or \"trafo\""
+msgstr ""
+
+#: of pandapower.std_types.copy_std_types:12
+msgid ""
+"**overwrite** - if True, overwrites standard types which already exist in"
+" to_net"
+msgstr ""
+
+#: ../../source/std_types/manage.rst:26
+msgid "Load Standard Types"
+msgstr ""
+
+#: of pandapower.std_types.load_std_type:2
+msgid ""
+"Loads standard type data from the linetypes data base. Issues a warning "
+"if linetype is unknown."
+msgstr ""
+
+#: of pandapower.std_types.load_std_type:13
+msgid "**typedata** - dictionary containing type data"
+msgstr ""
+
+#: ../../source/std_types/manage.rst:32
+msgid "Check if Standard Type Exists"
+msgstr ""
+
+#: of pandapower.std_types.std_type_exists:2
+msgid "Checks if a standard type exists."
+msgstr ""
+
+#: of pandapower.std_types.std_type_exists:12
+msgid "**exists** - True if standard type exists, False otherwise"
+msgstr ""
+
+#: ../../source/std_types/manage.rst:37
+msgid "Change Standard Type"
+msgstr ""
+
+#: of pandapower.std_types.change_std_type:2
+msgid ""
+"Changes the type of a given element in pandapower. Changes only parameter"
+" that are given for the type."
+msgstr ""
+
+#: of pandapower.std_types.change_std_type:6
+#: pandapower.std_types.find_std_type_by_parameter:6
+#: pandapower.std_types.parameter_from_std_type:7
+msgid "**net** - pandapower network"
+msgstr ""
+
+#: of pandapower.std_types.change_std_type:8
+msgid "**eid** - element index (either line or transformer index)"
+msgstr ""
+
+#: of pandapower.std_types.change_std_type:12
+msgid "**name** - name of the new standard type"
+msgstr ""
+
+#: ../../source/std_types/manage.rst:43
+msgid "Load Additional Parameter from Library"
+msgstr ""
+
+#: of pandapower.std_types.parameter_from_std_type:2
+msgid ""
+"Loads standard types data for a parameter, which can be used to add an "
+"additional parameter, that is not included in the original pandapower "
+"datastructure but is available in the standard type database."
+msgstr ""
+
+#: of pandapower.std_types.parameter_from_std_type:9
+msgid "**parameter** - name of parameter as string"
+msgstr ""
+
+#: of pandapower.std_types.parameter_from_std_type:15
+msgid "**fill** - fill-value that is assigned to all lines/trafos without"
+msgstr ""
+
+#: of pandapower.std_types.parameter_from_std_type:14
+msgid ""
+"a value for the parameter, either because the line/trafo has no type or "
+"because the type does not have a value for the parameter"
+msgstr ""
+
+#: of pandapower.std_types.parameter_from_std_type:18
+msgid "import pandapower as pp import pandapower.networks as pn"
+msgstr ""
+
+#: of pandapower.std_types.parameter_from_std_type:21
+msgid ""
+"net = pn.simple_mv_open_ring_net() pp.parameter_from_std_type(net, "
+"\"q_mm2\")"
+msgstr ""
+
+#: ../../source/std_types/manage.rst:49
+msgid "Find Standard Type"
+msgstr ""
+
+#: of pandapower.std_types.find_std_type_by_parameter:2
+msgid ""
+"Searches for a std_type that fits all values given in the data dictionary"
+" with the margin of epsilon."
+msgstr ""
+
+#: of pandapower.std_types.find_std_type_by_parameter:12
+msgid "**epsilon** - tolerance margin for parameter comparison"
+msgstr ""
+
+#: of pandapower.std_types.find_std_type_by_parameter:15
+msgid "**fitting_types** - list of fitting types or empty list"
+msgstr ""
+
+#: ../../source/std_types/manage.rst:54
+msgid "Delete Standard Type"
+msgstr ""
+
+#: of pandapower.std_types.delete_std_type:2
+msgid "Deletes standard type parameters from database."
+msgstr ""
+

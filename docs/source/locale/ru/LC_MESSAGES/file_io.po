@@ -1,0 +1,299 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/file_io.rst:5
+msgid "Save and Load Networks"
+msgstr ""
+
+#: ../../source/fileIO.csv:1
+msgid "Advantage"
+msgstr ""
+
+#: ../../source/fileIO.csv:1
+msgid "Disadvantage"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "Example: saving"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "case9241pegase"
+msgstr ""
+
+#: ../../source/fileIO.csv:1 ../../source/file_io.rst:16
+msgid "pickle"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "Allows storing of objects"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- large filesize"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- Stored objects might become"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "incompatible when loading"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "with different versions"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- Savetime:  1.2s"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- Loadtime: 0.65s"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- Filesize: 18.4 MB"
+msgstr ""
+
+#: ../../source/fileIO.csv:1 ../../source/file_io.rst:24
+msgid "Excel"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "Human readable"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- Long time to save and load"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- Needs libraries that are not part of"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "standard python distribution"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- Savetime: 23.9s"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- Loadtime: 10.9s"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- Filesize: 4.9 MB"
+msgstr ""
+
+#: ../../source/fileIO.csv:1 ../../source/file_io.rst:39
+msgid "SQL"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- Savetime: 1.32s"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- Loadtime: 0.6s"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- Filesize: 5.1 MB"
+msgstr ""
+
+#: ../../source/fileIO.csv:1
+msgid "json"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "can be interpreted in"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "other languages"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "potential insecurity with additional"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "translation in json notation"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "-Savetime: 0.19s"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "-Loadtime: 0.79s"
+msgstr ""
+
+#: ../../source/file_io.rst
+msgid "- Filesize: 5.3 MB"
+msgstr ""
+
+#: of pandapower.file_io.to_pickle:2
+msgid "Saves a pandapower Network with the pickle library."
+msgstr ""
+
+#: of pandapower.file_io.from_excel:8 pandapower.file_io.from_json:12
+#: pandapower.file_io.from_pickle:8 pandapower.file_io.to_excel:7
+#: pandapower.file_io.to_json:14 pandapower.file_io.to_pickle:7
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.file_io.from_excel:11 pandapower.file_io.from_json:15
+#: pandapower.file_io.from_pickle:11 pandapower.file_io.to_excel:5
+#: pandapower.file_io.to_json:7 pandapower.file_io.to_pickle:5
+msgid "**net** (dict) - The pandapower format network"
+msgstr ""
+
+#: of pandapower.file_io.to_pickle:7
+msgid ""
+"**filename** (string) - The absolute or relative path to the output file "
+"or an writable file-like objectxs"
+msgstr ""
+
+#: of pandapower.file_io.from_excel:13 pandapower.file_io.from_json:17
+#: pandapower.file_io.from_pickle:13 pandapower.file_io.to_excel:14
+#: pandapower.file_io.to_json:16 pandapower.file_io.to_pickle:9
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.file_io.from_pickle:2
+msgid "Load a pandapower format Network from pickle file"
+msgstr ""
+
+#: of pandapower.file_io.from_json:7 pandapower.file_io.from_pickle:5
+msgid ""
+"**filename** (string or file) - The absolute or relative path to the "
+"input file or file-like object"
+msgstr ""
+
+#: of pandapower.file_io.from_pickle:8
+msgid ""
+"**convert** (bool, True) - If True, converts the format of the net loaded"
+" from pickle from the older"
+msgstr ""
+
+#: of pandapower.file_io.from_json:10 pandapower.file_io.from_pickle:8
+msgid "version of pandapower to the newer version format"
+msgstr ""
+
+#: of pandapower.file_io.from_excel:11 pandapower.file_io.from_json:15
+#: pandapower.file_io.from_pickle:11
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.file_io.to_excel:2
+msgid "Saves a pandapower Network to an excel file."
+msgstr ""
+
+#: of pandapower.file_io.to_excel:7
+msgid "**filename** (string) - The absolute or relative path to the output file"
+msgstr ""
+
+#: of pandapower.file_io.to_excel:12
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.file_io.to_excel:10
+msgid ""
+"**include_empty_tables** (bool, False) - empty element tables are saved "
+"as excel sheet"
+msgstr ""
+
+#: of pandapower.file_io.to_excel:12
+msgid "**include_results** (bool, True) - results are included in the excel sheet"
+msgstr ""
+
+#: of pandapower.file_io.from_excel:2
+msgid "Load a pandapower network from an excel file"
+msgstr ""
+
+#: of pandapower.file_io.from_excel:5
+msgid "**filename** (string) - The absolute or relative path to the input file."
+msgstr ""
+
+#: of pandapower.file_io.from_excel:8
+msgid ""
+"**convert** (bool, True) - If True, converts the format of the net loaded"
+" from excel from"
+msgstr ""
+
+#: of pandapower.file_io.from_excel:8
+msgid "the older version of pandapower to the newer version format"
+msgstr ""
+
+#: ../../source/file_io.rst:32
+msgid "Json"
+msgstr ""
+
+#: of pandapower.file_io.to_json:2
+msgid ""
+"Saves a pandapower Network in JSON format. The index columns of all "
+"pandas DataFrames will be saved in ascending order. net elements which "
+"name begins with \"_\" (internal elements) will not be saved. Std types "
+"will also not be saved."
+msgstr ""
+
+#: of pandapower.file_io.to_json:11
+msgid ""
+"**filename** (string or file, None) - The absolute or relative path to "
+"the output file"
+msgstr ""
+
+#: of pandapower.file_io.to_json:10
+msgid "or a file-like object, if 'None' the function returns a json string"
+msgstr ""
+
+#: of pandapower.file_io.to_json:14
+msgid ""
+"**encrytion_key** (string, None) - If given, the pandapower network is "
+"stored as an"
+msgstr ""
+
+#: of pandapower.file_io.to_json:14
+msgid "encrypted json string"
+msgstr ""
+
+#: of pandapower.file_io.from_json:2
+msgid ""
+"Load a pandapower network from a JSON file. The index of the returned "
+"network is not necessarily in the same order as the original network. "
+"Index columns of all pandas DataFrames are sorted in ascending order."
+msgstr ""
+
+#: of pandapower.file_io.from_json:10
+msgid ""
+"**convert** (bool, True) - If True, converts the format of the net loaded"
+" from json from the older"
+msgstr ""
+
+#: of pandapower.file_io.from_json:12
+msgid ""
+"**encrytion_key** (string, \"\") - If given, key to decrypt an encrypted "
+"pandapower network"
+msgstr ""
+

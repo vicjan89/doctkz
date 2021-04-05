@@ -1,0 +1,327 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/opf/powermodels.rst:4
+msgid "Optimization with PowerModels.jl"
+msgstr ""
+
+#: ../../source/opf/powermodels.rst:7
+msgid "Installation"
+msgstr ""
+
+#: ../../source/opf/powermodels.rst:9
+msgid ""
+"If you are not yet using Julia, install it. Note that you need a version "
+"that is supported PowerModels, PyCall and pyjulia for the interface to "
+"work. Currently, `Julia 1.1 <https://julialang.org/downloads/>`_ is the "
+"most recent version of Julia that supports all these packages."
+msgstr ""
+
+#: ../../source/opf/powermodels.rst:11
+msgid ""
+"You don't necessarily need a Julia IDE if you are using PowerModels "
+"through pandapower, but it might help for debugging to install an IDE "
+"such as `Juno <http://docs.junolab.org/latest/man/installation>`_. Also, "
+"PyCharm has a Julia Plugin."
+msgstr ""
+
+#: ../../source/opf/powermodels.rst:13
+msgid ""
+"Add the Julia binary folder (e.g. /Julia-1.1.0/bin) to the `system "
+"variable PATH <https://www.computerhope.com/issues/ch000549.htm>`_. "
+"Providing the path is correct, you can now enter the julia prompt by "
+"executing :code:`julia` in your shell."
+msgstr ""
+
+#: ../../source/opf/powermodels.rst:15
+msgid ""
+"The library `PyCall <https://github.com/JuliaPy/PyCall.jl#installation>`_"
+" allows to use Python from inside julia. By default, PyCall uses the "
+"Conda.jl package to install a Miniconda distribution private to Julia. To"
+" use an already installed Python distribution (e.g. Anaconda), set the "
+":literal:`PYTHON` environment variable inside the Julia prompt to e.g.: "
+":code:`ENV[\"PYTHON\"]=\"C:\\\\Anaconda3\\\\python.exe\"`."
+msgstr ""
+
+#: ../../source/opf/powermodels.rst:18
+msgid ""
+"Access the package mode by typing :kbd:`]`. Now install the packages: "
+":code:`add Ipopt PowerModels PyCall`."
+msgstr ""
+
+#: ../../source/opf/powermodels.rst:20
+msgid ""
+"Test your `PowerModels <https://lanl-"
+"ansi.github.io/PowerModels.jl/stable/#Installation-1>`_ installation by "
+"executing :code:`test PowerModels`. Then, test if calling Python from "
+"Julia works as described `here "
+"<https://github.com/JuliaPy/PyCall.jl#usage>`_."
+msgstr ""
+
+#: ../../source/opf/powermodels.rst:22
+msgid ""
+"If you cannot plot using PyCall and PyPlot in Julia, see the workarounds "
+"offered `here <https://github.com/JuliaPy/PyCall.jl/issues/665>`_."
+msgstr ""
+
+#: ../../source/opf/powermodels.rst:24
+msgid ""
+"To call Julia from Python, install the pyjulia package with :code:`pip "
+"install julia`. Afterwards, test if everything works by importing "
+"PowerModels from Python with: :code:`from julia.PowerModels import "
+"run_ac_opf`. This takes some time, since Python starts a julia instance "
+"in the background, but it if the import completes without error "
+"everything is configured correctly and you can now use PowerModels to "
+"optimize pandapower networks."
+msgstr ""
+
+#: ../../source/opf/powermodels.rst:27
+msgid "Usage"
+msgstr ""
+
+#: ../../source/opf/powermodels.rst:29
+msgid ""
+"The usage is explained in the `PowerModels tutorial "
+"<https://github.com/e2nIEE/pandapower/blob/develop/tutorials/opf_powermodels.ipynb>`_."
+msgstr ""
+
+#: of pandapower.runpm.runpm_ac_opf:2
+msgid "Runs a non-linear power system optimization using PowerModels.jl."
+msgstr ""
+
+#: of pandapower.runpm.runpm:4 pandapower.runpm.runpm_ac_opf:4
+#: pandapower.runpm.runpm_dc_opf:4
+msgid ""
+"Flexibilities, constraints and cost parameters are defined in the "
+"pandapower element tables."
+msgstr ""
+
+#: of pandapower.runpm.runpm:6 pandapower.runpm.runpm_ac_opf:6
+#: pandapower.runpm.runpm_dc_opf:6
+msgid ""
+"Flexibilities can be defined in net.sgen / net.gen /net.load "
+"net.sgen.controllable if a static generator is controllable. If False, "
+"the active and reactive power are assigned as in a normal power flow. If "
+"True, the following flexibilities apply:"
+msgstr ""
+
+#: of pandapower.runpm.runpm:10 pandapower.runpm.runpm_ac_opf:10
+#: pandapower.runpm.runpm_dc_opf:10
+msgid "net.sgen.min_p_mw / net.sgen.max_p_mw"
+msgstr ""
+
+#: of pandapower.runpm.runpm:11 pandapower.runpm.runpm_ac_opf:11
+#: pandapower.runpm.runpm_dc_opf:11
+msgid "net.sgen.min_q_mvar / net.sgen.max_q_mvar"
+msgstr ""
+
+#: of pandapower.runpm.runpm:12 pandapower.runpm.runpm_ac_opf:12
+#: pandapower.runpm.runpm_dc_opf:12
+msgid "net.load.min_p_mw / net.load.max_p_mw"
+msgstr ""
+
+#: of pandapower.runpm.runpm:13 pandapower.runpm.runpm_ac_opf:13
+#: pandapower.runpm.runpm_dc_opf:13
+msgid "net.load.min_q_mvar / net.load.max_q_mvar"
+msgstr ""
+
+#: of pandapower.runpm.runpm:14 pandapower.runpm.runpm_ac_opf:14
+#: pandapower.runpm.runpm_dc_opf:14
+msgid "net.gen.min_p_mw / net.gen.max_p_mw"
+msgstr ""
+
+#: of pandapower.runpm.runpm:15 pandapower.runpm.runpm_ac_opf:15
+#: pandapower.runpm.runpm_dc_opf:15
+msgid "net.gen.min_q_mvar / net.gen.max_q_mvar"
+msgstr ""
+
+#: of pandapower.runpm.runpm:16 pandapower.runpm.runpm_ac_opf:16
+#: pandapower.runpm.runpm_dc_opf:16
+msgid "net.ext_grid.min_p_mw / net.ext_grid.max_p_mw"
+msgstr ""
+
+#: of pandapower.runpm.runpm:17 pandapower.runpm.runpm_ac_opf:17
+#: pandapower.runpm.runpm_dc_opf:17
+msgid "net.ext_grid.min_q_mvar / net.ext_grid.max_q_mvar"
+msgstr ""
+
+#: of pandapower.runpm.runpm:18 pandapower.runpm.runpm_ac_opf:18
+#: pandapower.runpm.runpm_dc_opf:18
+msgid ""
+"net.dcline.min_q_to_mvar / net.dcline.max_q_to_mvar / "
+"net.dcline.min_q_from_mvar / net.dcline.max_q_from_mvar"
+msgstr ""
+
+#: of pandapower.runpm.runpm:20 pandapower.runpm.runpm_ac_opf:20
+#: pandapower.runpm.runpm_dc_opf:20
+msgid ""
+"Controllable loads behave just like controllable static generators. It "
+"must be stated if they are controllable. Otherwise, they are not "
+"respected as flexibilities. Dc lines are controllable per default"
+msgstr ""
+
+#: of pandapower.runpm.runpm:28 pandapower.runpm.runpm_ac_opf:28
+#: pandapower.runpm.runpm_dc_opf:28
+msgid ""
+"Network constraints can be defined for buses, lines and transformers the "
+"elements in the following columns:"
+msgstr ""
+
+#: of pandapower.runpm.runpm:25 pandapower.runpm.runpm_ac_opf:25
+#: pandapower.runpm.runpm_dc_opf:25
+msgid "net.bus.min_vm_pu / net.bus.max_vm_pu"
+msgstr ""
+
+#: of pandapower.runpm.runpm:26 pandapower.runpm.runpm_ac_opf:26
+#: pandapower.runpm.runpm_dc_opf:26
+msgid "net.line.max_loading_percent"
+msgstr ""
+
+#: of pandapower.runpm.runpm:27 pandapower.runpm.runpm_ac_opf:27
+#: pandapower.runpm.runpm_dc_opf:27
+msgid "net.trafo.max_loading_percent"
+msgstr ""
+
+#: of pandapower.runpm.runpm:28 pandapower.runpm.runpm_ac_opf:28
+#: pandapower.runpm.runpm_dc_opf:28
+msgid "net.trafo3w.max_loading_percent"
+msgstr ""
+
+#: of pandapower.runpm.runpm:30 pandapower.runpm.runpm_ac_opf:30
+#: pandapower.runpm.runpm_dc_opf:30
+msgid ""
+"How these costs are combined into a cost function depends on the "
+"cost_function parameter."
+msgstr ""
+
+#: of pandapower.runpm.runpm:33 pandapower.runpm.runpm_ac_opf:33
+#: pandapower.runpm.runpm_dc_opf:33
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.runpm.runpm:33 pandapower.runpm.runpm_ac_opf:33
+#: pandapower.runpm.runpm_dc_opf:33
+msgid "**net** - The pandapower format network"
+msgstr ""
+
+#: of pandapower.runpm.runpm:67 pandapower.runpm.runpm_ac_opf:35
+#: pandapower.runpm.runpm_dc_opf:61 pandapower.runpm.runpm_tnep:36
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.runpm.runpm:38 pandapower.runpm.runpm_ac_opf:37
+#: pandapower.runpm.runpm_dc_opf:36 pandapower.runpm.runpm_tnep:7
+msgid ""
+"**pp_to_pm_callback** (function, None) - callback function to add data to"
+" the PowerModels data structure"
+msgstr ""
+
+#: of pandapower.runpm.runpm_ac_opf:39
+msgid "**pm_model** (str, \"ACPPowerModel\") - model to use. Default is AC model"
+msgstr ""
+
+#: of pandapower.runpm.runpm_ac_opf:41
+msgid ""
+"**pm_solver** (str, \"ipopt\") - default solver to use. If ipopt is not "
+"available use Ipopt"
+msgstr ""
+
+#: of pandapower.runpm.runpm:40 pandapower.runpm.runpm_ac_opf:43
+#: pandapower.runpm.runpm_dc_opf:42 pandapower.runpm.runpm_tnep:9
+msgid ""
+"**correct_pm_network_data** (bool, True) - checks if network data is "
+"correct. If not tries to correct it"
+msgstr ""
+
+#: of pandapower.runpm.runpm:51 pandapower.runpm.runpm_ac_opf:46
+#: pandapower.runpm.runpm_dc_opf:45 pandapower.runpm.runpm_tnep:20
+msgid ""
+"**pm_time_limits** (Dict, None) - Time limits in seconds for power models"
+" interface. To be set as a dict like"
+msgstr ""
+
+#: of pandapower.runpm.runpm_ac_opf:46 pandapower.runpm.runpm_dc_opf:45
+msgid "{\"pm_time_limit\": 300.}"
+msgstr ""
+
+#: of pandapower.runpm.runpm:53 pandapower.runpm.runpm_ac_opf:48
+#: pandapower.runpm.runpm_dc_opf:47 pandapower.runpm.runpm_tnep:22
+msgid "**pm_log_level** (int, 0) - solver log level in power models"
+msgstr ""
+
+#: of pandapower.runpm.runpm_dc_opf:2
+msgid "Runs a linearized power system optimization using PowerModels.jl."
+msgstr ""
+
+#: of pandapower.runpm.runpm_dc_opf:38
+msgid "**pm_model** (str, \"DCPPowerModel\") - model to use. Default is DC model"
+msgstr ""
+
+#: of pandapower.runpm.runpm:44 pandapower.runpm.runpm_dc_opf:40
+msgid "**pm_solver** (str, \"ipopt\") - The \"main\" power models solver"
+msgstr ""
+
+#: of pandapower.runpm.runpm:2
+msgid ""
+"Runs a power system optimization using PowerModels.jl. with a custom "
+"julia file."
+msgstr ""
+
+#: of pandapower.runpm.runpm:36 pandapower.runpm.runpm_tnep:5
+msgid "**julia_file** (str, None) - path to a custom julia optimization file"
+msgstr ""
+
+#: of pandapower.runpm.runpm:42 pandapower.runpm.runpm_tnep:11
+msgid "**pm_model** (str, \"ACPPowerModel\") - The PowerModels.jl model to use"
+msgstr ""
+
+#: of pandapower.runpm.runpm:46 pandapower.runpm.runpm_tnep:15
+msgid ""
+"**pm_mip_solver** (str, \"cbc\") - The mixed integer solver (when "
+"\"main\" solver == juniper)"
+msgstr ""
+
+#: of pandapower.runpm.runpm:48 pandapower.runpm.runpm_tnep:17
+msgid ""
+"**pm_nl_solver** (str, \"ipopt\") - The nonlinear solver (when \"main\" "
+"solver == juniper)"
+msgstr ""
+
+#: of pandapower.runpm.runpm:51 pandapower.runpm.runpm_tnep:20
+msgid ""
+"{\"pm_time_limit\": 300., \"pm_nl_time_limit\": 300., "
+"\"pm_mip_time_limit\": 300.}"
+msgstr ""
+
+#: ../../source/opf/powermodels.rst:37
+msgid ""
+"The TNEP optimization is explained in the `PowerModels TNEP tutorial "
+"<https://github.com/e2nIEE/pandapower/blob/develop/tutorials/tnep_powermodels.ipynb>`_."
+msgstr ""
+
+#: of pandapower.runpm.runpm_tnep:2
+msgid ""
+"Runs a non-linear transmission network extension planning (tnep) "
+"optimization using PowerModels.jl."
+msgstr ""
+
+#: of pandapower.runpm.runpm_tnep:13
+msgid "**pm_solver** (str, \"juniper\") - The \"main\" power models solver"
+msgstr ""
+

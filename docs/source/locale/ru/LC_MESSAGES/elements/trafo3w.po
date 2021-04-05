@@ -1,0 +1,1051 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/elements/trafo3w.rst:3
+msgid "Three Winding Transformer"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:11
+msgid ""
+":ref:`Unit Systems and Conventions <conventions>` |br| :ref:`Standard "
+"Type Libraries <std_types>`"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:15
+msgid "Create Function"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:2
+msgid ""
+"Creates a three-winding transformer in table net[\"trafo3w\"]. The trafo "
+"parameters are defined through the standard type library."
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:14
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:6
+msgid "**net** - The net within this transformer should be created"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:8
+#: pandapower.create.create_transformer3w_from_parameters:7
+msgid ""
+"**hv_bus** (int) - The bus on the high-voltage side on which the "
+"transformer will be             connected to"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:10
+msgid ""
+"**mv_bus** (int) - The medium voltage bus on which the transformer will "
+"be connected to"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:12
+#: pandapower.create.create_transformer3w_from_parameters:11
+msgid ""
+"**lv_bus** (int) - The bus on the low-voltage side on which the "
+"transformer will be             connected to"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:14
+msgid "**std_type** -  The used standard type from the standard type library"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:29
+#: pandapower.create.create_transformer3w_from_parameters:69
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:17
+msgid "**name** (string) - A custom name for this transformer"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:19
+msgid ""
+"**tap_pos** (int, nan) - current tap position of the transformer. "
+"Defaults to the medium             position (tap_neutral)"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:21
+#: pandapower.create.create_transformer3w_from_parameters:60
+msgid ""
+"**tap_at_star_point** (boolean) - Whether tap changer is located at the "
+"star point of the             3W-transformer or at the bus"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:23
+msgid "**in_service** (boolean) - True for in_service or False for out of service"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:25
+msgid ""
+"**index** (int, None) - Force a specified ID if it is available. If None,"
+" the index one             higher than the highest already existing index"
+" is selected."
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:27
+#: pandapower.create.create_transformer3w_from_parameters:69
+msgid ""
+"**max_loading_percent (float)** - maximum current loading (only needed "
+"for OPF)"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:29
+msgid ""
+"**tap_at_star_point (bool)** - whether tap changer is modelled at star "
+"point or at the bus"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:32
+#: pandapower.create.create_transformer3w_from_parameters:72
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:32
+msgid "**index** (int) - The unique ID of the created transformer"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:49
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w:35
+msgid ""
+"create_transformer3w(net, hv_bus = 0, mv_bus = 1, lv_bus = 2, name = "
+"\"trafo1\", std_type =             \"63/25/38 MVA 110/20/10 kV\")"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:2
+msgid "Adds a three-winding transformer in table net[\"trafo3w\"]."
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:39
+msgid "Input:"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:5
+msgid ""
+"**net** (pandapowerNet) - The net within this transformer should be "
+"created"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:9
+msgid ""
+"**mv_bus** (int) - The bus on the middle-voltage side on which the "
+"transformer will be             connected to"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:13
+msgid "**vn_hv_kv** (float) rated voltage on high voltage side"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:15
+msgid "**vn_mv_kv** (float) rated voltage on medium voltage side"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:17
+msgid "**vn_lv_kv** (float) rated voltage on low voltage side"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:19
+msgid "**sn_hv_mva** (float) - rated apparent power on high voltage side"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:21
+msgid "**sn_mv_mva** (float) - rated apparent power on medium voltage side"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:23
+msgid "**sn_lv_mva** (float) - rated apparent power on low voltage side"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:25
+msgid ""
+"**vk_hv_percent** (float) - short circuit voltage from high to medium "
+"voltage"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:27
+msgid ""
+"**vk_mv_percent** (float) - short circuit voltage from medium to low "
+"voltage"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:29
+msgid "**vk_lv_percent** (float) - short circuit voltage from high to low voltage"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:31
+msgid ""
+"**vkr_hv_percent** (float) - real part of short circuit voltage from high"
+" to medium voltage"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:33
+msgid ""
+"**vkr_mv_percent** (float) - real part of short circuit voltage from "
+"medium to low voltage"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:35
+msgid ""
+"**vkr_lv_percent** (float) - real part of short circuit voltage from high"
+" to low voltage"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:37
+msgid "**pfe_kw** (float) - iron losses in kW"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:39
+msgid "**i0_percent** (float) - open loop losses"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:42
+msgid "**shift_mv_degree** (float, 0) - angle shift to medium voltage side*"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:44
+msgid "**shift_lv_degree** (float, 0) - angle shift to low voltage side*"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:46
+msgid "**tap_step_percent** (float) - Tap step in percent"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:48
+msgid "**tap_step_degree** (float) - Tap phase shift angle in degrees"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:50
+msgid "**tap_side** (string, None) - \"hv\", \"mv\", \"lv\""
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:52
+msgid "**tap_neutral** (int, nan) - default tap position"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:54
+msgid "**tap_min** (int, nan) - Minimum tap position"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:56
+msgid "**tap_max** (int, nan) - Maximum tap position"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:58
+msgid ""
+"**tap_pos** (int, nan) - current tap position of the transformer. "
+"Defaults to the             medium position (tap_neutral)"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:62
+msgid "**name** (string, None) - Name of the 3-winding transformer"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:64
+msgid ""
+"**in_service** (boolean, True) - True for in_service or False for out of "
+"service"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:66
+msgid ""
+"** only considered in loadflow if calculate_voltage_angles = True **The "
+"model currently only supports one tap-changer per 3W Transformer."
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:72
+msgid "**trafo_id** - The unique trafo_id of the created 3W transformer"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:93
+msgid "Example:"
+msgstr ""
+
+#: of pandapower.create.create_transformer3w_from_parameters:75
+msgid ""
+"create_transformer3w_from_parameters(net, hv_bus=0, mv_bus=1, lv_bus=2, "
+"name=\"trafo1\", sn_hv_mva=40, sn_mv_mva=20, sn_lv_mva=20, vn_hv_kv=110, "
+"vn_mv_kv=20, vn_lv_kv=10, vk_hv_percent=10,vk_mv_percent=11, "
+"vk_lv_percent=12, vkr_hv_percent=0.3, vkr_mv_percent=0.31, "
+"vkr_lv_percent=0.32, pfe_kw=30, i0_percent=0.1, shift_mv_degree=30, "
+"shift_lv_degree=30)"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:25
+msgid ""
+"All short circuit voltages are given relative to the maximum apparent "
+"power flow. For example vk_hv_percent is the short circuit voltage from "
+"the high to the medium level, it is given relative to the minimum of the "
+"rated apparent power in high and medium level: min(sn_hv_mva, sn_mv_mva)."
+" This is consistent with most commercial network calculation software "
+"(e.g. PowerFactory). Some tools (like PSS Sincal) however define all "
+"short ciruit voltages relative to the overall rated apparent power of the"
+" transformer: max(sn_hv_mva, sn_mv_mva, sn_lv_mva). You might have to "
+"convert the values depending on how the short-circuit voltages are "
+"defined."
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:36
+msgid "Input Parameters"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:38
+msgid "*net.trafo3w*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "**Parameter**"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "**Datatype**"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "**Value Range**"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "**Explanation**"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "name"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "string"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "name of the transformer"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "std_type"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "transformer standard type name"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "hv_bus*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "integer"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "high voltage bus index of the transformer"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "mv_bus"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "medium voltage bus index of the transformer"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "lv_bus*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "low voltage bus index of the transformer"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "vn_hv_kv*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "float"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "rated voltage at high voltage bus [kV]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "vn_mv_kv*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid ":math:`>` 0"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "rated voltage at medium voltage bus [kV]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "vn_lv_kv*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "rated voltage at low voltage bus [kV]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "sn_hv_mva*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "rated apparent power on high voltage side [kVA]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "sn_mv_mva*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "rated apparent power on medium voltage side [kVA]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "sn_lv_mva*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "rated apparent power on low voltage side [kVA]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "vk_hv_percent*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "short circuit voltage from high to medium voltage [%]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "vk_mv_percent*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "short circuit voltage from medium to low voltage [%]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "vk_lv_percent*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "short circuit voltage from high to low voltage [%]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "vkr_hv_percent*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid ":math:`\\geq`  0"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "real part of short circuit voltage from high to medium voltage [%]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "vkr_mv_percent*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "real part of short circuit voltage from medium to low voltage [%]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "vkr_lv_percent*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "real part of short circuit voltage from high to low voltage [%]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "pfe_kw*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid ":math:`\\geq` 0"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "iron losses [kW]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "i0_percent*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "open loop losses [%]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "shift_mv_degree"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "transformer phase shift angle at the MV side"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "shift_lv_degree"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "transformer phase shift angle at the LV side"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "tap_side"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "\"hv\", \"mv\", \"lv\""
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "defines if tap changer is positioned on high- medium- or low voltage side"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "tap_neutral"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "tap_min"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "minimum tap position"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "tap_max"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "maximum tap position"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "tap_step_percent"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "tap step size [%]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "tap_step_degree"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "tap step size for voltage angle"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "tap_at_star_point"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "bool"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "whether the tap changer is modelled at terminal or at star point"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "tap_pos"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "current position of tap changer"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "in_service*"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "boolean"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "True/False"
+msgstr ""
+
+#: ../../source/elements/trafo3w_par.csv:1
+msgid "specifies if the transformer is in service."
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:46
+msgid "\\*necessary for executing a power flow calculation."
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:48
+msgid ""
+"Three Winding Transformer loading can not yet be constrained with the "
+"optimal power flow."
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:53
+msgid "Electric Model"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:55
+msgid ""
+"Three Winding Transformers are modelled by three two-winding transformers"
+" in :math:`Y`-connection:"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:62
+msgid "The parameters of the three transformers are defined as follows:"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "**T1**"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "**T2**"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "**T3**"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "hv_bus"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "auxiliary bus"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "lv_bus"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "sn_mva"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "sn_hv_mva"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "sn_mv_mva"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "sn_lv_mva"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "vn_hv_kv"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "vn_lv_kv"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "vn_mv_kv"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "vk_percent"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid ":math:`v_{k, t1}`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid ":math:`v_{k, t2}`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid ":math:`v_{k, t3}`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "vkr_percent"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid ":math:`v_{r, t1}`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid ":math:`v_{r, t2}`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid ":math:`v_{r, t3}`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "shift_degree"
+msgstr ""
+
+#: ../../source/elements/trafo3w_conversion.csv:1
+msgid "0"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:70
+msgid ""
+"The iron loss (pfe\\_kw) and open loop loss (i0\\_percent) of the 3W "
+"transformer is by default attributed to T1 ('hv'). The parameter "
+"'trafo3w\\_losses' in the runpp function however also allows to assign "
+"the losses to T2 ('mv'), T3('lv') or to the star point ('star')."
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:73
+msgid ""
+"To calculate the short-circuit voltages :math:`v_{k, t1..t3}` and "
+":math:`v_{r, t1..t3}`, first all short-circuit voltages are converted "
+"from side based values to branch based values"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:76
+msgid ""
+"\\begin{align*}\n"
+" v'_{k, hm} &= vk\\_hv\\_percent \\cdot "
+"\\frac{sn\\_hv\\_mva}{min(sn\\_hv\\_mva, sn\\_mv\\_mva)} \\\\\n"
+" v'_{k, ml} &= vk\\_mv\\_percent \\cdot "
+"\\frac{sn\\_hv\\_mva}{min(sn\\_mv\\_mva, sn\\_lv\\_mva)} \\\\\n"
+" v'_{k, lh} &= vk\\_lv\\_percent \\cdot "
+"\\frac{sn\\_hv\\_mva}{min(sn\\_hv\\_mva, sn\\_lv\\_mva)}\n"
+" \\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:85
+msgid ""
+"These transformer now represent a :math:`\\Delta` connection of the "
+"equivalent transformers. A :math:`\\Delta-Y` conversion is therefore "
+"applied to recieve the parameters in :math:`Y`-connection:"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:87
+msgid ""
+"\\begin{align*}\n"
+" v'_{k, T1} &= \\frac{1}{2} (v'_{k, hm} + v'_{k, lh} - v'_{k, ml}) \\\\\n"
+" v'_{k, T2} &= \\frac{1}{2} (v'_{k, ml} + v'_{k, hm} - v'_{k, lh}) \\\\\n"
+" v'_{k, T3} &= \\frac{1}{2} (v'_{k, ml} + v'_{k, lh} - v'_{k, hm})\n"
+" \\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:96
+msgid ""
+"Since these voltages are given relative to the high voltage side, they "
+"have to be transformed back to the voltage level of each transformer:"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:98
+msgid ""
+"\\begin{align*}\n"
+" v_{k, T1} &= v'_{k, t1} \\\\\n"
+" v_{k, T2} &= v'_{k, t2} \\cdot \\frac{sn\\_mv\\_mva}{sn\\_hv\\_mva} \\\\"
+"\n"
+" v_{k, T3} &= v'_{k, t3} \\cdot \\frac{sn\\_lv\\_mva}{sn\\_hv\\_mva}\n"
+" \\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:107
+msgid "The real part of the short-circuit voltage is calculated in the same way."
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:109
+msgid ""
+"The definition of how impedances are calculated for the two winding "
+"transformer from these parameters can be found :ref:`here<trafo>`."
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:112
+msgid ""
+"All short circuit voltages are given relative to the maximum apparent "
+"power flow. For example vk_hv_percent is the short circuit voltage from "
+"the high to the medium level, it is given relative to the minimum of the "
+"rated apparent power in high and medium level: min(sn_hv_mva, sn_mv_mva)."
+" This is consistent with most commercial network calculation software "
+"(e.g. PowerFactory). Some tools (like PSS Sincal) however define all "
+"short circuit voltages relative to the overall rated apparent power of "
+"the transformer: max(sn_hv_mva, sn_mv_mva, sn_lv_mva). You might have to "
+"convert the values depending on how the short-circuit voltages are "
+"defined."
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:122
+msgid ""
+"The tap changer adapts the nominal voltages of the transformer in the "
+"equivalent to the 2W-Model:"
+msgstr ""
+
+#: ../../source/elements/trafo3w_tap.csv:1
+msgid "**tap_side=\"hv\"**"
+msgstr ""
+
+#: ../../source/elements/trafo3w_tap.csv:1
+msgid "**tap_side=\"mv\"**"
+msgstr ""
+
+#: ../../source/elements/trafo3w_tap.csv:1
+msgid "**tap_side=\"lv\"**"
+msgstr ""
+
+#: ../../source/elements/trafo3w_tap.csv:1
+msgid ":math:`V_{n, HV, transformer}`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_tap.csv:1
+msgid ":math:`vnh\\_kv  \\cdot n_{tap}`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_tap.csv:1
+msgid ":math:`vnh\\_kv`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_tap.csv:1
+msgid ":math:`V_{n, MV, transformer}`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_tap.csv:1
+msgid ":math:`vnm\\_kv`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_tap.csv:1
+msgid ":math:`vnm\\_kv  \\cdot n_{tap}`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_tap.csv:1
+msgid ":math:`V_{n, LV, transformer}`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_tap.csv:1
+msgid ":math:`vnl\\_kv`"
+msgstr ""
+
+#: ../../source/elements/trafo3w_tap.csv:1
+msgid ":math:`vnl\\_kv  \\cdot n_{tap}`"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:130
+msgid "with"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:132
+msgid ""
+"\\begin{align*}\n"
+" n_{tap} = 1 + (tap\\_pos - tap\\_neutral) \\cdot "
+"\\frac{tap\\_st\\_percent}{100}\n"
+" \\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:139
+msgid ""
+"The variable tap\\_side controls if the tap changer is located at T1 "
+"('hv'), T2 ('mv') or T3 ('lv'). The tap\\_at\\_star\\_point variable "
+"controls if the tap changer is located at the star point of the three "
+"winding transformer or at the terminal side (hv/mv/lv bus)."
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:143
+msgid ""
+"`MVA METHOD FOR 3-WINDING TRANSFORMER "
+"<https:/pangonilo.com/index.php?sdmon=files/MVA_Method_3-Winding_Transformer.pdf>`_"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:149
+msgid "Result Parameters"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:150
+msgid "**net.res_trafo3w**"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "p_hv_mw"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "active power flow at the high voltage transformer bus [MW]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "q_hv_mvar"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "reactive power flow at the high voltage transformer bus [kVar]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "p_mv_mw"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "active power flow at the medium voltage transformer bus [MW]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "q_mv_mvar"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "reactive power flow at the medium voltage transformer bus [kVar]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "p_lv_mw"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "active power flow at the low voltage transformer bus [MW]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "q_lv_mvar"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "reactive power flow at the low voltage transformer bus [kVar]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "pl_mw"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "active power losses of the transformer [MW]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "ql_mvar"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "reactive power consumption of the transformer [Mvar]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "i_hv_ka"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "current at the high voltage side of the transformer [kA]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "i_mv_ka"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "current at the medium voltage side of the transformer [kA]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "i_lv_ka"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "current at the low voltage side of the transformer [kA]"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "loading_percent"
+msgstr ""
+
+#: ../../source/elements/trafo3w_res.csv:1
+msgid "transformer utilization [%]"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:158
+msgid ""
+"\\begin{align*}\n"
+" p\\_hv\\_mw &= Re(\\underline{v}_{hv} \\cdot \\underline{i}_{hv}) \\\\\n"
+" q\\_hv\\_mvar &= Im(\\underline{v}_{hv} \\cdot \\underline{i}_{hv}) \\\\"
+"\n"
+" p\\_mv\\_mw &= Re(\\underline{v}_{mv} \\cdot \\underline{i}_{mv}) \\\\\n"
+" q\\_mv\\_mvar &= Im(\\underline{v}_{mv} \\cdot \\underline{i}_{mv}) \\\\"
+"\n"
+" p\\_lv\\_mw &= Re(\\underline{v}_{lv} \\cdot \\underline{i}_{lv}) \\\\\n"
+" q\\_lv\\_mvar &= Im(\\underline{v}_{lv} \\cdot \\underline{i}_{lv}) \\\\"
+"\n"
+"     pl\\_mw &= p\\_hv\\_mw + p\\_lv\\_mw \\\\\n"
+"     ql\\_mvar &= q\\_hv\\_mvar + q\\_lv\\_mvar \\\\\n"
+" i\\_hv\\_ka &= i_{hv} \\\\\n"
+" i\\_mv\\_ka &= i_{mv} \\\\\n"
+" i\\_lv\\_ka &= i_{lv}\n"
+" \\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:175
+msgid ""
+"The definition of the transformer loading depends on the trafo_loading "
+"parameter of the power flow."
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:177
+msgid "For trafo_loading='current', the loading is calculated as:"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:179
+msgid ""
+"\\begin{align*}\n"
+" loading\\_percent &= max(\\frac{i_{hv} \\cdot "
+"vn\\_hv\\_kv}{sn\\_hv\\_mva}, \\frac{i_{mv} \\cdot "
+"vn\\_mv\\_kv}{sn\\_mv\\_mva}, \\frac{i_{lv} \\cdot "
+"vn\\_lv\\_kv}{sn\\_lv\\_mva})  \\cdot 100\n"
+"\\end{align*}"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:187
+msgid "For trafo_loading='power', the loading is defined as:"
+msgstr ""
+
+#: ../../source/elements/trafo3w.rst:189
+msgid ""
+"\\begin{align*}\n"
+" loading\\_percent &= max( \\frac{i_{hv} \\cdot v_{hv}}{sn\\_hv\\_mva}, "
+"\\frac{i_{mv} \\cdot v_{mv}}{sn\\_mv\\_mva}, \\frac{i_{lv} \\cdot "
+"v_{lv}}{sn\\_lv\\_mva}) \\cdot 100\n"
+" \\end{align*}"
+msgstr ""
+

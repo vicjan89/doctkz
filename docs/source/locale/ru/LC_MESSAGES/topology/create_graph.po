@@ -1,0 +1,269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/topology/create_graph.rst:3
+msgid "Create networkx graph"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:5
+msgid ""
+"The basis of all topology functions is the conversion of a padapower "
+"network into a NetworkX MultiGraph. A MultiGraph is a simplified "
+"representation of a network's topology, reduced to nodes and edges. "
+"Busses are being represented by nodes (Note: only buses with in_service ="
+" 1 appear in the graph), edges represent physical connections between "
+"buses (typically lines or trafos). Multiple parallel edges between nodes "
+"are possible."
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:9
+msgid ""
+"This is a very simple example of a pandapower network being converted to "
+"a MultiGraph. (Note: The MultiGraph's shape is completely arbitrary since"
+" MultiGraphs have no inherent shape unless geodata is provided.)"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:16
+msgid ""
+"Nodes have the same indicees as the buses they originate from. Edges are "
+"defined by the nodes they connect. Additionally nodes and edges can hold "
+"key/value attribute pairs."
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:19
+msgid "The following attributes get transferred into the MultiGraph:"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:22
+msgid "lines"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:22
+msgid "trafos"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:24
+msgid "from_bus"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:25
+msgid "to_bus"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:26
+msgid "length_km"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:26
+#: ../../source/topology/create_graph.rst:27
+msgid "index"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:27
+#: ../../source/topology/create_graph.rst:28
+msgid "in_service"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:29
+msgid "max_i_ka"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:24
+msgid "hv_bus"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:25
+msgid "lv_bus"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:32
+msgid ""
+"Apart from these there are no element attributes contained in the "
+"MultiGraph!"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:34
+msgid "**Creating a multigraph from a pandapower network**"
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:37
+msgid ""
+"The function create_nxgraph function from the pandapower.topology package"
+" allows you to convert a pandapower network into a MultiGraph:"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:2
+msgid ""
+"Converts a pandapower network into a NetworkX graph, which is a is a "
+"simplified representation of a network's topology, reduced to nodes and "
+"edges. Busses are being represented by nodes (Note: only buses with "
+"in_service = 1 appear in the graph), edges represent physical connections"
+" between buses (typically lines or trafos)."
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:8
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:8
+msgid "**net** (pandapowerNet) - variable that contains a pandapower network"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:47
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:12
+msgid ""
+"**respect_switches** (boolean, True) - True: open switches (line, trafo, "
+"bus) are being             considered (no edge between nodes)"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:12
+msgid "False: open switches are being ignored"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:15
+msgid ""
+"**include_lines** (boolean or index, True) - determines, whether or which"
+" lines get"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:15
+#: pandapower.topology.create_graph.create_nxgraph:21
+#: pandapower.topology.create_graph.create_nxgraph:24
+#: pandapower.topology.create_graph.create_nxgraph:27
+msgid "converted to edges"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:18
+msgid ""
+"**include_impedances** (boolean or , True) - determines, whether or which"
+" per unit"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:18
+msgid "impedances (net.impedance) are converted to edges"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:21
+msgid ""
+"**include_dclines** (boolean or index, True) - determines, whether or "
+"which dclines get"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:24
+msgid ""
+"**include_trafos** (boolean or index, True) - determines, whether or "
+"which trafos get"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:27
+msgid ""
+"**include_trafo3ws** (boolean or index, True) - determines, whether or "
+"which trafo3ws get"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:29
+msgid ""
+"**nogobuses** (integer/list, None) - nogobuses are not being considered "
+"in the graph"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:32
+msgid ""
+"**notravbuses** (integer/list, None) - lines connected to these buses are"
+" not being"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:32
+msgid "considered in the graph"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:36
+msgid ""
+"**multi** (boolean, True) - True: The function generates a NetworkX "
+"MultiGraph, which allows"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:35
+msgid ""
+"multiple parallel edges between nodes False: NetworkX Graph (no multiple "
+"parallel edges)"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:40
+msgid ""
+"**calc_branch_impedances** (boolean, False) - determines wether "
+"impedances are calculated"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:39
+msgid ""
+"and added as a weight to all branches or not. Impedances can be added in "
+"ohm or per unit (see branch_impedance unit parameter). DC Lines are "
+"considered as infinity."
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:45
+msgid ""
+"**branch_impedance_unit** (str, \"ohm\") - defines the unit of the branch"
+" impedance for"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:43
+msgid ""
+"calc_branch_impedances=True. If it is set to \"ohm\", the parameters "
+"'r_ohm', 'x_ohm' and 'z_ohm' are added to each branch. If it is set to "
+"\"pu\", the parameters are 'r_pu', 'x_pu' and 'z_pu'."
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:47
+msgid ""
+"**include_out_of_service** (bool, False) - defines if out of service "
+"buses are included in the nx graph"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:50
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:50
+msgid "**mg** - Returns the required NetworkX graph"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:70
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:53
+msgid "import pandapower.topology as top"
+msgstr ""
+
+#: of pandapower.topology.create_graph.create_nxgraph:55
+msgid ""
+"mg = top.create_nx_graph(net, respect_switches = False) # converts the "
+"pandapower network \"net\" to a MultiGraph. Open switches will be "
+"ignored."
+msgstr ""
+
+#: ../../source/topology/create_graph.rst:44
+msgid "**Examples**"
+msgstr ""
+

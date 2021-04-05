@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/plotting/plotly/plotly.rst:3
+msgid "Plotly Network Plots"
+msgstr ""
+
+#: ../../source/plotting/plotly/plotly.rst:5
+msgid ""
+"pandapower provides interactive network plots using `Plotly "
+"<https://plot.ly/python/>`_. These plots are built with arguments and "
+"functionalities to be as much as possible analogous with pandapower's "
+"matlpotlib plotting library. There is a functionality to translate "
+"pandapower network elements into plotly collections (traces). The "
+"different collections for lines, buses or transformers can than be drawn."
+msgstr ""
+
+#: ../../source/plotting/plotly/plotly.rst:11
+msgid ""
+"In order to get idea about interactive plot features and possibilities "
+"see the `tutorial "
+"<http://nbviewer.jupyter.org/github/e2nIEE/pandapower/blob/develop/tutorials"
+"/plotly_built-in.ipynb>`_."
+msgstr ""
+
+#: ../../source/plotting/plotly/plotly.rst:14
+msgid ""
+"If a network has geocoordinates, there is a possibility to represent "
+"interactive plots on `Mapbox <https://www.mapbox.com/>`_ maps."
+msgstr ""
+
+#: ../../source/plotting/plotly/plotly.rst:18
+msgid ""
+"Plots on Mapbox maps are available only considering you have a Mapbox "
+"account and a `Mapbox Access Token <https://www.mapbox.com/studio>`_. "
+"After getting a mabox token it can be set to pandapower as the following "
+"::"
+msgstr ""
+

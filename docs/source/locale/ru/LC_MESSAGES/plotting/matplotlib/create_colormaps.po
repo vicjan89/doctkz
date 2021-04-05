@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/plotting/matplotlib/create_colormaps.rst:3
+msgid "Create Colormaps"
+msgstr ""
+
+#: ../../source/plotting/matplotlib/create_colormaps.rst:6
+msgid "Discrete"
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_discrete:2
+msgid "Can be used to create a discrete colormap."
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_continuous:7
+#: pandapower.plotting.colormaps.cmap_discrete:6
+#: pandapower.plotting.colormaps.cmap_logarithmic:16
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_discrete:6
+msgid ""
+"cmap_list (list) - list of tuples, where each tuple represents one range."
+" Each tuple has"
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_discrete:6
+msgid "the form of ((from, to), color)."
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_continuous:12
+#: pandapower.plotting.colormaps.cmap_discrete:11
+#: pandapower.plotting.colormaps.cmap_logarithmic:21
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_continuous:10
+#: pandapower.plotting.colormaps.cmap_discrete:9
+#: pandapower.plotting.colormaps.cmap_logarithmic:19
+msgid "cmap - matplotlib colormap"
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_continuous:12
+#: pandapower.plotting.colormaps.cmap_discrete:11
+#: pandapower.plotting.colormaps.cmap_logarithmic:21
+msgid "norm - matplotlib norm object"
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_continuous:35
+#: pandapower.plotting.colormaps.cmap_discrete:34
+#: pandapower.plotting.colormaps.cmap_logarithmic:45
+msgid "EXAMPLE:"
+msgstr ""
+
+#: ../../source/plotting/matplotlib/create_colormaps.rst:10
+msgid "Continuous"
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_continuous:2
+msgid "Can be used to create a continuous colormap."
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_continuous:7
+msgid ""
+"cmap_list (list) - list of tuples, where each tuple represents one color."
+" Each tuple has"
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_continuous:6
+msgid ""
+"the form of (center, color). The colorbar is a linear segmentation of the"
+" colors between the centers."
+msgstr ""
+
+#: ../../source/plotting/matplotlib/create_colormaps.rst:14
+msgid "Logarithmic"
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_logarithmic:2
+msgid ""
+"Can be used to create a logarithmic colormap. The colormap itself has a "
+"linear segmentation of the given colors. The values however will be "
+"matched to the colors based on a logarithmic normalization (c.f. "
+"matplotlib.colors.LogNorm for more information on how the logarithmic "
+"normalization works)."
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_logarithmic:45
+msgid "Please note: There are numerous ways of how a logarithmic scale might"
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_logarithmic:7
+msgid ""
+"be created, the intermediate values on the scale are created "
+"automatically based on the minimum and maximum given values in analogy to"
+" the LogNorm. Also, the logarithmic colormap can only be used with at "
+"least 3 colors and increasing values which all have to be above 0."
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_logarithmic:12
+msgid "min_value (float) - the minimum value of the colorbar"
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_logarithmic:14
+msgid "max_value (float) - the maximum value for the colorbar"
+msgstr ""
+
+#: of pandapower.plotting.colormaps.cmap_logarithmic:16
+msgid "colors (list) - list of colors to be used for the colormap"
+msgstr ""
+

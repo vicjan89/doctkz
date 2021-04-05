@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/shortcircuit/currents.rst:3
+msgid "Short-Circuit Currents"
+msgstr ""
+
+#: ../../source/shortcircuit/currents.rst:5
+msgid ""
+"The short-circuit currents are calculated with the equivalent voltage "
+"source at the fault location. For an explanation of the theory behind "
+"short-circuit calculations according to IEC 60909 please refer to the "
+"norm or secondary literature:"
+msgstr ""
+
+#: ../../source/shortcircuit/currents.rst:11
+msgid ""
+"`IEC 60909-0:2016 <https://webstore.iec.ch/publication/24100>`_ Short-"
+"circuit currents in three-phase a.c. systems"
+msgstr ""
+
+#: ../../source/shortcircuit/currents.rst:13
+msgid ""
+"`According to the IEC 60909 "
+"<http://www.openelectrical.org/wiki/index.php?title=According_to_the_IEC_60909>`_"
+" on openelectrical"
+msgstr ""
+
+#: ../../source/shortcircuit/currents.rst:16
+msgid ""
+"pandapower currently implements symmetrical and two-phase faults. One "
+"phase faults and two-phase faults with earthing are not yet available."
+msgstr ""
+

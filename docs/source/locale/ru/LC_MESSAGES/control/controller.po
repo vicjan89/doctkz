@@ -1,0 +1,390 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/control/controller.rst:5
+msgid "Predefined Controllers"
+msgstr ""
+
+#: ../../source/control/controller.rst:9
+msgid "Basic Controller"
+msgstr ""
+
+#: ../../source/control/controller.rst:11
+msgid ""
+"The basic controller is the base controller class that should be "
+"subclassed when implementing custom controllers."
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller:2
+msgid "Base-Class of all controllable elements within a network."
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.add_controller_to_net:2
+msgid "adds the controller to net['controller'] dataframe."
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.add_controller_to_net:25
+#: pandapower.control.controller.const_control.ConstControl:5
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl:9
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl:11
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.add_controller_to_net:5
+msgid "**in_service** (bool) - in service status"
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.add_controller_to_net:7
+msgid "**order** (int) - order"
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.add_controller_to_net:9
+msgid "**index** (int) - index"
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.add_controller_to_net:11
+msgid ""
+"**recycle** (bool) - if controller needs a new bbm (ppc, Ybus...) or if "
+"it can be used with prestored values. This is mostly needed for time "
+"series calculations"
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.control_step:2
+msgid ""
+"If the is_converged method returns false, the control_step will be "
+"called. In other words: if the controller did not converge yet, this "
+"method should implement actions that promote convergence e.g. adapting "
+"actuating variables and writing them back to the data structure."
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.finalize_control:2
+msgid ""
+"Some controller require extended finalization. This method is being "
+"called at the end of a loadflow. It is a separate method from "
+"restore_init_state because it is possible that control finalization does "
+"not only restore the init state but also something in addition to that, "
+"that would require the results in net"
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.finalize_step:2
+#: pandapower.control.basic_controller.Controller.time_step:5
+msgid "This method is ONLY being called during time-series simulation!"
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.finalize_step:4
+msgid ""
+"After each time step, this method is being called to clean things up or "
+"similar. The OutputWriter is a class specifically designed to store "
+"results of the loadflow. If the ControlHandler.output_writer got an "
+"instance of this class, it will be called before the finalize step."
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.initialize_control:2
+msgid ""
+"Some controller require extended initialization in respect to the current"
+" state of the net (or their view of it). This method is being called "
+"after an initial loadflow but BEFORE any control strategies are being "
+"applied."
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.initialize_control:7
+msgid ""
+"This method may be interesting if you are aiming for a global controller "
+"or if it has to be aware of its initial state."
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.is_converged:2
+msgid ""
+"This method calculated whether or not the controller converged. This is "
+"where any target values are being calculated and compared to the actual "
+"measurements. Returns convergence of the controller."
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.repair_control:2
+msgid ""
+"Some controllers can cause net to not converge. In this case, they can "
+"implement a method to try and catch the load flow error by altering some "
+"values in net, for example load scaling. This method is being called in "
+"the except block in run_control. Either implement this in a controller "
+"that is likely to cause the error, or define a special \"load flow "
+"police\" controller for your use case"
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.restore_init_state:2
+msgid ""
+"Some controllers manipulate values in net and then restore them back to "
+"initial values, e.g. DistributedSlack. This method should be used for "
+"such a purpose because it is executed in the except block of run_control "
+"to make sure that the net condition is restored even if load flow "
+"calculation doesn't converge"
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.set_active:2
+msgid "Sets the controller in or out of service"
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.set_recycle:2
+#: pandapower.control.controller.const_control.ConstControl.set_recycle:2
+msgid ""
+"Checks the recyclability of this controller and changes the recyclability"
+" of the control handler if necessary. With this a faster time series "
+"calculation can be achieved since not everything must be recalculated."
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.set_recycle:6
+#: pandapower.control.controller.const_control.ConstControl.set_recycle:6
+msgid ""
+"Beware: Setting recycle wrong can mess up your results. Set it to False "
+"in init if in doubt!"
+msgstr ""
+
+#: of pandapower.control.basic_controller.Controller.time_step:2
+msgid ""
+"It is the first call in each time step, thus suited for things like "
+"reading profiles or prepare the controller for the next control step."
+msgstr ""
+
+#: ../../source/control/controller.rst:17
+msgid "ConstControl"
+msgstr ""
+
+#: ../../source/control/controller.rst:19
+msgid ""
+"This controller is made for the use with the time series module to read "
+"data from a DataSource and write it to the net."
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl:2
+msgid ""
+"Class representing a generic time series controller for a specified "
+"element and variable Control strategy: \"No Control\" -> just updates "
+"timeseries"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl:7
+msgid "**net** (attrdict) - The net in which the controller resides"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl:9
+msgid "**element** - element table ('sgen', 'load' etc.)"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl:11
+msgid "**variable** - variable ('p_mw', 'q_mvar', 'vm_pu', 'tap_pos' etc.)"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl:13
+msgid "**element_index** (int[]) - IDs of the controlled elements"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl:15
+msgid "**data_source** (obj) - The data source that provides profile data"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl:17
+msgid ""
+"**profile_name** (str[]) - The profile names of the elements in the data "
+"source"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl:19
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl:11
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl:13
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl:21
+msgid "**scale_factor** (real, 1.0) - Scaling factor for time series input values"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl:23
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl:19
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl:21
+msgid ""
+"**in_service** (bool, True) - Indicates if the controller is currently "
+"in_service"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl:25
+msgid "**recycle** (bool, True) - Re-use of internal-data in a time series loop."
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl:27
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl:23
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl:23
+msgid ""
+"**drop_same_existing_ctrl** (bool, False) - Indicates if already existing"
+" controllers of the same type and with the same matching parameters (e.g."
+" at same element) should be dropped"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl:29
+msgid ""
+"If multiple elements are represented with one controller, the data source"
+" must have integer columns. At the moment, only the DFData format is "
+"tested for the multiple const control."
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl.control_step:2
+msgid "Write to pandapower net by calling write_to_net()"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.const_control.ConstControl.initialize_control:2
+msgid "At the beginning of each run_control call reset applied-flag"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl.is_converged:2
+msgid ""
+"Actual implementation of the convergence criteria: If controller is "
+"applied, it can stop"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl.time_step:2
+msgid "Get the values of the element from data source"
+msgstr ""
+
+#: of pandapower.control.controller.const_control.ConstControl.write_to_net:2
+msgid ""
+"Writes to self.element at index self.element_index in the column "
+"self.variable the data from self.values"
+msgstr ""
+
+#: ../../source/control/controller.rst:26
+msgid "TrafoController"
+msgstr ""
+
+#: ../../source/control/controller.rst:28
+msgid ""
+"The following controllers to control tap changers are predefined within "
+"the pandapower control module."
+msgstr ""
+
+#: ../../source/control/controller.rst:32
+msgid "Continuous Tap Control"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl:2
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl:2
+msgid "Trafo Controller with local tap changer voltage control."
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl:5
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl:5
+msgid "**net** (attrdict) - Pandapower struct"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl:7
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl:7
+msgid "**tid** (int) - ID of the trafo that is controlled"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl:9
+msgid "**vm_set_pu** (float) - Maximum OLTC target voltage at bus in pu"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl:13
+msgid ""
+"**tol** (float, 0.001) - Voltage tolerance band at bus in percent "
+"(default: 1% = 0.01pu)"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl:15
+msgid ""
+"**side** (string, \"lv\") - Side of the transformer where the voltage is "
+"controlled"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl:17
+msgid "**trafo_type** (float, \"2W\") - Trafo type (\"2W\" or \"3W\")"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl:21
+msgid ""
+"**check_tap_bounds** (bool, True) - In case of true the tap_bounds will "
+"be considered"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl.control_step:2
+msgid "Implements one step of the ContinuousTapControl"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.ContinuousTapControl.ContinuousTapControl.is_converged:2
+msgid ""
+"The ContinuousTapControl is converged, when the difference of the voltage"
+" between control steps is smaller than the Tolerance (tol)."
+msgstr ""
+
+#: ../../source/control/controller.rst:40
+msgid "Discrete Tap Control"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl:9
+msgid "**vm_lower_pu** (float) - Lower voltage limit in pu"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl:11
+msgid "**vm_upper_pu** (float) - Upper voltage limit in pu"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl:15
+msgid ""
+"**side** (string, \"lv\") - Side of the transformer where the voltage is "
+"controlled (hv or lv)"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl:17
+msgid "**trafotype** (float, \"2W\") - Trafo type (\"2W\" or \"3W\")"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl:19
+msgid ""
+"**tol** (float, 0.001) - Voltage tolerance band at bus in Percent "
+"(default: 1% = 0.01pu)"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl.control_step:2
+msgid ""
+"Implements one step of the Discrete controller, always stepping only one "
+"tap position up or down"
+msgstr ""
+
+#: of
+#: pandapower.control.controller.trafo.DiscreteTapControl.DiscreteTapControl.is_converged:2
+msgid ""
+"Checks if the voltage is within the desired voltage band, then returns "
+"True"
+msgstr ""
+

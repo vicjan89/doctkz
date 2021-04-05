@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/topology/examples.rst:3
+msgid "Examples"
+msgstr ""
+
+#: ../../source/topology/examples.rst:5
+msgid ""
+"The combination of a suitable MultiGraph and the availabe topology "
+"functions enables you to perform a wide range of topological searches and"
+" analyses."
+msgstr ""
+
+#: ../../source/topology/examples.rst:8
+msgid "Here are a few examples of what you can do:"
+msgstr ""
+
+#: ../../source/topology/examples.rst:10
+msgid "**basic example network**"
+msgstr ""
+
+#: ../../source/topology/examples.rst:59
+msgid "Using NetworkX algorithms: shortest path"
+msgstr ""
+
+#: ../../source/topology/examples.rst:61
+msgid ""
+"For many basic network analyses the algorithms that come with the "
+"NetworkX package will work just fine and you won't need one of the "
+"spezialised topology functions. Finding the shortest path between two "
+"buses is a good example for that."
+msgstr ""
+
+#: ../../source/topology/examples.rst:82
+msgid "Find disconnected buses"
+msgstr ""
+
+#: ../../source/topology/examples.rst:84
+msgid ""
+"With *unsupplied_buses* you can easily find buses that are not connected "
+"to an external grid."
+msgstr ""
+
+#: ../../source/topology/examples.rst:104
+msgid "Calculate distances between buses"
+msgstr ""
+
+#: ../../source/topology/examples.rst:106
+msgid ""
+"*calc_distance_to_bus* allows you to calculate the distance ( = shortest "
+"network route) from one bus all other ones. This is possible since line "
+"lengths are being transferred into the MultiGraph as an edge attribute. "
+"(Note: bus-bus-switches and trafos are interpreted as edges with length ="
+" 0)"
+msgstr ""
+
+#: ../../source/topology/examples.rst:129
+msgid ""
+"**Interpretation:** The distance between bus 1 and itself is 0 km. Bus 1 "
+"is also 0 km away from bus 0, since they are connected with a "
+"transformer. The shortest path between bus 1 and bus 5 is 4 km long."
+msgstr ""
+
+#: ../../source/topology/examples.rst:138
+msgid "Find connected buses with the same voltage level"
+msgstr ""
+
+#: ../../source/topology/examples.rst:161
+msgid "Find rings and ring sections"
+msgstr ""
+
+#: ../../source/topology/examples.rst:163
+msgid ""
+"Another example of what you can do with the right combination of input "
+"arguments when creating the MultiGraph is finding rings and ring sections"
+" in your network. To achieve that for our example network, the trafo "
+"buses needs to be set as a nogobuses. With *respect_switches = True* you "
+"get the ring sections, with *respect_switches = False* the whole ring."
+msgstr ""
+
+#: ../../source/topology/examples.rst:208
+msgid "Find stubs"
+msgstr ""
+
+#: ../../source/topology/examples.rst:210
+msgid ""
+"*determine_stubs* lets you identify buses and lines that are stubs. Open "
+"switches are being ignored. Busses that you want to exclude should be "
+"defined as roots. Ext_grid buses are roots by default."
+msgstr ""
+
+#: ../../source/topology/examples.rst:213
+msgid "This is a small extension for the example network:"
+msgstr ""
+

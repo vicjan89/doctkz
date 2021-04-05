@@ -1,0 +1,271 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/networks/dickert_lv_networks.rst:3
+msgid "Dickert LV Networks"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:2
+msgid ""
+"This function creates a LV network from J. Dickert, M. Domagk and P. "
+"Schegner. \"Benchmark     low voltage distribution networks based on "
+"cluster analysis of actual grid properties\".     PowerTech, 2013 IEEE "
+"Grenoble. This LV network will have one to three feeders connected to MV-"
+"LV-Trafo. To connect more feeders with respect to the optional given "
+"parameters 'feeders_range', 'linetype', 'customer' and 'case', the "
+"'create_dickert_lv_feeders' function can be executed. The given "
+"'preferred lines for feeders' are used, knowing that there are some other"
+"     standard types mentioned as well."
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:8
+msgid ""
+"Since the paper focusses on LV grids structure, load powers and MV "
+"connection are neglected,     so that the user should identify "
+"appropriate assumptions for trafo and load parameters. 'trafo_type_name' "
+"and 'trafo_type_data' can be set directly by the user. By default, the "
+"load powers are calculated with coincidence factor, derived with normal"
+"     distributed peak system demand, described in Dickert, Schegner -"
+"     'Residential Load Models for Network Planning Purposes', Modern "
+"Electric Power Systems 2010,     Wroclaw, Poland, with the given example "
+"assumptions:"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:11
+msgid "c_inf = 0.1"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:12
+msgid "P_max1 = 10 kW"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:13
+msgid "powerfactor = 0.95 ind. (in range of 0.9 to 1)"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:15
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:17
+msgid ""
+"**feeders_range** (str, 'short') - feeder length, which can be ('short', "
+"'middle', 'long')"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:19
+msgid ""
+"**linetype** (str, 'cable') - the are different feeders provided for "
+"'cable' or 'C&OHL'"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:21
+msgid ""
+"**customer** (str, 'single') - type of customers ('single' or 'multiple')"
+" supplied by the             feeders"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:23
+msgid ""
+"**case** (str, 'good') - case of supply mission, which can be ('good', "
+"'average', 'bad')"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:25
+msgid ""
+"**trafo_type_name** (str, '0.4 MVA 20/0.4 kV') - name of the HV-MV-Trafo "
+"standard type"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:27
+msgid ""
+"**trafo_type_data** (dict, None) - if 'trafo_type_name' is not in "
+"pandapower standard             types, the data of this new trafo types "
+"must be given here in pandapower trafo type way"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:29
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:31
+msgid "**net** (pandapowerNet) - Returns the required dickert lv network"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:33
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:35
+msgid "import pandapower.networks as pn"
+msgstr ""
+
+#: of pandapower.networks.dickert_lv_networks.create_dickert_lv_network:37
+msgid "net = pn.create_dickert_lv_network()"
+msgstr ""
+
+#: ../../source/networks/dickert_lv_networks.rst:7
+msgid ""
+"For all given Dickert LV Networks (in numbers: 12) the number of delivery"
+" points of tapped lines (n_DP) and the distance between delivery points "
+"(d_DP) is given in this table:"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "**Feeders range**"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "**Line type**"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "**Customer**"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "**Case**"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "**d_DP**"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "**n_DP**"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "short"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "cable"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "single"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "good"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "60"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "1"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "average"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "120"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "bad"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "80"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "2"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "multiple"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "3"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "50"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "6"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "40"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "10"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "middle"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "15"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "35"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "20"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "30"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "25"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "C&OHL"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "45"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "13"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "16"
+msgstr ""
+
+#: ../../source/networks/dickert.csv:1
+msgid "long"
+msgstr ""
+
+#: ../../source/networks/dickert_lv_networks.rst:15
+msgid ""
+"The next figure shows the topology of the paper's example with lv network"
+" with mid-range, cable type and in good case:"
+msgstr ""
+

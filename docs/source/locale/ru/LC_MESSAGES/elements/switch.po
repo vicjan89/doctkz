@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/elements/switch.rst:5
+msgid "Switch"
+msgstr ""
+
+#: ../../source/elements/switch.rst:8
+msgid "Create Function"
+msgstr ""
+
+#: of pandapower.create.create_switch:2
+msgid "Adds a switch in the net[\"switch\"] table."
+msgstr ""
+
+#: of pandapower.create.create_switch:4
+msgid ""
+"Switches can be either between two buses (bus-bus switch) or at the end "
+"of a line or transformer element (bus-element switch)."
+msgstr ""
+
+#: of pandapower.create.create_switch:7
+msgid ""
+"Two buses that are connected through a closed bus-bus switches are fused "
+"in the power flow if the switch is closed or separated if the switch is "
+"open."
+msgstr ""
+
+#: of pandapower.create.create_switch:10
+msgid ""
+"An element that is connected to a bus through a bus-element switch is "
+"connected to the bus if the switch is closed or disconnected if the "
+"switch is open."
+msgstr ""
+
+#: of pandapower.create.create_switch:22
+msgid "INPUT:"
+msgstr ""
+
+#: of pandapower.create.create_switch:14
+msgid ""
+"**net** (pandapowerNet) - The net within which this switch should be "
+"created"
+msgstr ""
+
+#: of pandapower.create.create_switch:16
+msgid "**bus** - The bus that the switch is connected to"
+msgstr ""
+
+#: of pandapower.create.create_switch:18
+msgid ""
+"**element** - index of the element: bus id if et == \"b\", line id if et "
+"== \"l\", trafo id if             et == \"t\""
+msgstr ""
+
+#: of pandapower.create.create_switch:22
+msgid ""
+"**et** - (string) element type: \"l\" = switch between bus and line, "
+"\"t\" = switch between"
+msgstr ""
+
+#: of pandapower.create.create_switch:21
+msgid ""
+"bus and transformer, \"t3\" = switch between bus and transformer3w, \"b\""
+" = switch between two buses"
+msgstr ""
+
+#: of pandapower.create.create_switch:33
+msgid "OPTIONAL:"
+msgstr ""
+
+#: of pandapower.create.create_switch:25
+msgid "**closed** (boolean, True) - switch position: False = open, True = closed"
+msgstr ""
+
+#: of pandapower.create.create_switch:27
+msgid ""
+"**type** (int, None) - indicates the type of switch: \"LS\" = Load "
+"Switch, \"CB\" =             Circuit Breaker, \"LBS\" = Load Break Switch"
+" or \"DS\" = Disconnecting Switch"
+msgstr ""
+
+#: of pandapower.create.create_switch:31
+msgid ""
+"**z_ohm** (float, 0) - indicates the resistance of the switch, which has "
+"effect only on"
+msgstr ""
+
+#: of pandapower.create.create_switch:30
+msgid ""
+"bus-bus switches, if sets to 0, the buses will be fused like before, if "
+"larger than 0 a branch will be created for the switch which has also "
+"effects on the bus mapping"
+msgstr ""
+
+#: of pandapower.create.create_switch:33
+msgid "**name** (string, default None) - The name for this switch"
+msgstr ""
+
+#: of pandapower.create.create_switch:36
+msgid "OUTPUT:"
+msgstr ""
+
+#: of pandapower.create.create_switch:36
+msgid "**sid** - The unique switch_id of the created switch"
+msgstr ""
+
+#: of pandapower.create.create_switch:55
+msgid "EXAMPLE:"
+msgstr ""
+
+#: of pandapower.create.create_switch:39
+msgid ""
+"create_switch(net, bus =  0, element = 1, et = 'b', type =\"LS\", z_ohm ="
+" 0.1)"
+msgstr ""
+
+#: of pandapower.create.create_switch:41
+msgid "create_switch(net, bus = 0, element = 1, et = 'l')"
+msgstr ""
+
+#: ../../source/elements/switch.rst:13
+msgid "Input Parameters"
+msgstr ""
+
+#: ../../source/elements/switch.rst:15
+msgid "*net.switch*"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "**Parameter**"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "**Datatype**"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "**Value Range**"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "**Explanation**"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "bus*"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "integer"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "index of connected bus"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "name"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "string"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "name of the switch"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "element*"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv
+msgid "index of the element the switch is connected to:"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv
+msgid "- bus index if et = *\"b\"*"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv
+msgid "- line index if et = *\"l\"*"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv
+msgid "- trafo index if et = *\"t\"*"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "et*"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv
+msgid "*\"b\"* - bus-bus switch"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv
+msgid "*\"l\"* - bus-line switch"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv
+msgid "*\"t\"* - bus-trafo"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv
+msgid "*\"t3\"* - bus-trafo3w switch"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "element type the switch connects to"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "type"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv
+msgid "naming conventions:"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv
+msgid "*\"CB\"* - circuit breaker"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv
+msgid "*\"LS\"* - load switch"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv
+msgid "*\"LBS\"* - load break switch"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv
+msgid "*\"DS\"* - disconnecting switch"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "type of switch"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "closed*"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "boolean"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "True / False"
+msgstr ""
+
+#: ../../source/elements/switch_par.csv:1
+msgid "signals the switching state of the switch"
+msgstr ""
+
+#: ../../source/elements/switch.rst:23
+msgid "\\*necessary for executing a power flow calculation."
+msgstr ""
+
+#: ../../source/elements/switch.rst:27
+msgid "Electric Model"
+msgstr ""
+
+#: ../../source/elements/switch.rst:29
+msgid "*Bus-Bus-Switches:*"
+msgstr ""
+
+#: ../../source/elements/switch.rst:31
+msgid ""
+"Two buses that are connected with a closed bus-bus switches are fused "
+"internally for the power flow, open bus-bus switches are ignored:"
+msgstr ""
+
+#: ../../source/elements/switch.rst:38
+msgid ""
+"This has the following advantages compared to modelling the switch as a "
+"small impedance:"
+msgstr ""
+
+#: ../../source/elements/switch.rst:40
+msgid "there is no voltage drop over the switch (ideal switch)"
+msgstr ""
+
+#: ../../source/elements/switch.rst:41
+msgid "no convergence problems due to small impedances / large admittances"
+msgstr ""
+
+#: ../../source/elements/switch.rst:42
+msgid "less buses in the admittance matrix"
+msgstr ""
+
+#: ../../source/elements/switch.rst:44
+msgid "*Bus-Element-Switches:*"
+msgstr ""
+
+#: ../../source/elements/switch.rst:46
+msgid ""
+"When the power flow is calculated internally for every open bus-element "
+"switch an auxilary bus is created in the pypower case file. The pypower "
+"branch that corresponds to the element is then connected to this bus. "
+"This has the following advantages compared to modelling the switch by "
+"setting the element out of service:"
+msgstr ""
+
+#: ../../source/elements/switch.rst:48
+msgid "loading current is considered"
+msgstr ""
+
+#: ../../source/elements/switch.rst:49
+msgid "information about switch position is preserved"
+msgstr ""
+
+#: ../../source/elements/switch.rst:50
+msgid ""
+"difference between open switch and out of service line (e.g. faulty line)"
+" can be modelled"
+msgstr ""
+
+#: ../../source/elements/switch.rst:52
+msgid "Closed bus-element switches are ignored:"
+msgstr ""
+

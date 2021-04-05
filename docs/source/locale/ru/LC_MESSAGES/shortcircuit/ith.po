@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2016-2020 by Fraunhofer IEE and University of Kassel
+# This file is distributed under the same license as the pandapower package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pandapower 2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-09 17:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.0\n"
+
+#: ../../source/shortcircuit/ith.rst:2
+msgid "Thermal Short-Circuit Current"
+msgstr ""
+
+#: ../../source/shortcircuit/ith.rst:5
+msgid "Current Calculation"
+msgstr ""
+
+#: ../../source/shortcircuit/ith.rst:7
+msgid "The equivalent thermal current is calculated as:"
+msgstr ""
+
+#: ../../source/shortcircuit/ith.rst:9
+msgid ""
+"\\begin{bmatrix}\n"
+"\\underline{I}_{th, 1} \\\\\n"
+"\\vdots  \\\\\n"
+"\\underline{I}_{th, n} \\\\\n"
+"\\end{bmatrix} =\n"
+"\\begin{bmatrix}\n"
+"\\sqrt{m_1 + n_1} \\\\\n"
+"\\vdots  \\\\\n"
+"\\sqrt{m_n + n_n} \\\\\n"
+"\\end{bmatrix}\n"
+"\\begin{bmatrix}\n"
+"\\underline{I}''_{k, 1} \\\\\n"
+"\\vdots  \\\\\n"
+"\\underline{I}''_{k, n} \\\\\n"
+"\\end{bmatrix}"
+msgstr ""
+
+#: ../../source/shortcircuit/ith.rst:27
+msgid "where m and n represent the dc and ac part of the thermal load."
+msgstr ""
+
+#: ../../source/shortcircuit/ith.rst:30
+msgid "Correction Factors m and n"
+msgstr ""
+
+#: ../../source/shortcircuit/ith.rst:32
+msgid ""
+"For short-circuit currents far from synchronous generators, the factors "
+"are given as:"
+msgstr ""
+
+#: ../../source/shortcircuit/ith.rst:34
+msgid ""
+"n = 1\n"
+"m = \\frac{1}{2 \\cdot f \\cdot T_k \\cdot ln(\\kappa - 1)} [e^{4 \\cdot "
+"f \\cdot T_k \\cdot ln(\\kappa - 1)} - 1]"
+msgstr ""
+
+#: ../../source/shortcircuit/ith.rst:39
+msgid ""
+"where :math:`\\kappa` is the peak factor defined :ref:`here <kappa>` and "
+":math:`T_k` is the duration of the short-circuit current that can be "
+"defined as a parameter when running the short-circuit calculation."
+msgstr ""
+
