@@ -1,0 +1,1080 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Basic Standard Types &mdash; документация Calculation of electrical networks 1.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="Об этих документах" href="../about.html" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Calculation of electrical networks
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О программе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elements.html">Описания элементов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editor.html">Функции редактора</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Calculation of electrical networks</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Basic Standard Types</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/std_types/basic.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basic-standard-types">
+<h1>Basic Standard Types<a class="headerlink" href="#basic-standard-types" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Every pandapower network comes with a default set of standard types.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>The pandapower standard types are compatible with 50 Hz systems, please be aware that the standard type values might not be realistic for 60 Hz (or other) power systems.</p>
+</div>
+<div class="section" id="lines">
+<h2>Lines<a class="headerlink" href="#lines" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td></td>
+<td><p>r_ohm_per_km</p></td>
+<td><p>x_ohm_per_km</p></td>
+<td><p>c_nf_per_km</p></td>
+<td><p>max_i_ka</p></td>
+<td><p>type</p></td>
+<td><p>q_mm2</p></td>
+<td><p>alpha</p></td>
+</tr>
+<tr class="row-even"><td><p>NAYY 4x50 SE</p></td>
+<td><p>0.642</p></td>
+<td><p>0.083</p></td>
+<td><p>210.0</p></td>
+<td><p>0.142</p></td>
+<td><p>cs</p></td>
+<td><p>50</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>NAYY 4x120 SE</p></td>
+<td><p>0.225</p></td>
+<td><p>0.08</p></td>
+<td><p>264.0</p></td>
+<td><p>0.242</p></td>
+<td><p>cs</p></td>
+<td><p>120</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>NAYY 4x150 SE</p></td>
+<td><p>0.208</p></td>
+<td><p>0.08</p></td>
+<td><p>261.0</p></td>
+<td><p>0.27</p></td>
+<td><p>cs</p></td>
+<td><p>150</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>NA2XS2Y 1x95 RM/25 12/20 kV</p></td>
+<td><p>0.313</p></td>
+<td><p>0.132</p></td>
+<td><p>216.0</p></td>
+<td><p>0.252</p></td>
+<td><p>cs</p></td>
+<td><p>95</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>NA2XS2Y 1x185 RM/25 12/20 kV</p></td>
+<td><p>0.161</p></td>
+<td><p>0.117</p></td>
+<td><p>273.0</p></td>
+<td><p>0.362</p></td>
+<td><p>cs</p></td>
+<td><p>185</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>NA2XS2Y 1x240 RM/25 12/20 kV</p></td>
+<td><p>0.122</p></td>
+<td><p>0.112</p></td>
+<td><p>304.0</p></td>
+<td><p>0.421</p></td>
+<td><p>cs</p></td>
+<td><p>240</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>NA2XS2Y 1x95 RM/25 6/10 kV</p></td>
+<td><p>0.313</p></td>
+<td><p>0.123</p></td>
+<td><p>315.0</p></td>
+<td><p>0.249</p></td>
+<td><p>cs</p></td>
+<td><p>95</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>NA2XS2Y 1x185 RM/25 6/10 kV</p></td>
+<td><p>0.161</p></td>
+<td><p>0.11</p></td>
+<td><p>406.0</p></td>
+<td><p>0.358</p></td>
+<td><p>cs</p></td>
+<td><p>185</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>NA2XS2Y 1x240 RM/25 6/10 kV</p></td>
+<td><p>0.122</p></td>
+<td><p>0.105</p></td>
+<td><p>456.0</p></td>
+<td><p>0.416</p></td>
+<td><p>cs</p></td>
+<td><p>240</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>NA2XS2Y 1x150 RM/25 12/20 kV</p></td>
+<td><p>0.206</p></td>
+<td><p>0.116</p></td>
+<td><p>250.0</p></td>
+<td><p>0.319</p></td>
+<td><p>cs</p></td>
+<td><p>150</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>NA2XS2Y 1x120 RM/25 12/20 kV</p></td>
+<td><p>0.253</p></td>
+<td><p>0.119</p></td>
+<td><p>230.0</p></td>
+<td><p>0.283</p></td>
+<td><p>cs</p></td>
+<td><p>120</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>NA2XS2Y 1x70 RM/25 12/20 kV</p></td>
+<td><p>0.443</p></td>
+<td><p>0.132</p></td>
+<td><p>190.0</p></td>
+<td><p>0.22</p></td>
+<td><p>cs</p></td>
+<td><p>70</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>NA2XS2Y 1x150 RM/25 6/10 kV</p></td>
+<td><p>0.206</p></td>
+<td><p>0.11</p></td>
+<td><p>360.0</p></td>
+<td><p>0.315</p></td>
+<td><p>cs</p></td>
+<td><p>150</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>NA2XS2Y 1x120 RM/25 6/10 kV</p></td>
+<td><p>0.253</p></td>
+<td><p>0.113</p></td>
+<td><p>340.0</p></td>
+<td><p>0.28</p></td>
+<td><p>cs</p></td>
+<td><p>120</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>NA2XS2Y 1x70 RM/25 6/10 kV</p></td>
+<td><p>0.443</p></td>
+<td><p>0.123</p></td>
+<td><p>280.0</p></td>
+<td><p>0.217</p></td>
+<td><p>cs</p></td>
+<td><p>70</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>N2XS(FL)2Y 1x120 RM/35 64/110 kV</p></td>
+<td><p>0.153</p></td>
+<td><p>0.166</p></td>
+<td><p>112.0</p></td>
+<td><p>0.366</p></td>
+<td><p>cs</p></td>
+<td><p>120</p></td>
+<td><p>0.00393</p></td>
+</tr>
+<tr class="row-even"><td><p>N2XS(FL)2Y 1x185 RM/35 64/110 kV</p></td>
+<td><p>0.099</p></td>
+<td><p>0.156</p></td>
+<td><p>125.0</p></td>
+<td><p>0.457</p></td>
+<td><p>cs</p></td>
+<td><p>185</p></td>
+<td><p>0.00393</p></td>
+</tr>
+<tr class="row-odd"><td><p>N2XS(FL)2Y 1x240 RM/35 64/110 kV</p></td>
+<td><p>0.075</p></td>
+<td><p>0.149</p></td>
+<td><p>135.0</p></td>
+<td><p>0.526</p></td>
+<td><p>cs</p></td>
+<td><p>240</p></td>
+<td><p>0.00393</p></td>
+</tr>
+<tr class="row-even"><td><p>N2XS(FL)2Y 1x300 RM/35 64/110 kV</p></td>
+<td><p>0.06</p></td>
+<td><p>0.144</p></td>
+<td><p>144.0</p></td>
+<td><p>0.588</p></td>
+<td><p>cs</p></td>
+<td><p>300</p></td>
+<td><p>0.00393</p></td>
+</tr>
+<tr class="row-odd"><td><p>15-AL1/3-ST1A 0.4</p></td>
+<td><p>1.8769</p></td>
+<td><p>0.35</p></td>
+<td><p>11.0</p></td>
+<td><p>0.105</p></td>
+<td><p>ol</p></td>
+<td><p>16</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>24-AL1/4-ST1A 0.4</p></td>
+<td><p>1.2012</p></td>
+<td><p>0.335</p></td>
+<td><p>11.25</p></td>
+<td><p>0.14</p></td>
+<td><p>ol</p></td>
+<td><p>24</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>48-AL1/8-ST1A 0.4</p></td>
+<td><p>0.5939</p></td>
+<td><p>0.3</p></td>
+<td><p>12.2</p></td>
+<td><p>0.21</p></td>
+<td><p>ol</p></td>
+<td><p>48</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>94-AL1/15-ST1A 0.4</p></td>
+<td><p>0.306</p></td>
+<td><p>0.29</p></td>
+<td><p>13.2</p></td>
+<td><p>0.35</p></td>
+<td><p>ol</p></td>
+<td><p>94</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>34-AL1/6-ST1A 10.0</p></td>
+<td><p>0.8342</p></td>
+<td><p>0.36</p></td>
+<td><p>9.7</p></td>
+<td><p>0.17</p></td>
+<td><p>ol</p></td>
+<td><p>34</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>48-AL1/8-ST1A 10.0</p></td>
+<td><p>0.5939</p></td>
+<td><p>0.35</p></td>
+<td><p>10.1</p></td>
+<td><p>0.21</p></td>
+<td><p>ol</p></td>
+<td><p>48</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>70-AL1/11-ST1A 10.0</p></td>
+<td><p>0.4132</p></td>
+<td><p>0.339</p></td>
+<td><p>10.4</p></td>
+<td><p>0.29</p></td>
+<td><p>ol</p></td>
+<td><p>70</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>94-AL1/15-ST1A 10.0</p></td>
+<td><p>0.306</p></td>
+<td><p>0.33</p></td>
+<td><p>10.75</p></td>
+<td><p>0.35</p></td>
+<td><p>ol</p></td>
+<td><p>94</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>122-AL1/20-ST1A 10.0</p></td>
+<td><p>0.2376</p></td>
+<td><p>0.323</p></td>
+<td><p>11.1</p></td>
+<td><p>0.41</p></td>
+<td><p>ol</p></td>
+<td><p>122</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>149-AL1/24-ST1A 10.0</p></td>
+<td><p>0.194</p></td>
+<td><p>0.315</p></td>
+<td><p>11.25</p></td>
+<td><p>0.47</p></td>
+<td><p>ol</p></td>
+<td><p>149</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>34-AL1/6-ST1A 20.0</p></td>
+<td><p>0.8342</p></td>
+<td><p>0.382</p></td>
+<td><p>9.15</p></td>
+<td><p>0.17</p></td>
+<td><p>ol</p></td>
+<td><p>34</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>48-AL1/8-ST1A 20.0</p></td>
+<td><p>0.5939</p></td>
+<td><p>0.372</p></td>
+<td><p>9.5</p></td>
+<td><p>0.21</p></td>
+<td><p>ol</p></td>
+<td><p>48</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>70-AL1/11-ST1A 20.0</p></td>
+<td><p>0.4132</p></td>
+<td><p>0.36</p></td>
+<td><p>9.7</p></td>
+<td><p>0.29</p></td>
+<td><p>ol</p></td>
+<td><p>70</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>94-AL1/15-ST1A 20.0</p></td>
+<td><p>0.306</p></td>
+<td><p>0.35</p></td>
+<td><p>10.0</p></td>
+<td><p>0.35</p></td>
+<td><p>ol</p></td>
+<td><p>94</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>122-AL1/20-ST1A 20.0</p></td>
+<td><p>0.2376</p></td>
+<td><p>0.344</p></td>
+<td><p>10.3</p></td>
+<td><p>0.41</p></td>
+<td><p>ol</p></td>
+<td><p>122</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>149-AL1/24-ST1A 20.0</p></td>
+<td><p>0.194</p></td>
+<td><p>0.337</p></td>
+<td><p>10.5</p></td>
+<td><p>0.47</p></td>
+<td><p>ol</p></td>
+<td><p>149</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>184-AL1/30-ST1A 20.0</p></td>
+<td><p>0.1571</p></td>
+<td><p>0.33</p></td>
+<td><p>10.75</p></td>
+<td><p>0.535</p></td>
+<td><p>ol</p></td>
+<td><p>184</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>243-AL1/39-ST1A 20.0</p></td>
+<td><p>0.1188</p></td>
+<td><p>0.32</p></td>
+<td><p>11.0</p></td>
+<td><p>0.645</p></td>
+<td><p>ol</p></td>
+<td><p>243</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>48-AL1/8-ST1A 110.0</p></td>
+<td><p>0.5939</p></td>
+<td><p>0.46</p></td>
+<td><p>8.0</p></td>
+<td><p>0.21</p></td>
+<td><p>ol</p></td>
+<td><p>48</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>70-AL1/11-ST1A 110.0</p></td>
+<td><p>0.4132</p></td>
+<td><p>0.45</p></td>
+<td><p>8.4</p></td>
+<td><p>0.29</p></td>
+<td><p>ol</p></td>
+<td><p>70</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>94-AL1/15-ST1A 110.0</p></td>
+<td><p>0.306</p></td>
+<td><p>0.44</p></td>
+<td><p>8.65</p></td>
+<td><p>0.35</p></td>
+<td><p>ol</p></td>
+<td><p>94</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>122-AL1/20-ST1A 110.0</p></td>
+<td><p>0.2376</p></td>
+<td><p>0.43</p></td>
+<td><p>8.5</p></td>
+<td><p>0.41</p></td>
+<td><p>ol</p></td>
+<td><p>122</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>149-AL1/24-ST1A 110.0</p></td>
+<td><p>0.194</p></td>
+<td><p>0.41</p></td>
+<td><p>8.75</p></td>
+<td><p>0.47</p></td>
+<td><p>ol</p></td>
+<td><p>149</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>184-AL1/30-ST1A 110.0</p></td>
+<td><p>0.1571</p></td>
+<td><p>0.4</p></td>
+<td><p>8.8</p></td>
+<td><p>0.535</p></td>
+<td><p>ol</p></td>
+<td><p>184</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>243-AL1/39-ST1A 110.0</p></td>
+<td><p>0.1188</p></td>
+<td><p>0.39</p></td>
+<td><p>9.0</p></td>
+<td><p>0.645</p></td>
+<td><p>ol</p></td>
+<td><p>243</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>305-AL1/39-ST1A 110.0</p></td>
+<td><p>0.0949</p></td>
+<td><p>0.38</p></td>
+<td><p>9.2</p></td>
+<td><p>0.74</p></td>
+<td><p>ol</p></td>
+<td><p>305</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>490-AL1/64-ST1A 110.0</p></td>
+<td><p>0.059</p></td>
+<td><p>0.37</p></td>
+<td><p>9.75</p></td>
+<td><p>0.96</p></td>
+<td><p>ol</p></td>
+<td><p>490</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>679-AL1/86-ST1A 110.0</p></td>
+<td><p>0.042</p></td>
+<td><p>0.36</p></td>
+<td><p>9.95</p></td>
+<td><p>1.15</p></td>
+<td><p>ol</p></td>
+<td><p>679</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>490-AL1/64-ST1A 220.0</p></td>
+<td><p>0.059</p></td>
+<td><p>0.285</p></td>
+<td><p>10.0</p></td>
+<td><p>0.96</p></td>
+<td><p>ol</p></td>
+<td><p>490</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>679-AL1/86-ST1A 220.0</p></td>
+<td><p>0.042</p></td>
+<td><p>0.275</p></td>
+<td><p>11.7</p></td>
+<td><p>1.15</p></td>
+<td><p>ol</p></td>
+<td><p>679</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-odd"><td><p>490-AL1/64-ST1A 380.0</p></td>
+<td><p>0.059</p></td>
+<td><p>0.253</p></td>
+<td><p>11.0</p></td>
+<td><p>0.96</p></td>
+<td><p>ol</p></td>
+<td><p>490</p></td>
+<td><p>0.00403</p></td>
+</tr>
+<tr class="row-even"><td><p>679-AL1/86-ST1A 380.0</p></td>
+<td><p>0.042</p></td>
+<td><p>0.25</p></td>
+<td><p>14.6</p></td>
+<td><p>1.15</p></td>
+<td><p>ol</p></td>
+<td><p>679</p></td>
+<td><p>0.00403</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>To add the optional column «alpha» to net.line that is used if power flow is calculated for a different line temperature than 20 °C, use the function pp.add_temperature_coefficient()</p>
+</div>
+</div>
+<div class="section" id="transformers">
+<h2>Transformers<a class="headerlink" href="#transformers" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td></td>
+<td><p>sn_mva</p></td>
+<td><p>vn_hv_kv</p></td>
+<td><p>vn_lv_kv</p></td>
+<td><p>vk_percent</p></td>
+<td><p>vkr_percent</p></td>
+<td><p>pfe_kw</p></td>
+<td><p>i0_percent</p></td>
+<td><p>shift_degree</p></td>
+<td><p>tap_side</p></td>
+<td><p>tap_neutral</p></td>
+<td><p>tap_min</p></td>
+<td><p>tap_max</p></td>
+<td><p>tap_step_percent</p></td>
+<td><p>tap_step_degree</p></td>
+<td><p>tap_phase_shifter</p></td>
+</tr>
+<tr class="row-even"><td><p>160 MVA 380/110 kV</p></td>
+<td><p>160.0</p></td>
+<td><p>380.0</p></td>
+<td><p>110.0</p></td>
+<td><p>12.2</p></td>
+<td><p>0.25</p></td>
+<td><p>60.0</p></td>
+<td><p>0.06</p></td>
+<td><p>0</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-9</p></td>
+<td><p>9</p></td>
+<td><p>1.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>100 MVA 220/110 kV</p></td>
+<td><p>100.0</p></td>
+<td><p>220.0</p></td>
+<td><p>110.0</p></td>
+<td><p>12.0</p></td>
+<td><p>0.26</p></td>
+<td><p>55.0</p></td>
+<td><p>0.06</p></td>
+<td><p>0</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-9</p></td>
+<td><p>9</p></td>
+<td><p>1.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>63 MVA 110/20 kV</p></td>
+<td><p>63.0</p></td>
+<td><p>110.0</p></td>
+<td><p>20.0</p></td>
+<td><p>18.0</p></td>
+<td><p>0.32</p></td>
+<td><p>22.0</p></td>
+<td><p>0.04</p></td>
+<td><p>150</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-9</p></td>
+<td><p>9</p></td>
+<td><p>1.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>40 MVA 110/20 kV</p></td>
+<td><p>40.0</p></td>
+<td><p>110.0</p></td>
+<td><p>20.0</p></td>
+<td><p>16.2</p></td>
+<td><p>0.34</p></td>
+<td><p>18.0</p></td>
+<td><p>0.05</p></td>
+<td><p>150</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-9</p></td>
+<td><p>9</p></td>
+<td><p>1.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>25 MVA 110/20 kV</p></td>
+<td><p>25.0</p></td>
+<td><p>110.0</p></td>
+<td><p>20.0</p></td>
+<td><p>12.0</p></td>
+<td><p>0.41</p></td>
+<td><p>14.0</p></td>
+<td><p>0.07</p></td>
+<td><p>150</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-9</p></td>
+<td><p>9</p></td>
+<td><p>1.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>63 MVA 110/10 kV</p></td>
+<td><p>63.0</p></td>
+<td><p>110.0</p></td>
+<td><p>10.0</p></td>
+<td><p>18.0</p></td>
+<td><p>0.32</p></td>
+<td><p>22.0</p></td>
+<td><p>0.04</p></td>
+<td><p>150</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-9</p></td>
+<td><p>9</p></td>
+<td><p>1.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>40 MVA 110/10 kV</p></td>
+<td><p>40.0</p></td>
+<td><p>110.0</p></td>
+<td><p>10.0</p></td>
+<td><p>16.2</p></td>
+<td><p>0.34</p></td>
+<td><p>18.0</p></td>
+<td><p>0.05</p></td>
+<td><p>150</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-9</p></td>
+<td><p>9</p></td>
+<td><p>1.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>25 MVA 110/10 kV</p></td>
+<td><p>25.0</p></td>
+<td><p>110.0</p></td>
+<td><p>10.0</p></td>
+<td><p>12.0</p></td>
+<td><p>0.41</p></td>
+<td><p>14.0</p></td>
+<td><p>0.07</p></td>
+<td><p>150</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-9</p></td>
+<td><p>9</p></td>
+<td><p>1.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>0.25 MVA 20/0.4 kV</p></td>
+<td><p>0.25</p></td>
+<td><p>20.0</p></td>
+<td><p>0.4</p></td>
+<td><p>6.0</p></td>
+<td><p>1.44</p></td>
+<td><p>0.8</p></td>
+<td><p>0.32</p></td>
+<td><p>150</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-2</p></td>
+<td><p>2</p></td>
+<td><p>2.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.4 MVA 20/0.4 kV</p></td>
+<td><p>0.4</p></td>
+<td><p>20.0</p></td>
+<td><p>0.4</p></td>
+<td><p>6.0</p></td>
+<td><p>1.425</p></td>
+<td><p>1.35</p></td>
+<td><p>0.3375</p></td>
+<td><p>150</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-2</p></td>
+<td><p>2</p></td>
+<td><p>2.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>0.63 MVA 20/0.4 kV</p></td>
+<td><p>0.63</p></td>
+<td><p>20.0</p></td>
+<td><p>0.4</p></td>
+<td><p>6.0</p></td>
+<td><p>1.206</p></td>
+<td><p>1.65</p></td>
+<td><p>0.2619</p></td>
+<td><p>150</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-2</p></td>
+<td><p>2</p></td>
+<td><p>2.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.25 MVA 10/0.4 kV</p></td>
+<td><p>0.25</p></td>
+<td><p>10.0</p></td>
+<td><p>0.4</p></td>
+<td><p>4.0</p></td>
+<td><p>1.2</p></td>
+<td><p>0.6</p></td>
+<td><p>0.24</p></td>
+<td><p>150</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-2</p></td>
+<td><p>2</p></td>
+<td><p>2.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-even"><td><p>0.4 MVA 10/0.4 kV</p></td>
+<td><p>0.4</p></td>
+<td><p>10.0</p></td>
+<td><p>0.4</p></td>
+<td><p>4.0</p></td>
+<td><p>1.325</p></td>
+<td><p>0.95</p></td>
+<td><p>0.2375</p></td>
+<td><p>150</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-2</p></td>
+<td><p>2</p></td>
+<td><p>2.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.63 MVA 10/0.4 kV</p></td>
+<td><p>0.63</p></td>
+<td><p>10.0</p></td>
+<td><p>0.4</p></td>
+<td><p>4.0</p></td>
+<td><p>1.0794</p></td>
+<td><p>1.18</p></td>
+<td><p>0.1873</p></td>
+<td><p>150</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-2</p></td>
+<td><p>2</p></td>
+<td><p>2.5</p></td>
+<td><p>0</p></td>
+<td><p>False</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="three-winding-transformers">
+<h2>Three Winding Transformers<a class="headerlink" href="#three-winding-transformers" title="Ссылка на этот заголовок">¶</a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td></td>
+<td><p>sn_hv_mva</p></td>
+<td><p>sn_mv_mva</p></td>
+<td><p>sn_lv_mva</p></td>
+<td><p>vn_hv_kv</p></td>
+<td><p>vn_mv_kv</p></td>
+<td><p>vn_lv_kv</p></td>
+<td><p>vk_hv_percent</p></td>
+<td><p>vk_mv_percent</p></td>
+<td><p>vk_lv_percent</p></td>
+<td><p>vkr_hv_percent</p></td>
+<td><p>vkr_mv_percent</p></td>
+<td><p>vkr_lv_percent</p></td>
+<td><p>pfe_kw</p></td>
+<td><p>i0_percent</p></td>
+<td><p>shift_mv_degree</p></td>
+<td><p>shift_lv_degree</p></td>
+<td><p>tap_side</p></td>
+<td><p>tap_neutral</p></td>
+<td><p>tap_min</p></td>
+<td><p>tap_max</p></td>
+<td><p>tap_step_percent</p></td>
+</tr>
+<tr class="row-even"><td><p>63/25/38 MVA 110/20/10 kV</p></td>
+<td><p>63</p></td>
+<td><p>25</p></td>
+<td><p>38</p></td>
+<td><p>110</p></td>
+<td><p>20</p></td>
+<td><p>10</p></td>
+<td><p>10.4</p></td>
+<td><p>10.4</p></td>
+<td><p>10.4</p></td>
+<td><p>0.28</p></td>
+<td><p>0.32</p></td>
+<td><p>0.35</p></td>
+<td><p>35</p></td>
+<td><p>0.89</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-10</p></td>
+<td><p>10</p></td>
+<td><p>1.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>63/25/38 MVA 110/10/10 kV</p></td>
+<td><p>63</p></td>
+<td><p>25</p></td>
+<td><p>38</p></td>
+<td><p>110</p></td>
+<td><p>10</p></td>
+<td><p>10</p></td>
+<td><p>10.4</p></td>
+<td><p>10.4</p></td>
+<td><p>10.4</p></td>
+<td><p>0.28</p></td>
+<td><p>0.32</p></td>
+<td><p>0.35</p></td>
+<td><p>35</p></td>
+<td><p>0.89</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>hv</p></td>
+<td><p>0</p></td>
+<td><p>-10</p></td>
+<td><p>10</p></td>
+<td><p>1.2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, РУП ВЭ.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

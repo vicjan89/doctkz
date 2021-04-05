@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Initial Short-Circuit Current &mdash; документация Calculation of electrical networks 1.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="Об этих документах" href="../about.html" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Calculation of electrical networks
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О программе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elements.html">Описания элементов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editor.html">Функции редактора</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Calculation of electrical networks</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Initial Short-Circuit Current</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/shortcircuit/ikss.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="initial-short-circuit-current">
+<h1>Initial Short-Circuit Current<a class="headerlink" href="#initial-short-circuit-current" title="Ссылка на этот заголовок">¶</a></h1>
+<p>The general ohmic network equation is given as:</p>
+<dl class="simple">
+<dt>The SC is calculated in two steps:</dt><dd><ul class="simple">
+<li><p>calculate the SC contribution <span class="math notranslate nohighlight">\(I''_{kI}\)</span> of all voltage source elements</p></li>
+<li><p>calculate the SC contribution <span class="math notranslate nohighlight">\(I''_{kII}\)</span> of all current source elements</p></li>
+</ul>
+</dd>
+</dl>
+<p>These two currents are then combined into the total initial SC current  <span class="math notranslate nohighlight">\(I''_{k} = I''_{kI} + I''_{kII}\)</span>.</p>
+<div class="section" id="equivalent-voltage-source">
+<span id="c"></span><h2>Equivalent Voltage Source<a class="headerlink" href="#equivalent-voltage-source" title="Ссылка на этот заголовок">¶</a></h2>
+<p>For the short-circuit calculation with the equivalent voltage source, all voltage sources are replaced by one equivalent voltage source <span class="math notranslate nohighlight">\(V_Q\)</span> at the fault location.
+The voltage magnitude at the fault bus is assumed to be:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V_Q =
+\left\{
+\begin{array}{&#64;{}ll&#64;{}}
+  \frac{c \cdot \underline{V}_{N}}{\sqrt{3}} &amp; \text{for three phase short circuit currents} \\
+  \frac{c \cdot \underline{V}_{N}}{2} &amp; \text{for two phase short circuit currents}
+\end{array}\right.\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(V_N\)</span> is the nominal voltage at the fault bus and c is the voltage correction factor, which accounts for operational deviations from the nominal voltage in the network.</p>
+<p>The voltage correction factors <span class="math notranslate nohighlight">\(c_{min}\)</span> for minimum and <span class="math notranslate nohighlight">\(c_{max}\)</span> for maximum short-circuit currents are defined for each bus depending on the voltage level.
+In the low voltage level, there is an additional distinction between networks with a tolerance of 6% vs. a tolerance of 10% for <span class="math notranslate nohighlight">\(c_{max}\)</span>:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 33%" />
+<col style="width: 18%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Voltage Level</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(c_{min}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(c_{max}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td rowspan="2"><p>&lt; 1 kV</p></td>
+<td><p>Tolerance 6%</p></td>
+<td rowspan="2"><p>0.95</p></td>
+<td><p>1.05</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tolerance 10%</p></td>
+<td rowspan="2"><p>1.10</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>&gt; 1 kV</p></td>
+<td><p>1.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="voltage-source-contribution">
+<h2>Voltage Source Contribution<a class="headerlink" href="#voltage-source-contribution" title="Ссылка на этот заголовок">¶</a></h2>
+<p>To calculate the contribution of all voltage source elements, the following assumptions are made:</p>
+<ol class="arabic simple">
+<li><p>Operational currents at all buses are neglected</p></li>
+<li><p>All current source elements are neglected</p></li>
+<li><p>The voltage at the fault bus is equal to <span class="math notranslate nohighlight">\(V_Q\)</span></p></li>
+</ol>
+<p>For the calculation of a short-circuit at bus <span class="math notranslate nohighlight">\(j\)</span>, this yields the following network equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+ \underline{Y}_{11} &amp; \dots &amp; \dots &amp; \underline{Y}_{n1} \\[0.3em]
+ \vdots &amp; \ddots &amp; &amp; \vdots \\[0.3em]
+ \vdots &amp; &amp; \ddots &amp; \vdots \\[0.3em]
+ \underline{Y}_{1n} &amp; \dots &amp; \dots &amp; \underline{Y}_{nn}
+ \end{bmatrix}
+ \begin{bmatrix}
+ \underline{V}_{1}  \\
+ \vdots  \\
+ V_{Qj}  \\
+ \vdots  \\
+ \underline{V}_{n}
+ \end{bmatrix}
+ =
+ \begin{bmatrix}
+ 0 \\
+ \vdots  \\
+ \underline{I}''_{kIj} \\
+ \vdots  \\
+ 0
+ \end{bmatrix}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\underline{I}''_{kIj}\)</span> is the voltage source contribution of the short-circuit current at bus <span class="math notranslate nohighlight">\(j\)</span>.
+The voltages at all non-fault buses and the current at the fault bus are unknown. To solve for <span class="math notranslate nohighlight">\(\underline{I}''_{kIj}\)</span> ,
+we multipliy with the inverted nodal point admittance matrix (impedance matrix):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+\underline{V}_{1}  \\
+\vdots  \\[0.4em]
+V_{Qj}  \\[0.4em]
+\vdots  \\
+\underline{V}_{n}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\underline{Z}_{11} &amp; \dots &amp; \dots &amp; \dots &amp; \underline{Z}_{n1} \\
+\vdots &amp; \ddots &amp;  &amp; &amp; \vdots \\
+\vdots &amp; &amp; \underline{Z}_{jj} &amp; &amp; \vdots \\
+\vdots &amp; &amp; &amp; \ddots &amp; \vdots \\
+\underline{Z}_{1n} &amp; \dots &amp; \dots &amp; \dots &amp; \underline{Z}_{nn}
+\end{bmatrix}
+\begin{bmatrix}
+0 \\
+\vdots  \\[0.25em]
+\underline{I}''_{kIj} \\[0.25em]
+\vdots  \\
+0
+\end{bmatrix}\end{split}\]</div>
+<p>The short-circuit current for bus m is now given as:</p>
+<div class="math notranslate nohighlight">
+\[I''_{kIj} = \frac{V_{Qj}}{Z_{jj}}\]</div>
+<p>To calculate the vector of the short-circuit currents at all buses, the equation can be expanded as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+\underline{V}_{Q1} &amp; \dots &amp; \underline{V}_{n1} \\[0.4em]
+\vdots &amp; \ddots &amp; \vdots \\[0.4em]
+\underline{V}_{1n} &amp; \dots &amp; \underline{V}_{Qn}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\underline{Z}_{11} &amp; \dots &amp; \underline{Z}_{n1} \\[0.8em]
+\vdots &amp; \ddots &amp; \vdots \\[0.8em]
+\underline{Z}_{1n} &amp; \dots &amp; \underline{Z}_{nn}
+\end{bmatrix}
+\begin{bmatrix}
+\underline{I}''_{kI1} &amp; \dots &amp; 0 \\[0.8em]
+\vdots &amp; \ddots &amp; \vdots \\[0.8em]
+0 &amp; \dots &amp; \underline{I}''_{kIn}
+\end{bmatrix}\end{split}\]</div>
+<p>which yields:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+I''_{kI1} \\[0.25em]
+\vdots  \\[0.25em]
+I''_{kIn} \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+\frac{V_{Q1}}{Z_{11}}  \\
+\vdots  \\
+\frac{V_{Qn}}{Z_{nn}}
+\end{bmatrix}\end{split}\]</div>
+<p>In that way, all short-circuit currents can be calculated at once with one inversion of the nodal point admittance matrix.</p>
+<p>In case a fault impedance is specified, it is added to the diagonal of the impedance matrix. The short-circuit currents
+at all buses are then calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+I''_{kI1} \\[0.25em]
+\vdots  \\[0.25em]
+I''_{kIn} \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+\frac{V_{Q1}}{Z_{11} + Z_{fault}}  \\
+\vdots  \\
+\frac{V_{Qn}}{Z_{nn} + Z_{fault}}
+\end{bmatrix}\end{split}\]</div>
+</div>
+<div class="section" id="current-source-contribution">
+<h2>Current Source Contribution<a class="headerlink" href="#current-source-contribution" title="Ссылка на этот заголовок">¶</a></h2>
+<p>To calculate the current source component of the SC current, all voltage sources are short circuited and only current sources are considered. The bus currents are then given as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+I_1 \\[0.2em]
+\vdots  \\[0.2em]
+I_m \\[0.2em]
+\vdots  \\
+I_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\[0.2em]
+\vdots  \\[0.2em]
+\underline{I}''_{kIIj} \\[0.2em]
+\vdots  \\
+0
+\end{bmatrix}
+-
+\begin{bmatrix}
+I''_{kC1} \\[0.2em]
+\vdots  \\[0.2em]
+\underline{I}''_{kCj} \\[0.2em]
+\vdots  \\
+I''_{kCn}
+\end{bmatrix}
+=
+\begin{bmatrix}
+-I''_{kC1} \\[0.2em]
+\vdots  \\[0.2em]
+\underline{I}''_{kIIj} - \underline{I}''_{kCj} \\[0.2em]
+\vdots  \\
+-I''_{kCn}
+\end{bmatrix}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(I''_{kC}\)</span> are the SC currents that are fed in by converter element at each bus and <span class="math notranslate nohighlight">\(\underline{I}''_{kIIj}\)</span> is the contribution of converter elements at the fault bus <span class="math notranslate nohighlight">\(j\)</span>.
+With the voltage at the fault bus known to be zero, the network equations are given as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+\underline{V}_{1}  \\
+\vdots  \\[0.4em]
+0  \\[0.4em]
+\vdots  \\
+\underline{V}_{n}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\underline{Z}_{11} &amp; \dots &amp; \dots &amp; \dots &amp; \underline{Z}_{n1} \\
+\vdots &amp; \ddots &amp;  &amp; &amp; \vdots \\
+\vdots &amp; &amp; {Z}_{jj} &amp; &amp; \vdots \\
+\vdots &amp; &amp; &amp; \ddots &amp; \vdots \\
+\underline{Z}_{1n} &amp; \dots &amp; \dots &amp; \dots &amp; \underline{Z}_{nn}
+\end{bmatrix}
+\begin{bmatrix}
+-I''_{kC1} \\[0.2em]
+\vdots  \\[0.2em]
+\underline{I}''_{kIIj} - \underline{I}''_{kCj} \\[0.2em]
+\vdots  \\
+-I''_{kCn}
+\end{bmatrix}\end{split}\]</div>
+<p>From which row <span class="math notranslate nohighlight">\(j\)</span> of the equation yields:</p>
+<div class="math notranslate nohighlight">
+\[0 = \underline{Z}_{jj} \cdot \underline{I}''_{kIIj} - \sum_{m=1}^{n}{\underline{Z}_{jm} \cdot \underline{I}_{kCj}}\]</div>
+<p>which can be converted into:</p>
+<div class="math notranslate nohighlight">
+\[\underline{I}''_{kIIj} = \frac{1}{\underline{Z}_{jj}} \cdot \sum_{m=1}^{n}{\underline{Z}_{jm} \cdot \underline{I}_{kC, m}}\]</div>
+<p>To calculate all SC currents for faults at each bus simultaneously, this can be generalized into the following matrix equation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+\underline{I}''_{kII1} \\[0.5em]
+\vdots  \\[0.5em]
+\vdots  \\[0.5em]
+\underline{I}''_{kIIn}
+\end{bmatrix} =
+\begin{bmatrix}
+\underline{Z}_{11} &amp; \dots &amp; \dots &amp; \underline{Z}_{n1} \\[0.3em]
+\vdots &amp; \ddots &amp; &amp; \vdots \\[0.3em]
+\vdots &amp; &amp; \ddots &amp; \vdots \\[0.3em]
+\underline{Z}_{1n} &amp; \dots &amp; \dots &amp; \underline{Z}_{nn}
+\end{bmatrix}
+\begin{bmatrix}
+\frac{I''_{kC1}}{\underline{Z}_{11}} \\[0.25em]
+\vdots  \\
+\vdots  \\[0.25em]
+\frac{I''_{kCn}}{\underline{Z}_{nn}}
+\end{bmatrix}\end{split}\]</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, РУП ВЭ.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

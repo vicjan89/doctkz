@@ -1,0 +1,356 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Dickert LV Networks &mdash; документация Calculation of electrical networks 1.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="Об этих документах" href="../about.html" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Calculation of electrical networks
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О программе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elements.html">Описания элементов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editor.html">Функции редактора</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Calculation of electrical networks</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Dickert LV Networks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/networks/dickert_lv_networks.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dickert-lv-networks">
+<h1>Dickert LV Networks<a class="headerlink" href="#dickert-lv-networks" title="Ссылка на этот заголовок">¶</a></h1>
+<p>For all given Dickert LV Networks (in numbers: 12) the number of delivery points of tapped lines
+(n_DP) and the distance between delivery points (d_DP) is given in this table:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Feeders range</strong></p></td>
+<td><p><strong>Line type</strong></p></td>
+<td><p><strong>Customer</strong></p></td>
+<td><p><strong>Case</strong></p></td>
+<td><p><strong>d_DP</strong></p></td>
+<td><p><strong>n_DP</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>short</p></td>
+<td><p>cable</p></td>
+<td><p>single</p></td>
+<td><p>good</p></td>
+<td><p>60</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td><p>average</p></td>
+<td><p>120</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td><p>bad</p></td>
+<td><p>80</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p>multiple</p></td>
+<td><p>good</p></td>
+<td><p>80</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td><p>average</p></td>
+<td><p>50</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td><p>bad</p></td>
+<td><p>40</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>middle</p></td>
+<td><p>cable</p></td>
+<td><p>multiple</p></td>
+<td><p>good</p></td>
+<td><p>40</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td><p>average</p></td>
+<td><p>35</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td><p>bad</p></td>
+<td><p>30</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>C&amp;OHL</p></td>
+<td><p>multiple</p></td>
+<td><p>good</p></td>
+<td><p>50</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td><p>average</p></td>
+<td><p>45</p></td>
+<td><p>13</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td><p>bad</p></td>
+<td><p>40</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td><p>long</p></td>
+<td><p>cable</p></td>
+<td><p>multiple</p></td>
+<td><p>good</p></td>
+<td><p>30</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td><p>average</p></td>
+<td><p>30</p></td>
+<td><p>40</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td><p>bad</p></td>
+<td><p>30</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>C&amp;OHL</p></td>
+<td><p>multiple</p></td>
+<td><p>good</p></td>
+<td><p>40</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td><p>average</p></td>
+<td><p>40</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td><p>bad</p></td>
+<td><p>40</p></td>
+<td><p>40</p></td>
+</tr>
+</tbody>
+</table>
+<p>The next figure shows the topology of the paper’s example with lv network with mid-range, cable type
+and in good case:</p>
+<a class="reference internal image-reference" href="pics/networks/example_of_dickert_lv-feeders_for_neutral-range_cable.PNG"><img alt="alternate Text" class="align-center" src="pics/networks/example_of_dickert_lv-feeders_for_neutral-range_cable.PNG" style="width: 435.88000000000005px; height: 312.12px;" /></a>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, РУП ВЭ.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

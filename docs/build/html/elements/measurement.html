@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Measurement &mdash; документация Calculation of electrical networks 1.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="Об этих документах" href="../about.html" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Calculation of electrical networks
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О программе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elements.html">Описания элементов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editor.html">Функции редактора</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Calculation of electrical networks</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Measurement</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/elements/measurement.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="measurement">
+<h1>Measurement<a class="headerlink" href="#measurement" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="create-function">
+<h2>Create Function<a class="headerlink" href="#create-function" title="Ссылка на этот заголовок">¶</a></h2>
+</div>
+<div class="section" id="input-parameters">
+<h2>Input Parameters<a class="headerlink" href="#input-parameters" title="Ссылка на этот заголовок">¶</a></h2>
+<p><em>net.measurement</em></p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 20%" />
+<col style="width: 53%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<td><p><strong>Datatype</strong></p></td>
+<td><p><strong>Value Range</strong></p></td>
+<td><p><strong>Explanation</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>type</p></td>
+<td><p>string</p></td>
+<td><div class="line-block">
+<div class="line">«p»</div>
+<div class="line">«q»</div>
+<div class="line">«i»</div>
+<div class="line">«v»</div>
+</div>
+</td>
+<td><p>Defines what physical quantity is measured</p></td>
+</tr>
+<tr class="row-odd"><td><p>element_type</p></td>
+<td><p>string</p></td>
+<td><div class="line-block">
+<div class="line">«bus»</div>
+<div class="line">«line»</div>
+<div class="line">«transformer»</div>
+</div>
+</td>
+<td><p>Defines which element type is equipped with the measurement</p></td>
+</tr>
+<tr class="row-even"><td><p>value</p></td>
+<td><p>float</p></td>
+<td></td>
+<td><p>Measurement value</p></td>
+</tr>
+<tr class="row-odd"><td><p>std_dev</p></td>
+<td><p>float</p></td>
+<td></td>
+<td><p>Standard deviation (same unit as measurement)</p></td>
+</tr>
+<tr class="row-even"><td><p>bus</p></td>
+<td><p>int</p></td>
+<td><div class="line-block">
+<div class="line">must be in </div>
+<div class="line">net.bus.index</div>
+</div>
+</td>
+<td><p>Defines the bus at which the measurement is placed. 
+For line or transformer measurement it defines the side at which the measurement is placed (from_bus or to_bus).</p></td>
+</tr>
+<tr class="row-odd"><td><p>element</p></td>
+<td><p>int</p></td>
+<td><div class="line-block">
+<div class="line">must be in </div>
+<div class="line">net.line.index or</div>
+<div class="line">net.trafo.index</div>
+</div>
+</td>
+<td><p>If the element_type is «line» or «transformer», element is the index of the relevant element. For «bus» measurements it is None (default)</p></td>
+</tr>
+<tr class="row-even"><td><p>check_existing</p></td>
+<td><p>bool</p></td>
+<td></td>
+<td><p>Checks if a measurement of the type already exists and overwrites it. If set to False, the measurement may be added twice (unsafe behaviour), but the performance increases</p></td>
+</tr>
+<tr class="row-odd"><td><p>index</p></td>
+<td><p>int</p></td>
+<td></td>
+<td><p>Defines a specific index for the new measurement (if possible)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, РУП ВЭ.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>State Estimation &mdash; документация Calculation of electrical networks 1.1</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="Об этих документах" href="about.html" />
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Calculation of electrical networks
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="about.html">О программе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elements.html">Описания элементов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="editor.html">Функции редактора</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Calculation of electrical networks</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>State Estimation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/estimation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="state-estimation">
+<h1>State Estimation<a class="headerlink" href="#state-estimation" title="Ссылка на этот заголовок">¶</a></h1>
+<p>The module provides a state estimation for pandapower networks.</p>
+<div class="section" id="theoretical-background">
+<h2>Theoretical Background<a class="headerlink" href="#theoretical-background" title="Ссылка на этот заголовок">¶</a></h2>
+<p>State Estimation is a process to estimate the electrical state of a network by eliminating inaccuracies and errors from measurement data. Various measurements are placed around the network and transferred to the operational control center via SCADA. Unfortunately measurements are not perfect: There are tolerances for each measurement device, which lead to an inherent inaccuracy in the measurement value. Analog transmission of data can change the measurement values through noise. Faulty devices can return completely wrong measurement values. To account for the measurement errors, the state estimation processes all available measurements and uses a regression method to identify the likely real state of the electrical network.
+The <strong>output</strong> of the state estimator is therefore a <strong>set of voltage absolutes and voltage angles</strong> for all buses in the grid. The <strong>input</strong> is the <strong>network</strong> in pandapower format and a number of <strong>measurements</strong>.</p>
+<div class="section" id="amount-of-measurements">
+<h3>Amount of Measurements<a class="headerlink" href="#amount-of-measurements" title="Ссылка на этот заголовок">¶</a></h3>
+<p>There is a minimum amount of required measurements necessary for the regression to be mathematically possible.
+Assuming the network contains <span class="math notranslate nohighlight">\(n\)</span> buses, the network is then described by <span class="math notranslate nohighlight">\(2n\)</span> variables, namely <span class="math notranslate nohighlight">\(n\)</span> voltage absolute values and <span class="math notranslate nohighlight">\(n\)</span> voltage angles.
+A slack bus serves as the reference, its voltage angle is set to zero or the value provided in the corresponding <em>net.ext_grid.va_degree</em> entry (see <em>init</em> parameter) and is not altered in the estimation process.
+The voltage angles of the other network buses are relative to the voltage angles of the connected slack bus. The state estimation therefore has to find <span class="math notranslate nohighlight">\(2n-k\)</span> variables, where <span class="math notranslate nohighlight">\(k\)</span> is the number of defined slack buses.
+The minimum amount of measurements <span class="math notranslate nohighlight">\(m_{min}\)</span> needed for the method to work is therefore:</p>
+<p><span class="math notranslate nohighlight">\(m_{min} = 2n-k\)</span></p>
+<p>To perform well however, the number of redundant measurements should be higher. A value of <span class="math notranslate nohighlight">\(m \approx 4n\)</span> is often considered reasonable for practical purposes.</p>
+</div>
+<div class="section" id="standard-deviation">
+<h3>Standard Deviation<a class="headerlink" href="#standard-deviation" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Since each measurement device may have a different tolerance and a different path length it has to travel to the control center, the accuracy of each measurement can be different.
+Therefore each measurement is assigned an accuracy value in the form of a standard deviation. Typical measurement errors are 1 % for voltage measurements and 1-3 % for power measurements.</p>
+<p>For a more in-depth explanation of the internals of the state estimation method, please see the following sources:</p>
+<div class="admonition seealso">
+<p class="admonition-title">См.также</p>
+<ul class="simple">
+<li><p><em>Power System State Estimation: Theory and Implementation</em> by Ali Abur, Antonio Gómez Expósito, CRC Press, 2004.</p></li>
+<li><p><em>State Estimation in Electric Power Systems - A Generalized Approach</em> by A. Monticelli, Springer, 1999.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="defining-measurements">
+<h2>Defining Measurements<a class="headerlink" href="#defining-measurements" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Measurements are defined via the pandapower <em>«create_measurement»</em> function. There are different physical properties, which can be measured at different elements. The following lists and table clarify the possible combinations. Contrary to the pandapower load flow results, bus power injection measurements are given in the producer system. Generated power is positive, consumed power is negative.</p>
+<p><strong>Types of Measurements</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>«v»</em> for voltage measurements (in per-unit)</p></li>
+<li><p><em>«p»</em> for active power measurements (in MW)</p></li>
+<li><p><em>«q»</em> for reactive power measurements (in MVar)</p></li>
+<li><p><em>«i»</em> for electrical current measurements at a line (in kA)</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Element Types</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>«bus»</em> for bus measurements</p></li>
+<li><p><em>«line»</em> for line measurements</p></li>
+<li><p><em>«trafo»</em> for transformer measurements</p></li>
+<li><p><em>«trafo3w»</em> for three-winding-transformer measurements</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Available Measurements per Element</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Element Type</p></th>
+<th class="head"><p>Available Measurement Types</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>bus</p></td>
+<td><p>v, p, q</p></td>
+</tr>
+<tr class="row-odd"><td><p>line</p></td>
+<td><p>i, p, q</p></td>
+</tr>
+<tr class="row-even"><td><p>trafo</p></td>
+<td><p>i, p, q</p></td>
+</tr>
+<tr class="row-odd"><td><p>trafo3w</p></td>
+<td><p>i, p, q</p></td>
+</tr>
+</tbody>
+</table>
+<p>The <em>«create_measurement»</em> function is defined as follows:</p>
+</div>
+<div class="section" id="running-the-state-estimation">
+<h2>Running the State Estimation<a class="headerlink" href="#running-the-state-estimation" title="Ссылка на этот заголовок">¶</a></h2>
+<p>The state estimation can be used with the wrapper function <em>«estimate»</em>, which prevents the need to deal with the state_estimation class object and functions. It can be imported from <em>«estimation.state_estimation»</em>.</p>
+</div>
+<div class="section" id="handling-of-bad-data">
+<h2>Handling of bad data<a class="headerlink" href="#handling-of-bad-data" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>The bad data removal is not very robust at this time. Please treat the results with caution!</p>
+</div>
+<p>The state estimation class allows additionally the removal of bad data, especially single or non-interacting false measurements.
+For detecting bad data the Chi-squared distribution is used to identify the presence of them.
+Afterwards follows the largest normalized residual test that identifys the actual measurements which will be removed at the end.
+Both methods are combined in the <em>perform_rn_max_test</em> function that is part of the state estimation class.
+To access it, the following wrapper function <em>remove_bad_data</em> has been created.</p>
+<p>Nevertheless the Chi-squared test is available as well to allow a identification of topology errors or, as explained, false measurements.
+It is named as <em>chi2_analysis</em>. The detection’s result of present bad data of the Chi-squared test is stored internally as <em>bad_data_present</em> (boolean, class member variable) and returned by the function call.</p>
+<p>Background information about this topic can be sourced from the following literature:</p>
+<div class="admonition seealso">
+<p class="admonition-title">См.также</p>
+<ul class="simple">
+<li><p><em>Power System State Estimation: Theory and Implementation</em> by Ali Abur, Antonio Gómez Expósito, CRC Press, 2004.</p></li>
+<li><p><em>Power Generation, Operation, and Control</em> by Allen J. Wood, Bruce Wollenberg, Wiley Interscience Publication, 1996.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Ссылка на этот заголовок">¶</a></h2>
+<p>As an example, we will define measurements for a simple pandapower network <em>net</em> with 4 buses. Bus 4 is out-of-service. The external grid is connected at bus 1.</p>
+<p>There are multiple measurements available, which have to be defined for the state estimator. There are two voltage measurements at buses 1 and 2. There are two power measurements (active and reactive power) at bus 2. There are also line power measurements at bus 1. The measurements are both for active and reactive power and are located on the line from bus 1 to bus 2 and from bus 1 to bus 3. This yields the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">create_measurement</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="s2">&quot;v&quot;</span><span class="p">,</span> <span class="s2">&quot;bus&quot;</span><span class="p">,</span> <span class="mf">1.006</span><span class="p">,</span> <span class="o">.</span><span class="mi">004</span><span class="p">,</span> <span class="n">bus1</span><span class="p">)</span>  <span class="c1"># V at bus 1</span>
+    <span class="n">pp</span><span class="o">.</span><span class="n">create_measurement</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="s2">&quot;v&quot;</span><span class="p">,</span> <span class="s2">&quot;bus&quot;</span><span class="p">,</span> <span class="mf">0.968</span><span class="p">,</span> <span class="o">.</span><span class="mi">004</span><span class="p">,</span> <span class="n">bus2</span><span class="p">)</span>  <span class="c1"># V at bus 2</span>
+
+    <span class="n">pp</span><span class="o">.</span><span class="n">create_measurement</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;bus&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">501</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">bus2</span><span class="p">)</span>     <span class="c1"># P at bus 2</span>
+    <span class="n">pp</span><span class="o">.</span><span class="n">create_measurement</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="s2">&quot;bus&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">286</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">bus2</span><span class="p">)</span>     <span class="c1"># Q at bus 2</span>
+
+    <span class="n">pp</span><span class="o">.</span><span class="n">create_measurement</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="mi">888</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="n">line1</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">&quot;from&quot;</span><span class="p">)</span>   <span class="c1"># P_line (bus 1 -&gt; bus 2) at bus 1</span>
+    <span class="n">pp</span><span class="o">.</span><span class="n">create_measurement</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="mi">1173</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="n">line2</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">&quot;from&quot;</span><span class="p">)</span>  <span class="c1"># P_line (bus 1 -&gt; bus 3) at bus 1</span>
+    <span class="c1"># you can either define the side with a string (&quot;from&quot; / &quot;to&quot;) or</span>
+    <span class="c1"># using the bus index where the line ends and the measurement is located</span>
+    <span class="n">pp</span><span class="o">.</span><span class="n">create_measurement</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="mi">568</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="n">line1</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="n">bus1</span><span class="p">)</span>     <span class="c1"># Q_line (bus 1 -&gt; bus 2) at bus 1</span>
+    <span class="n">pp</span><span class="o">.</span><span class="n">create_measurement</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="s2">&quot;q&quot;</span><span class="p">,</span> <span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="mi">663</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="n">line2</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="n">bus1</span><span class="p">)</span>     <span class="c1"># Q_line (bus 1 -&gt; bus 3) at bus 1</span>
+</pre></div>
+</div>
+<p>Now that the data is ready, the state_estimation can be initialized and run. We want to use the flat start condition, in which all voltages are set to 1.0 p.u..</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">success</span> <span class="o">=</span> <span class="n">estimate</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="s2">&quot;flat&quot;</span><span class="p">)</span>
+<span class="n">V</span><span class="p">,</span> <span class="n">delta</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">res_bus_est</span><span class="o">.</span><span class="n">vm_pu</span><span class="p">,</span> <span class="n">net</span><span class="o">.</span><span class="n">res_bus_est</span><span class="o">.</span><span class="n">va_degree</span>
+</pre></div>
+</div>
+<p>The resulting variables now contain the voltage absolute values in <em>V</em>, the voltage angles in <em>delta</em>, an indication of success in <em>success</em>.
+The bus power injections can be accessed similarly with <em>net.res_bus_est.p_mw</em> and <em>net.res_bus_est.q_mvar</em>. Line data is also available in the same format as defined in <em>res_line</em>.</p>
+<p>If we like to check our data for fault measurements, and exclude them in in our state estimation, we use the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">success_rn_max</span> <span class="o">=</span> <span class="n">remove_bad_data</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="s2">&quot;flat&quot;</span><span class="p">)</span>
+<span class="n">V_rn_max</span><span class="p">,</span> <span class="n">delta_rn_max</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">res_bus_est</span><span class="o">.</span><span class="n">vm_pu</span><span class="p">,</span> <span class="n">net</span><span class="o">.</span><span class="n">res_bus_est</span><span class="o">.</span><span class="n">va_degree</span>
+</pre></div>
+</div>
+<p>In the case that we only like to know if there is a likelihood of fault measurements (probabilty of fault can be adjusted), the Chi-squared test should be performed separatly.
+If the test detects the possibility of fault data, the value of the added class member variable <em>bad_data_present</em> would be <em>true</em> as well as the boolean variable <em>success_chi2</em> that is used here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">success_chi2</span> <span class="o">=</span> <span class="n">chi2_analysis</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span><span class="s2">&quot;flat&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="further-algorithms-and-estimators">
+<h2>Further Algorithms and Estimators<a class="headerlink" href="#further-algorithms-and-estimators" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Since Pandapower 2.0.1 further algorithms and estimators (robust estimators) are available for the state estimation module, these include:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 63%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Algorithm</p></th>
+<th class="head"><p>Available Estimators</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wls (Newton-Gauss)</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>wls with zero injection constraints</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>lp</p></td>
+<td><p>lav</p></td>
+</tr>
+<tr class="row-odd"><td><p>irwls</p></td>
+<td><p>wls, shgm</p></td>
+</tr>
+<tr class="row-even"><td><p>Scipy Optimization Tool</p></td>
+<td><p>wls, lav, ql, qc</p></td>
+</tr>
+</tbody>
+</table>
+<p>Most of the algorithms and estimators are implemented as explained in the <em>Power System State Estimation: Theory and Implementation</em> by Ali Abur, Antonio Gómez Expósito, CRC Press, 2004. While the QC and QL estimators are adjusted mathematically for a better convergence of scipy optimization tool.</p>
+<p>For SHGM: Please see <em>«Robust state estimation based on projection statistics,» IEEE Trans. Power Syst, vol. 11, no. 2, pp. 1118–1127, 1996.</em> by L. Mili, M. Cheniae, N. Vichare, and P. Rousseeuw. The projection statistics was rewritten in Python based on the code published by original authors of the paper.</p>
+<p>Example of using extra estimators:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using shgm</span>
+<span class="n">success</span> <span class="o">=</span> <span class="n">estimate</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s2">&quot;irwls&quot;</span><span class="p">,</span> <span class="n">estimator</span><span class="o">=</span><span class="s1">&#39;shgm&#39;</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Using lav</span>
+<span class="n">success</span> <span class="o">=</span> <span class="n">estimate</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s2">&quot;lp&quot;</span><span class="p">)</span>
+
+<span class="c1"># Using ql</span>
+<span class="n">success</span> <span class="o">=</span> <span class="n">estimate</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s2">&quot;opt&quot;</span><span class="p">,</span> <span class="n">estimator</span><span class="o">=</span><span class="s2">&quot;ql&quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Note that:
+The state estimation with Scipy Optimization Tool could collapse in some cases with flat start, it’s suggested to give the algorithm a warm start or try some other optimization’s methods offered by scipy, which preserves the effects of the estimator while helps the convergence.</p>
+<p>Example for chained estimation (warm start for SciPy Optimization Tool):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize eppci for the algorithm which contains pypower-grid,</span>
+<span class="c1"># measurements and estimated grid state (initial value)</span>
+<span class="n">net</span><span class="p">,</span> <span class="n">ppc</span><span class="p">,</span> <span class="n">eppci</span> <span class="o">=</span> <span class="n">pp2eppci</span><span class="p">(</span><span class="n">net</span><span class="p">)</span>
+
+<span class="c1"># Initialize algorithm</span>
+<span class="n">estimation_wls</span> <span class="o">=</span> <span class="n">WLSAlgorithm</span><span class="p">(</span><span class="mf">1e-3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">estimation_opt</span> <span class="o">=</span> <span class="n">OptAlgorithm</span><span class="p">(</span><span class="mf">1e-6</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="c1"># Start Estimation with specified estimator</span>
+<span class="n">eppci</span> <span class="o">=</span> <span class="n">estimation_wls</span><span class="o">.</span><span class="n">estimate</span><span class="p">(</span><span class="n">eppci</span><span class="p">)</span>
+<span class="c1"># for some estimators extra parameters must be specified</span>
+<span class="n">eppci</span> <span class="o">=</span> <span class="n">estimation_opt</span><span class="o">.</span><span class="n">estimate</span><span class="p">(</span><span class="n">eppci</span><span class="p">,</span> <span class="n">estimator</span><span class="o">=</span><span class="s2">&quot;ql&quot;</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Update the pandapower network with estimated results</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">eppci2pp</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">ppc</span><span class="p">,</span> <span class="n">eppci</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, РУП ВЭ.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Create networkx graph &mdash; документация Calculation of electrical networks 1.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="Об этих документах" href="../about.html" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Calculation of electrical networks
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О программе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elements.html">Описания элементов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editor.html">Функции редактора</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Calculation of electrical networks</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Create networkx graph</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/topology/create_graph.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="create-networkx-graph">
+<h1>Create networkx graph<a class="headerlink" href="#create-networkx-graph" title="Ссылка на этот заголовок">¶</a></h1>
+<p>The basis of all topology functions is the conversion of a padapower network into a NetworkX MultiGraph. A MultiGraph is a simplified representation of a network’s topology, reduced to nodes and edges.
+Busses are being represented by nodes (Note: only buses with in_service = 1 appear in the graph), edges represent physical connections between buses (typically lines or trafos).
+Multiple parallel edges between nodes are possible.</p>
+<p>This is a very simple example of a pandapower network being converted to a MultiGraph. (Note: The MultiGraph’s shape is completely arbitrary since MultiGraphs have no inherent shape unless geodata is provided.)</p>
+<a class="reference internal image-reference" href="../_images/multigraph_example.png"><img alt="alternate Text" class="align-center" src="../_images/multigraph_example.png" style="width: 42em;" /></a>
+<p>Nodes have the same indicees as the buses they originate from. Edges are defined by the nodes they connect.
+Additionally nodes and edges can hold key/value attribute pairs.</p>
+<p>The following attributes get transferred into the MultiGraph:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 58%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>lines</p></th>
+<th class="head"><p>trafos</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ul class="simple">
+<li><p>from_bus</p></li>
+<li><p>to_bus</p></li>
+<li><p>length_km</p></li>
+<li><p>index</p></li>
+<li><p>in_service</p></li>
+<li><p>max_i_ka</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>hv_bus</p></li>
+<li><p>lv_bus</p></li>
+<li><p>index</p></li>
+<li><p>in_service</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Apart from these there are no element attributes contained in the MultiGraph!</p>
+<p><strong>Creating a multigraph from a pandapower network</strong></p>
+<p>The function create_nxgraph function from the pandapower.topology package allows you to convert a pandapower network into a MultiGraph:</p>
+<p><strong>Examples</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">create_nxgraph</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">respect_switches</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/multigraph_example_respect_switches.png"><img alt="alternate Text" class="align-center" src="../_images/multigraph_example_respect_switches.png" style="width: 42em;" /></a>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">create_nxgraph</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">include_lines</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">include_impedances</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/multigraph_example_include_lines.png"><img alt="alternate Text" class="align-center" src="../_images/multigraph_example_include_lines.png" style="width: 42em;" /></a>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">create_nxgraph</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">include_trafos</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/multigraph_example_include_trafos.png"><img alt="alternate Text" class="align-center" src="../_images/multigraph_example_include_trafos.png" style="width: 42em;" /></a>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">create_nxgraph</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">nogobuses</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/multigraph_example_nogobuses.png"><img alt="alternate Text" class="align-center" src="../_images/multigraph_example_nogobuses.png" style="width: 42em;" /></a>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">create_nxgraph</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">notravbuses</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/multigraph_example_notravbuses.png"><img alt="alternate Text" class="align-center" src="../_images/multigraph_example_notravbuses.png" style="width: 42em;" /></a>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, РУП ВЭ.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

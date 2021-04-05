@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Timeseries Example &mdash; документация Calculation of electrical networks 1.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="Об этих документах" href="../about.html" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Calculation of electrical networks
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О программе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elements.html">Описания элементов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editor.html">Функции редактора</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Calculation of electrical networks</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Timeseries Example</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/timeseries/timeseries_example.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="timeseries-example">
+<span id="timeseriesexample"></span><h1>Timeseries Example<a class="headerlink" href="#timeseries-example" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="common-use-case">
+<h2>Common Use Case<a class="headerlink" href="#common-use-case" title="Ссылка на этот заголовок">¶</a></h2>
+<p>A common use case is to add two <a class="reference internal" href="../control/controller.html#id1"><span class="std std-ref">const controller</span></a> to the grid to update the P values of loads and static generators.
+The p_mw values for each time step are stored in a data source, which is defined by the class <code class="docutils literal notranslate"><span class="pre">DataSource</span></code>. This class
+holds a pandas DataFrame which contains the values for each element and time step.
+The <a class="reference internal" href="../control/controller.html#id1"><span class="std std-ref">const controller</span></a> gets the data source, reads p_mw values from it and writes the
+corresponding ones to each sgen / load prior to the power flow calculation.
+After running the power flow calculation, results for each time steps are written by the output writer class <code class="docutils literal notranslate"><span class="pre">OutputWriter</span></code> to
+excel, csv, json or pickle files.</p>
+</div>
+<div class="section" id="simulating-time-series">
+<h2>Simulating Time Series<a class="headerlink" href="#simulating-time-series" title="Ссылка на этот заголовок">¶</a></h2>
+<p>First you need a <code class="docutils literal notranslate"><span class="pre">DataSource</span></code> to store the p_mw values of sgens or loads. For example multiple CSV-files can be used
+to provide the values for each element and time step. Each column contains a profile with a value
+for each time step in the corresponding row. Here is a schematic example for a grid with N static generators and T time steps:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>—</p></td>
+<td><p>N-1</p></td>
+<td><p>N</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>P0 sgen0</p></td>
+<td><p>P0 sgen1</p></td>
+<td><p>—</p></td>
+<td><p>P0 sgen N-1</p></td>
+<td><p>P0 sgen N</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>P1 sgen0</p></td>
+<td><p>P1 sgen1</p></td>
+<td><p>—</p></td>
+<td><p>P1 sgen N-1</p></td>
+<td><p>P1 sgen N</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>P2 sgen0</p></td>
+<td><p>P2 sgen1</p></td>
+<td><p>—</p></td>
+<td><p>P2 sgen N-1</p></td>
+<td><p>P2 sgen N</p></td>
+</tr>
+<tr class="row-odd"><td><p>—</p></td>
+<td><p>—</p></td>
+<td><p>—</p></td>
+<td><p>—</p></td>
+<td><p>—</p></td>
+<td><p>—</p></td>
+</tr>
+<tr class="row-even"><td><p>T-1</p></td>
+<td><p>P T-1 sgen0</p></td>
+<td><p>P T-1 sgen1</p></td>
+<td><p>—</p></td>
+<td><p>P T-1 sgen N-1</p></td>
+<td><p>P T-1 sgen N</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>P T sgen0</p></td>
+<td><p>P T sgen1</p></td>
+<td><p>—</p></td>
+<td><p>P T sgen N-1</p></td>
+<td><p>P T sgen N</p></td>
+</tr>
+</tbody>
+</table>
+<p>This structure is saved to a <a href="#id1"><span class="problematic" id="id2">*</span></a>.csv file and can be read by pandas and passed to the DataSource constructor like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">pandapower</span> <span class="k">as</span> <span class="nn">pp</span>
+<span class="kn">import</span> <span class="nn">control</span>
+<span class="kn">import</span> <span class="nn">timeseries</span>
+
+<span class="c1"># load a pandapower network</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">networks</span><span class="o">.</span><span class="n">mv_oberrhein</span><span class="p">(</span><span class="n">scenario</span><span class="o">=</span><span class="s1">&#39;generation&#39;</span><span class="p">)</span>
+
+<span class="c1"># load your timeseries file (here csv file)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;sgen_timeseries.csv&quot;</span><span class="p">)</span>
+<span class="c1"># create the data source from it</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">timeseries</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># initialising ConstControl controller to update values of the regenerative generators (&quot;sgen&quot; elements)</span>
+<span class="c1"># the element_index specifies which elements to update (here all sgens in the net since net.sgen.index is passed)</span>
+<span class="c1"># the controlled variable is &quot;p_mw&quot;</span>
+<span class="c1"># the profile_name are the columns in the csv file (here this is also equal to the sgen indices 0-N )</span>
+<span class="n">const_sgen</span> <span class="o">=</span> <span class="n">control</span><span class="o">.</span><span class="n">ConstControl</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;sgen&#39;</span><span class="p">,</span> <span class="n">element_index</span><span class="o">=</span><span class="n">net</span><span class="o">.</span><span class="n">sgen</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+                                    <span class="n">variable</span><span class="o">=</span><span class="s1">&#39;p_mw&#39;</span><span class="p">,</span>  <span class="n">data_source</span><span class="o">=</span><span class="n">ds</span><span class="p">,</span> <span class="n">profile_name</span><span class="o">=</span><span class="n">net</span><span class="o">.</span><span class="n">sgen</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="c1"># do the same for loads</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;load_timeseries.csv&quot;</span><span class="p">)</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">timeseries</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">const_load</span> <span class="o">=</span> <span class="n">control</span><span class="o">.</span><span class="n">ConstControl</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="n">element_index</span><span class="o">=</span><span class="n">net</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+                                    <span class="n">variable</span><span class="o">=</span><span class="s1">&#39;p_mw&#39;</span><span class="p">,</span>  <span class="n">data_source</span><span class="o">=</span><span class="n">ds</span><span class="p">,</span> <span class="n">profile_name</span><span class="o">=</span><span class="n">net</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="c1"># starting the timeseries simulation for one day -&gt; 96 15 min values.</span>
+<span class="n">timeseries</span><span class="o">.</span><span class="n">run_timeseries</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">time_steps</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">95</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>We created a <code class="docutils literal notranslate"><span class="pre">DataSource</span></code> and passed it to the <code class="docutils literal notranslate"><span class="pre">ConstControl</span></code>, while also providing the name of the
+P-profile. To get the time series calculation results and save it to separate files we build an <code class="docutils literal notranslate"><span class="pre">OutputWriter</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialising the outputwriter to save data to the current folder</span>
+<span class="n">ow</span> <span class="o">=</span> <span class="n">timeseries</span><span class="o">.</span><span class="n">OutputWriter</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">output_path</span><span class="o">=</span><span class="s2">&quot;./&quot;</span><span class="p">,</span> <span class="n">output_file_type</span><span class="o">=</span><span class="s2">&quot;.xlsx&quot;</span><span class="p">)</span>
+<span class="c1"># adding vm_pu of all buses and line_loading in percent of all lines as outputs to be stored</span>
+<span class="n">ow</span><span class="o">.</span><span class="n">log_variable</span><span class="p">(</span><span class="s1">&#39;res_bus&#39;</span><span class="p">,</span> <span class="s1">&#39;vm_pu&#39;</span><span class="p">)</span>
+<span class="n">ow</span><span class="o">.</span><span class="n">log_variable</span><span class="p">(</span><span class="s1">&#39;res_line&#39;</span><span class="p">,</span> <span class="s1">&#39;loading_percent&#39;</span><span class="p">)</span>
+
+<span class="c1"># starting the timeseries simulation for one day -&gt; 96 15 min values.</span>
+<span class="n">timeseries</span><span class="o">.</span><span class="n">run_timeseries</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">time_steps</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">95</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>We created an <code class="docutils literal notranslate"><span class="pre">OutputWriter</span></code> and stored the voltage magnitude <strong>vm_pu</strong> for each bus and the line loading in percent
+<strong>loading_percent</strong> for every line to separate excel files.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, РУП ВЭ.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

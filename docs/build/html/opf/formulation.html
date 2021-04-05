@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Optimisation problem &mdash; документация Calculation of electrical networks 1.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="Об этих документах" href="../about.html" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Calculation of electrical networks
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О программе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elements.html">Описания элементов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editor.html">Функции редактора</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Calculation of electrical networks</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Optimisation problem</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/opf/formulation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="optimisation-problem">
+<span id="opf"></span><h1>Optimisation problem<a class="headerlink" href="#optimisation-problem" title="Ссылка на этот заголовок">¶</a></h1>
+<p>The equation describes the basic formulation of the optimal power flow (OPF) problem.
+The pandapower optimal power flow can be constrained by either AC or DC loadflow equations.
+The branch constraints represent the maximum apparent power loading of transformers and the maximum line current loadings.
+The bus constraints can contain maximum and minimum voltage magnitude and angle.
+For the external grid, generators, loads, DC lines and static generators, the maximum and minimum active resp. reactive power can be considered as operational constraints for the optimal power flow.
+The constraints are defined element wise in the respective element tables.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; min &amp; \sum_{i  \ \epsilon \ gen, sgen, load, ext\_grid}{f_{i}(P_i)} \\
+&amp; subject \ to \\
+&amp; &amp; loadflow \ equations \\
+&amp; &amp; branch \ constraints  \\
+&amp; &amp; bus \ constraints \\
+&amp; &amp; operational \ power \ constraints \\\end{split}\]</div>
+<p><strong>Generator flexibilities / Operational power constraints</strong></p>
+<p>The active and reactive power generation of generators, loads, dc lines and static generators can be defined as a flexibility for the OPF.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Constraint</strong></p></td>
+<td><p><strong>Defined in</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_{min,i} \leq P_{g} \leq P_{max,g},\ g  \ \epsilon \ gen\)</span></p></td>
+<td><p>net.gen.min_p_mw / net.gen.max_p_mw</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q_{min,g} \leq Q_{g} \leq Q_{max,g},\ g  \ \epsilon \ gen\)</span></p></td>
+<td><p>net.gen.min_q_mvar / net.gen.max_q_mvar</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_{min,sg} \leq P_{sg} \leq P_{max,sg},\ sg  \ \epsilon \ sgen\)</span></p></td>
+<td><p>net.sgen.min_p_mw  / net.sgen.max_p_mw</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q_{min,sg} \leq Q_{sg} \leq Q_{max,sg},\ sg  \ \epsilon \ sgen\)</span></p></td>
+<td><p>net.sgen.min_q_mvar / net.sgen.max_q_mvar</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_{max,g},\ g  \ \epsilon \ dcline\)</span></p></td>
+<td><p>net.dcline.max_p_mw</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q_{min,g} \leq Q_{g} \leq Q_{max,g},\ g  \ \epsilon \ dcline\)</span></p></td>
+<td><p>net.dcline.min_q_from_mvar / net.dcline.max_q_from_mvar / net.dcline.min_q_to_mvar / net.dcline.max_q_to_mvar</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_{min,eg} \leq P_{eg} \leq P_{max,eg},\ eg  \ \epsilon \ ext\_grid\)</span></p></td>
+<td><p>net.ext_grid.min_p_mw  / net.ext_grid.max_p_mw</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q_{min,eg} \leq Q_{eg} \leq Q_{max,eg},\ eg  \ \epsilon \ ext\_grid\)</span></p></td>
+<td><p>net.ext_grid.min_q_mvar / net.ext_grid.max_q_mvar</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_{min,ld} \leq P_{ld} \leq P_{max,ld},\ ld \ \epsilon \ load\)</span></p></td>
+<td><p>net.load.min_p_mw  / net.load.max_p_mw</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q_{min,ld} \leq Q_{ld} \leq Q_{max,ld},\ ld  \ \epsilon \ load\)</span></p></td>
+<td><p>net.load.min_q_mvar / net.load.max_q_mvar</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(P_{min,st} \leq P_{st} \leq P_{max,st},\ st \ \epsilon \ storage\)</span></p></td>
+<td><p>net.storage.min_p_mw  / net.storage.max_p_mw</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(Q_{min,st} \leq Q_{st} \leq Q_{max,st},\ st  \ \epsilon \ storage\)</span></p></td>
+<td><p>net.storage.min_q_mvar / net.storage.max_q_mvar</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Defining operational constraints is indispensable for the OPF, it will not start if constraints are not defined.</p>
+</div>
+<p><strong>Network constraints</strong></p>
+<p>The network constraints contain constraints for bus voltages and branch flows:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Constraint</strong></p></td>
+<td><p><strong>Defined in</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(V_{min,j} \leq V_{g,i}  \leq V_{min,i},\ j  \ \epsilon \ bus\)</span></p></td>
+<td><p>net.bus.min_vm_pu / net.bus.max_vm_pu</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(L_{k} \leq L_{max,k},\ k \ \epsilon \ trafo\)</span></p></td>
+<td><p>net.trafo.max_loading_percent</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(L_{l} \leq L_{max,l},\ l \ \epsilon \ line\)</span></p></td>
+<td><p>net.line.max_loading_percent</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(L_{l} \leq L_{max,l},\ l \ \epsilon \ trafo_{3w}\)</span></p></td>
+<td><p>net.trafo3w.max_loading_percent</p></td>
+</tr>
+</tbody>
+</table>
+<p>The defaults are unconstraint branch loadings and <span class="math notranslate nohighlight">\(\pm 1.0 pu\)</span> for bus voltages.</p>
+<div class="section" id="cost-functions">
+<h2>Cost functions<a class="headerlink" href="#cost-functions" title="Ссылка на этот заголовок">¶</a></h2>
+<p>The cost function is specified element wise and is organized in tables as well, which makes the parametrization user friendly. There are two options formulating a cost function for each element:
+A piecewise linear function with <span class="math notranslate nohighlight">\(n\)</span> data points.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f_{pwl}(p) = f_{\alpha} +(p-p_{\alpha}) \frac{f_{\alpha + 1}-f_{\alpha}}{p_{\alpha + 1}-p_{\alpha}}  \ , \ (p_{\alpha},f_{\alpha}) \ =\begin{cases}
+                                                  (p_{0},f_{0}) \ , \ &amp; p_{0} &lt; p &lt;p_{1}) \\
+                                                  ...\\
+                                                  (p_{n-1},f_{n-1}) \ , &amp; \ p_{n-1} &lt; p &lt;p_{n})
+                                                  \end{cases} \\  \\
+f_{pwl}(q) = f_{1} +(q-q_{1}) \frac{f_{2}-f_{1}}{q_{2}-q_{1}}\end{split}\]</div>
+<p>Piecewise linear cost functions can be specified using create_pwl_costs():</p>
+<p>The other option is to formulate a n-polynomial cost function:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f_{pol}(p) = c_n p^n + ... + c_1 p + c_0 \\
+f_{pol}(q) = c_2 q^2 + c_1 q + c_0\end{split}\]</div>
+<p>Polynomial cost functions can be specified using create_poly_cost():</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>Please note, that polynomial costs for reactive power can only be quadratic, linear or constant.
+Piecewise linear cost funcions for reactive power are not working at the moment with 2 segments or more.
+Loads can only have 2 data points in their piecewise linear cost function for active power.</p>
+</div>
+<p>Active and reactive power costs are calculted separately. The costs of all types are summed up to determine the overall costs for a grid state.</p>
+</div>
+<div class="section" id="visualization-of-cost-functions">
+<h2>Visualization of cost functions<a class="headerlink" href="#visualization-of-cost-functions" title="Ссылка на этот заголовок">¶</a></h2>
+<p><strong>Minimizing generation</strong></p>
+<p>The most common optimization goal is the minimization of the overall generator feed in. The according cost function would be formulated like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">create_poly_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;sgen&#39;</span><span class="p">,</span> <span class="n">cp1_eur_per_mw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">create_poly_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;gen&#39;</span><span class="p">,</span> <span class="n">cp1_eur_per_mw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">create_pwl_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;sgen&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="n">net</span><span class="o">.</span><span class="n">sgen</span><span class="o">.</span><span class="n">min_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">net</span><span class="o">.</span><span class="n">sgen</span><span class="o">.</span><span class="n">max_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">create_pwl_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;gen&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="n">net</span><span class="o">.</span><span class="n">gen</span><span class="o">.</span><span class="n">min_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">net</span><span class="o">.</span><span class="n">gen</span><span class="o">.</span><span class="n">max_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>It is a straight with a negative slope, so that it has the highest cost value at p_min_mw and is zero when the feed in is zero:</p>
+<a class="reference internal image-reference" href="../_images/minimizeload.png"><img alt="alternate Text" class="align-center" src="../_images/minimizeload.png" style="width: 20em;" /></a>
+<p><strong>Maximizing generation</strong></p>
+<p>This cost function may be used, when the curtailment of renewables should be minimized, which at the same time means that the feed in of those renewables should be maximized. This can be realized by the following cost function definitions:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">create_poly_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;sgen&#39;</span><span class="p">,</span> <span class="n">cp1_eur_per_mw</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">create_poly_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;gen&#39;</span><span class="p">,</span> <span class="n">cp1_eur_per_mw</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">create_pwl_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;sgen&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="n">net</span><span class="o">.</span><span class="n">sgen</span><span class="o">.</span><span class="n">min_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">net</span><span class="o">.</span><span class="n">sgen</span><span class="o">.</span><span class="n">max_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">create_pwl_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;gen&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="n">net</span><span class="o">.</span><span class="n">gen</span><span class="o">.</span><span class="n">min_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">net</span><span class="o">.</span><span class="n">gen</span><span class="o">.</span><span class="n">max_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>It is a straight with a positive slope, so that the cost is zero at p_min_mw and is at its maximum when the generation equals zero.</p>
+<a class="reference internal image-reference" href="../_images/maximizeload.png"><img alt="alternate Text" class="align-center" src="../_images/maximizeload.png" style="width: 20em;" /></a>
+<p><strong>Maximize load</strong></p>
+<p>In case that the load should be maximized, the cost function could be defined like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">create_poly_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="n">cp1_eur_per_mw</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">create_poly_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;storage&#39;</span><span class="p">,</span> <span class="n">cp1_eur_per_mw</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">create_pwl_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;load&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="n">net</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">min_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">net</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">max_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">create_pwl_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;storage&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="n">net</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">min_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">net</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">max_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/maximizeload.png"><img alt="alternate Text" class="align-center" src="../_images/maximizeload.png" style="width: 20em;" /></a>
+<p><strong>Minimizing load</strong></p>
+<p>In case that the load should be minimized, the cost function could be defined like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span><span class="o">.</span><span class="n">create_poly_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="n">cp1_eur_per_mw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">create_poly_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;storage&#39;</span><span class="p">,</span> <span class="n">cp1_eur_per_mw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">create_pwl_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;load&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="n">net</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">min_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">net</span><span class="o">.</span><span class="n">load</span><span class="o">.</span><span class="n">max_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">pp</span><span class="o">.</span><span class="n">create_pwl_cost</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;storage&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="n">net</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">min_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">net</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">max_p_mw</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">]])</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/minimizeload.png"><img alt="alternate Text" class="align-center" src="../_images/minimizeload.png" style="width: 20em;" /></a>
+<p><strong>DC line behaviour</strong></p>
+<p>Please note, that the costs of the DC line transmission are always related to the power at the from_bus!</p>
+<p>You can always check your optimization result by comparing your result (From res_sgen, res_load etc.).</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, РУП ВЭ.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

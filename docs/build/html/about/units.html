@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Unit System and Conventions &mdash; документация Calculation of electrical networks 1.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="Об этих документах" href="../about.html" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Calculation of electrical networks
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О программе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elements.html">Описания элементов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editor.html">Функции редактора</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Calculation of electrical networks</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Unit System and Conventions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/about/units.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="unit-system-and-conventions">
+<span id="conventions"></span><h1>Unit System and Conventions<a class="headerlink" href="#unit-system-and-conventions" title="Ссылка на этот заголовок">¶</a></h1>
+<p><strong>Naming Conventions</strong></p>
+<p>Parameters are always named in the form of &lt;parameter&gt;_&lt;unit&gt;, such as:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<td><p><strong>read as</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>vm_pu</p></td>
+<td><p><span class="math notranslate nohighlight">\(v_m  [pu]\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>loading_percent</p></td>
+<td><p><span class="math notranslate nohighlight">\(loading [\%]\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>pl_mw</p></td>
+<td><p><span class="math notranslate nohighlight">\(p_l  [mw]\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>r_ohm_per_km</p></td>
+<td><p><span class="math notranslate nohighlight">\(r  [\Omega / km]\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Constraint parameters are always named with max or min as the prefix to the variable which is constrained, for example:</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<td><p><strong>read as</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>min_vm_pu</p></td>
+<td><p><span class="math notranslate nohighlight">\(v_m^{min}  [pu]\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>max_loading_percent</p></td>
+<td><p><span class="math notranslate nohighlight">\(loading^{max} [\%]\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>max_p_mw</p></td>
+<td><p><span class="math notranslate nohighlight">\(p^{max}  [mw]\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>min_q_mvar</p></td>
+<td><p><span class="math notranslate nohighlight">\(q^{min}  [mvar]\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>It is advised to keep consistent with these naming conventions when extending the framework and introducing new parameters.</p>
+<p><strong>Three Phase System</strong></p>
+<p>For the three phase system, the following conventions apply:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>voltage values are given as phase-to-phase voltages</p></li>
+<li><p>current values are given as phase currents</p></li>
+<li><p>power values are given as three-phase power flows</p></li>
+</ul>
+</div></blockquote>
+<p>The power equation in the three phase system is therefore given as <span class="math notranslate nohighlight">\(S = \sqrt3 \cdot V \cdot I\)</span>.</p>
+<p>All power values are given in MW / MVA / MVar except the iron losses of transformers which are given in MW (pfe_mw).</p>
+<p><strong>Per Unit System</strong></p>
+<p>Bus voltages are given in the per unit system. The per unit values are relative to the phase-to-phase voltages defined in net.bus.vn_kv for each bus.</p>
+<p>The rated apparent power for the per unit system can be defined with the net.sn_mva parameter when creating an empty network. The default value is <span class="math notranslate nohighlight">\(S_{N} = 1 MVA\)</span>.
+The value should not be relevant in most applications since all power values are given in physical units.</p>
+<p><strong>Signing System</strong></p>
+<dl class="simple">
+<dt>There are three elements that have power values based on the generator viewpoint (positive active power means power generation), which are:</dt><dd><ul class="simple">
+<li><p>gen</p></li>
+<li><p>sgen</p></li>
+<li><p>ext_grid</p></li>
+</ul>
+</dd>
+<dt>For all other bus elements the signing is based on the consumer viewpoint (positive active power means power consumption):</dt><dd><ul class="simple">
+<li><p>bus</p></li>
+<li><p>load</p></li>
+<li><p>shunt</p></li>
+<li><p>ward</p></li>
+<li><p>xward</p></li>
+<li><p>storage</p></li>
+</ul>
+</dd>
+</dl>
+<p>The power flow values for branch elements (e.g. lines &amp; transformers) are always defined as the power flow into the branch element (positive values means power flows into the element, negative power means power flows out of the element).</p>
+<p><strong>Frequency</strong></p>
+<p>The frequency can be defined when creating an empty network. The frequency is only used to calculate the shunt admittance of lines, since the line reactance is given directly in ohm per kilometer.
+The frequency is also relevant when calculating the peak factor <span class="math notranslate nohighlight">\(\kappa\)</span> in the short circuit calculation.</p>
+<p>The standard frequency in pandapower is 50 Hz, and the pandapower standard types are also chosen for 50 Hz systems. If you use a different frequency, please be aware that the line reactance values might not be realistic.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, РУП ВЭ.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

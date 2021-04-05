@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Voltage Source Elements &mdash; документация Calculation of electrical networks 1.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="author" title="Об этих документах" href="../about.html" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Calculation of electrical networks
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">О программе</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../elements.html">Описания элементов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editor.html">Функции редактора</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Calculation of electrical networks</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Voltage Source Elements</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/shortcircuit/voltage_source.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="voltage-source-elements">
+<h1>Voltage Source Elements<a class="headerlink" href="#voltage-source-elements" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Voltage source elements are represented by their internal voltage source with an internal resistance <span class="math notranslate nohighlight">\(Z_k\)</span>:</p>
+<a class="reference internal image-reference" href="../_images/bus_voltage.png"><img alt="../_images/bus_voltage.png" class="align-center" src="../_images/bus_voltage.png" style="width: 8em;" /></a>
+<p>since the voltage source is moved to the fault location for with methodology of the equivalent voltage source, the bus elements
+can be reduced to a single shunt impedance:</p>
+<a class="reference internal image-reference" href="../_images/bus_equivalent.png"><img alt="../_images/bus_equivalent.png" class="align-center" src="../_images/bus_equivalent.png" style="width: 10em;" /></a>
+<p>The contribution of loads and shunts are negligible according to the standard and therefore neglected in the short-circuit calculation.</p>
+<div class="section" id="external-grid">
+<h2>External Grid<a class="headerlink" href="#external-grid" title="Ссылка на этот заголовок">¶</a></h2>
+<p>When calculating maximum short-circuit currents, the impedance of an external grid connection is given as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}z_{k, eg} =&amp; \frac{c_{max}}{s\_sc\_max\_mva} \\[1em]
+x_{k, eg} =&amp; \frac{z_{sg}}{\sqrt{1 + rx\_max^2}} \\[1em]
+r_{k, eg} =&amp; rx\_max \cdot x_{sg}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(rx\_max\)</span> and <span class="math notranslate nohighlight">\(s\_sc\_max\_mva\)</span> are parameters in the ext_grid table and <span class="math notranslate nohighlight">\(c_{max}\)</span> is the <a class="reference internal" href="ikss.html#c"><span class="std std-ref">voltage correction factor</span></a> of the
+external grid bus.</p>
+<p>In case of minimal short-circuit currents, the impedance is calculated accordingly:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}z_{k, eg} =&amp; \frac{c_{min}}{s\_sc\_min\_mva} \\[1em]
+x_{k, eg} =&amp; \frac{z_{sg}}{\sqrt{1 + rx\_min^2}} \\[1em]
+r_{k, eg} =&amp; rx\_min \cdot x_{sg}\end{split}\]</div>
+</div>
+<div class="section" id="asynchronous-motor">
+<h2>Asynchronous Motor<a class="headerlink" href="#asynchronous-motor" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Asynchronous motors can be considered by setting the type variable of an sgen element to «motor». The internal impedance is then calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}Z_{k, m} = \frac{1}{k} \cdot \frac{vn\_kv^2 \cdot 1000}{sn\_kva} \\
+X_{k, m} = \frac{Z_{sg}}{\sqrt{1 + rx^2}} \\
+R_{k, m} = rx \cdot X_{sg}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(sn\_kva\)</span> is the rated power of the motor, <span class="math notranslate nohighlight">\(k\)</span> is the ratio of nominal to short circuit current and <span class="math notranslate nohighlight">\(rx\)</span> is the R/X ratio of the motor.
+<span class="math notranslate nohighlight">\(vn\_kv\)</span> is the rated voltage of the bus the motor is connected to.</p>
+</div>
+<div class="section" id="synchronous-generator">
+<h2>Synchronous Generator<a class="headerlink" href="#synchronous-generator" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Synchronous generators are considered with the short-circuit impedance of:</p>
+<div class="math notranslate nohighlight">
+\[\underline{Z}_{k, gen} = K_G \cdot (R''_d + jX''_d)\]</div>
+<p>The short-circuit impedance is calculated as:</p>
+<div class="math notranslate nohighlight">
+\[z_k = xdss\]</div>
+<p>The generator correction factor <span class="math notranslate nohighlight">\(K_G\)</span> is given as:</p>
+<div class="math notranslate nohighlight">
+\[K_G = \frac{V_{N, gen}}{V_{N, bus}} \cdot \frac{c_{max}}{1 + x_{dss} \cdot sin(\varphi)}\]</div>
+<p>where <span class="math notranslate nohighlight">\(V_{N, bus}\)</span> is the rated voltage of the bus the generator is connected to and <span class="math notranslate nohighlight">\(V_{N, gen}\)</span> is the rated voltage of the
+generator which is defined by the parameter <span class="math notranslate nohighlight">\(\text{sn\_kva}\)</span> in the gen table. The rated phasor angle <span class="math notranslate nohighlight">\(\varphi\)</span> is given as:</p>
+<div class="math notranslate nohighlight">
+\[\varphi = arcos(cos\_phi)\]</div>
+<p>where <span class="math notranslate nohighlight">\(cos\_phi\)</span> is defined in the gen table.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, РУП ВЭ.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
