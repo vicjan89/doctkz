@@ -1,11 +1,11 @@
 ﻿.. _gen:
 
 =============
-Generator
+Генератор
 =============
 
 .. note::
-    A generator with positive active power represents a voltage controlled generator. If you want to model constant generation without voltage control, use the Static Generator element.
+    Генератор с положительной активной мощностью представляет собой генератор, управляемый напряжением. Если вы хотите смоделировать постоянную генерацию без контроля напряжения, используйте элемент Static Generator.
 
 .. seealso::
     :ref:`Unit Systems and Conventions <conventions>`

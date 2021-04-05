@@ -77,7 +77,7 @@
 
 .. _`Типовые трансформаторы`: https://docs.google.com/spreadsheets/d/1lO0p00TQaeeAiepkt2yaH8aGHDOVyx-eBP4ehjBrVJ8/edit?usp=sharing
 
-.. _`Типовые линии`: https://drive.google.com/file/d/1YHrHbTskAKGsVBgm9y2lN3-hVd27TIrz/view?usp=sharing
+.. _`Типовые линии`: https://docs.google.com/spreadsheets/d/1YHrHbTskAKGsVBgm9y2lN3-hVd27TIrz/edit#gid=74370223
 
 |br|    
 |br|    

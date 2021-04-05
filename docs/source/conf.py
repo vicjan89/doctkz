@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'doctkz'
-copyright = '2021, janush'
-author = 'janush'
+project = 'Calculation of electrical networks'
+copyright = '2021, РУП ВЭ'
+author = 'РУП "Витебскэнерго"'
 
 # The full version, including alpha/beta/rc tags
 release = '1.1'
