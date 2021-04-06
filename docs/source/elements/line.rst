@@ -1,5 +1,5 @@
 ﻿=============
-Line
+Линия
 =============
 
 
@@ -12,18 +12,7 @@ Line
     :ref:`Unit Systems and Conventions <conventions>` |br|
     :ref:`Standard Type Libraries <std_types>`
     
-Create Function
-=====================
-
-.. _create_line:
-
-Lines can be either created from the standard type library (create_line) or with custom values (create_line_from_parameters).
-
-.. autofunction:: pandapower.create_line
-
-.. autofunction:: pandapower.create_line_from_parameters
-
-Input Parameters
+Входные параметры
 =============================
 
 *net.line*
@@ -34,12 +23,12 @@ Input Parameters
    :delim: ;
    :widths: 15, 10, 25, 40
   
-\*necessary for executing a power flow calculation |br| \*\*optimal power flow parameter |br| \*\*\*short-circuit calculation parameter
+\*необходимо для расчёта потоков мощности в установившемся режиме |br| \*\*параметры для расчёта оптимальных потоков мощноси |br| \*\*\*параметры для расчёта токов короткого замыкания
 
 .. note::
 
-    Defining a line with length zero leads to a division by zero in the power flow and is therefore not allowed. Lines with a very low impedance might lead to convergence problems in the power flow
-    for the same reason. If you want to directly connect two buses, please use the switch element instead of a line with a small impedance!
+    Задание нулевой длины для линий электропередач приведёт к делению на ноль при расчёте потоков мощности и это не допускается. Линии с очень малым сопротивлением могут привести к проблемам сходимости при расчёте потоков мощности
+    по той же причине. Если вы хотите накоротко соединить две шины, используйте выключатель вместо линии с малым сопротивлением!
 
 *net.line_geodata*
 
@@ -50,19 +39,19 @@ Input Parameters
    :widths: 10, 10, 55
 
    
-Electric Model
-=================
+Электрическая модель
+====================
 
-Lines are modelled with the :math:`\pi`-equivalent circuit:
+Линия моделируется :math:`\pi`-образной схемой замещения:
 
 .. image:: line.png
 	:width: 25em
 	:alt: alternate Text
 	:align: center
 
- 
+                   ..
     
-The elements in the equivalent circuit are calculated from the parameters in the net.line dataframe as:
+Параметры элементов схемы замещения рассчитывается на основе входных параметров по следующим формулам:
 
 .. math::
    :nowrap:
@@ -72,9 +61,9 @@ The elements in the equivalent circuit are calculated from the parameters in the
     \underline{Y}&= (g\_us\_per\_km \cdot 1 \cdot 10^-6 + j \cdot 2 \pi f \cdot c\_nf\_per\_km \cdot 1 \cdot 10^-9) \cdot length\_km \cdot parallel
    \end{align*}
     
-The power system frequency :math:`f` is defined when creating an empty network, the default value is :math:`f = 50 Hz`.
+Частота электрического тока :math:`f` задаётся при создании электрической сети. Значение по умолчанию :math:`f = 50 Hz`.
 
-The parameters are then transformed in the per unit system:
+Параметры затем преобразуются в относительные единицы:
 
 .. math::
    :nowrap:
@@ -85,13 +74,13 @@ The parameters are then transformed in the per unit system:
     \underline{y} &= \underline{Y} \cdot Z_{N} \\
     \end{align*}
 
-Where the reference voltage :math:`V_{N}` is the nominal voltage at the from bus and the rated apparent power :math:`S_{N}` is defined system wide in the net object (see :ref:`Unit Systems and Conventions<conventions>`).
+где опорное напряжение :math:`V_{N}`является номинальным напряжением входной шины, номинальная полная мощность :math:`S_{N}` определена в системы единиц сети (see :ref:`Unit Systems and Conventions<conventions>`).
 
 .. note::
-    pandapower assumes that nominal voltage of from bus and to bus are equal, which means pandapower does not support lines that connect different voltage levels.
-    If you want to connect different voltage levels, either use a transformer or an impedance element.
+    предполагается, что номинальные напряжения шин соединяемых линией равны, что означает, что программа не поддерживает линии, которые соединяют разные уровни напряжения.
+    Если вы хотите соединить разные уровни напряжения то используйте трансформатор либо элемент сопротивления (токоограничивающий реактор).
     
-Result Parameters
+Результирующие параметры
 ==========================
    
 *net.res_line*
@@ -102,7 +91,7 @@ Result Parameters
    :delim: ;
    :widths: 15, 10, 55
    
-The power flow results in the net.res_line table are defined as:
+Результат расчёта потоков мощности определяется по следующим формулам:
 
 .. math::
    :nowrap:
@@ -120,13 +109,3 @@ The power flow results in the net.res_line table are defined as:
     loading\_percent &= \frac{i\_ka}{imax\_ka \cdot df \cdot parallel} \cdot 100 
     \end{align*}
     
-
-*net.res_line_est*
-
-The state estimation results are put into *net.res_line_est* with the same definition as in *net.res_line*.
-
-.. tabularcolumns:: |p{0.15\linewidth}|p{0.10\linewidth}|p{0.55\linewidth}|
-.. csv-table:: 
-   :file: line_res.csv
-   :delim: ;
-   :widths: 15, 10, 55

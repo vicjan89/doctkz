@@ -1,20 +1,18 @@
-**Parameter**;**Datatype**;**Value Range**;**Explanation**
-name;string;;name of the line
-std_type;string;;standard type which can be used to easily define line parameters with the pandapower standard type library
-from_bus*;integer;;Index of bus where the line starts
-to_bus*;integer;;Index of bus where the line ends
-length_km*;float;:math:`>` 0;length of the line [km]
-r_ohm_per_km*;float;:math:`\geq` 0   ;resistance of the line [Ohm per km]
-x_ohm_per_km*;float;:math:`\geq` 0   ;inductance of the line [Ohm per km]
-c_nf_per_km*;float;:math:`\geq` 0   ;capacitance of the line [nano Farad per km]
-g_us_per_km*;float;:math:`\geq` 0   ;dielectric conductance of the line [micro Siemens per km]
-max_i_ka*;float;:math:`>` 0   ;maximal thermal current [kilo Ampere]
-parallel*;integer;:math:`\geq` 1;number of parallel line systems
-df*;float;0...1 ;derating factor (scaling) for max_i_ka
-type;string;"| Naming conventions:
+**Параметр**;**Тип данных**;**Диапазон величин**;**Описание**
+name;string;;Диспетчерское наименование
+std_type;string;;стандартный тип который может быть использован для простейшего определения параметров линии используя таблицу стандартных линий
+length_km*;float;:math:`>` 0;длина линии [км]
+r_ohm_per_km*;float;:math:`\geq` 0   ;активное сопротивление линии [Ом/км]
+x_ohm_per_km*;float;:math:`\geq` 0   ;реактивное сопротивление линии [Ом/км]
+c_nf_per_km*;float;:math:`\geq` 0   ;ёмкость жилы линии относительно земли [нФ/км]
+g_us_per_km*;float;:math:`\geq` 0   ;диэлектрическая проводимость линии [мкСм/км]
+max_i_ka*;float;:math:`>` 0   ;допустимый ток [кА]
+parallel*;integer;:math:`\geq` 1;количество параллельных линий
+df*;float;0...1 ;коэффициент умножения (масштабный коэффициент) допустимого тока
+type;string;"| наименование типа:
 
-| *""ol""* - overhead line 
-| *""cs""* - underground cable system";type of line
-max_loading_percent**;float;:math:`>` 0   ;Maximum loading of the line
-endtemp_degree***;float;:math:`>` 0   ;Short-Circuit end temperature of the line
-in_service*;boolean;True / False;specifies if the line is in service.
+| *""ol""* - воздушная линия 
+| *""cs""* - кабельная линия";тип линии
+max_loading_percent**;float;:math:`>` 0   ;максимальная нагрузка в процентах
+endtemp_degree***;float;:math:`>` 0   ;температура линии в конце короткого замыкания
+in_service*;boolean;True / False;Использовать линию в расчётах.
