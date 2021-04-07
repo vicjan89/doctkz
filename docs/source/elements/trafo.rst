@@ -1,8 +1,8 @@
 ﻿.. _trafo:
 
-=============
-Transformer
-=============
+============================
+Трансформатор двухобмоточный
+============================
 
 .. |br| raw:: html
 
@@ -12,16 +12,6 @@ Transformer
 
     :ref:`Unit Systems and Conventions <conventions>` |br|
     :ref:`Standard Type Libraries <std_types>`
-
-Create Function
-=====================
-
-Transformers can be either created from the standard type library (create_transformer) or with custom values (create_transformer_from_parameters).
-
-.. autofunction:: pandapower.create_transformer
-
-.. autofunction:: pandapower.create_transformer_from_parameters
-
 
 Input Parameters
 =====================

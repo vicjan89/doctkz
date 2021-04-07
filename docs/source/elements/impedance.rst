@@ -1,14 +1,9 @@
-﻿=============
-Impedance
-=============
+﻿==========================
+Токоограничивающий реактор
+==========================
 
 .. seealso::
     :ref:`Unit Systems and Conventions <conventions>`
-
-Create Function
-=====================
-
-.. autofunction:: pandapower.create_impedance
 
 Input Parameters
 =====================

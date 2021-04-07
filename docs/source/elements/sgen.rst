@@ -1,5 +1,5 @@
 ﻿==================
-Static Generator
+Генератор ВИЭ, КГУ
 ==================
 
 .. note::
@@ -10,13 +10,6 @@ Static Generator
 
 .. seealso::
     :ref:`Unit Systems and Conventions <conventions>`
-
-Create Function
-=====================
-
-.. autofunction:: pandapower.create_sgen
-
-.. autofunction:: pandapower.create_sgen_from_cosphi
 
 Input Parameters
 =====================

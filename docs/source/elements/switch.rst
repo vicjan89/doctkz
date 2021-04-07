@@ -1,13 +1,8 @@
 ﻿.. _switch_model:
 
-=============
-Switch
-=============
-
-Create Function
-=====================
-
-.. autofunction:: pandapower.create_switch
+==========================
+Выключатель, разъединитель
+==========================
 
 Input Parameters
 =====================

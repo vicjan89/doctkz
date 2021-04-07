@@ -1,6 +1,6 @@
-﻿===========================
-Three Winding Transformer
-===========================
+﻿============================
+Трансформатор трёхобмоточный
+============================
 
 .. |br| raw:: html
 
@@ -11,15 +11,6 @@ Three Winding Transformer
     :ref:`Unit Systems and Conventions <conventions>` |br|
     :ref:`Standard Type Libraries <std_types>`
 
-Create Function
-=====================
-
-.. _create_trafo3w:
-
-
-.. autofunction:: pandapower.create_transformer3w
-
-.. autofunction:: pandapower.create_transformer3w_from_parameters
 
 .. note::
     All short circuit voltages are given relative to the maximum apparent power

@@ -1,19 +1,11 @@
 ﻿.. _shunt:
 
-=============
-Shunt
-=============
+=========================
+Дугогасящий реактор (ДГК)
+=========================
 
 .. seealso::
     :ref:`Unit Systems and Conventions <conventions>`
-
-Create Function
-=====================
-
-.. autofunction:: pandapower.create_shunt
-
-.. autofunction:: pandapower.create_shunt_as_capacitor
-
 
 Input Parameters
 =====================

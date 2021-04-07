@@ -1,5 +1,5 @@
 ﻿=============
-Load
+Нагрузка
 =============
 
 .. note::
@@ -8,13 +8,6 @@ Load
 
 .. seealso::
     :ref:`Unit Systems and Conventions <conventions>`
-
-Create Function
-=====================
-
-.. autofunction:: pandapower.create_load
-
-.. autofunction:: pandapower.create_load_from_cosphi
 
 
 Input Parameters
