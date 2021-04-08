@@ -11,12 +11,7 @@
     :ref:`Unit Systems and Conventions <conventions>`
 
     
-Create Function
-=====================
-
-.. autofunction:: pandapower.create_gen
-
-Input Parameters
+Входные параметры
 =====================
 
 *net.gen*
@@ -31,11 +26,11 @@ Input Parameters
 
    <br />
    
-\*necessary for executing a power flow calculation |br| \*\*optimal power flow parameter |br| \*\*\*short-circuit calculation parameter
+\*требуется для расчёта потоков мощности |br| \*\*параметы для расчёта оптимальных потоков мощности (в программе не реализовано) |br| \*\*\*требуется для расчёта токов короткого замыкания
 
    
-Electric Model
-=================
+Электрическая модель
+====================
 
 Generators are modelled as PV-nodes in the power flow:
 
@@ -44,7 +39,7 @@ Generators are modelled as PV-nodes in the power flow:
 	:alt: alternate Text
 	:align: center
 
-Voltage magnitude and active power are defined by the input parameters in the generator table:
+Величина напряжения и активная мощность определяются входными параметрами в таблице генератора:
 
 .. math::
    :nowrap:
@@ -54,7 +49,7 @@ Voltage magnitude and active power are defined by the input parameters in the ge
     v_{bus} &= vm\_pu
    \end{align*}
     
-Result Parameters
+Результирующие параметры
 ==========================
 *net.res_gen*
 
@@ -64,7 +59,7 @@ Result Parameters
    :delim: ;
    :widths: 10, 10, 50
 
-The power flow returns reactive generator power and generator voltage angle:
+Расчёт потоков мощности возвращает реактивную мощность генератора и угол напряжения:
 
 .. math::
    :nowrap:
@@ -78,6 +73,6 @@ The power flow returns reactive generator power and generator voltage angle:
 
    
 .. note::
-    If the power flow is run with the enforce_qlims option and the generator reactive power exceeds / underruns the maximum / minimum reactive power limit,
-    the generator is converted to a static generator with the maximum / minimum reactive power as constant reactive power generation.
-    The voltage at the generator bus is then no longer equal to the voltage set point defined in the parameter table.
+     Если поток мощности рассчитывается с опцией enforce_qlims, а реактивная мощность генератора превышает или находится ниже максимального или минимального предела реактивной мощности,
+     то генератор преобразуется в статический генератор с максимальной / минимальной реактивной мощностью как постоянная реактивная генерация энергии.
+     Напряжение на шине генератора больше не равно установленной в параметрах.    

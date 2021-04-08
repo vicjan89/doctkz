@@ -1,5 +1,5 @@
-**Parameter**;**Datatype**;**Explanation**
-p_mw;float;resulting active power demand after scaling [MW]
-q_mvar;float; resulting reactive power demand after scaling [MVar]
-va_degree;float;generator voltage angle [degree]
-vm_pu;float;voltage at the generator [p.u]
+**Параметр**;**Тип данных**;**Описание**
+p_mw;float;результирующая активная мощность после масштабирования (скорректированная на коэффициент умножения) [МВт]
+q_mvar;float;результирующая реактивная мощность после масштабирования (скорректированная на коэффициент умножения) [МВар]
+va_degree;float;угол напряжения генератора [градус]
+vm_pu;float;напряжение генератора [о.е.]

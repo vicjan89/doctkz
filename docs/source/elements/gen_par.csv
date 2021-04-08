@@ -1,22 +1,21 @@
-**Parameter**;**Datatype**;**Value Range**;**Explanation**
-name;string;;name of the generator
-type;string;"| naming conventions:
-| *""sync""* - synchronous generator
-| *""async""* - asynchronous generator
-";type variable to classify generators
-bus*;integer;;index of connected bus
-p_mw*;float;:math:`\leq` 0;the real power of the generator [MW]
-vm_pu*;float;;voltage set point of the generator [p.u]
-sn_mva;float;:math:`>` 0;nominal power of the generator [MVA]
-min_q_mvar;float;;minimal reactive power of the generator [MVar]
-max_q_mvar;float;;maximal reactive power of the generator [MVar]
-scaling*;float;:math:`\leq` 0;scaling factor for the active power
-max_p_mw**;float;;Maximum active power
-min_p_mw**;float;;Minimum active power
-max_q_mvar**;float;;Maximum reactive power
-min_q_mvar**;float;;Minimum reactive power
-vn_kv***;float;;Rated voltage of the generator
-xdss_pu***;float;:math:`>` 0;Subtransient generator reactance in per unit
-rdss_pu***;float;:math:`>` 0;Subtransient generator resistence in per unit
-cos_phi***;float;:math:`0 \leq` 1;Rated generator cosine phi
-in_service*;boolean;True / False;specifies if the generator is in service.
+**Параметр**;**Тип данных**;**Диапазон значений**;**Описание**
+name;string;;Диспетчерское наименование генератора
+type;string;"| наименование типа:
+| *""sync""* - синхронный генератор
+| *""async""* - асинхронный генератор
+";тип генератора
+p_mw*;float;:math:`\leq` 0;Активная мощность генератора [МВт]
+vm_pu*;float;;Напряжение генератора [о.е.]
+sn_mva;float;:math:`>` 0;номинальная полная мощность генератора [МВА]
+min_q_mvar;float;;минимальная реактивная мощност генератора [МВар]
+max_q_mvar;float;;максимальная реактивная мощность генератора [МВар]
+scaling*;float;:math:`\leq` 0;коэффициент умножения для активной мощности
+max_p_mw**;float;;Максимальная активная мощность [МВт]
+min_p_mw**;float;;Минимальная активная мощность [МВт]
+max_q_mvar**;float;;Максимальная реактивная мощность [МВар]
+min_q_mvar**;float;;Минимальная реактивная мощность [МВар]
+vn_kv***;float;;Величиина напряжения генератора [кВ]
+xdss_pu***;float;:math:`>` 0;Сверхпереходное реактивное сопротивление генератора в относительных единицах
+rdss_pu***;float;:math:`>` 0;Сверхпереходное активное сопротивление генератора в относительных единицах
+cos_phi***;float;:math:`0 \leq` 1;Коэффициент мощности
+in_service*;boolean;True / False;Генератор в работе.
