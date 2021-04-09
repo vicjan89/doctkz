@@ -29,18 +29,10 @@
     about
     elements
     editor
+    download
 
 ..  std_types
     powerflow
-    opf
     shortcircuit
-    estimation
-    control
-    timeseries
-    topology
-    networks
-    plotting
-    file_io
-    converter
-    toolbox
+    
 	
