@@ -11,7 +11,7 @@
 .. seealso::
     :ref:`Unit Systems and Conventions <conventions>`
 
-Input Parameters
+Входные параметры
 =====================
 
 *net.sgen*
@@ -29,8 +29,8 @@ Input Parameters
 \*necessary for executing a power flow calculation |br| \*\*optimal power flow parameter
 
    
-Electric Model
-=================
+Электрическая модель
+====================
 
 Static Generators are modelled as PQ-buses in the power flow calculation:
 
@@ -54,7 +54,7 @@ The PQ-Values are calculated from the parameter table values as:
     
     The apparent power value sn_mva is provided as additional information for usage in controller or other applications based on panadapower. It is not considered in the power flow!
 
-Result Parameters
+Результирующие параметры
 ==========================
 *net.res_sgen*
 

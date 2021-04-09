@@ -5,7 +5,7 @@
 .. seealso::
     :ref:`Unit Systems and Conventions <conventions>`
 
-Input Parameters
+Входные параметры
 =====================
 
 *net.impedance*
@@ -20,8 +20,8 @@ Input Parameters
 
 .. _impedance_model:
 
-Electric Model
-=================
+Электрическая модель
+====================
 
 The impedance is modelled as a longitudinal per unit impedance with :math:`\underline{z}_{ft} \neq \underline{z}_{tf}` :
 
@@ -55,7 +55,7 @@ The asymetric impedance results in an asymetric nodal point admittance matrix:
     \end{bmatrix}
 
 
-Result Parameters
+Результирующие параметры
 ==========================
 *net.res_impedance*
 

@@ -7,7 +7,7 @@
 .. seealso::
     :ref:`Unit Systems and Conventions <conventions>`
 
-Input Parameters
+Входные параметры
 =====================
 
 *net.shunt*
@@ -21,8 +21,8 @@ Input Parameters
 \*necessary for executing a power flow calculation.
 
    
-Electric Model
-=================
+Электрическая модель
+====================
 
 
 .. image:: shunt.png
@@ -61,7 +61,7 @@ Converting to the per unit system results in:
 
 with the reference values for the per unit system as defined in :ref:`Unit Systems and Conventions<conventions>`.
    
-Result Parameters
+Результирующие параметры
 ==========================
 *net.res_shunt*
 

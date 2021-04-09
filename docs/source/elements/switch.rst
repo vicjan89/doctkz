@@ -4,7 +4,7 @@
 Выключатель, разъединитель
 ==========================
 
-Input Parameters
+Входные параметры
 =====================
 
 *net.switch*
@@ -18,8 +18,8 @@ Input Parameters
 \*necessary for executing a power flow calculation.
 
    
-Electric Model
-=================
+Электрическая модель
+====================
 
 *Bus-Bus-Switches:*
 

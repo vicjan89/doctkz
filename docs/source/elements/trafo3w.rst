@@ -23,7 +23,7 @@
     max(sn_hv_mva, sn_mv_mva, sn_lv_mva). You might have to convert the
     values depending on how the short-circuit voltages are defined.
 
-Input Parameters
+Входные параметры
 =========================
 
 *net.trafo3w*
@@ -40,8 +40,8 @@ Input Parameters
 
 .. _trafo3w_model:
 
-Electric Model
-=================
+Электрическая модель
+====================
 
 Three Winding Transformers are modelled by three two-winding transformers in :math:`Y`-connection:
 
@@ -136,7 +136,7 @@ is located at the star point of the three winding transformer or at the terminal
 
     
 
-Result Parameters
+Результирующие параметры
 ==========================
 **net.res_trafo3w**
 

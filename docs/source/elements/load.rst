@@ -10,7 +10,7 @@
     :ref:`Unit Systems and Conventions <conventions>`
 
 
-Input Parameters
+Входные параметры
 =====================
 
 *net.load*
@@ -28,8 +28,8 @@ Input Parameters
     
     The apparent power value sn_mva is provided as additional information for usage in controller or other applications based on panadapower. It is not considered in the power flow!  
 
-Electric Model
-=================
+Электрическая модель
+====================
 
 Loads are modelled as PQ-buses in the power flow calculation, with an option to use the so-called ZIP load model, where a load is represented as a composition of constant power (P), constant current (I) and constant impedance (Z):
 
@@ -61,7 +61,7 @@ The load power values are then defines as:
     \end{align*}
 
 
-Result Parameters
+Результирующие параметры
 ==========================    
 *net.res_load*
 

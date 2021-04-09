@@ -13,7 +13,7 @@
     :ref:`Unit Systems and Conventions <conventions>` |br|
     :ref:`Standard Type Libraries <std_types>`
 
-Input Parameters
+Входные параметры
 =====================
 
 *net.trafo*
@@ -29,8 +29,8 @@ Input Parameters
 .. note:: The transformer loading constraint for the optimal power flow corresponds to the option trafo_loading="current":
 
    
-Electric Model
-=================
+Электрическая модель
+====================
 
 The equivalent circuit used for the transformer can be set in the power flow with the parameter "trafo_model".
    
@@ -205,7 +205,7 @@ If both values are given for an ideal phase shift transformer, the power flow wi
 
 
 
-Result Parameters
+Результирующие параметры
 ==========================
 *net.res_trafo*
 
