@@ -4,10 +4,10 @@
 
 .. note::
 
-   Loads should always have a positive p_mw value, since all power values are given in the consumer system. If you want to model constant generation, use a Static Generator (sgen element) instead of a negative load.
+   Нагрузка всегда имеет положительную потребляемую активную мощность.
 
 .. seealso::
-    :ref:`Unit Systems and Conventions <conventions>`
+    :ref:`Система единиц и условные обозначения <conventions>`
 
 
 Входные параметры
@@ -22,16 +22,16 @@
    :delim: ;
    :widths: 10, 10, 25, 40
 
-\*necessary for executing a power flow calculation.
+\*требуется для расчёта потоков мощности.
 
 .. note::
     
-    The apparent power value sn_mva is provided as additional information for usage in controller or other applications based on panadapower. It is not considered in the power flow!  
+    Значение полной мощности sn_mva задаётся в качестве дополнительной информации для использования в контроллерах. Этот параметр не учитывается в расчёте потока мощности! 
 
 Электрическая модель
 ====================
 
-Loads are modelled as PQ-buses in the power flow calculation, with an option to use the so-called ZIP load model, where a load is represented as a composition of constant power (P), constant current (I) and constant impedance (Z):
+Нагрузки моделируются как шины PQ при расчете потока мощности с возможностью использования так называемой модели нагрузки ZIP, где нагрузка представлена ​​как комбинация постоянной мощности (P), постоянного тока (I) и постоянного сопротивления (Z):
 
 .. image:: load.png
 	:width: 8em
@@ -39,7 +39,7 @@ Loads are modelled as PQ-buses in the power flow calculation, with an option to 
 	:align: center
 
 
-What part of the load is considered constant with constant power, constant current or constant impedance is defined as follows:
+Какая часть нагрузки считается постоянной при постоянной мощности, постоянном токе или постоянном сопротивлении, определяется следующим образом:
   
 .. math::
    :nowrap:
@@ -50,7 +50,7 @@ What part of the load is considered constant with constant power, constant curre
     p_{const} =& (100 - const\_z\_percent - const\_i\_percent) / 100
     \end{align*}
     
-The load power values are then defines as:
+Мощность нагрузки определяется по следующим формулам:
 
 .. math::
    :nowrap:
@@ -71,5 +71,5 @@ The load power values are then defines as:
    :delim: ;
    :widths: 10, 10, 45
    
-The power values in the net.res_load table are equivalent to :math:`P_{load}` and :math:`Q_{load}`.
+Значения мощностей в результирующей таблице net.res_load эквивалентны :math:`P_{load}` and :math:`Q_{load}`.
 
