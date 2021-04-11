@@ -9,7 +9,7 @@
 
 
 .. seealso::
-    :ref:`Unit Systems and Conventions <conventions>`
+    :ref:`Система единиц и условные обозначения <conventions>`
 
 Входные параметры
 =====================

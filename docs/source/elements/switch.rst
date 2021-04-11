@@ -15,36 +15,36 @@
    :delim: ;
    :widths: 10, 10, 25, 40
 
-\*necessary for executing a power flow calculation.
+\*необходимо для расчёта потоков мощности.
 
    
 Электрическая модель
 ====================
 
-*Bus-Bus-Switches:*
+*Выключатели между шинами:*
 
-Two buses that are connected with a closed bus-bus switches are fused internally for the power flow, open bus-bus switches are ignored:
+Две шины, соединённые включенным выключателем или разъединителем моделируются как одна единая шина. Отключенные выключатели или разъединители игнорируются при расчёте потоков мощности и токов короткого замыкания:
 
-.. image:: switches_bus.png
+.. image:: switches_bus.png                                    
 	:width: 18em
 	:alt: alternate Text
 	:align: center
 
-This has the following advantages compared to modelling the switch as a small impedance:
+Это дает следующие преимущества по сравнению с моделированием переключателя элементом с малым сопротивлением:
 
-    - there is no voltage drop over the switch (ideal switch)
-    - no convergence problems due to small impedances / large admittances
-    - less buses in the admittance matrix
+    - нет падения напряжения на переключателе (идеальный переключатель)
+    - нет проблем сходимости из-за малого/большого сопротивления
+    - меньше узлов в расчётной матрице
     
-*Bus-Element-Switches:*
+*Выключатели между шинами и элементами сети:*
 
-When the power flow is calculated internally for every open bus-element switch an auxilary bus is created in the pypower case file. The pypower branch that corresponds to the element is then connected to this bus. This has the following advantages compared to modelling the switch by setting the element out of service:
+При расчёте потоков мощности для каждого отключенного коммутационного аппарата между элементом схемы и шиной создается вспомогательная шина. Затем к этой шине подключается ветвь, соответствующая элементу. Это дает следующие преимущества по сравнению с моделированием коммутационных аппаратов путем вывода элемента из работы:
 
-    - loading current is considered
-    - information about switch position is preserved
-    - difference between open switch and out of service line (e.g. faulty line) can be modelled
+    - расчитивыется зарядный ток линии или токи холостого хода трансформатора
+    - сохраняется информация о положении коммутационного аппарата
+    - может быть смоделирована неисправность на элементе с отключенными некоторыми коммутационными аппаратами (например повреждение на линии отключенной с одной стороны)
 
-Closed bus-element switches are ignored:
+Включенные коммутационные аппараты в цепи элементов сети игнорируются:
 
 .. image:: switches_element.png
 	:width: 30em

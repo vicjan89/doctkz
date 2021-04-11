@@ -8,7 +8,7 @@
     
 .. seealso::
 
-    :ref:`Unit Systems and Conventions <conventions>` |br|
+    :ref:`Система единиц и условные обозначения <conventions>` |br|
     :ref:`Standard Type Libraries <std_types>`
 
 

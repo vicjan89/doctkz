@@ -1,13 +1,13 @@
 ======================
-Basic Standard Types
+Стандартные типы
 ======================
 
-Every pandapower network comes with a default set of standard types. 
+Каждый файл сети содержит библиотеку стандартных типов лииний и трансформаторов. 
 
 .. note ::
-    The pandapower standard types are compatible with 50 Hz systems, please be aware that the standard type values might not be realistic for 60 Hz (or other) power systems.
+    Параметры стандартных типов заполнены для частоты 50 Гц и не могут быть использованы для сетей, работающих с частотой 60 Гц
 
-Lines
+Линии
 --------
 
 .. tabularcolumns:: |l|l|l|l|l|l|l|l|
@@ -16,11 +16,9 @@ Lines
    :delim: ;
    :widths: 60, 15, 15, 15, 15, 15, 15, 15
 
-.. note ::
-    To add the optional column "alpha" to net.line that is used if power flow is calculated for a different line temperature than 20 °C, use the function pp.add_temperature_coefficient()
 
-Transformers
------------------
+Трансформаторы двухобмоточные
+-----------------------------
 
 .. tabularcolumns:: |l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|
 .. csv-table:: 
@@ -28,7 +26,7 @@ Transformers
    :delim: ;
    :widths: 60, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15
 
-Three Winding Transformers
+Трансформаторы трёхобмоточные
 --------------------------------
 
 .. tabularcolumns:: |l|l|l|l|l|l|l|l|l|l|l||l|l|l|l|l|l|l|l|l|l|l|
