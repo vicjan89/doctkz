@@ -13,7 +13,7 @@
 .. tabularcolumns:: |l|l|l|l|l|l|l|
 .. csv-table:: 
    :file: linetypes.csv
-   :delim: ;
+   :delim: ,
    :widths: 60, 15, 15, 15, 15, 15, 15
 
 
@@ -23,7 +23,7 @@
 .. tabularcolumns:: |l|l|l|l|l|l|l|l|l|l|l|l|l|l|
 .. csv-table:: 
    :file: trafotypes.csv
-   :delim: ;
+   :delim: ,
    :widths: 60, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15
 
 Трансформаторы трёхобмоточные
@@ -32,6 +32,6 @@
 .. tabularcolumns:: |l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|
 .. csv-table:: 
    :file: trafo3wtypes.csv
-   :delim: ;
+   :delim: ,
    :widths: 60, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15
 
