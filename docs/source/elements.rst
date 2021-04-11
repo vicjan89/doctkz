@@ -16,11 +16,11 @@
     elements/line
     elements/switch
     elements/load	
+    elements/gen
     elements/sgen	
     elements/ext_grid	
     elements/trafo
     elements/trafo3w	
-    elements/gen
     elements/shunt
     elements/impedance
 

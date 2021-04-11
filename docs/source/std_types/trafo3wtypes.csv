@@ -1,4 +1,4 @@
-,hv_bus,mv_bus,lv_bus,sn_hv_mva,sn_mv_mva,sn_lv_mva,vn_hv_kv,vn_mv_kv,vn_lv_kv,vk_hv_percent,vk_mv_percent,vk_lv_percent,vkr_hv_percent,vkr_mv_percent,vkr_lv_percent,shift_mv_degree,shift_lv_degree,pfe_kw,i0_percent,tap_side,tap_neutral,tap_min,tap_max,tap_step_percent,t1ap_step_degree,tap_pos,tap_at_star_point
+name,hv_bus,mv_bus,lv_bus,sn_hv_mva,sn_mv_mva,sn_lv_mva,vn_hv_kv,vn_mv_kv,vn_lv_kv,vk_hv_percent,vk_mv_percent,vk_lv_percent,vkr_hv_percent,vkr_mv_percent,vkr_lv_percent,shift_mv_degree,shift_lv_degree,pfe_kw,i0_percent,tap_side,tap_neutral,tap_min,tap_max,tap_step_percent,t1ap_step_degree,tap_pos,tap_at_star_point
 ТМТН-6300/35-68,35,11,6.6,6.3,0,6.3,35,11,6.6,7.5,7.5,16.5,0.87,,,,,13,2.3,,,,,,,,
 ТМТН-10000/35,36.75,11,6.6,16,0,16,36.75,11,6.6,16.5,8,7.2,0.75,,,,,18,2.1,,,,,,,,
 ТМТН-16000/35,36.75,11,6.6,16,0,16,36.75,11,6.6,17,8,7.5,0.71,,,,,24,1.6,,,,,,,,

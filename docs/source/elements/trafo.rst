@@ -11,7 +11,7 @@
 .. seealso::
 
     :ref:`Система единиц и условные обозначения <conventions>` |br|
-    :ref:`Standard Type Libraries <std_types>`
+    :ref:`Библиотека стандартных типов <std_types>`
 
 Входные параметры
 =====================

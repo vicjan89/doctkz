@@ -1,4 +1,4 @@
-,r_ohm_per_km,x_ohm_per_km,c_nf_per_km,type,max_i_ka,endtemp_degree
+name,r_ohm_per_km,x_ohm_per_km,c_nf_per_km,type,max_i_ka,endtemp_degree
 А-120                         ,0.27,0.297,4.97,cs,100,0
 А-150                         ,0.21,0.288,4.97,cs,100,0
 А-16                          ,1.96,0.377,4.97,cs,100,0

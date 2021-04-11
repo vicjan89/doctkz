@@ -1,4 +1,4 @@
-,sn_mva,vn_hv_kv,vn_lv_kv,vk_percent,vkr_percent,pfe_kw,i0_percent,shift_degree,vk0_percent,vkr0_percent,mag0_percent,mag0_rx,si0_hv_partial
+name,sn_mva,vn_hv_kv,vn_lv_kv,vk_percent,vkr_percent,pfe_kw,i0_percent,shift_degree,vk0_percent,vkr0_percent,mag0_percent,mag0_rx,si0_hv_partial
 ТДН-10000/110_115,10,115,11.00,10.5,2,27,0.9,330,,,,,
 ТДН-16000/110_115,16,115,11.00,10.5,2,26,0.85,330,,,,,
 ТДН-25000/110_115,25,115,10.5,10.5,2,36,0.8,330,,,,,
