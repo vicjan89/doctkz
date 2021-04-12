@@ -24,15 +24,15 @@
    :delim: ;
    :widths: 15, 10, 25, 40
   
-\*necessary for executing a power flow calculation |br| \*\*optimal power flow parameter
+\*требуется для расчёта потоков мощности |br| \*\*параметр для расчёта оптимальных потоков мощности
 
-.. note:: The transformer loading constraint for the optimal power flow corresponds to the option trafo_loading="current":
+.. note:: Ограничение нагрузки трансформатора расчитывается с опцией trafo_loading = "current" для оптимальных потоков мощности:
 
    
 Электрическая модель
 ====================
 
-The equivalent circuit used for the transformer can be set in the power flow with the parameter "trafo_model".
+Эквивалентная схема, используемая для моделирования трансформатора, может быть выбрана при​расчёте потоков мощности с помощью параметра «Модель схемы замещения трансформатора».
    
 *trafo_model='t':*
 
@@ -47,10 +47,10 @@ The equivalent circuit used for the transformer can be set in the power flow wit
 	:align: center
 
     
-Transformer Ratio
--------------------
+Коэффициент трансформации
+-------------------------
 
-The magnitude of the transformer ratio is given as:
+Коэффициент трансформации определяется как:
 
 .. math::
    :nowrap:
@@ -59,7 +59,7 @@ The magnitude of the transformer ratio is given as:
    n &= \frac{V_{ref, HV, transformer}}{V_{ref, LV, transformer}} \cdot \frac{V_{ref, LV bus}}{V_{ref, HV bus}}
    \end{align*}
 
-The reference voltages of the high- and low voltage buses are taken from the net.bus table. The reference voltage of the transformer  is taken directly from the transformer table:
+Напряжения шин высокого и низкого напряжения взяты из элементов шина(узел) к которым подключён трансформатор. Напряжения трансформатора берется непосредственно из параметров трансформатора:
 
 .. math::
    :nowrap:
@@ -70,7 +70,7 @@ The reference voltages of the high- and low voltage buses are taken from the net
    \end{align*}
    
 
-If the power flow is run with voltage_angles=True, the complex ratio is given as:
+Если расчёт потоков мощности выполняется с опцией "Учитывать углы при расчёте мощности"=Да то комплексный коэффициент трансформации задается как:
 
 .. math::
    :nowrap:
@@ -80,7 +80,7 @@ If the power flow is run with voltage_angles=True, the complex ratio is given as
    \theta &= shift\_degree 
    \end{align*}
    
-Otherwise, the ratio does not include a phase shift:
+В противном случае коэффициент трансформации не содержит фазовый сдвиг:
 
 .. math::
    :nowrap:
@@ -89,10 +89,10 @@ Otherwise, the ratio does not include a phase shift:
    \underline{n} &= n
    \end{align*}
    
-Impedance Values
-------------------
+Значения сопротивлений
+----------------------
 
-The short-circuit impedance is calculated as:
+Сопротивление току короткого замыканий расчитывается как:
 
 .. math::
    :nowrap:
@@ -104,7 +104,7 @@ The short-circuit impedance is calculated as:
    \underline{z}_k &= r_k + j \cdot x_k
    \end{align*}    
 
-The magnetising admittance is calculated as:
+Проводимость намагничивания рассчитывается как:
 
 .. math::
    :nowrap:
@@ -116,7 +116,7 @@ The magnetising admittance is calculated as:
    \underline{y_m} &= g_m - j \cdot b_m
    \end{align*}    
 
-The values calculated in that way are relative to the rated values of the transformer. To transform them into the per unit system, they have to be converted to the rated values of the network:
+Рассчитанные таким образом величины относятся к именованным значениям трансформатора. Чтобы преобразовать их в систему отноительных единиц необходимо использовать базисные значения:
 
 .. math::
    :nowrap:
@@ -128,12 +128,12 @@ The values calculated in that way are relative to the rated values of the transf
     \underline{y} &= \underline{y}_m \cdot \frac{Z_{N}}{Z_{ref, trafo}} \\
     \end{align*}
 
-Where the reference voltage :math:`V_{N}` is the nominal voltage at the low voltage side of the transformer and the rated apparent power :math:`S_{N}` is defined system wide in the net object (see :ref:`Unit Systems and Conventions<conventions>`). 
+Где базисное напряжение :math:`V_{N}` это номинальное напряжение на стороне низкого напряжения трансформатора а номинальная полная мощность :math:`S_{N}` задана в описании (see :ref:`Система единиц и условные обозначения<conventions>`). 
 
-Tap Changer
----------------
+Регулятор напряения
+-------------------
 
-**Longitudinal regulator**
+**Линейный регулятор**
 
 A longitudinal regulator can be modeled by setting tap_phase_shifter to False and defining the tap changer voltage step with tap_step_percent.
 

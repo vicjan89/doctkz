@@ -15,29 +15,17 @@
 pickle
 -----------
 
-.. autofunction:: pandapower.to_pickle
-
-.. autofunction:: pandapower.from_pickle
 
 
 Excel
 -----------
 
-.. autofunction:: pandapower.to_excel
-
-.. autofunction:: pandapower.from_excel
 
 
 Json
 -----------
 
-.. autofunction:: pandapower.to_json
-
-.. autofunction:: pandapower.from_json
 
 SQL
 -----------
 
-.. autofunction:: pandapower.to_sqlite
-
-.. autofunction:: pandapower.from_sqlite

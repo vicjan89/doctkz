@@ -30,9 +30,8 @@
     elements
     editor
     download
-
-..  std_types
+    std_types
     powerflow
     shortcircuit
-    
+    file_io    
 	
