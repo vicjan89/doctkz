@@ -156,16 +156,14 @@
 .. note::
     Параметры "максимальное положение РПН" и "Минимальное положение РПН" не учитываются в расчёте потоков мощности. Пользователь несет ответственность за то, чтобы положение РПН находилось в указанных пределах!
 
-**Cross regulator**
+**Поперечный регулятор**
 
-In addition to tap_step_percent a value for tap_step_degree can be defined to model an angle shift for each tap, resulting in a cross
-regulator that affects the magnitude as well as the angle of the transformer ratio.
+В дополнение к параметру "Шаг РПН, %" может быть задано значение для параметра tap_step_degree для моделирования углового сдвига для каждого ответвления, что приводит к поперечному регулированию, который влияет как на величину так и на угол коэффициента трансформации трансформатора.
 
+**Идеальный фазорегулятор**
 
-**Ideal phase shifter**
-
-If tap_phase_shifter is set to True, the tap changer is modeled as an ideal phase shifter, meaning that a constant
-angle shift is added with each tap step:
+Если параметр tap_phase_shifter установлен в True, переключатель ответвлений (РПН) моделирует работу идеального фазорегулятора, 
+то есть при каждом переключении ответвления изменяется фаза на постоянную величину шага.
 
 .. math::
    :nowrap:
@@ -175,7 +173,7 @@ angle shift is added with each tap step:
    \theta &= shift\_degree 
    \end{align*}
    
-The angle shift can be directly defined in tap_step_degree, in which case:
+Величина шага изменения фазы напряжения задаётся  параметромn tap_step_degree. В таком случае:
 
 .. math::
    :nowrap:
@@ -184,7 +182,7 @@ The angle shift can be directly defined in tap_step_degree, in which case:
    \theta_{tp} = tap\_st\_degree \cdot (tap\_pos - tap\_neutral)
    \end{align*}
 
-or it can be given as a constant voltage step in tap_step_percent, in which case the angle is calculated as:
+или он может быть задан постоянным шагом изменения напряжения (параметр "Шаг РПН, %"), и в этом случае угол рассчитывается как:
 
 .. math::
    :nowrap:
@@ -193,7 +191,7 @@ or it can be given as a constant voltage step in tap_step_percent, in which case
    \theta_{tp} = 2 \cdot arcsin(\frac{1}{2} \cdot \frac{tap\_st\_percent}{100})  \cdot (tap\_pos - tap\_neutral)
    \end{align*}
 
-If both values are given for an ideal phase shift transformer, the power flow will raise an error.
+Если для идеального фазорегулятора заданы оба значения то расчёт потоков мощности вызовет ошибку.
 
 .. seealso::
 
@@ -229,9 +227,9 @@ If both values are given for an ideal phase shift transformer, the power flow wi
     i\_lv\_ka &= i_{lv}
     \end{align*}
     
-The definition of the transformer loading depends on the trafo_loading parameter of the power flow.
+Определение нагрузки трансформатора зависит от параметра "Режим расчёта нагрузки трансформатора" в диалоге настоек расчёта потоков мощности установившегося режима.
 
-For trafo_loading="current", the loading is calculated as:
+Для режима "Как отношение тока к номинальному току трансформатора" нагрузка расчитывается:
 
 .. math::
    :nowrap:
@@ -240,8 +238,7 @@ For trafo_loading="current", the loading is calculated as:
     loading\_percent &= max(\frac{i_{hv} \cdot vn\_hv\_kv}{sn\_mva}, \frac{i_{lv} \cdot vn\_lv\_kv}{sn\_mva})  \cdot 100
    \end{align*}
     
-
-For trafo_loading="power", the loading is defined as:
+Для режима "Как отношение полной мощности к номинальной мощности трансформатора" нагрузка расчитывается:
     
 .. math::
    :nowrap:
