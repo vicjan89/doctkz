@@ -134,10 +134,9 @@
 -------------------
 
 **Линейный регулятор**
+Линейный регулятор моделируется установкой параметра tap_phase_shifter в состояние False и заданием шага изменения напряжения РПН (Шаг РПН, %).
 
-A longitudinal regulator can be modeled by setting tap_phase_shifter to False and defining the tap changer voltage step with tap_step_percent.
-
-The reference voltage is then multiplied with the tap factor:
+Номинальное напряжение затем умножается на коэффициент положения регулятора напряжения:
 
 .. math::
    :nowrap:
@@ -146,7 +145,7 @@ The reference voltage is then multiplied with the tap factor:
     n_{tap} = 1 + (tap\_pos - tap\_neutral) \cdot \frac{tap\_st\_percent}{100}
     \end{align*}
     
-On which side the reference voltage is adapted depends on the :math:`tap\_side` variable:
+Напряжения трансформаторов пересчитываются в зависимости от места установки регулятора напряжения (параметр "РПН на стороне ВН" или "РПН на стороне НН") по следующим формулам:
 
 .. tabularcolumns:: |p{0.2\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|
 .. csv-table:: 
@@ -155,7 +154,7 @@ On which side the reference voltage is adapted depends on the :math:`tap\_side` 
    :widths: 20, 15, 15
 
 .. note::
-    The variables tap_min and tap_max are not considered in the power flow. The user is responsible to ensure that tap_min < tap_pos < tap_max!
+    Параметры "максимальное положение РПН" и "Минимальное положение РПН" не учитываются в расчёте потоков мощности. Пользователь несет ответственность за то, чтобы положение РПН находилось в указанных пределах!
 
 **Cross regulator**
 
