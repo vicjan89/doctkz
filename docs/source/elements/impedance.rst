@@ -16,22 +16,22 @@
    :delim: ;
    :widths: 10, 10, 15, 40
 
-\*necessary for executing a power flow calculation.
+\*необходимы для расчёта потоков мощности.
 
 .. _impedance_model:
 
 Электрическая модель
 ====================
 
-The impedance is modelled as a longitudinal per unit impedance with :math:`\underline{z}_{ft} \neq \underline{z}_{tf}` :
+Токоограничивающий реактор моделируется как продольное сопротивление с :math:`\underline{z}_{ft} \neq \underline{z}_{tf}` :
 
 .. image:: impedance.png
 	:width: 25em
 	:alt: alternate Text
 	:align: center
 
-The per unit values given in the parameter table are assumed to be relative to the rated voltage of from and to bus as well as to the apparent power given in the table.
-The per unit values are therefore transformed into the network per unit system:
+Значения в относительных единицах, указанные в таблице входных параметров, принимаются относительно номинального напряжения на входной и выходной шине, а также полной мощности, указанной в таблице входных параметров.
+Таким образом, значения в относительных единицах преобразуются в именованные единицы:
 
 .. math::
    :nowrap:
@@ -41,9 +41,9 @@ The per unit values are therefore transformed into the network per unit system:
     \underline{z}_{tf} &= (rft\_pu + j \cdot xtf\_pu) \cdot \frac{S_{N}}{sn\_mva} \\
     \end{align*}
 
-where :math:`S_{N}` is the reference power of the per unit system (see :ref:`Unit Systems and Conventions<conventions>`). 
+где :math:`S_{N}` это базисная мощность в системе относительных единиц (see :ref:`Система единиц и условные обозначения<conventions>`). 
 
-The asymetric impedance results in an asymetric nodal point admittance matrix:
+Асимметричное сопротивление приводит к асимметричной матрице проводимостей узловых точек:
 
 .. math::
    :nowrap:

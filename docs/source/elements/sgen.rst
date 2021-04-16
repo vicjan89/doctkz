@@ -4,8 +4,8 @@
 
 .. note::
 
-   Static generators should always have a positive p_mw value, since all power values are given in the generator convention. If you want to model constant power consumption, it is recommended to use a load element instead of a static generator with negative active power value.
-   If you want to model a voltage controlled generator, use the generator element.
+   Статические генераторы всегда должны иметь положительное значение активной мощности. Если вы хотите смоделировать постоянное энергопотребление, рекомендуется использовать элемент Нагрузка вместо статического генератора с отрицательным значением активной мощности.
+   Если вы хотите смоделировать генератор, управляемый напряжением, используйте неоэлемент Генератор.
 
 
 .. seealso::
@@ -26,20 +26,20 @@
 
    <br />
    
-\*necessary for executing a power flow calculation |br| \*\*optimal power flow parameter
+\*Необходимо для расчёта потоков мощности |br| \*\*параметр расчёта оптимальных потоков мощности
 
    
 Электрическая модель
 ====================
 
-Static Generators are modelled as PQ-buses in the power flow calculation:
+Статические генераторы моделируются как шины PQ при расчете потоков мощности:
 
 .. image:: pq.png
 	:width: 8em
 	:alt: alternate Text
 	:align: center
     
-The PQ-Values are calculated from the parameter table values as:
+Значения P и Q расчитываются на основании таблицы входных параметров:
 
 .. math::
    :nowrap:
@@ -52,7 +52,7 @@ The PQ-Values are calculated from the parameter table values as:
 
 .. note::
     
-    The apparent power value sn_mva is provided as additional information for usage in controller or other applications based on panadapower. It is not considered in the power flow!
+    Значение полной мощности sn_mva предоставляется в качестве дополнительной информации для использования в контроллере или других функциях. При расчёте потоков мощности оно не учитывается!
 
 Результирующие параметры
 ==========================
@@ -64,4 +64,4 @@ The PQ-Values are calculated from the parameter table values as:
    :delim: ;
    :widths: 10, 10, 50
 
-The power values in the net.res_sgen table are equivalent to :math:`P_{sgen}` and :math:`Q_{sgen}`.
+Значения мощностей в результате расчёта эквивалентны :math:`P_{sgen}` и :math:`Q_{sgen}`.

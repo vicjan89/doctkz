@@ -1,8 +1,8 @@
 ############################
-Short-Circuit 
+Расчёт одно- междуфазных КЗ 
 ############################
 
-The shortcircuit module is used to calculate short-circuits according to DIN/IEC EN 60909.
+Функция для расчета коротких замыканий использует стандарт DIN/IEC EN 60909.
 
 .. toctree:: 
     :maxdepth: 1

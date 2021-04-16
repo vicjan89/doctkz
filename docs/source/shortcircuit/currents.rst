@@ -1,10 +1,9 @@
-=======================
-Short-Circuit Currents
-=======================
+========================
+Токи короткого замыкания
+========================
 
-The short-circuit currents are calculated with the equivalent voltage source at the fault location.  
-For an explanation of the theory behind short-circuit calculations according to IEC 60909
-please refer to the norm or secondary literature:
+Токи короткого замыкания расчитываются используя осточник эквивалентного напряжения, подключенный в место повреждения.
+Для объяснения теории, лежащей в основе расчетов короткого замыкания в соответствии с IEC 60909, обратитесь к соответствующей нормативной или технической литературе:
 
 .. seealso::
 
@@ -13,7 +12,7 @@ please refer to the norm or secondary literature:
     `According to the IEC 60909 <http://www.openelectrical.org/wiki/index.php?title=According_to_the_IEC_60909>`_ on openelectrical
 
     
-pandapower currently implements symmetrical and two-phase faults. One phase faults and two-phase faults with earthing are not yet available.
+В настоящее время программа реализует симметричные и двухфазные КЗ. Однофазные КЗ и двухфазные КЗ на землю пока отсутствуют.
 
 
 .. toctree:: 

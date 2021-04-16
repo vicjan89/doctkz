@@ -42,14 +42,14 @@
 Электрическая модель
 ====================
 
-Three Winding Transformers are modelled by three two-winding transformers in :math:`Y`-connection:
+Трёхобмоточный трансформатор моделируется тремя двухобмоточными соединёнными в :math:`Y`:
 
 .. image:: trafo3w.png
 	:width: 25em
 	:alt: alternate Text
 	:align: center
 
-The parameters of the three transformers are defined as follows:
+Параметры этих трёх трансформаторов определяются ниже:
 
 .. tabularcolumns:: |p{0.15\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|
 .. csv-table:: 
@@ -57,11 +57,11 @@ The parameters of the three transformers are defined as follows:
    :delim: ;
    :widths: 10, 15, 15, 15
 
-The iron loss (pfe\_kw) and open loop loss (i0\_percent) of the 3W transformer is by default attributed to T1 ('hv').
-The parameter 'trafo3w\_losses' in the runpp function however also allows to assign the losses to T2 ('mv'), T3('lv') or to the star point ('star').
+Поотери в стали (pfe\_kw) и потери холостого хода (i0\_percent) трёхобмоточного трансформатора становятся параметрами T1 ('hv').
+Параметр "Где учитывать потери трансформатора" в диалоге запуска расчёта потоков мощности однако также позволяет назначить потери трансформаторам T2 ('Средняя сторона'), T3('Низкая сторона') или всей звезде трансформаторов ('Звезда').
    
-To calculate the short-circuit voltages :math:`v_{k, t1..t3}` and :math:`v_{r, t1..t3}`, first all short-circuit voltages are converted from side based
-values to branch based values
+Для расчёта напряжений короткого замыкания :math:`v_{k, t1..t3}` и :math:`v_{r, t1..t3}`, сначала все напряжения конвертируются из межобмоточных
+в напряжения отдельных ветвей схемы замещения
 
 .. math::
    :nowrap:
@@ -72,7 +72,7 @@ values to branch based values
     v'_{k, lh} &= vk\_lv\_percent \cdot \frac{sn\_hv\_mva}{min(sn\_hv\_mva, sn\_lv\_mva)}
     \end{align*}   
     
-These transformer now represent a :math:`\Delta` connection of the equivalent transformers. A :math:`\Delta-Y` conversion is therefore applied to recieve the parameters in :math:`Y`-connection:
+Этит трансформаторы теперь представлены :math:`\Delta` -соединением эквивалентных трансформаторов. Поэтому для получения :math:`Y`-соединения требуется :math:`\Delta-Y`-преобразование:
 
 .. math::
    :nowrap:
@@ -83,7 +83,7 @@ These transformer now represent a :math:`\Delta` connection of the equivalent tr
     v'_{k, T3} &= \frac{1}{2} (v'_{k, ml} + v'_{k, lh} - v'_{k, hm})
     \end{align*}
     
-Since these voltages are given relative to the high voltage side, they have to be transformed back to the voltage level of each transformer:
+Поскольку эти напряжения указаны относительно стороны высокого напряжения то они должны быть преобразованы обратно в уровень напряжения каждого трансформатора:
 
 .. math::
    :nowrap:
@@ -94,22 +94,22 @@ Since these voltages are given relative to the high voltage side, they have to b
     v_{k, T3} &= v'_{k, t3} \cdot \frac{sn\_lv\_mva}{sn\_hv\_mva}
     \end{align*}
 
-The real part of the short-circuit voltage is calculated in the same way.
+Активная составляющая напряжения короткого замыкания рассчитывается аналогично.
 
-The definition of how impedances are calculated for the two winding transformer from these parameters can be found :ref:`here<trafo>`.
+Определение того, как рассчитываются сопротивления двухобмоточного трансформатора на основе этих параметров, можно найти :ref:`здесь<trafo>`.
 
 .. note::
-    All short circuit voltages are given relative to the maximum apparent power
-    flow. For example vk_hv_percent is the short circuit voltage from the high to
-    the medium level, it is given relative to the minimum of the rated apparent
-    power in high and medium level: min(sn_hv_mva, sn_mv_mva). This is consistent
-    with most commercial network calculation software (e.g. PowerFactory).
-    Some tools (like PSS Sincal) however define all short circuit voltages relative
-    to the overall rated apparent power of the transformer:
-    max(sn_hv_mva, sn_mv_mva, sn_lv_mva). You might have to convert the
-    values depending on how the short-circuit voltages are defined.
+     Все напряжения короткого замыкания приведены относительно максимальной полной мощности.
+     Например, "Напряжение КЗ ВС,%" - это напряжение короткого замыкания от высокой до
+     средней обмотки. Оно задается относительно минимальной из полных мощностей
+     обмоток высокого и среднего напряжения: min(Номинальная мощность ВН, Номинальная мощность СН). Это соответствует
+     большинству коммерческих программ для расчётов электрических сетей (например PowerFactory).
+     Некоторые программы (такие как PSS Sincal), однако определяют все напряжения короткого замыкания относительно
+     обще номинальной полной мощности трансформатора:
+     max (Номинальная мощность ВН, Номинальная мощность СН, Номинальная мощность НН). Возможно, вам придется преобразовать
+     значения напряжений короткого замыкания в зависимости от того, как они определены.
 
-The tap changer adapts the nominal voltages of the transformer in the equivalent to the 2W-Model:
+Устройство РПН изменяет номинальное напряжение в схеме замещения двухобмоточного трансформатора:
 
 .. tabularcolumns:: |p{0.2\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|p{0.15\linewidth}|
 .. csv-table:: 
@@ -117,7 +117,7 @@ The tap changer adapts the nominal voltages of the transformer in the equivalent
    :delim: ;
    :widths: 20, 15, 15, 15
 
-with 
+с 
 
 .. math::
    :nowrap:
@@ -126,8 +126,7 @@ with
     n_{tap} = 1 + (tap\_pos - tap\_neutral) \cdot \frac{tap\_st\_percent}{100}
     \end{align*}
 
-The variable tap\_side controls if the tap changer is located at T1 ('hv'), T2 ('mv') or T3 ('lv'). The tap\_at\_star\_point variable controls if the tap changer
-is located at the star point of the three winding transformer or at the terminal side (hv/mv/lv bus).
+Параметры "РПН на стороне ВН(СН, НН)" определяют, находится ли устройство РПН в трансформаторе T1 («ВН»), T2 («СН») или T3 («НН»). Параметр "РПН в нейтрали обмотки" определяет, находится ли устройство РПН в нейтрали звезды обмотки трансформатора или на стороне выводов.
     
 .. seealso::
     `MVA METHOD FOR 3-WINDING TRANSFORMER <https:/pangonilo.com/index.php?sdmon=files/MVA_Method_3-Winding_Transformer.pdf>`_
@@ -162,9 +161,9 @@ is located at the star point of the three winding transformer or at the terminal
     i\_lv\_ka &= i_{lv}
     \end{align*}
     
-The definition of the transformer loading depends on the trafo_loading parameter of the power flow.
+Определение нагрузки трансформатора зависит от параметра "Режим расчёта нагрузки трансформатора" в диалоге настоек расчёта потоков мощности установившегося режима.
 
-For trafo_loading='current', the loading is calculated as:
+Для режима "Как отношение тока к номинальному току трансформатора" нагрузка расчитывается:
 
 .. math::
    :nowrap:
@@ -174,7 +173,7 @@ For trafo_loading='current', the loading is calculated as:
    \end{align*}
     
 
-For trafo_loading='power', the loading is defined as:
+Для режима "Как отношение полной мощности к номинальной мощности трансформатора" нагрузка расчитывается:
     
 .. math::
    :nowrap:

@@ -18,7 +18,7 @@
    :delim: ;
    :widths: 10, 10, 25, 40
 
-\*necessary for executing a power flow calculation.
+\*необходимо для расчёта потоков мощности.
 
    
 Электрическая модель
@@ -30,7 +30,7 @@
 	:alt: alternate Text
 	:align: center
 
-The power values are given at :math:`v = 1` pu and are scaled linearly with the number of steps:
+Значение поомощности определяются при :math:`v = 1` о.е. и умножаются на "Умножитель мощности":
    
 .. math::
    :nowrap:
@@ -39,7 +39,7 @@ The power values are given at :math:`v = 1` pu and are scaled linearly with the 
    \underline{S}_{shunt, ref} &= (p\_mw + j \cdot q\_mvar) \cdot step
    \end{align*}
    
-Since :math:`\underline{S}_{shunt, ref}` is the apparent power at the nominal voltage, we know that:
+Поскольку :math:`\underline{S}_{shunt, ref}` это полная мощность при номинальном напряжении то:
 
 .. math::
    :nowrap:
@@ -48,7 +48,7 @@ Since :math:`\underline{S}_{shunt, ref}` is the apparent power at the nominal vo
    \underline{Y}_{shunt} = \frac{\underline{S}_{shunt, ref}}{vn\_kv^2}
    \end{align*}
    
-Converting to the per unit system results in:
+Ковертирование в систему относительных единиц даст следующий результат:
 
 .. math::
    :nowrap:
@@ -59,7 +59,7 @@ Converting to the per unit system results in:
                          &= \frac{S_{shunt, ref}}{S_{N}}
    \end{align*}
 
-with the reference values for the per unit system as defined in :ref:`Unit Systems and Conventions<conventions>`.
+с базисными значениями, которые определены в :ref:`Система единиц и условные обозначения<conventions>`.
    
 Результирующие параметры
 ==========================

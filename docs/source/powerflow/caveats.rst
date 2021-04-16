@@ -1,24 +1,23 @@
-Known Problems and Caveats
-==========================
+Известные проблемы и предостережения
+====================================
 
    
-Zero Impedance Branches
--------------------------------
+Ветви с нулевыыыым сопротивлением
+---------------------------------
 
-Branches with zero impedance will lead to a non-converging power flow:
+Ветви с нулевым сопротивлением приведут к ошибке при расчёте потоков мощности:
 
 .. image:: /pics/caveats/zero_branch.png
 	:width: 20em
 	:alt: alternate Text
 	:align: center
     
-This is due to the fact that the power flow is based on admittances, which would be infinite for an impedance of zero. The same problem might occur with impedances very close to zero.
+Это связано с тем, что расчёт потоков мощности основан на проводимостях, которые были бы бесконечными при нулевом сопротивлении. Та же проблема может возникнуть с сопротивлением, очень близким к нулю.
 
-Zero impedance branches occur for:
+Ветви с нулевым сопротивлением возникают при:
 
-    - lines with length_km = 0
-    - lines with r_ohm_per_km = 0 and x_ohm_per_km = 0
-    - transformers with vk_percent=0
+    - линиях с длиной = 0
+    - линиях с удельными сопротивлениями = 0
+    - трансформаторах с напряжением короткого замыкания = 0
     
-If you want to directly connect to buses without voltage drop, use a :ref:`bus-bus switch<switch_model>`.
-
+Если вы хотите напрямую соединить шины без падения напряжения, используйте :ref:`шинный коммутационный аппарат<switch_model>`.

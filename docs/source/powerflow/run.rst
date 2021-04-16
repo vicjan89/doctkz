@@ -1,12 +1,5 @@
-=====================
-Run a Power Flow
-=====================
+===============================
+Запуск расчёта потоков мощности
+===============================
 .. _ppLoadflow:
 
-pandapower provides an AC and linearized (DC) powerflow.
-
-.. toctree:: 
-    :maxdepth: 2
-
-    ac
-    dc

@@ -1,11 +1,10 @@
 ##########################
-Power Flow
+Расчёт потоков мощности
 ##########################
 
 .. _ppLoadflow:
 
-The power flow is the most import static network calculation operation. This section shows you how to run different power flows (AC/DC), what known problems and caveats there are and how you 
-can identify problems using the pandapower diagnostic function.
+Расчёт потоков мощности - это наиболее важная функция расчета статической сети. В этом разделе показано, как выполнять различные расчёты потоков мощности (AC / DC), какие известные проблемы и предостережения, а также как вы можете определить проблемы с помощью функции диагностики сети.
         
 .. toctree:: 
     :maxdepth: 2
