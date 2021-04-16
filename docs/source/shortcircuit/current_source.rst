@@ -1,4 +1,4 @@
-Current Source Elements
+Элементы источников тока
 ================================
 
 Full converter elements, such as PV plants or wind parks, are modeled as current sources:

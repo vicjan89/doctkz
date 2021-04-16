@@ -1,21 +1,21 @@
-Initial Short-Circuit Current
+Начальный ток короткого замыкания
 ==================================
 
-The general ohmic network equation is given as: 
+Расчёт сети имеет вид: 
     
-The SC is calculated in two steps:
-    - calculate the SC contribution :math:`I''_{kI}` of all voltage source elements
-    - calculate the SC contribution :math:`I''_{kII}` of all current source elements
+Ток КЗ расчитывается в два этапа:
+    - расчитать составляющую тока КЗ :math:`I''_{kI}` от всех источников напряжения
+    - расчитать составляющую тока КЗ :math:`I''_{kII}` от всех источников тока
     
-These two currents are then combined into the total initial SC current  :math:`I''_{k} = I''_{kI} + I''_{kII}`.
+Эти два тока затем составляют полный начальный ток КЗ  :math:`I''_{k} = I''_{kI} + I''_{kII}`.
 
 .. _c:
 
-Equivalent Voltage Source
------------------------------
+Эквивалентные источники напряжения
+----------------------------------
 
-For the short-circuit calculation with the equivalent voltage source, all voltage sources are replaced by one equivalent voltage source :math:`V_Q` at the fault location.
-The voltage magnitude at the fault bus is assumed to be:
+Для расчёта составляющей тока КЗ от источников напряжения, все эти источники заменяются на один эквивалентный источник напряжения :math:`V_Q` подключенный в месте повреждения.
+Величина напряжения на повреждённой шине принимается равной:
 
 .. math::
 
@@ -26,35 +26,36 @@ The voltage magnitude at the fault bus is assumed to be:
       \frac{c \cdot \underline{V}_{N}}{2} & \text{for two phase short circuit currents}
     \end{array}\right.
      
-where :math:`V_N` is the nominal voltage at the fault bus and c is the voltage correction factor, which accounts for operational deviations from the nominal voltage in the network.
+где :math:`V_N` - номинальное напряжение повреждённой шины и c это коэффициент коррекции напряжения, - коэффициент коррекции напряжения, который учитывает рабочие отклонения от номинального напряжения в сети..
 
-The voltage correction factors :math:`c_{min}` for minimum and :math:`c_{max}` for maximum short-circuit currents are defined for each bus depending on the voltage level.
-In the low voltage level, there is an additional distinction between networks with a tolerance of 6% vs. a tolerance of 10% for :math:`c_{max}`:
+Коэффициенты коррекции напряжения :math:`c_{min}` для минимального и :math:`c_{max}` для максимального токов короткого замыкания определяются для каждой шины в зависимости от уровня напряжения.
+В низковольтных сетях существует дополнительное различие между сетями с допустимым снижением напряжения 6% по сравнению с 10% для :math:`c_{max}`:
+
 
 .. |cmin| replace:: :math:`c_{min}`
 .. |cmax| replace:: :math:`c_{max}`
 
 +--------------+---------------+--------+--------+
-|Voltage Level                 | |cmin| | |cmax| |
+|Уровень напряжения            | |cmin| | |cmax| |
 +==============+===============+========+========+
-|              | Tolerance 6%  |        |  1.05  |
-|< 1 kV        +---------------+  0.95  +--------+
-|              | Tolerance 10% |        |        |
+|              | Допуск 6%     |        |  1.05  |
+|< 1 кВ        +---------------+  0.95  +--------+
+|              | Допуск 10%    |        |        |
 +--------------+---------------+--------+  1.10  +
-|> 1 kV                        |  1.00  |        |
+|> 1 кВ                        |  1.00  |        |
 +--------------+---------------+--------+--------+
 
 
-Voltage Source Contribution 
------------------------------
+Составляющая источника напряжения 
+---------------------------------
 
-To calculate the contribution of all voltage source elements, the following assumptions are made:
+Чтобы расчитать составляющую всех источников напряжения сделаны следующие допущения:
 
-1. Operational currents at all buses are neglected
-2. All current source elements are neglected
-3. The voltage at the fault bus is equal to :math:`V_Q`
+1. Токи нагрузки на всех шинах не учитываются
+2. Игнорируются все источники тока
+3. Напряжние на повреждённой шине равно :math:`V_Q`
    
-For the calculation of a short-circuit at bus :math:`j`, this yields the following network equations:
+Для расчёта тока КЗ на шине :math:`j`необходимо решить следующее матричное уравнение:
 
 .. math::
    
@@ -80,9 +81,9 @@ For the calculation of a short-circuit at bus :math:`j`, this yields the followi
     0 
     \end{bmatrix}
 
-where :math:`\underline{I}''_{kIj}` is the voltage source contribution of the short-circuit current at bus :math:`j`.
-The voltages at all non-fault buses and the current at the fault bus are unknown. To solve for :math:`\underline{I}''_{kIj}` , 
-we multipliy with the inverted nodal point admittance matrix (impedance matrix):
+где :math:`\underline{I}''_{kIj}` - составляющая источника напряжения в ток короткого замыкания на шине :math:`j`.
+Напряжения на неповреждённых шинах и ток в повреждённой шине неизвестны. Чтобы найти :math:`\underline{I}''_{kIj}`
+мы умножаем его на инвертированную матрицу проводимостей (матрицу сопротивлений):
     
 .. math::
    
@@ -109,13 +110,13 @@ we multipliy with the inverted nodal point admittance matrix (impedance matrix):
     0 
     \end{bmatrix}
 
-The short-circuit current for bus m is now given as:
+Ток короткого замыкания для шины j определяется как:
 
 .. math::
    
    I''_{kIj} = \frac{V_{Qj}}{Z_{jj}}
 
-To calculate the vector of the short-circuit currents at all buses, the equation can be expanded as follows:
+Для расчета вектора токов короткого замыкания на всех шинах уравнение можно расширить следующим образом:
 
 .. math::
    
@@ -136,7 +137,7 @@ To calculate the vector of the short-circuit currents at all buses, the equation
     0 & \dots & \underline{I}''_{kIn}
     \end{bmatrix}
 
-which yields:
+из которого следует:
     
 .. math::
    
@@ -152,10 +153,9 @@ which yields:
     \frac{V_{Qn}}{Z_{nn}} 
     \end{bmatrix}
 
-In that way, all short-circuit currents can be calculated at once with one inversion of the nodal point admittance matrix.
+Таким образом все токи короткого замыкания могут быть рассчитаны одновременно с помощью одной инверсии матрицы проводимостей.
 
-In case a fault impedance is specified, it is added to the diagonal of the impedance matrix. The short-circuit currents
-at all buses are then calculated as:
+Если указано сопротивление в месте повреждения то оно добавляется к диагонали матрицы сопротивления. Затем токи короткого замыкания на всех шинах рассчитываются как:
 
 .. math::
      
@@ -172,10 +172,10 @@ at all buses are then calculated as:
     \end{bmatrix}
     
 
-Current Source Contribution
+Составляющая источников тока
 -----------------------------
 
-To calculate the current source component of the SC current, all voltage sources are short circuited and only current sources are considered. The bus currents are then given as:
+Для рассчёта составляющей источников тока в полном токе КЗ все источники напряжения все источники напряжения замкнуты накоротко и учитываются только источники тока. Тогда токи шин выражаются как:
 
 .. math::
     \begin{bmatrix}
@@ -210,8 +210,8 @@ To calculate the current source component of the SC current, all voltage sources
     -I''_{kCn}
     \end{bmatrix}
 
-where :math:`I''_{kC}` are the SC currents that are fed in by converter element at each bus and :math:`\underline{I}''_{kIIj}` is the contribution of converter elements at the fault bus :math:`j`.
-With the voltage at the fault bus known to be zero, the network equations are given as:
+где :math:`I''_{kC}` - токи КЗ, которые подаются преобразовательным элементом на каждую шину, :math:`\underline{I}''_{kIIj}` - вклад преобразовательных элементов на повреждённую шину :math:`j`.
+Если известно что напряжение на повреждённой шине равно нулю, уравнения сети имеет следующий вид:
 
 .. math::
 
@@ -238,19 +238,19 @@ With the voltage at the fault bus known to be zero, the network equations are gi
     -I''_{kCn}
     \end{bmatrix}
 
-From which row :math:`j` of the equation yields:
+Из строки :math:`j` уравнения следует:
 
 .. math::
 
     0 = \underline{Z}_{jj} \cdot \underline{I}''_{kIIj} - \sum_{m=1}^{n}{\underline{Z}_{jm} \cdot \underline{I}_{kCj}}
 
-which can be converted into:
+которое можно преобразовать в:
     
 .. math::
  
     \underline{I}''_{kIIj} = \frac{1}{\underline{Z}_{jj}} \cdot \sum_{m=1}^{n}{\underline{Z}_{jm} \cdot \underline{I}_{kC, m}}
 
-To calculate all SC currents for faults at each bus simultaneously, this can be generalized into the following matrix equation:
+Чтобы рассчитать все токи при КЗ на каждой шине одновременно можно обобщить в следующее матричное уравнение:
 
 .. math::
 

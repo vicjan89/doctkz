@@ -1,4 +1,4 @@
-Branch Elements
+Элементы ветвей
 =================
 
 Branches are represented by a single short circuit impedance:
@@ -9,7 +9,7 @@ Branches are represented by a single short circuit impedance:
     
 Shunt admittances are neglected for all branch elements. 
 
-Line
+Линия
 -----------------------
 
 .. math::
@@ -32,8 +32,8 @@ where the correction factor for the short-circuit resistance  :math:`K_L` is def
 
 The end temperature in degree after a fault has to be defined with the parameter endtemp\_degre in the line table.
 
-Two-Winding Transformer
--------------------------
+Двухобмоточный трансформатор
+----------------------------
 
 The short-circuit impedance is calculated as:
 
@@ -57,8 +57,8 @@ rated values of the transformer.
 
 The ratio of the transformer is considered to be the nominal ratio, the tap changer positions are not considered according to the standard. 
 
-Three-Winding Transformer
---------------------------
+Трёхобмоточный трансформатор
+----------------------------
 Three Winding Transformers are modelled by three two-winding transformers:
 
 .. image:: branch3.png
@@ -84,7 +84,7 @@ Note that the correction factor has to be applied to the transformers before the
 two-winding transformers. 
 
 
-Impedance
+Токоограничивающий реактор
 --------------------------
 The impedance element is a generic element that is not desribed in the standard. It is considered in the short-circuit calculation just as in the power flow as described :ref:`here <impedance_model>`.
 

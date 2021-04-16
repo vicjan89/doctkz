@@ -1,4 +1,4 @@
-Voltage Source Elements
+Элементы источников напряжения
 ================================
 
 Voltage source elements are represented by their internal voltage source with an internal resistance :math:`Z_k`:
@@ -16,7 +16,7 @@ can be reduced to a single shunt impedance:
 
 The contribution of loads and shunts are negligible according to the standard and therefore neglected in the short-circuit calculation.
     
-External Grid
+Внешняя сеть
 -----------------
 
 When calculating maximum short-circuit currents, the impedance of an external grid connection is given as:
@@ -38,7 +38,7 @@ In case of minimal short-circuit currents, the impedance is calculated according
   x_{k, eg} =& \frac{z_{sg}}{\sqrt{1 + rx\_min^2}} \\[1em]
   r_{k, eg} =& rx\_min \cdot x_{sg} 
 
-Asynchronous Motor
+Асинхронный двигатель
 -----------------------
 Asynchronous motors can be considered by setting the type variable of an sgen element to "motor". The internal impedance is then calculated as:
 
@@ -52,7 +52,7 @@ where :math:`sn\_kva` is the rated power of the motor, :math:`k` is the ratio of
 :math:`vn\_kv` is the rated voltage of the bus the motor is connected to.
 
     
-Synchronous Generator
+Синхронный генератор
 -----------------------
 Synchronous generators are considered with the short-circuit impedance of:
 

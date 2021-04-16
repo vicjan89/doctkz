@@ -1,10 +1,10 @@
-Peak Short-Circuit Current
+Ударный ток короткого замыкания
 ===============================
 
-Current Calculation
+Рассчёт тока
 ---------------------------
 
-The peak short-circuit current is calculated as:
+Ударный ток короткого замыкания рассчитывается как:
 
 .. math::
 
@@ -30,53 +30,54 @@ The peak short-circuit current is calculated as:
     \underline{I}''_{kII, n} \\
     \end{bmatrix} \right)
 
-where :math:`\kappa` is the peak factor.
+где :math:`\kappa` - ударный коэффициент.
 
 .. _kappa:
 
-Peak Factor :math:`\kappa`
+Ударный коэффициент :math:`\kappa`
 -------------------------------
 
-In radial networks, :math:`\kappa` is given as:
+В радиальных сетях :math:`\kappa` определяется как:
 
 .. math::
 
     \kappa = 1.02 + 0.98 e^{-{3}{R/X}}
     
-where :math:`R/X` is the R/X ratio of the equivalent short-circuit impedance :math:`Z_k` at the fault location.
+где :math:`R/X` это соотношение эквивалентного сопротивления короткого замыкания :math:`Z_k` в месте повреждения.
 
-In meshed networks, the standard defines three possibilities for the calculation of :math:`\kappa`:
+В кольцевых сетях стандарт определяет три варианта для расчета :math:`\kappa`: 
 
-- Method A: Uniform Ratio R/X
-- Method B: R/X ratio at short-circuit location
-- Method C: Equivalent frequency 
+- Метод A: Равномерное соотношение R / X
+- Метод B: Соотношение R / X в месте короткого замыкания
+- Метод C: Эквивалентная частота 
 
-The user can chose between Methods B and C when running a short circuit calculation. Method C yields the most accurate results according to the standard and is therefore the default option.
-Method A is only suited for estimated manual calculations with low accuracy and therefore not implemented in pandapower.
+Пользователь может выбирать между методами B и C при выполнении расчета короткого замыкания. Метод C дает наиболее точные результаты
+в соответствии со стандартом и поэтому является вариантом по умолчанию. Метод A подходит только для приблизительных расчетов вручную
+с низкой точностью и поэтому не реализован в данной программе.
 
-**Method C: Equivalent frequency**
+**Метод C: Эквивалентная частота**
 
-For method C, the same formula for :math:`\kappa` is used as for radial grids. The R/X value that is inserter is however not the 
+Для метода C используется та же формула для :math:`\kappa` что и для радиальных сетей. Однако значение R/X которое является устройством вставки, не является 
 
 
-**Method B: R/X Ratio at short-circuit location**
+**Метод B: Соотношение R/X в месте короткого замыкания**
 
-For method B, :math:`\kappa` is given as:
+Для метода B :math:`\kappa` определяется как:
 
 .. math::
 
     \kappa = [1.02 + 0.98 e^{-{3}{R/X}}] \cdot 1.15
 
    
-while being limited with :math:`\kappa_{min} < \kappa < \kappa_{max}` depending on the voltage level:
+и ограничивается в диапазоне :math:`\kappa_{min} < \kappa < \kappa_{max}` в зависимости от уровня напряжения:
 
 .. |kmin| replace:: :math:`\kappa_{min}`
 .. |kmax| replace:: :math:`\kappa_{max}`
 
 +-------------+--------+--------+
-|Voltage Level| |kmin| | |kmax| |
+|Напряжение   | |kmin| | |kmax| |
 +=============+========+========+
-| < 1 kV      |        | 1.8    |
+| < 1 кВ      |        | 1.8    |
 +-------------+  1.0   +--------+
-| > 1 kV      |        | 2.0    |
+| > 1 кВ      |        | 2.0    |
 +-------------+--------+--------+

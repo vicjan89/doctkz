@@ -3,7 +3,9 @@
 Элементы сети
 ==================
 
-Correction factors for generator and branch elements are implemented as defined in the IEC 60909 standard. The results for all elements are tested against commercial software to ensure that correction factors are correctly applied.
+Поправочные коэффициенты для элементов генератора и ветвей реализованы, как определено в стандарте IEC 60909. 
+Результаты для всех элементов сравниваются с коммерческим программным обеспечением, чтобы убедиться в правильности
+применения поправочных коэффициентов.
 
 
 .. toctree:: 
