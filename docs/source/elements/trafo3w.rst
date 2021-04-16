@@ -13,15 +13,14 @@
 
 
 .. note::
-    All short circuit voltages are given relative to the maximum apparent power
-    flow. For example vk_hv_percent is the short circuit voltage from the high to
-    the medium level, it is given relative to the minimum of the rated apparent
-    power in high and medium level: min(sn_hv_mva, sn_mv_mva). This is consistent
-    with most commercial network calculation software (e.g. PowerFactory).
-    Some tools (like PSS Sincal) however define all short ciruit voltages relative
-    to the overall rated apparent power of the transformer:
-    max(sn_hv_mva, sn_mv_mva, sn_lv_mva). You might have to convert the
-    values depending on how the short-circuit voltages are defined.
+    Все напряжения короткого замыкания даны относительно максимального потока полной мощности.
+    Например, "Напряжение КЗ ВС,%" - это напряжение короткого замыкания от высокого до
+    среднего напряжения. Оно дается относительно минимума номинальной полной 
+    мощности на высоком и среднем уровне: min(Номинальная мощность ВН, Номинальная мощность СН).
+    Это соответствует подходу большинства коммерческих программ расчета сети (например, PowerFactory).
+    Однако некоторые инструменты (например PSS Sincal) определяют все напряжения короткого замыкания относительно
+    к общей номинальной полной мощности трансформатора: max(Номинальная мощность ВН, Номинальная мощность СН, Номинальная мощность НН). 
+    Возможно, вам придется преобразовать значения в зависимости от того, как определены напряжения короткого замыкания.
 
 Входные параметры
 =========================
@@ -34,9 +33,9 @@
    :delim: ;
    :widths: 15, 10, 10, 30
 
-\*necessary for executing a power flow calculation.
+\*необходимо для расчёта потоков мощности установившегося режима.
 
-.. note:: Three Winding Transformer loading can not yet be constrained with the optimal power flow.
+.. note:: Нагрузка трехобмоточного трансформатора еще не может быть ограничена оптимальным потоком мощности.
 
 .. _trafo3w_model:
 
