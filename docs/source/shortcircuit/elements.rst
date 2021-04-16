@@ -1,6 +1,6 @@
 .. _sc_elements:
 ==================
-Элементы сети
+Р­Р»РµРјРµРЅС‚С‹ СЃРµС‚Рё
 ==================
 
 Correction factors for generator and branch elements are implemented as defined in the IEC 60909 standard. The results for all elements are tested against commercial software to ensure that correction factors are correctly applied.
