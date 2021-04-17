@@ -1,13 +1,13 @@
 Элементы ветвей
 =================
 
-Branches are represented by a single short circuit impedance:
+Ветви представляются единичным сопротивлением короткого замыкания:
 
 .. image:: branch2.png
 	:width: 15em
 	:align: center
     
-Shunt admittances are neglected for all branch elements. 
+Проводимости на землю не учитываются для всех ветвей.
 
 Линия
 -----------------------
@@ -20,7 +20,7 @@ Shunt admittances are neglected for all branch elements.
     \underline{X}_k &= x\_ohm\_per\_km \cdot \frac{length\_km}{parallel} 
    \end{align*}
    
-where the correction factor for the short-circuit resistance  :math:`K_L` is defined as:
+где поправочный коэффициент для сопротивления короткого замыкания :math:`K_L` определяется как:
 
 .. math::
 
@@ -30,12 +30,12 @@ where the correction factor for the short-circuit resistance  :math:`K_L` is def
             1 + 0.04 K^{-1} (endtemp\_degree - 20°C) & \text{ for minimum short-circuit calculations} 
   \end{array}\right.
 
-The end temperature in degree after a fault has to be defined with the parameter endtemp\_degre in the line table.
+Конечная температура в градусах после окончания короткого замыкания должна быть определена параметром endtemp\_degre в параметрах линии.
 
 Двухобмоточный трансформатор
 ----------------------------
 
-The short-circuit impedance is calculated as:
+Сопротивление короткого замыкания рассчитываетя как:
 
 .. math::
    :nowrap:
@@ -46,30 +46,29 @@ The short-circuit impedance is calculated as:
    x_k &= \sqrt{z^2 - r^2} \\
    \end{align*}    
 
-where the correction factor :math:`K_T` is defined in the standard as:
+где поправочный коэффициент :math:`K_T` определен в стандарте как:
 
 .. math::
 
     K_{T} = 0.95 \frac{c_{max}}{1 + 0.6 x_T}
 
-where :math:`c_{max}` is the :ref:`voltage correction factor <c>` on the low voltage side of the transformer and :math:`x_T` is the transformer impedance relative to the
-rated values of the transformer.
+где :math:`c_{max}` - :ref:`коэффициент коррекции напряжения <c>` на стороне низкого напряжения трансформатора, а :math:`x_T` - сопротивление трансформатора относительно номинальных значений трансформатора.
 
-The ratio of the transformer is considered to be the nominal ratio, the tap changer positions are not considered according to the standard. 
+В расчёте используется номинальный коэффициент трансформатора. Положение устройства РПН не учитываются в соответствии со стандартом.
 
 Трёхобмоточный трансформатор
 ----------------------------
-Three Winding Transformers are modelled by three two-winding transformers:
+Трёхобмоточный трансформатор моделируется тремя двухобмоточными трансформаторами:
 
 .. image:: branch3.png
 	:width: 15em
 	:alt: alternate Text
 	:align: center
 
-The conversion from one two to three two winding transformer parameter is described :ref:`here<trafo3w_model>`.
+Преобразование одного трёхобмоточного трансформатора в три двухобмоточных описано :ref:`здесь<trafo3w_model>`.
     
-For the short-circuit calculation, the loss parameters are neglected and the transformer correction factor is
-applied for the equivalent two-winding transformers as follows:
+При расчете короткого замыкания параметры потерь не учитываются,
+а поправочный коэффициент трансформатора применяется для эквивалентных двухобмоточных трансформаторов следующим образом:
 
 .. math::
    :nowrap:
@@ -80,13 +79,12 @@ applied for the equivalent two-winding transformers as follows:
     v'_{k, t3} &= \frac{1}{2} (v'_{k, m} \cdot K_{T, m} + v'_{k, l} \cdot K_{T, l} - v'_{k, h} \cdot K_{T, h})
     \end{align*}
     
-Note that the correction factor has to be applied to the transformers before the wye-delta and not on the resulting 
-two-winding transformers. 
+Обратите внимание, что поправочный коэффициент должен применяться к трансформатору перед преобразованием треугольник-звезда, 
+а не к полученным двухобмоточным трансформаторам.
 
 
 Токоограничивающий реактор
 --------------------------
-The impedance element is a generic element that is not desribed in the standard. It is considered in the short-circuit calculation just as in the power flow as described :ref:`here <impedance_model>`.
-
+Токоограничивающий реактор - это общий элемент, который не описывается в стандарте. Он учитывается при расчете короткого замыкания так же, как и при описанном :ref:`здесь <impedance_model>` рассчёте потоков мощности.
 
 
