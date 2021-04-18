@@ -8,7 +8,7 @@
 Расчёт термического действия тока КЗ описано :ref:`здесь.<ith>`
 
 
-.. image:: /_static/Calc SC.png
+.. image:: /_static/CalcSC.png
 		:width: 60em
 		:align: center 
 
