@@ -30,7 +30,7 @@
     download
     file_io
     elements
-    editor
+    interface
     std_types
     powerflow
     shortcircuit    

@@ -9,7 +9,7 @@
 
 
 .. image:: /_static/CalcSC.png
-		:width: 60em
+		:width: 50em
 		:align: center 
 
 

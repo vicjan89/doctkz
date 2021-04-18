@@ -9,7 +9,7 @@
 Параметр "Модель схемы замещения трансформатора" описан :ref:`здесь<modtrafo>`.
         
 
-.. image:: /_static/PoweFlow.png
+.. image:: /_static/PowerFlow.png
 		:width: 60em
 		:align: center 
 
