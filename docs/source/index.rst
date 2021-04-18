@@ -27,11 +27,11 @@
     :maxdepth: 3
 
     about
+    download
+    file_io
     elements
     editor
-    download
     std_types
     powerflow
-    shortcircuit
-    file_io    
+    shortcircuit    
 	
