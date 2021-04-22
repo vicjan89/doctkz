@@ -1,4 +1,4 @@
-**Parameter**;**Datatype**;**Explanation**
-p_mw;float;shunt active power consumption [MW]
-q_mvar;float;shunt reactive power consumption [MVAr]
-vm_pu;float;voltage magnitude at shunt bus [pu]
+**Параметр**;**Тип данных**;**Описание**
+p_mw;float;потребляемая активная мощность [МВт]
+q_mvar;float;потребляемая реактивная мощность [МВар]
+vm_pu;float;величина напряжения на шине элемента [о.е.]

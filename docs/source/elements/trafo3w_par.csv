@@ -1,31 +1,28 @@
-**Parameter**;**Datatype**;**Value Range**;**Explanation**
-name;string;;name of the transformer
-std_type;string;;transformer standard type name
-hv_bus*;integer;;high voltage bus index of the transformer
-mv_bus;integer;;medium voltage bus index of the transformer
-lv_bus*;integer;;low voltage bus index of the transformer
-vn_hv_kv*;float;;rated voltage at high voltage bus [kV]
-vn_mv_kv*;float;:math:`>` 0;rated voltage at medium voltage bus [kV]
-vn_lv_kv*;float;:math:`>` 0;rated voltage at low voltage bus [kV]
-sn_hv_mva*;float;:math:`>` 0;rated apparent power on high voltage side [kVA]
-sn_mv_mva*;float;:math:`>` 0;rated apparent power on medium voltage side [kVA]
-sn_lv_mva*;float;:math:`>` 0;rated apparent power on low voltage side [kVA]
-vk_hv_percent*;float;:math:`>` 0;short circuit voltage from high to medium voltage [%]
-vk_mv_percent*;float;:math:`>` 0;short circuit voltage from medium to low voltage [%]
-vk_lv_percent*;float;:math:`>` 0;short circuit voltage from high to low voltage [%]
-vkr_hv_percent*;float;:math:`\geq`  0;real part of short circuit voltage from high to medium voltage [%]
-vkr_mv_percent*;float;:math:`\geq`  0;real part of short circuit voltage from medium to low voltage [%]
-vkr_lv_percent*;float;:math:`\geq`  0;real part of short circuit voltage from high to low voltage [%]
-pfe_kw*;float;:math:`\geq` 0;iron losses [kW]
-i0_percent*;float;:math:`\geq` 0;open loop losses [%]
-shift_mv_degree;float;;transformer phase shift angle at the MV side
-shift_lv_degree;float;;transformer phase shift angle at the LV side
-tap_side;string;"""hv"", ""mv"", ""lv""";defines if tap changer is positioned on high- medium- or low voltage side
-tap_neutral;integer;;
-tap_min;integer;;minimum tap position
-tap_max;integer;;maximum tap position
-tap_step_percent;float;:math:`>` 0;tap step size [%]
-tap_step_degree;float;;tap step size for voltage angle
-tap_at_star_point;bool;;whether the tap changer is modelled at terminal or at star point
-tap_pos;integer;;current position of tap changer
-in_service*;boolean;True/False;specifies if the transformer is in service.
+**Параметр**;**Тип данных**;**Диапазон данных**;**Описание**
+name;string;;диспетчерское наименование
+std_type;string;;наименование используемого типа стандартного трансформатора
+vn_hv_kv*;float;;номинальное напряжение обмотки высокого напряжения [кВ]
+vn_mv_kv*;float;:math:`>` 0;номинальное напряжение обмотки среднего напряжения [кВ]
+vn_lv_kv*;float;:math:`>` 0;номинальное напряжение обмотки низкого напряжения [кВ]
+sn_hv_mva*;float;:math:`>` 0;номинальная полная мощность обмотки высокого напряжения [кВА]
+sn_mv_mva*;float;:math:`>` 0;номинальная полная мощность обмотки среднего напряжения [кВА]
+sn_lv_mva*;float;:math:`>` 0;номинальная полная мощность обмотки низкого напряжения [кВА]
+vk_hv_percent*;float;:math:`>` 0;напряжение короткого замыкания от обмотки высокого к обмотке среднего напряжения [%]
+vk_mv_percent*;float;:math:`>` 0;напряжение короткого замыкания от обмотки среднего к обмотке низкого напряжения [%]
+vk_lv_percent*;float;:math:`>` 0;напряжение короткого замыкания от обмотки высокого к обмотке низкого напряжения [%]
+vkr_hv_percent*;float;:math:`\geq`  0;активная составляющая напряжения короткого замыкания от обмотки высокого к обмотке среднего напряжения [%]
+vkr_mv_percent*;float;:math:`\geq`  0;активная составляющая напряжения короткого замыкания от обмотки среднего к обмотке низкого напряжения [%]
+vkr_lv_percent*;float;:math:`\geq`  0;активная составляющая напряжения короткого замыкания от обмотки высокого к обмотке низкого напряжения [%]
+pfe_kw*;float;:math:`\geq` 0;потери короткого замыкания [кВт]
+i0_percent*;float;:math:`\geq` 0;потери холостого хода [%]
+shift_mv_degree;float;;угловой сдвиг напряжения средней обмотки относительно напряжения высокой обмотки
+shift_lv_degree;float;;угловой сдвиг напряжения низкой обмотки относительно напряжения высокой обмотки
+tap_side;string;"""hv"", ""mv"", ""lv""";определяет какая обмотка содержит РПН, высокая, средняя или низкая
+tap_neutral;integer;;нейтральное положение РПН
+tap_min;integer;;минимальное положение РПН
+tap_max;integer;;максимальное положение РПН
+tap_step_percent;float;:math:`>` 0;величина изменения величины напряжения при переключении РПН на одно положение [%]
+tap_step_degree;float;;величина изменения угла напряжения при переключении РПН на одно положение [%]
+tap_at_star_point;bool;;подключено РПН к выводам обмотки или в нейтраль звезды
+tap_pos;integer;;текущее положение РПН
+in_service*;boolean;True/False;использовать в расчётах.
