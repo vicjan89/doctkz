@@ -1,26 +1,23 @@
-**Parameter**;**Datatype**;**Value Range**;**Explanation**
-name;string;;name of the transformer
-std_type;string;;transformer standard type name
-hv_bus*;integer;;high voltage bus index of the transformer
-lv_bus*;integer;;low voltage bus index of the transformer
-sn_mva*;float;:math:`>` 0;rated apparent power of the transformer [MVA]
-vn_hv_kv*;float;:math:`>` 0;rated voltage at high voltage bus [kV]
-vn_lv_kv*;float;:math:`>` 0;rated voltage at low voltage bus [kV]
-vk_percent*;float;:math:`>` 0;short circuit voltage [%]
-vkr_percent*;float;:math:`\geq`  0;"real component of
-short circuit voltage [%]"
-pfe_kw*;float;:math:`\geq` 0;iron losses [kW]
-i0_percent*;float;:math:`\geq` 0;open loop losses in [%]
-shift_degree*;float;;transformer phase shift angle
-tap_side;string;"""hv"", ""lv""";defines if tap changer is at the high- or low voltage side
-tap_neutral;integer;;rated tap position
-tap_min;integer;;minimum tap position
-tap_max;integer;;maximum tap position
-tap_step_percent;float;:math:`>` 0;tap step size for voltage magnitude [%]
-tap_step_degree;float;:math:`\geq` 0;tap step size for voltage angle
-tap_pos;integer;;current position of tap changer
-tap_phase_shifter;bool;;defines whether the transformer is an ideal phase shifter
-parallel;int;:math:`>` 0;number of parallel transformers
-max_loading_percent**;float;:math:`>` 0;Maximum loading of the transformer with respect to sn_mva and its corresponding current at 1.0 p.u.
-df;float;1 :math:`\geq` df :math:`>`0;derating factor: maximal current of transformer in relation to nominal current of transformer (from 0 to 1)
-in_service*;boolean;True / False;specifies if the transformer is in service.
+**Параметр**;**Тип данных**;**Диапазон значений**;**Описание**
+name;string;;диспетчерское наименование
+std_type;string;;тип используемого стандартного трансформатора
+sn_mva*;float;:math:`>` 0;номинальная полная мощность [МВА]
+vn_hv_kv*;float;:math:`>` 0;номинальное напряжение обмотки высокого напряжени [кВ]
+vn_lv_kv*;float;:math:`>` 0;номинальное напряжение обмотки низкого напряжения [кВ]
+vk_percent*;float;:math:`>` 0;напряжение короткого замыкания [%]
+vkr_percent*;float;:math:`\geq`  0;активная составляющая напряжения короткого замыкания [%]
+pfe_kw*;float;:math:`\geq` 0;потери короткого замыкания [кВт]
+i0_percent*;float;:math:`\geq` 0;потери холостого хода [%]
+shift_degree*;float;;угол сдвига фазы низкой обмотки относительно высокой
+tap_side;string;"""hv"", ""lv""";определяет обмотку содержащую РПН
+tap_neutral;integer;;нейтральное положение РПН
+tap_min;integer;;минимальное положение РПН
+tap_max;integer;;максимальное положение РПН
+tap_step_percent;float;:math:`>` 0;величина изменения напряжения для одного положения РПН [%]
+tap_step_degree;float;:math:`\geq` 0;величина изменения угла для одного положения РПН
+tap_pos;integer;;текущее положение РПН
+tap_phase_shifter;bool;;определяет, является ли трансформатор идеальным фазорегулятором
+parallel;int;:math:`>` 0;количество параллельных трансформаторов
+max_loading_percent**;float;:math:`>` 0;максимальная нагрузка трансформатора относительно sn_mva и соответствующего ей тока при V=1,0 о.е.
+df;float;1 :math:`\geq` df :math:`>`0;коэффициент снижения: максимальный ток трансформатора по отношению к номинальному току трансформатора (от 0 до 1)
+in_service*;boolean;True / False;использовать в расчётах.
