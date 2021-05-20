@@ -63,11 +63,3 @@ html_favicon = '_static/electrodevices_electr_4064.ico'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-
-# Additional stuff for the LaTeX preamble.
-'preamble': '\\usepackage[utf8]{inputenc}',
-'babel': '\\usepackage[russian]{babel}',
-'cmappkg': '\\usepackage{cmap}',
-'fontenc': '\usepackage[T1,T2A]{fontenc}',
-'utf8extra':'\\DeclareUnicodeCharacter{00A0}{\\nobreakspace}',
-}
