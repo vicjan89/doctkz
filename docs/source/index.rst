@@ -3,7 +3,7 @@
 ######################################
 
 
-.. image:: /_static/electrodevices_electr_4064.ico
+.. image:: /_static/icon.png
 		:width: 10em
 		:align: left 
 

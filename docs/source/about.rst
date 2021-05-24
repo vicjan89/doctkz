@@ -2,7 +2,7 @@
 О программе
 ##########################
 
-.. image:: /_static/electrodevices_electr_4064.ico
+.. image:: /_static/icon.png
 		:width: 10em
 		:align: left 
     
@@ -92,3 +92,5 @@
 		:width: 25em
 		:align: left 
 
+
+`Знак молнии предоставлен сайтом ru.pngtree.com <https://ru.pngtree.com/so/молния>`_
