@@ -58,7 +58,7 @@ html_theme = 'sphinx_rtd_theme'
 #html_theme = 'bizstyle'  - не очень
 #html_theme = 'pyramid' - не очень
 #html_theme = 'sphinxdoc' - не очень
-html_favicon = '_static/electrodevices_electr_4064.ico'
+html_favicon = '_static/icon.png'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
