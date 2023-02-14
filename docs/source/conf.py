@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Calculation of electrical networks'
-copyright = '2021, РУП "Витебскэнерго"'
-author = 'РУП "Витебскэнерго"'
+copyright = '2021, '
+author = ''
 
 # The full version, including alpha/beta/rc tags
 release = '1.15'
