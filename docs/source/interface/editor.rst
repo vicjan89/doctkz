@@ -5,12 +5,12 @@
 Главное меню
 """"""""""""
 
-.. image:: 5.png
+.. image:: ../_static/5.png
     :width: 10em
     :alt: alternate Text
     :align: center
 
-.. image:: 6.png
+.. image:: ../_static/6.png
     :width: 10em
     :alt: alternate Text
     :align: center
