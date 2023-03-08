@@ -6,13 +6,9 @@
 """"""""""""
 
 .. image:: ../_static/5.png
-    :width: 10em
-    :alt: alternate Text
     :align: center
 
 .. image:: ../_static/6.png
-    :width: 10em
-    :alt: alternate Text
     :align: center
 
 Контекстная справка
