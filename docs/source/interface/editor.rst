@@ -2,6 +2,19 @@
 Функции редактора
 #############################
 
+Главное меню
+""""""""""""
+
+.. image:: 5.png
+    :width: 10em
+    :alt: alternate Text
+    :align: center
+
+.. image:: 6.png
+    :width: 10em
+    :alt: alternate Text
+    :align: center
+
 Контекстная справка
 """""""""""""""""""
 
