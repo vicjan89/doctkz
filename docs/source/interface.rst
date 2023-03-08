@@ -8,5 +8,5 @@
     :maxdepth: 1
 
     interface/editor
-    interface/file
+
 
